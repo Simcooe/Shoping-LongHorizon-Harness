@@ -1,0 +1,17 @@
+# Shopping Long-Horizon — shopping harness bundle patch.
+#
+# Applied when this bundle is installed into a profile. It inserts the
+# ShopSimulator tool plugin by its bare package name. The name resolves through
+# the profile's node_modules (the symlink `dsh plugin add` establishes for this
+# package), so the specifier is the package name, not a relative path.
+#
+# 基线保持中性：不注入购物行为纪律提示词（instructions/verify-middleware
+# 已移除），行为约束由后续长程机制层用代码实现。
+
+- insert:
+    - id: shop-tools
+      name: '@shopping-longhorizon/shop-tools'
+      config:
+        baseUrl: !!js process.env.SHOPSIM_BASE_URL ?? 'http://127.0.0.1:5700'
+        envIdx: !!js process.env.SHOPSIM_ENV_IDX
+        timeoutMs: !!js Number(process.env.SHOPSIM_TIMEOUT_MS ?? 60000)
