@@ -1,0 +1,67 @@
+# h1 — 购物长程基线 profile + 购买守卫（buy-guard）。
+#
+# 基底 = dsh-base + dsh-headless（与官方 headless 一致，保证能跑），
+# 在此之上【按 id 禁用】所有非购物的模型可见工具：
+# 终端 / 文件系统 / 技能 / subagent / workflow / 网页 / 编程辅助。
+# 禁用后模型的工具面只剩本 bundle 注册的 search / click / finish / ask_shopper。
+#
+# 背景：dsh 0.1.2 默认工具面自带 bash/文件工具，曾导致模型沙箱逃逸、
+# 读取 .shopper_facts 隐藏答案（事故存档：旧仓库 runs/0903-1704）。
+#
+# h1 相对 h0 的唯一差异：末尾追加注册 buy-guard 插件。
+#
+# 本文件由 scripts/setup_harness.sh 复制进 $DSH_HOME/profiles/h1/。
+
+- id: tool-bash
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+- id: tool-jobs
+  disabled: true
+
+- id: tool-skill
+  disabled: true
+- id: skill-filesystem
+  disabled: true
+
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+
+- id: tool-workflow
+  disabled: true
+- id: tool-web
+  disabled: true
+
+- id: tool-todo
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: tool-ralph
+  disabled: true
+- id: tool-str-replace-editor
+  disabled: true
+
+# 覆盖系统提示词：最小购物 persona（基线，不含行为纪律提示）
+- id: system-prompt
+  config:
+    persona: >-
+      You are a shopping agent helping a user buy a product on an e-commerce
+      site. Search, compare candidates, verify attributes and price, then buy
+      the product that satisfies the user's constraints. The user's initial
+      requirement may be incomplete; you may ask the user clarifying questions
+      with the ask_shopper tool when available.
+
+# ── h1 新增：购买守卫 ──────────────────────────────
+- insert:
+    - id: buy-guard
+      name: '@shopping-longhorizon/shop-tools/buy-guard'

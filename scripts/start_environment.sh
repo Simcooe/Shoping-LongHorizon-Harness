@@ -25,8 +25,8 @@ export SHOP_SEARCH_INDEX="$INDEX_PATH"
 export SHOP_MAX_STEPS="${SHOP_MAX_STEPS:-35}"
 export SHOPSIM_ENV_SLOTS="${SHOPSIM_ENV_SLOTS:-8}"
 export SHOPSIM_PORT="${SHOPSIM_PORT:-5700}"
-# Personalization 场景开关：1/true 开启后，初始需求用模糊版 instruction_sample，
-# 隐藏细节需要 agent 通过 ask_shopper 逐步澄清（服务启动时生效，构建 goal 列表）
+# Personalization 场景开关：1/true 开启后，初始需求用模糊版，需 ask_shopper 澄清
+# （建议始终显式传：SHOPSIM_IF_PERSONA=1 bash scripts/start_environment.sh）
 export SHOPSIM_IF_PERSONA="${SHOPSIM_IF_PERSONA:-0}"
 
 # Shopper Simulator 隐藏事实目录（未设置则不落盘；文件仅服务端可读）
