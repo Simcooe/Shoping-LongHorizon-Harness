@@ -1,0 +1,54 @@
+{
+  "task_id": "1282",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "给我推荐一款智能的洗地机，要求可以放在家里吸尘、拖地和洗地，预算不超过6800元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为洗地机",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "洗地机",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品需具备智能属性",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "智能",
+      "selection_reason": "Query 明确提出了商品属性要求"
+    },
+    {
+      "id": "c0003",
+      "description": "功能需支持在家中进行吸尘、拖地和洗地",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以放在家里吸尘、拖地和洗地",
+      "selection_reason": "Query 明确列出了必须的功能和适用场景"
+    },
+    {
+      "id": "c0004",
+      "description": "价格不超过6800元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "预算不超过6800元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:23.461100+00:00",
+    "source_task_id": "1282"
+  }
+}

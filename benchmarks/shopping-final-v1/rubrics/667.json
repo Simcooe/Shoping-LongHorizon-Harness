@@ -1,0 +1,62 @@
+{
+  "task_id": "667",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "急需一款透明色带有吸盘的毛巾杆，要75cm长的，价格不超过50元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为毛巾杆",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "毛巾杆",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为透明色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "透明色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "带有吸盘设计",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "带有吸盘",
+      "selection_reason": "Query 明确提出了功能或安装方式"
+    },
+    {
+      "id": "c0004",
+      "description": "长度为75cm",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "要75cm长的",
+      "selection_reason": "Query 明确给出了尺寸规格"
+    },
+    {
+      "id": "c0005",
+      "description": "价格不超过50元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过50元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 10,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:13.361658+00:00",
+    "source_task_id": "667"
+  }
+}

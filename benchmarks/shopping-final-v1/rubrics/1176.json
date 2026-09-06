@@ -1,0 +1,46 @@
+{
+  "task_id": "1176",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "急需一套水上摩托艇的配件，价格不要超过1300元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "需要一套水上摩托艇的配件",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "一套水上摩托艇的配件",
+      "selection_reason": "Query 明确提出了商品类型和数量单位"
+    },
+    {
+      "id": "c0002",
+      "description": "价格不超过1300元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不要超过1300元",
+      "selection_reason": "Query 明确给出预算上限"
+    },
+    {
+      "id": "c0003",
+      "description": "用户急需该商品，对时效性有较高要求",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "急需",
+      "selection_reason": "表达紧急程度但未给出具体时限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:25.346105+00:00",
+    "source_task_id": "1176"
+  }
+}

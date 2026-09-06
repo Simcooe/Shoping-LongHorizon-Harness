@@ -1,0 +1,55 @@
+{
+  "task_id": "982",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "搜一下中式风格的隔断屏风，每平方价格650元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2,
+          8
+        ],
+        "reasoning": "搜索词及最终点击商品标题均明确为“隔断屏风”，如 816282901564 标题含玄关隔断屏风。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2,
+          8
+        ],
+        "reasoning": "搜索词包含“中式风格”，最终商品标题明确含“中式”。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          3,
+          9
+        ],
+        "reasoning": "选择“新西兰樟子松定制平方价”后页面价格显示为 650.0，符合每平方约650元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:25:12.469102+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

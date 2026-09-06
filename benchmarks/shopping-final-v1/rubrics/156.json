@@ -1,0 +1,54 @@
+{
+  "task_id": "156",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "有没有带绿豆标、带包装盒的乒乓球拍？要价格在300元左右的。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为乒乓球拍",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "乒乓球拍",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品需要带绿豆标",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "带绿豆标",
+      "selection_reason": "Query 明确提出了绿豆标要求"
+    },
+    {
+      "id": "c0003",
+      "description": "商品需要带包装盒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "带包装盒",
+      "selection_reason": "Query 明确提出了包装盒要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约300元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "300元左右",
+      "selection_reason": "「左右」属于模糊价位，判为 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 1,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:56.305793+00:00",
+    "source_task_id": "156"
+  }
+}

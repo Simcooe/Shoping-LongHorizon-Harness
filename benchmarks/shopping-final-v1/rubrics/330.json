@@ -1,0 +1,54 @@
+{
+  "task_id": "330",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "希望买到一款适合送人的阿玛尼唇釉礼盒，售价在270元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "品牌为阿玛尼",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "阿玛尼",
+      "selection_reason": "Query 明确出现品牌名称"
+    },
+    {
+      "id": "c0002",
+      "description": "商品类型为唇釉礼盒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "唇釉礼盒",
+      "selection_reason": "Query 明确提出了商品形态和品类"
+    },
+    {
+      "id": "c0003",
+      "description": "适合作为送人礼品",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "适合送人",
+      "selection_reason": "「适合送人」为主观用途偏好，未限定具体规格，判 soft"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约270元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "售价在270元左右",
+      "selection_reason": "「左右」表示模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:46.076129+00:00",
+    "source_task_id": "330"
+  }
+}

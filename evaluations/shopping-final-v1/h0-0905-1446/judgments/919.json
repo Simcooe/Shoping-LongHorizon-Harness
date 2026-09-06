@@ -1,0 +1,68 @@
+{
+  "task_id": "919",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "求安利一款可搭配奶粉使用降燥清火的饮料，适合家里大人小孩喝的那种，预算30块左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2
+        ],
+        "reasoning": "Step 1/2 中商品标题明确包含“雪梨饮料”，表明候选为饮料品类。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2
+        ],
+        "reasoning": "Step 1/2 中商品标题明确包含“奶粉伴侣/宝宝小儿奶粉伴侣”，表明可搭配奶粉使用。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2
+        ],
+        "reasoning": "Step 1/2 中商品标题明确包含“清火宝”“金银花植物配方”等清火降燥相关表述。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "标题显示适合宝宝/小儿，但轨迹中没有明确证据表明同时适合家里大人饮用。"
+      },
+      {
+        "rubric_id": "c0005",
+        "status": "satisfied",
+        "step_reference": [
+          3,
+          13
+        ],
+        "reasoning": "Step 3/13 选中“非寒【一罐｜清清宝雪梨味】（180克*30包）”后价格显示为 29.0 元，符合约 30 元预算。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 1,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:24:02.542141+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

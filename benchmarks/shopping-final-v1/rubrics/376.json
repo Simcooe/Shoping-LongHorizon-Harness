@@ -1,0 +1,46 @@
+{
+  "task_id": "376",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "看上了一款去角质产品，净含量有135克，价格在100元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为去角质产品",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "去角质产品",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "净含量为135克",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "净含量有135克",
+      "selection_reason": "Query 明确给出了净含量规格"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约100元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在100元左右",
+      "selection_reason": "「左右」表示模糊价位，不作为硬性预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:46.302759+00:00",
+    "source_task_id": "376"
+  }
+}

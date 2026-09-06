@@ -1,0 +1,46 @@
+{
+  "task_id": "577",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "帮我挑选一支适合妈妈们使用的羊脂膏，接受价格在160元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为羊脂膏",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "羊脂膏",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用于妈妈们使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合妈妈们使用",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约160元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "接受价格在160元左右",
+      "selection_reason": "「左右」属于模糊价位，按 soft 处理"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:39:31.243072+00:00",
+    "source_task_id": "577"
+  }
+}

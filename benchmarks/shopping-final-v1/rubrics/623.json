@@ -1,0 +1,38 @@
+{
+  "task_id": "623",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "挑选一款价格在400元左右的白酒。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为白酒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "白酒",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "价格预期约400元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在400元左右",
+      "selection_reason": "「左右」为模糊价位表述，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 2,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:39:52.019368+00:00",
+    "source_task_id": "623"
+  }
+}

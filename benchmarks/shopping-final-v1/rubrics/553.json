@@ -1,0 +1,54 @@
+{
+  "task_id": "553",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "最近想找一款白色的创意短袖，预算三十元左右推荐下。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为短袖",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "短袖",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "白色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "具有创意设计或创意风格",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "创意",
+      "selection_reason": "「创意」带有主观审美，未指定具体设计元素，判 soft"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约三十元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "三十元左右",
+      "selection_reason": "「左右」为模糊价位，写成价格预期约三十元，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:39:32.934170+00:00",
+    "source_task_id": "553"
+  }
+}

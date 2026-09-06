@@ -1,0 +1,54 @@
+{
+  "task_id": "1062",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想找一款适合缺牙蛀牙人群长期使用的牙套，价格在20元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为牙套",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "牙套",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为缺牙、蛀牙人群",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合缺牙蛀牙人群",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "适合长期使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "长期使用",
+      "selection_reason": "Query 明确提出了使用时长/耐用性要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在20元左右",
+      "selection_reason": "「左右」表示模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:13.484680+00:00",
+    "source_task_id": "1062"
+  }
+}

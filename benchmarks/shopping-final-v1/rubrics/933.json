@@ -1,0 +1,54 @@
+{
+  "task_id": "933",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "查一下价格在5000元上下的黄金戒指，按照实际克重计价，支持多退少补的那种。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为黄金戒指",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "黄金戒指",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "价格预期约5000元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在5000元上下",
+      "selection_reason": "「上下」属于模糊价位表述，未给出明确上限或区间，判 soft"
+    },
+    {
+      "id": "c0003",
+      "description": "计价方式为按照实际克重计价",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "按照实际克重计价",
+      "selection_reason": "Query 明确提出了计价方式"
+    },
+    {
+      "id": "c0004",
+      "description": "支持多退少补的差价处理方式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "支持多退少补",
+      "selection_reason": "Query 明确提出了交易结算要求"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:45.344135+00:00",
+    "source_task_id": "933"
+  }
+}

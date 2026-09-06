@@ -1,0 +1,46 @@
+{
+  "task_id": "1031",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求推荐一款瓷白色的粉底液，价格在20元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为粉底液",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "粉底液",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为瓷白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "瓷白色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在20元左右",
+      "selection_reason": "「左右」属于模糊价位，不是明确的预算上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:05.358806+00:00",
+    "source_task_id": "1031"
+  }
+}

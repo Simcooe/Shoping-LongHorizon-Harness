@@ -1,0 +1,54 @@
+{
+  "task_id": "794",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "有没有一款供吸氢机专用的制氢装置？价格在700元以内。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          9,
+          10,
+          12
+        ],
+        "reasoning": "Step 9-12 页面标题为“PEM电解槽 20A纯净水电解制氢”，且选中“20a-150ml”，属于制氢装置。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          5,
+          9
+        ],
+        "reasoning": "Step 5 用户明确确认需要“20A的PEM电解槽，作为吸氢机核心部件”；Step 9 商品标题含“吸氢机富氢水机专用”。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          12,
+          13
+        ],
+        "reasoning": "Step 12 选中“20a-150ml”后价格显示为305.0元，低于700元；Step 13 点击购买。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:19:18.613315+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "122",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想要一款800g拉力的自动闭门器，适合懒人使用，价格不超过25元的。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为自动闭门器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "自动闭门器",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "拉力规格为800g",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "800g拉力",
+      "selection_reason": "Query 明确提出了拉力规格"
+    },
+    {
+      "id": "c0003",
+      "description": "商品需适合懒人使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合懒人使用",
+      "selection_reason": "Query 明确提出了适用人群/使用场景"
+    },
+    {
+      "id": "c0004",
+      "description": "价格不超过25元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过25元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 8,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:16.134698+00:00",
+    "source_task_id": "122"
+  }
+}

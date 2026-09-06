@@ -1,0 +1,44 @@
+{
+  "task_id": "10",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "有没有单支装的哺乳辅助器推荐呀？价格在130-140元之间。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "轨迹中浏览过多款乳盾/乳头保护罩类商品，但最终未购买或确认具体商品，无法判定最终商品品类约束是否满足。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 曾点击单只/单个装选项（如 Step 23、26、30），但未最终购买或确认商品，无法判定最终包装规格是否满足。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "轨迹中查看过 128、129、139 等接近价格区间选项，但没有最终购买/确认商品，无法证明最终价格满足 130-140 元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 1,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T16:49:12.678316+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

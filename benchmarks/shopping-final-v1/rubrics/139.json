@@ -1,0 +1,54 @@
+{
+  "task_id": "139",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想找一款小瓶50ml的伏特加，能在便利店买到，价格在50元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为伏特加",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "伏特加",
+      "selection_reason": "Query明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "容量为50ml的小瓶装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "小瓶50ml",
+      "selection_reason": "Query明确给出了容量和瓶型规格"
+    },
+    {
+      "id": "c0003",
+      "description": "能在便利店购买到",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "能在便利店买到",
+      "selection_reason": "Query明确提出了购买渠道要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约50元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在50元左右",
+      "selection_reason": "「左右」为模糊价位表达，按规则判soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:46.479568+00:00",
+    "source_task_id": "139"
+  }
+}

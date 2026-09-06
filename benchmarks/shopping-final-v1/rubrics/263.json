@@ -1,0 +1,46 @@
+{
+  "task_id": "263",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "预算在两百块左右，帮我找一百根玻璃纤维杆子。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为玻璃纤维杆子",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "玻璃纤维杆子",
+      "selection_reason": "Query 明确提出了商品类型与材质组合"
+    },
+    {
+      "id": "c0002",
+      "description": "数量为一百根",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "一百根",
+      "selection_reason": "Query 明确给出了购买数量"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约两百元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "两百块左右",
+      "selection_reason": "「左右」表示大约的模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:48.178458+00:00",
+    "source_task_id": "263"
+  }
+}

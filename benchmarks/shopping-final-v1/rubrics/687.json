@@ -1,0 +1,62 @@
+{
+  "task_id": "687",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想买一款适合宝宝使用的蓝色有鲸鱼图案的床尾护栏，接受价格一百五十出头。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为床尾护栏",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "床尾护栏",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为宝宝",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合宝宝使用",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "颜色为蓝色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "蓝色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0004",
+      "description": "带有鲸鱼图案",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "有鲸鱼图案",
+      "selection_reason": "Query 明确提出了图案要求"
+    },
+    {
+      "id": "c0005",
+      "description": "价格预期约150元出头",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "接受价格一百五十出头",
+      "selection_reason": "「一百五十出头」为模糊价位，非明确上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 8,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:23.138294+00:00",
+    "source_task_id": "687"
+  }
+}

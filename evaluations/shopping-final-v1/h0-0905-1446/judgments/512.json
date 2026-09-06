@@ -1,0 +1,51 @@
+{
+  "task_id": "512",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "帮我找找40颗组合装的胶囊咖啡，价格在250元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          25,
+          26
+        ],
+        "reasoning": "Step 25/26 打开并选中‘治光师Nespresso胶囊咖啡’及其40颗组合规格，明确为胶囊咖啡。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          26
+        ],
+        "reasoning": "Step 26 明确选择‘【40颗】野草莓+冠军甄选+只要咖啡味+白茶胶囊’，为40颗组合装。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          26
+        ],
+        "reasoning": "Step 26 选中该40颗组合后页面显示价格为246.0元，符合约250元预期。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:30:29.622958+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "916",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求输出一款可以治疗慢性痛风、风湿性关节炎和腰肌劳损的胶囊，预算150元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "药品剂型为胶囊",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "胶囊",
+      "selection_reason": "Query 明确提出了剂型要求"
+    },
+    {
+      "id": "c0002",
+      "description": "适用于治疗慢性痛风、风湿性关节炎和腰肌劳损",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以治疗慢性痛风、风湿性关节炎和腰肌劳损",
+      "selection_reason": "Query 明确列出了需要治疗的具体病症"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约150元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算150元左右",
+      "selection_reason": "「左右」表述为模糊价位，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:42.270638+00:00",
+    "source_task_id": "916"
+  }
+}

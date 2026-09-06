@@ -1,0 +1,54 @@
+{
+  "task_id": "162",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "推荐一套长柄的排线轮式鱼竿，价格在400元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为鱼竿",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "鱼竿",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "鱼竿为长柄设计",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "长柄",
+      "selection_reason": "Query 明确提出了柄长属性"
+    },
+    {
+      "id": "c0003",
+      "description": "鱼竿为排线轮式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "排线轮式",
+      "selection_reason": "Query 明确提出了轮式类型/功能"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约400元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "400元左右",
+      "selection_reason": "「左右」表示模糊价位，判 soft，作为价格预期而非硬上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:05.883652+00:00",
+    "source_task_id": "162"
+  }
+}

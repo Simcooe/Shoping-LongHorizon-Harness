@@ -1,0 +1,46 @@
+{
+  "task_id": "680",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "帮我找一款免打孔的浴霸，价格大概270元到280元之间。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为浴霸",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "浴霸",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "安装方式为免打孔",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "免打孔",
+      "selection_reason": "Query 明确提出了安装要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约270元到280元之间",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格大概270元到280元之间",
+      "selection_reason": "Query 给出价格区间，但使用了「大概」表示模糊价位，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:11.377382+00:00",
+    "source_task_id": "680"
+  }
+}

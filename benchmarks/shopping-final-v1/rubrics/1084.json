@@ -1,0 +1,46 @@
+{
+  "task_id": "1084",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "麻烦查找一款水瓶用的圆形嘴盖，价格在十元左右就行。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为水瓶用嘴盖（盖子配件）",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "水瓶用的圆形嘴盖",
+      "selection_reason": "Query 明确提出了商品类型及适用对象"
+    },
+    {
+      "id": "c0002",
+      "description": "嘴盖形状为圆形",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "圆形",
+      "selection_reason": "Query 明确提出了形状要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约为十元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "十元左右",
+      "selection_reason": "「左右」为模糊价位表述，判为软性价格预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:29.010607+00:00",
+    "source_task_id": "1084"
+  }
+}

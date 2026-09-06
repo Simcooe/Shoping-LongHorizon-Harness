@@ -1,0 +1,61 @@
+{
+  "task_id": "933",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "查一下价格在5000元上下的黄金戒指，按照实际克重计价，支持多退少补的那种。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          2
+        ],
+        "reasoning": "Step 2 商品页标题明确为“Mclon/曼卡龙fin红公主黄金戒指足金”，品类为黄金戒指。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          7
+        ],
+        "reasoning": "Step 2 显示价格 4980.0 to 5400.0，Step 7 中 Agent 也提到约4980元附近，符合5000元上下预期。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3
+        ],
+        "reasoning": "Step 2/3 款式选项明确写有“按照实际克重”，满足按实际克重计价要求。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3
+        ],
+        "reasoning": "Step 2/3 款式选项明确写有“差价多退少补”，满足多退少补要求。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:23:59.939645+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

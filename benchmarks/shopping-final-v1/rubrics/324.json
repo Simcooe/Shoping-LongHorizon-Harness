@@ -1,0 +1,54 @@
+{
+  "task_id": "324",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我想买一条黑色男士九分裤， 预算270元以内。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为九分裤",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "九分裤",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为男士",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "男士",
+      "selection_reason": "Query 明确提出了适用性别"
+    },
+    {
+      "id": "c0003",
+      "description": "颜色为黑色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "黑色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0004",
+      "description": "价格不超过270元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "预算270元以内",
+      "selection_reason": "「以内」是明确预算上限，判 hard"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 9,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:29.630370+00:00",
+    "source_task_id": "324"
+  }
+}

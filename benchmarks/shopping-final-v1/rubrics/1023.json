@@ -1,0 +1,46 @@
+{
+  "task_id": "1023",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我需要一款深灰浅灰拼色的大型犬护肘服，预算为70元以内。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为大型犬护肘服，适用于大型犬并具有护肘功能",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "大型犬护肘服",
+      "selection_reason": "Query 明确提出了商品品类、适用对象和护肘功能"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为深灰浅灰拼色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "深灰浅灰拼色",
+      "selection_reason": "Query 明确提出了颜色选项"
+    },
+    {
+      "id": "c0003",
+      "description": "价格不超过70元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "预算为70元以内",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:12.461560+00:00",
+    "source_task_id": "1023"
+  }
+}

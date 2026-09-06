@@ -1,0 +1,52 @@
+{
+  "task_id": "765",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "帮找一个适合放在餐馆里的簸箕画，价格不要超过80元。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          13,
+          15
+        ],
+        "reasoning": "Step 13 商品标题为手绘竹编簸箕挂画，Step 15 选中该簸箕画款式，品类明确匹配。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          13
+        ],
+        "reasoning": "Step 13 商品标题明确包含饭店餐馆墙饰，说明适合餐馆环境。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          14,
+          15
+        ],
+        "reasoning": "Step 14/15 显示选择 40*40 后价格为 78.0 元，未超过 80 元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 2
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:17:31.701816+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

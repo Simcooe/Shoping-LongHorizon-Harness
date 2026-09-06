@@ -1,0 +1,54 @@
+{
+  "task_id": "1240",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求推荐适合儿童穿的丁字鞋，颜色要浅粉色的，价格在1300-1400元之间。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为丁字鞋",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "丁字鞋",
+      "selection_reason": "Query 明确提出了鞋型/品类"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为儿童",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合儿童穿",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "颜色为浅粉色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "浅粉色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格在1300-1400元之间",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格在1300-1400元之间",
+      "selection_reason": "Query 明确给出了价格区间"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:21.505711+00:00",
+    "source_task_id": "1240"
+  }
+}

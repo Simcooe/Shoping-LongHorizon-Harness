@@ -1,0 +1,54 @@
+{
+  "task_id": "833",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "有没有男女都能背的淡绿色双肩包，价格在400元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为双肩包",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "双肩包",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为淡绿色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "淡绿色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "男女都能背，适合通用款式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "男女都能背",
+      "selection_reason": "Query 明确提出了适用人群/通用性要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约400元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在400元左右",
+      "selection_reason": "「左右」为模糊价位，判为 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:03.987045+00:00",
+    "source_task_id": "833"
+  }
+}

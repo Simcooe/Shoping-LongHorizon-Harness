@@ -1,0 +1,61 @@
+{
+  "task_id": "1295",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "找找看芦荟绿色的水性洗衣液染料，我能接受的价格在三十块左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2
+        ],
+        "reasoning": "Step 2 商品标题明确为“日化洗衣液染料”，且 Step 1 搜索词也围绕洗衣液染料相关水性染料。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3
+        ],
+        "reasoning": "Step 2 显示有“芦荟绿100克/500克”规格，Step 3 明确选中“芦荟绿100克”。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2
+        ],
+        "reasoning": "Step 2 商品标题明确包含“水性”，且搜索结果与点击商品均为水性染料相关。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          3
+        ],
+        "reasoning": "Step 3 选中“芦荟绿100克”后页面显示价格为 32.0，符合用户“三十块左右”的软性价格预期。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 2
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:37:02.974459+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

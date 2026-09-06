@@ -1,0 +1,78 @@
+{
+  "task_id": "253",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "预算在100元以内，推荐一套适合儿童夏季穿的桔色条纹衬衫。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为衬衫",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "衬衫",
+      "selection_reason": "Query 明确给出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为桔色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "桔色",
+      "selection_reason": "Query 明确给出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "图案为条纹",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "条纹",
+      "selection_reason": "Query 明确给出了图案要求"
+    },
+    {
+      "id": "c0004",
+      "description": "适用人群为儿童",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "儿童",
+      "selection_reason": "Query 明确给出了适用人群"
+    },
+    {
+      "id": "c0005",
+      "description": "适合夏季穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "夏季",
+      "selection_reason": "Query 明确给出了季节要求"
+    },
+    {
+      "id": "c0006",
+      "description": "价格不超过100元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "预算在100元以内",
+      "selection_reason": "Query 明确给出了预算上限"
+    },
+    {
+      "id": "c0007",
+      "description": "商品销售形式或数量为一套/套装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "一套",
+      "selection_reason": "Query 明确给出了购买单位或套装形式"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 7,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:17.749250+00:00",
+    "source_task_id": "253"
+  }
+}

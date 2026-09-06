@@ -1,0 +1,38 @@
+{
+  "task_id": "47",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我想要买秋天9月后种的银莲花球根。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为银莲花球根",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "银莲花球根",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适合在秋天9月以后种植",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "秋天9月后种",
+      "selection_reason": "Query 明确给出了种植时间要求"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 2,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:18.933700+00:00",
+    "source_task_id": "47"
+  }
+}

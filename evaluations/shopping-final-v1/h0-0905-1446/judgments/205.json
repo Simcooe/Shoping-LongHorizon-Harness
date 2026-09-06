@@ -1,0 +1,60 @@
+{
+  "task_id": "205",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "求安利一款兰橘拼色的儿童凉鞋，我要25码的大小，价格别超70块。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          5
+        ],
+        "reasoning": "Step 5 商品页标题为“儿童溯溪鞋小学生涉水鞋...沙滩鞋”，且来自儿童凉鞋搜索结果，可确认属于儿童凉鞋/涉水凉鞋类。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          5,
+          6
+        ],
+        "reasoning": "Step 5 显示颜色分类包含“rema 兰橘条纹”，Step 6 点击选择该颜色，满足兰橘拼色要求。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          5,
+          7
+        ],
+        "reasoning": "Step 5 显示尺码包含25，Step 7 点击选择25码。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          5
+        ],
+        "reasoning": "Step 5 商品页明确显示价格为69.0元，未超过70元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 2
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:05:59.720077+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

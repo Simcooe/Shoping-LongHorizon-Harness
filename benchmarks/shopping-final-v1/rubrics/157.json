@@ -1,0 +1,54 @@
+{
+  "task_id": "157",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求购一款银色的可以在户外旅行使用的手冲咖啡机，要价格在400元左右的。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为手冲咖啡机",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "手冲咖啡机",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为银色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "银色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "适合在户外旅行场景使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以在户外旅行使用",
+      "selection_reason": "Query 明确提出了使用场景功能"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约400元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "400元左右",
+      "selection_reason": "「左右」为模糊价位表述，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:00.389360+00:00",
+    "source_task_id": "157"
+  }
+}

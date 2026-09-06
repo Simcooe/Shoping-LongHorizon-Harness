@@ -1,0 +1,62 @@
+{
+  "task_id": "291",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "给我推荐一双适合女童演出穿的玛丽珍小皮鞋，颜色为黑色，价钱不超过50元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为玛丽珍款式的小皮鞋",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "玛丽珍小皮鞋",
+      "selection_reason": "Query 明确给出了商品类型与款式"
+    },
+    {
+      "id": "c0002",
+      "description": "适用对象为女童",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合女童",
+      "selection_reason": "Query 明确给出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "适用场景为演出穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "演出穿",
+      "selection_reason": "Query 明确给出了使用场景"
+    },
+    {
+      "id": "c0004",
+      "description": "颜色为黑色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "黑色",
+      "selection_reason": "Query 明确给出了颜色要求"
+    },
+    {
+      "id": "c0005",
+      "description": "价钱不超过50元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价钱不超过50元",
+      "selection_reason": "Query 明确给出了预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:25.674815+00:00",
+    "source_task_id": "291"
+  }
+}

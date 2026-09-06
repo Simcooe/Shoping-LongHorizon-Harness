@@ -1,0 +1,46 @@
+{
+  "task_id": "1006",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "搜一款牛油果绿的背包，预算在300元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为背包",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "背包",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为牛油果绿",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "牛油果绿",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约300元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算在300元左右",
+      "selection_reason": "「左右」表示模糊价位，不是明确上限，判断为 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:58.179102+00:00",
+    "source_task_id": "1006"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "859",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "推荐一款价格在10元左右的红豆沙馅料。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          20,
+          22
+        ],
+        "reasoning": "Step 1 搜索红豆沙馅料；Step 20/22 进入并选择低糖水洗红豆沙相关红豆沙馅料候选，品类明确匹配。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 最终未确认购买，且 For love 款选择 1 斤后未显示最终成交价，无法证明价格约 10 元被满足或违反。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:22:19.796839+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

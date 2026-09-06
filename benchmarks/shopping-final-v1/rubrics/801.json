@@ -1,0 +1,54 @@
+{
+  "task_id": "801",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "麻烦帮我找一款适合平时外出游玩的软包，颜色要黑色，售价20元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为软包",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "软包",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用于平时外出游玩场景",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合平时外出游玩",
+      "selection_reason": "Query 明确提出了使用场景要求"
+    },
+    {
+      "id": "c0003",
+      "description": "颜色为黑色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "颜色要黑色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "售价20元左右",
+      "selection_reason": "「左右」属于模糊价位，不构成明确上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:55.942624+00:00",
+    "source_task_id": "801"
+  }
+}

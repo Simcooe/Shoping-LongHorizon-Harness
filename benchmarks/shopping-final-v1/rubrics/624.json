@@ -1,0 +1,62 @@
+{
+  "task_id": "624",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "查找一款实木材质的中阮，适合刚学习中阮的成年人，也适合考试和专业演奏使用，价格不超过3800元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为中阮",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "中阮",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "材质为实木",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "实木材质",
+      "selection_reason": "Query 明确提出了材质要求"
+    },
+    {
+      "id": "c0003",
+      "description": "适合刚学习中阮的成年人使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合刚学习中阮的成年人",
+      "selection_reason": "Query 明确给出了适用人群"
+    },
+    {
+      "id": "c0004",
+      "description": "适合考试和专业演奏使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "考试和专业演奏使用",
+      "selection_reason": "Query 明确给出了使用场景要求"
+    },
+    {
+      "id": "c0005",
+      "description": "价格不超过3800元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过3800元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:01.022036+00:00",
+    "source_task_id": "624"
+  }
+}

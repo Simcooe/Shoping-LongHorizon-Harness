@@ -1,0 +1,64 @@
+{
+  "task_id": "139",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想找一款小瓶50ml的伏特加，能在便利店买到，价格在50元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          6,
+          7,
+          17
+        ],
+        "reasoning": "Step 6/7/17 商品标题与选项均明确为绝对伏特加，品类匹配伏特加。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          7,
+          13,
+          18
+        ],
+        "reasoning": "Step 7 选中‘原味 50ml’，Step 13/18 选中‘原味 50ml*2瓶装’，均为50ml小瓶规格。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          6,
+          17
+        ],
+        "reasoning": "Step 6/17 商品标题明确含‘居家便利店’，可作为便利店可买到的页面证据。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          7,
+          13
+        ],
+        "reasoning": "Step 7 显示50ml单价22元，Step 13 显示50ml*2总价44元，均在约50元预期范围内。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T16:59:28.840121+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

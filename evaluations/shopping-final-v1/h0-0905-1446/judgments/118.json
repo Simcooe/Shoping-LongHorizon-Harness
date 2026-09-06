@@ -1,0 +1,54 @@
+{
+  "task_id": "118",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "预算在550块以内，搜一款白蓝配色的羽毛球鞋。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "reasoning": "Step 9-12 商品页标题明确为正品尤尼克斯羽毛球鞋，并最终选择颜色尺码后点击 Buy Now。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          10
+        ],
+        "reasoning": "Step 10 明确选择了颜色分类“shb510wcr 白蓝（宽楦）”，与白蓝配色要求一致。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          10,
+          11
+        ],
+        "reasoning": "Step 10-11 选中白蓝配色后页面显示价格为 528.0 元，未超过 550 元预算。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T16:57:11.626961+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

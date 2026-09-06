@@ -1,0 +1,38 @@
+{
+  "task_id": "831",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "推荐一款700元左右的创意座椅。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为创意座椅/座椅，需具有创意设计感",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "创意座椅",
+      "selection_reason": "Query 明确将商品限定为创意座椅这一品类/设计类型"
+    },
+    {
+      "id": "c0002",
+      "description": "价格预期约700元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "700元左右",
+      "selection_reason": "「左右」为模糊价位，按规则判为 soft 预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 2,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:11.210583+00:00",
+    "source_task_id": "831"
+  }
+}

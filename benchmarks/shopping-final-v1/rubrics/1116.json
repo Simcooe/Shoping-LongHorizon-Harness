@@ -1,0 +1,54 @@
+{
+  "task_id": "1116",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想入手一款全国联保的紫色助听器，预算在1100元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为助听器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "助听器",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为紫色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "紫色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "享有全国联保服务",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "全国联保",
+      "selection_reason": "Query 明确提出了售后服务保障要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约1100元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "1100元左右",
+      "selection_reason": "「左右」属于模糊价位表达，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 11,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:21.677338+00:00",
+    "source_task_id": "1116"
+  }
+}

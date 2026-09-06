@@ -1,0 +1,62 @@
+{
+  "task_id": "919",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求安利一款可搭配奶粉使用降燥清火的饮料，适合家里大人小孩喝的那种，预算30块左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为饮料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "饮料",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "可搭配奶粉使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可搭配奶粉使用",
+      "selection_reason": "Query 明确提出了使用搭配要求"
+    },
+    {
+      "id": "c0003",
+      "description": "具有降燥清火功能",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "降燥清火",
+      "selection_reason": "Query 明确提出了功能需求"
+    },
+    {
+      "id": "c0004",
+      "description": "适合家里大人和小孩饮用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合家里大人小孩喝",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0005",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算30块左右",
+      "selection_reason": "「左右」是模糊价位，未给出明确上限，按价格预期判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:40.673904+00:00",
+    "source_task_id": "919"
+  }
+}

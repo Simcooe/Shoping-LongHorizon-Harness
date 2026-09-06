@@ -1,0 +1,62 @@
+{
+  "task_id": "133",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想要一款简约风格的矮款柱头灯，款式为较大尺寸，在35-45cm之间，价格900-1000元内。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为柱头灯",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "柱头灯",
+      "selection_reason": "Query明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "风格为简约",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "简约风格",
+      "selection_reason": "Query明确提出了风格要求"
+    },
+    {
+      "id": "c0003",
+      "description": "款式为矮款",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "矮款",
+      "selection_reason": "Query明确提出了款式特征"
+    },
+    {
+      "id": "c0004",
+      "description": "款式为较大尺寸，尺寸在35-45cm之间",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "款式为较大尺寸，在35-45cm之间",
+      "selection_reason": "Query明确给出了尺寸区间和较大尺寸要求"
+    },
+    {
+      "id": "c0005",
+      "description": "价格在900-1000元范围内",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格900-1000元内",
+      "selection_reason": "Query明确给出了价格区间"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:01.820568+00:00",
+    "source_task_id": "133"
+  }
+}

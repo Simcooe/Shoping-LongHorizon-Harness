@@ -1,0 +1,62 @@
+{
+  "task_id": "187",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求一款价格在108元左右的气垫，容量15克就够用了，要自然色并带有替换装的。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为气垫",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "气垫",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品价格预期约108元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在108元左右",
+      "selection_reason": "「左右」为模糊价位，判 soft"
+    },
+    {
+      "id": "c0003",
+      "description": "商品容量为15克",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "容量15克就够用了",
+      "selection_reason": "Query 明确提出了容量规格"
+    },
+    {
+      "id": "c0004",
+      "description": "颜色为自然色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "自然色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0005",
+      "description": "带有替换装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "带有替换装",
+      "selection_reason": "Query 明确提出了替换装配件要求"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:22.083315+00:00",
+    "source_task_id": "187"
+  }
+}
