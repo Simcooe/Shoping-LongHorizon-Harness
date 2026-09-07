@@ -1,0 +1,200 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/1243",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为洋水仙",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "洋水仙",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "洋水仙",
+      "source_events": [
+        "initial:1243"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "适合在家里种植的品种",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适合家里种植",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适合家里种植",
+      "source_events": [
+        "initial:1243"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "四季都可以开花",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "四季都可以开花",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "四季都可以开花",
+      "source_events": [
+        "initial:1243"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格预期约20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在20元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/1243/budget/qa-0001",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在20元左右",
+      "source_events": [
+        "initial:1243"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"15元\", \"upper\": 15.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/1243/budget/qa-0001",
+      "source_quote": "15元",
+      "visible_from_event": "h0-0905-1446/1243/budget/qa-0001",
+      "effective_from_event": "h0-0905-1446/1243/budget/qa-0001",
+      "effective_until_event": null,
+      "supersedes": "c0004",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 15.0,
+        "quote": "15元"
+      },
+      "source_events": [
+        "h0-0905-1446/1243/budget/qa-0001"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/1243/budget/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1243",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "ca7f219fd34a97e73b86509c2d85cec0258100c077ded4373542eb2556cf886c",
+  "trace_hash": "8643f379429cd7a4897f0ffd019dc8fec9593fe3fdaa396916d12aa77f53340f",
+  "events_hash": "21de364da28fad6a0573aa402d85592bd4c288f112e7fe76891ea73496204e59",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 18,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/1243/budget/qa-0001",
+      "session": "h0-0905-1446/1243",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 15.0,
+        "quote": "15元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "15元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 15
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/1243/budget/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.055979+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "97204d455c2136e9ff2562207318cbbf6f8f21db645215d3065fd9ab83bbf07b"
+}

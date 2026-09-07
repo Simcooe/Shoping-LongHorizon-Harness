@@ -1,0 +1,187 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/730",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为替换刷头",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "替换刷头",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "替换刷头",
+      "source_events": [
+        "initial:730"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "audience",
+      "description": "适用对象为电动牙刷",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "电动牙刷",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "电动牙刷",
+      "source_events": [
+        "initial:730"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "quantity",
+      "description": "购买数量为6支",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "6支",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "6支",
+      "source_events": [
+        "initial:730"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "color",
+      "description": "颜色为白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "白色",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "白色",
+      "source_events": [
+        "initial:730"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "预算在30元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "预算在30元左右",
+      "source_events": [
+        "initial:730"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "730",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "b8d731b4c01df9bf61b95a0b80f224b8c69795e85c45ff57a685363ef9a72957",
+  "trace_hash": "a76a0e9aa75e0a3c8deb60e58b5cd8a3ee1a5a3f80c58f5c4690ca0d0c68e770",
+  "events_hash": "adc03d3b497c369823f2ac0660158ca8daa10d7ce957ff11247b179d1a8c9ad4",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 16,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/730/budget/qa-0001",
+      "status": "post_terminal_excluded",
+      "kind": "modify"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/730/budget/qa-0001",
+      "session": "h0-0905-1446/730",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 30.0,
+        "quote": "30块"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "30块",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "post_terminal_excluded",
+      "step_index": 12
+    }
+  ],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.997982+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "451a9392b39e57b86949d2d58d7cea203e70663c2c33b79a96f9310ba2e431bd"
+}

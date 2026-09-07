@@ -1,0 +1,75 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1178",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 16,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 8,
+      "position": 9,
+      "position_mapped": true,
+      "question": "确认购买这款MOOER魔耳PRIME P1电吉他综合效果器（绿色款，580元）吗？",
+      "reply": "用户回复：这款绿色PRIME P1正好是我想要的，580元价格也合适。不过想再确认下：它支持电贝司用吗？分期免息和赠品都有吧？",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/1178/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/1178",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 580.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "580元",
+      "conditions": [
+        "用户回复：这款绿色PRIME P1正好是我想要的，580元价格也合适。不过想再确认下：它支持电贝司用吗？分期免息和赠品都有吧？"
+      ],
+      "scope": {
+        "amount": 580.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 9
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

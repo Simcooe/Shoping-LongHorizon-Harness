@@ -23,18 +23,43 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from eval.trace_utils import (  # noqa: E402
+    DEFAULT_TERMINAL_PROTOCOL,
     REWARD_TYPE_TO_CLASS,
     SUCCESS_TYPES,
+    TERMINAL_PROTOCOL_V1,
+    TERMINAL_PROTOCOL_V2,
     agent_turn_end,
     canonical_terminal_step,
     classify_non_terminal,
+    first_terminal_step,
     last_action_info,
     read_json,
     read_session_events,
     scan_invalid_clicks,
+    select_terminal,
     step_is_done,
     step_reward_type,
 )
+
+EVALUATOR_VERSION = "deterministic-evaluator-v2"
+
+
+def _terminal_brief(steps: list[dict], idx: int | None, step: dict | None) -> dict | None:
+    """把一个终局 step 摘要成可并列展示的短字段（新旧口径对照用）。"""
+    if step is None:
+        return None
+    raw = step.get("raw") or {}
+    rd = raw.get("reward_detail") or {}
+    rt = rd.get("reward_type") or raw.get("termination_reason")
+    return {
+        "index": idx,
+        "step": step.get("step"),
+        "reward_type": rt,
+        "class": REWARD_TYPE_TO_CLASS.get(rt, rt),
+        "reward": raw.get("reward"),
+        "termination_reason": raw.get("termination_reason"),
+        "task_success": rt in SUCCESS_TYPES,
+    }
 
 
 def _merged_anomalies(anomaly_details: list[dict]) -> tuple[list[str], list[dict]]:
@@ -78,8 +103,13 @@ def scan_progress_anomalies(steps: list[dict], limit: int) -> list[dict]:
     return anomalies
 
 
-def evaluate_task(task_id: int, raw_steps: list[dict], events: list[dict], reset_state: dict | None) -> dict:
-    terminal_idx, terminal_step = canonical_terminal_step(raw_steps)
+def evaluate_task(task_id: int, raw_steps: list[dict], events: list[dict], reset_state: dict | None,
+                  terminal_protocol: str = DEFAULT_TERMINAL_PROTOCOL) -> dict:
+    # 双口径并存：历史任务同时保留 first_terminal（v2 锁定口径）与旧
+    # canonical_terminal（v1，自然终局覆盖硬停止），outcome 按选定协议。
+    terminal_idx, terminal_step = select_terminal(raw_steps, terminal_protocol)
+    first_idx, first_step = first_terminal_step(raw_steps)
+    canon_idx, canon_step = canonical_terminal_step(raw_steps)
 
     outcome = {
         "class": None,
@@ -187,6 +217,10 @@ def evaluate_task(task_id: int, raw_steps: list[dict], events: list[dict], reset
 
     return {
         "task_id": task_id,
+        "evaluator_version": EVALUATOR_VERSION,
+        "terminal_protocol": terminal_protocol,
+        "first_terminal": _terminal_brief(raw_steps, first_idx, first_step),
+        "legacy_canonical_terminal": _terminal_brief(raw_steps, canon_idx, canon_step),
         "outcome": outcome,
         "failure": failure,
         "anomalies": anomaly_classes,
@@ -203,7 +237,7 @@ def evaluate_task(task_id: int, raw_steps: list[dict], events: list[dict], reset
     }
 
 
-def build_summary(results: list[dict]) -> dict:
+def build_summary(results: list[dict], terminal_protocol: str = DEFAULT_TERMINAL_PROTOCOL) -> dict:
     total = len(results)
     env_terminal = sum(1 for r in results if r["outcome"]["environment_done"])
     success = sum(1 for r in results if r["outcome"]["task_success"])
@@ -215,7 +249,9 @@ def build_summary(results: list[dict]) -> dict:
     anomaly_counts = Counter(a["class"] for r in results for a in r["anomaly_details"])
     post_terminal = sum(1 for r in results if any(a["class"] == "post_terminal_action" for a in r["anomaly_details"]))
 
-    return {
+    summary = {
+        "evaluator_version": EVALUATOR_VERSION,
+        "terminal_protocol": terminal_protocol,
         "total": total,
         "environment_terminal_count": env_terminal,
         "environment_terminal_rate": env_terminal / total if total else 0,
@@ -248,6 +284,23 @@ def build_summary(results: list[dict]) -> dict:
         "non_terminal_infrastructure_error": failure_classes.get("non_terminal_infrastructure_error", 0),
     }
 
+    # v2 口径下另附旧口径（canonical terminal）的 outcome 分布，便于新旧对照；
+    # 不覆盖、不改写任何旧口径字段。
+    if terminal_protocol == TERMINAL_PROTOCOL_V2:
+        legacy_classes = Counter(
+            (r.get("legacy_canonical_terminal") or {}).get("class")
+            for r in results
+            if r.get("legacy_canonical_terminal")
+        )
+        summary["legacy_outcome_classes"] = dict(
+            sorted(legacy_classes.items(), key=lambda x: -x[1])
+        )
+        summary["legacy_task_success_count"] = sum(
+            1 for r in results
+            if (r.get("legacy_canonical_terminal") or {}).get("task_success")
+        )
+    return summary
+
 
 def main(argv):
     parser = argparse.ArgumentParser(description="重新评测已有 run（不重跑任务）")
@@ -255,10 +308,23 @@ def main(argv):
     parser.add_argument("--run-dir", required=True, help="run 目录（含 sessions/ manifest.json）")
     parser.add_argument("--benchmark", default=None, help="benchmark 目录（可选）")
     parser.add_argument("--out", default=None, help="输出目录（默认 reports/<run 名>/）")
+    parser.add_argument(
+        "--terminal-protocol",
+        default=DEFAULT_TERMINAL_PROTOCOL,
+        choices=[TERMINAL_PROTOCOL_V1, TERMINAL_PROTOCOL_V2],
+        help="终局口径：v1=历史 canonical（自然终局覆盖硬停止），"
+             "v2=统一终止协议（第一条 done 终局锁定）。默认 v2。",
+    )
+    parser.add_argument(
+        "--force-overwrite",
+        action="store_true",
+        help="允许覆盖已存在的输出目录（默认拒绝，保护历史报告）",
+    )
     args = parser.parse_args(argv)
 
     traces_dir = Path(args.traces)
     run_dir = Path(args.run_dir)
+
     if not traces_dir.exists():
         raise SystemExit(f"traces 目录不存在: {traces_dir}")
     if not run_dir.exists():
@@ -293,13 +359,21 @@ def main(argv):
         if session_map.get(tid):
             sess_dir = run_dir / "sessions" / session_map[tid]
             events = read_session_events(sess_dir, zstd_bin=zstd)
-        results.append(evaluate_task(tid, steps, events, reset_state))
+        results.append(evaluate_task(tid, steps, events, reset_state,
+                                     terminal_protocol=args.terminal_protocol))
 
     results.sort(key=lambda r: r["task_id"])
-    summary = build_summary(results)
+    summary = build_summary(results, terminal_protocol=args.terminal_protocol)
+    # 数据指纹：同一 environment_version 下也能分辨输入数据与口径，
+    # 便于审计「不同协议对同一批轨迹」的可复现性。
+    import hashlib
+    _fp = hashlib.sha256()
+    for _f in sorted(raw_files, key=lambda p: p.name):
+        _fp.update(f"{_f.name}:{_f.stat().st_size}\n".encode())
     summary.update({
         "run_dir": str(run_dir),
         "traces_dir": str(traces_dir),
+        "input_fingerprint": _fp.hexdigest()[:16],
     })
 
     # failure_breakdown：outcome_classes 和 failure_classes 分开
@@ -316,6 +390,14 @@ def main(argv):
             failure_breakdown["failure_classes"].setdefault(fc, []).append(r["task_id"])
 
     out_dir = Path(args.out) if args.out else (ROOT / "reports" / run_dir.name)
+    # 结果保护：旧 run 的确定性报告默认不可覆盖。重评新协议时必须使用
+    # 独立输出目录，或显式 --force-overwrite。
+    if (out_dir / "task_results.jsonl").exists() and not args.force_overwrite:
+        raise SystemExit(
+            f"拒绝覆盖已有评测结果: {out_dir / 'task_results.jsonl'}\n"
+            f"  - 新协议重评请使用独立输出目录：--out reports/{run_dir.name}-<protocol>\n"
+            f"  - 或显式覆盖：--force-overwrite"
+        )
     out_dir.mkdir(parents=True, exist_ok=True)
 
     (out_dir / "task_results.jsonl").write_text(

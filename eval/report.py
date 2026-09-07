@@ -30,6 +30,11 @@ import argparse
 import json
 import statistics
 import sys
+from pathlib import Path
+
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -239,6 +244,10 @@ def build_panel1_task(row):
         "reward_type": o.get("reward_type"),
         "termination_reason": o.get("termination_reason"),
         "terminal_step_index": o.get("terminal_step_index"),
+        # 新旧口径对照（deterministic-evaluator-v2 起可用）：不丢失第一次
+        # 真实终局与旧 canonical 终局的差异。
+        "first_terminal": row.get("first_terminal"),
+        "legacy_canonical_terminal": row.get("legacy_canonical_terminal"),
     }
 
 
@@ -636,13 +645,30 @@ def main():
     ap.add_argument("--run-dir", default=None, help="run 目录（提供 manifest 与 traces）")
     ap.add_argument("--deterministic", required=True,
                     help="deterministic evaluator 输出目录（含 task_results.jsonl）")
-    ap.add_argument("--judgments", required=True, help="judgment 目录")
+    ap.add_argument("--judgments", default=None, help="judgment 目录（v1）")
     ap.add_argument("--rubrics", default=None,
                     help="rubric 目录（默认 <benchmark>/rubrics）")
     ap.add_argument("--out", required=True, help="report.json 输出路径")
     ap.add_argument("--allow-missing", action="store_true",
                     help="调试用：缺数据降级为警告而非失败")
+    # ── report v2 分支 ──
+    ap.add_argument("--rubric-version", default="v1", choices=["v1", "v2"],
+                    help="v2：读取 rubric v2 时间线与 judgment v2（来源/分母/版本可解释）")
+    ap.add_argument("--rubrics-v2", default=None, help="rubric v2 目录")
+    ap.add_argument("--judgments-v2", default=None, help="judgment v2 目录")
+    ap.add_argument("--events", default=None, help="事件目录（可选，供澄清/同步统计）")
     args = ap.parse_args()
+
+    if args.rubric_version == "v2":
+        if not args.rubrics_v2 or not args.judgments_v2:
+            print("--rubric-version v2 需要 --rubrics-v2 与 --judgments-v2", file=sys.stderr)
+            return 2
+        import eval.report_v2 as report_v2  # noqa: PLC0415
+        return report_v2.run(args)
+
+    if not args.judgments:
+        print("v1 模式需要 --judgments", file=sys.stderr)
+        return 2
 
     errors, warnings = [], []
 
@@ -668,6 +694,32 @@ def main():
 
     validate_inputs(args, bench_manifest, bench_tasks, set(bench_ids),
                     det_rows, rubrics, judgments, errors, warnings)
+
+    # 统一报告保留并校验 deterministic 评测的协议信息：同一报告内必须使用
+    # 同一终局口径；无声明（历史输出）视为 legacy，与显式口径混用报错。
+    det_protocol_values = {
+        (row.get("terminal_protocol") or "legacy-unlabeled")
+        for row in det_rows.values()
+    }
+    det_evaluator_values = {
+        (row.get("evaluator_version") or "legacy-unlabeled")
+        for row in det_rows.values()
+    }
+    if len(det_protocol_values) > 1:
+        errors.append(
+            f"deterministic 结果混用终局协议（需先统一口径再报告）: "
+            f"{sorted(det_protocol_values)}"
+        )
+    if len(det_evaluator_values) > 1:
+        warnings.append(
+            f"deterministic 结果混用评测器版本: {sorted(det_evaluator_values)}"
+        )
+    det_terminal_protocol = (
+        next(iter(det_protocol_values)) if det_protocol_values else "legacy-unlabeled"
+    )
+    det_evaluator_version = (
+        next(iter(det_evaluator_values)) if det_evaluator_values else "legacy-unlabeled"
+    )
 
     if errors:
         print(f"[失败] 共 {len(errors)} 个校验错误：", file=sys.stderr)
@@ -757,6 +809,8 @@ def main():
         "rubric_strategy": rmanifest.get("policy", {}).get("initial_query_only_first_version")
                            and "initial_query_only_v1" or "unknown",
         "environment_version": bench_manifest.get("environment_version"),
+        "deterministic_terminal_protocol": det_terminal_protocol,
+        "deterministic_evaluator_version": det_evaluator_version,
         "ask_shopper_source": ("model_trace" if ask_counts is not None else "unavailable"),
         "field_missing": [w for w in warnings if "缺" in w or "unavailable" in w.lower()] or None,
         "warnings": warnings or None,

@@ -1,0 +1,137 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/219",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为休闲椅",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "休闲椅",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "休闲椅",
+      "source_events": [
+        "initial:219"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "material",
+      "description": "材质为玻璃钢",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "玻璃钢材质",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "玻璃钢材质",
+      "source_events": [
+        "initial:219"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "适合放在商城、广场和写字楼休息区使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适合放在商城、广场和写字楼休息区使用",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适合放在商城、广场和写字楼休息区使用",
+      "source_events": [
+        "initial:219"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格预期约2500元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "售价在2500元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "售价在2500元左右",
+      "source_events": [
+        "initial:219"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "219",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "89f0b8ab48970c92a8c99b76ccdecfe98a8670639298050fdfc22e8e2387e174",
+  "trace_hash": "73eb94c1f6aa331120e31d3918d430ac0164b0443a09a8c77922425daaadd4f7",
+  "events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 16,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.939631+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "0bca852004b7436b602aae6fa89e77ca17503cb3c09b18d96871acf85e9280b3"
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1192",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 37,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 19,
+      "position": 18,
+      "position_mapped": true,
+      "question": "综合来看，99元的\"GAN十周年礼盒 356me UV纪念版三阶魔方\"（GAN品牌、磁力、UV面、比赛专用）最符合您的需求。是否就按这款GAN下单？还是您更想要魔域威龙V11（108元，王艺衡世界纪录同款）或奇艺XMD风三代（72元）？",
+      "reply": "用户回复：这款GAN是普通三阶吧？我需要能连APP的智能款，平时练习要看数据分析。有没有像i carry E那种带磁力又能连软件的？",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0002",
+      "step": 29,
+      "position": 28,
+      "position_mapped": true,
+      "question": "确认购买这款 **GAN iCarry E 智能磁力版三阶魔方（107元，含电池+赠品，可连手机APP学习PK）** 吗？这是目前最符合您需求（约100元+Gan品牌+磁力+可连APP数据分析）的选项。",
+      "reply": "用户回复：这个107元是爆款推荐的那个i carry E智能磁力版吗？我听说有个爆款配置带专属配件，想确认下是不是同款，别买错了。",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0003",
+      "step": 35,
+      "position": 34,
+      "position_mapped": true,
+      "question": "您听说的\"爆款带专属配件\"具体指哪个？这家店107元档有两个相近选项：①【⭐爆款推荐·最多人选择】i carry e智能磁力版；②i carry e智能磁力版+电池+赠品（明确含电池和赠品）。若您要的是带专属配件的爆款，我建议选②（同价107元且明确含配件），可以吗？还是您确认要①？",
+      "reply": "用户回复：那我要②这个带电池和赠品的爆款，107元刚好在预算内，就它了。",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/1192/conditional_accept/qa-0002",
+      "session": "h0-0905-1446/1192",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 107.0
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "107元",
+      "conditions": [
+        "用户回复：这个107元是爆款推荐的那个i carry E智能磁力版吗？我听说有个爆款配置带专属配件，想确认下是不是同款，别买错了。"
+      ],
+      "scope": {
+        "amount": 107.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 28
+    },
+    {
+      "event_id": "h0-0905-1446/1192/budget/qa-0003",
+      "session": "h0-0905-1446/1192",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 107.0,
+        "quote": "107元"
+      },
+      "source_reply_id": "qa-0003",
+      "source_quote": "107元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 2,
+      "status": "applied",
+      "step_index": 34
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

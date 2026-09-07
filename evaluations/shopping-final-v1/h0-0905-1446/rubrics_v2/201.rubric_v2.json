@@ -1,0 +1,137 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/201",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为冲锋衣",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "冲锋衣",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "冲锋衣",
+      "source_events": [
+        "initial:201"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "size",
+      "description": "适用对象为身高120的小女孩",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适合身高120小女孩",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适合身高120小女孩",
+      "source_events": [
+        "initial:201"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "color",
+      "description": "颜色为紫黑拼色款",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "紫黑拼色款",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "紫黑拼色款",
+      "source_events": [
+        "initial:201"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格不超过700元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "预算700元以内",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "预算700元以内",
+      "source_events": [
+        "initial:201"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "201",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "1db3f8dcf1650629d4e303b9ab07853bd2ecf81df86ae2651a50b85d39598252",
+  "trace_hash": "f769200c1f466703073cc10aab38743d810bb415fdad564966994f399bc5f8dc",
+  "events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 34,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.936714+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "e78bc826fe717964500fdc2630f41727b1e8659e08b2c37fb41d61112ecc230a"
+}

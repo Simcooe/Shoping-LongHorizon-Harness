@@ -1,0 +1,115 @@
+{
+  "task_id": "317",
+  "schema_version": "shopping-judge-output-v2",
+  "rubric_version": "v2",
+  "frozen": true,
+  "judgment": {
+    "candidate_evidence": [
+      {
+        "constraint_id": "c0001",
+        "position": 7,
+        "quote": "Nike耐克新款男子速干休闲百搭训练跑步运动裤瑜伽梭织长裤FB7547"
+      },
+      {
+        "constraint_id": "c0002",
+        "position": 6,
+        "quote": "Nike耐克新款男子速干休闲百搭训练跑步运动裤瑜伽梭织长裤FB7547 [SEP] 499.0"
+      },
+      {
+        "constraint_id": "c0003",
+        "position": 13,
+        "quote": "价格: 499.0"
+      }
+    ],
+    "final_requirement_verdicts": [
+      {
+        "constraint_id": "c0001",
+        "status": "satisfied",
+        "requirement_version": 0,
+        "position_reference": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "event_reference": [
+          "Step 14 click 726102229429",
+          "Step 15 select 180 | 84a | xl",
+          "Step 16 select fb7547-010 | 男 | 黑",
+          "Step 17 click buy now"
+        ],
+        "reasoning": "最终点击购买的商品标题含“男子…运动裤…长裤”，且颜色选项标注“男”，最终购买动作证据明确。"
+      },
+      {
+        "constraint_id": "c0002",
+        "status": "satisfied",
+        "requirement_version": 0,
+        "position_reference": [
+          6,
+          13,
+          16
+        ],
+        "event_reference": [
+          "Step 7 search Nike耐克 男 运动长裤 速干",
+          "Step 14 click 726102229429",
+          "Step 17 click buy now"
+        ],
+        "reasoning": "最终购买商品标题含“男子速干…运动裤”，且来自夏季/速干检索结果，可作为夏季穿着的可见证据。"
+      },
+      {
+        "constraint_id": "c0003",
+        "status": "satisfied",
+        "requirement_version": 0,
+        "position_reference": [
+          13,
+          16
+        ],
+        "event_reference": [
+          "Step 14 click 726102229429",
+          "Step 17 click buy now"
+        ],
+        "reasoning": "最终购买商品页面显示价格499.0元，符合“500元左右”的软预算。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    },
+    "dimension_reasons": {
+      "clarification_strategy": "初始需求已包含品类、季节、预算，无需额外澄清；未提问不扣分。",
+      "information_retention": "后续搜索与最终选择始终围绕男款、夏季/速干、运动长裤和约500元预算。",
+      "search_strategy": "先用泛搜定位候选，再聚焦Nike男款速干长裤并找回目标SKU，搜索路径有效。",
+      "candidate_utilization": "曾查看多个候选但较早放弃229元候选，转向499元目标；整体可用但略有重复进入同一商品。",
+      "evidence_verification": "查看了description/features/reviews但页面未返回有效细节；最终依据标题、价格、选项完成判断，验证深度一般。",
+      "decision_quality": "最终购买动作明确，商品为男款速干运动长裤，价格499元，匹配核心约束。",
+      "termination_efficiency": "任务最终完成，但中间多次返回搜索、重复点击同一商品与无效信息页，效率略低。"
+    }
+  },
+  "metadata": {
+    "judge_mode": "llm",
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-06T12:06:37.288603+00:00",
+    "trace_source": "model_trace_only",
+    "event_source": "retrospective",
+    "terminal_protocol": "terminal-protocol-v2",
+    "decision": {
+      "kind": "purchase_attempt",
+      "position": 16,
+      "requirement_version": 0
+    },
+    "requirement_version_at_decision": 0,
+    "evidence_coverage": {
+      "steps_total": 17,
+      "steps_included": 17,
+      "chars": 11695,
+      "evidence_budget": 120000,
+      "evidence_truncated": false
+    },
+    "attempts": 1
+  }
+}

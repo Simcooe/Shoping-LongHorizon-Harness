@@ -1,0 +1,171 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/10",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为哺乳辅助器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "哺乳辅助器",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "哺乳辅助器",
+      "source_events": [
+        "initial:10"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "quantity",
+      "description": "包装规格为单支装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "单支装",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "单支装",
+      "source_events": [
+        "initial:10"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格在130元到140元之间",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在130-140元之间",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在130-140元之间",
+      "source_events": [
+        "initial:10"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "10",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "9683202f0ab352c54e83f9736b88b5efc38bb457e88f3cd7326493aebfb70ede",
+  "trace_hash": "83b94d1da4c17508545483c5d035172667e96b98e41b9fe6a9d9965dd75562c5",
+  "events_hash": "8d4822a7959709e85112334a89609ed0e739d0123c7939ce67c5fb8d1fa8e7a4",
+  "decision": {
+    "kind": "finish",
+    "position": 38,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/10/conditional_accept/qa-0001",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    },
+    {
+      "event_id": "h0-0905-1446/10/reject/qa-0001",
+      "status": "post_terminal_excluded",
+      "kind": "reject"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/10/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/10",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 140.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "140元",
+      "conditions": [
+        "用户回复：单支装和130-140元我都要的，不然就不合适了。品牌的话美德乐我比较熟，优先看它吧。"
+      ],
+      "scope": {
+        "amount": 140.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 36
+    },
+    {
+      "event_id": "h0-0905-1446/10/reject/qa-0001",
+      "session": "h0-0905-1446/10",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "目前搜索到的单支装哺乳辅助器价格多集中在70-128元（如美德乐超薄119元、小雅象128元），130-140元区间出现的多为2个装/两只装（如世喜两只138元、十月结晶2个装139元）。请问您对\"单支装\"和\"130-140元\"哪个更看重？",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：单支装和130-140元我都要的，不然就不合适了。品牌的话美德乐我比较熟，优先看它吧。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 2,
+      "status": "post_terminal_excluded",
+      "step_index": 36
+    }
+  ],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.910607+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "0b98926fe69674425f70bfa2c7aabdbfc5d7cd55d8a55b219a2747b1aee34707"
+}

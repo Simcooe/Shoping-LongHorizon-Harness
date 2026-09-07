@@ -1,0 +1,159 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/295",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为防火涂料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "防火涂料",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "防火涂料",
+      "source_events": [
+        "initial:295"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "color",
+      "description": "颜色为白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "白色",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "白色",
+      "source_events": [
+        "initial:295"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "可涂覆表面为墙体和木制品表面",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "可以涂覆在墙体和木制品表面",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "可以涂覆在墙体和木制品表面",
+      "source_events": [
+        "initial:295"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "audience",
+      "description": "适用环境为房间内外都可以使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "房间内外都可以使用",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "房间内外都可以使用",
+      "source_events": [
+        "initial:295"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "价格不超过95元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价钱在95元以下",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价钱在95元以下",
+      "source_events": [
+        "initial:295"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "295",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "8eb2a1275f74cfe2d15bfcf80af255e67e5bcd15876f93b44ada6ba29255a36d",
+  "trace_hash": "6222569248e8687c36fd73babb83e673d61f0354b83f93c57354c9232cbe0689",
+  "events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 13,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.951854+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "63f87b74490458cde9e16aea423fb8edb4617c36e9d71475e54e201347d68cfe"
+}

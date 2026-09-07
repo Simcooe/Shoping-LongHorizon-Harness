@@ -1,0 +1,178 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/885",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为人体存在传感器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "人体存在传感器",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "人体存在传感器",
+      "source_events": [
+        "initial:885"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "budget",
+      "description": "价格预期约90元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在90元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在90元左右",
+      "source_events": [
+        "initial:885"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [
+    {
+      "event_id": "h0-0905-1446/885/reject/qa-0001",
+      "requirement_key": "candidate",
+      "scope": {
+        "candidate": null
+      },
+      "source_quote": "用户回复：必须支持米家APP的，我要用它做智能场景联动，其他生态不行。"
+    }
+  ],
+  "exclusions": [
+    {
+      "event_id": "h0-0905-1446/885/reject/qa-0001",
+      "requirement_key": "candidate",
+      "value": "请问这款人体存在传感器是否必须支持接入米家APP（用于智能场景联动）？还是说接入其他生态（如涂鸦/易微联等）也可以接受？",
+      "scope": {
+        "candidate": null
+      }
+    }
+  ],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/885/reject/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "885",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "1117570e20da8833c17f05201afca44c916ab9020a0de35c5368159ccc68c2c3",
+  "trace_hash": "d08241c82ecb4529cdee5571c2b3dc36d7743c596fac7ede9cf73082e2215fda",
+  "events_hash": "50164a5de24ec1857a40339ed2563e5893a60481e5b0ea200c0de81768e2947e",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 35,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/885/conditional_accept/qa-0005",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/885/reject/qa-0001",
+      "session": "h0-0905-1446/885",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "请问这款人体存在传感器是否必须支持接入米家APP（用于智能场景联动）？还是说接入其他生态（如涂鸦/易微联等）也可以接受？",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：必须支持米家APP的，我要用它做智能场景联动，其他生态不行。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 1
+    },
+    {
+      "event_id": "h0-0905-1446/885/conditional_accept/qa-0005",
+      "session": "h0-0905-1446/885",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 99.0
+      },
+      "source_reply_id": "qa-0005",
+      "source_quote": "99元",
+      "conditions": [
+        "用户回复：好的，确认下单B，领普ES3电池版99元。这款正好符合我的需求，可以。"
+      ],
+      "scope": {
+        "amount": 99.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 2,
+      "status": "pending_confirmation",
+      "step_index": 41
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/885/reject/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.013732+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "1009c1368245978b5779d0e5a97d0581ad6eace37466c1a3253553a6ca7e8774"
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/330",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "brand",
+      "description": "品牌为阿玛尼",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "阿玛尼",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "阿玛尼",
+      "source_events": [
+        "initial:330"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "category",
+      "description": "商品类型为唇釉礼盒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "唇釉礼盒",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "唇釉礼盒",
+      "source_events": [
+        "initial:330"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "适合作为送人礼品",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适合送人",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适合送人",
+      "source_events": [
+        "initial:330"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格预期约270元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "售价在270元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/330/budget/qa-0001",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "售价在270元左右",
+      "source_events": [
+        "initial:330"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"268元\", \"upper\": 268.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/330/budget/qa-0001",
+      "source_quote": "268元",
+      "visible_from_event": "h0-0905-1446/330/budget/qa-0001",
+      "effective_from_event": "h0-0905-1446/330/budget/qa-0001",
+      "effective_until_event": null,
+      "supersedes": "c0004",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 268.0,
+        "quote": "268元"
+      },
+      "source_events": [
+        "h0-0905-1446/330/budget/qa-0001"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/330/budget/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "330",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "36e4dadb69b4660aae0e3e114f6b383a24b9d50a16b970e21bac9be98410c471",
+  "trace_hash": "54f149503bc879575188274e02624c4c8301fe764970e083cf44c48a043b98f5",
+  "events_hash": "c013c1017a6fd443d471b78171c6694f10f308b514dc36dbe63a7d9111b60cee",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 15,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/330/budget/qa-0001",
+      "session": "h0-0905-1446/330",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 268.0,
+        "quote": "268元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "268元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 10
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/330/budget/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.956906+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "b7c7f766e8402d1b6482e59d9c1c70a7bc5c452cdd92cfcbb0e57ea550b15c6b"
+}

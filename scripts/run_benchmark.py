@@ -39,6 +39,71 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from eval.interaction_router import classify_turn  # noqa: E402
+from eval.purchase_verifier import (  # noqa: E402
+    VERDICT_VIOLATED,
+    verify_price,
+    verify_quantity,
+)
+
+# --------------------------------------------------------------------------- #
+# profile -> 运行时控制能力（E0/E1 不变量）
+#
+# 声明来源：harness/<profile>/runtime_controls.json（进程外拦截器开关，
+# 与 cordis.patch.yml 的进程内插件 buy-guard 分离）。runner 读取该文件；
+# 文件缺失/不可解析时回退到下方 PROFILE_RUNTIME_CONTROLS 内置表；仍未知
+# 则一律 off（宁可少做，不污染基线）。
+#
+# 单次执行：一个任务只跑一个 dsh 进程（模型需要用户信息时通过 ask_shopper
+# 工具同步拿到回复、在同一个进程内继续，不靠 runner 重跑）。
+# h0 = E0 基线：无 Purchase Verifier 行为性判定。
+# h1 = E1：h0 + Purchase Verifier 行为性判定；Action Guard 由
+#          harness/h1/cordis.patch.yml 的 buy-guard 插件负责。
+# --------------------------------------------------------------------------- #
+PROFILE_RUNTIME_CONTROLS = {
+    "h0": {"purchase_verifier": False},
+    "h1": {"purchase_verifier": True},
+}
+
+# 进程外拦截器的已知开关键（runtime_controls.json 里只有这些键会被读取）。
+_RUNTIME_CONTROL_KEYS = ("purchase_verifier",)
+
+
+def load_profile_runtime_controls(profile: str) -> dict | None:
+    """读取 harness/<profile>/runtime_controls.json。
+
+    只读取已知开关键并布尔强转；文件缺失/不可解析/非 dict → None
+    （调用方回退到 PROFILE_RUNTIME_CONTROLS 或全 off）。
+    """
+    path = REPO_ROOT / "harness" / profile / "runtime_controls.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    return {k: bool(data[k]) for k in _RUNTIME_CONTROL_KEYS if k in data}
+
+
+def resolve_runtime_controls(profile: str, mode: str) -> dict:
+    """按 profile + 显式开关解析运行时控制能力。
+
+    mode：auto=读 harness/<profile>/runtime_controls.json（缺失回退内置表，
+          未知 profile 一律 off）；on=全开；off=全关。
+    返回 {purchase_verifier}。
+    """
+    declared = load_profile_runtime_controls(profile)
+    if declared is None:
+        declared = PROFILE_RUNTIME_CONTROLS.get(profile, {})
+    base = {k: declared.get(k, False) for k in _RUNTIME_CONTROL_KEYS}
+    if mode == "on":
+        return {k: True for k in _RUNTIME_CONTROL_KEYS}
+    if mode == "off":
+        return {k: False for k in _RUNTIME_CONTROL_KEYS}
+    return base
 
 DEFAULT_SHOPSIM_BASE_URL = "http://127.0.0.1:5700"
 DEFAULT_SHOPPER_BASE_URL = "http://127.0.0.1:5701"
@@ -116,11 +181,14 @@ def release_slot(base_url: str, env_idx: int, timeout: int = 60) -> None:
         pass
 
 
-def shopper_start(shopper_url: str, task_id: int, timeout: int = 30) -> None:
+def shopper_start(shopper_url: str, task_id: int, run_id: str | None = None,
+                  timeout: int = 30) -> None:
+    # 会话身份 = run/task（与 shop-tools 一致，避免跨 run 串话）。
+    session = f"{run_id}/{task_id}" if run_id else str(task_id)
     try:
         http_post(
             f"{shopper_url.rstrip('/')}/start",
-            {"session": str(task_id), "idx": task_id},
+            {"session": session, "idx": task_id, "run_id": run_id},
             timeout=timeout,
         )
     except Exception:
@@ -153,6 +221,89 @@ def build_task_text(reset_result: dict) -> str:
     return instr
 
 
+def _raw_state(raw: dict) -> dict:
+    reward_detail = raw.get("reward_detail")
+    return {
+        "done": raw.get("done"),
+        "termination_reason": raw.get("termination_reason"),
+        "reward": raw.get("reward"),
+        "reward_valid": raw.get("reward_valid"),
+        "reward_type": reward_detail.get("reward_type") if isinstance(reward_detail, dict) else None,
+        "purchase_success": reward_detail.get("purchase_success") if isinstance(reward_detail, dict) else None,
+        "purchase": raw.get("purchase"),
+    }
+
+
+def _compute_terminal_v2(raw_steps: list[dict]) -> dict:
+    """terminal-protocol-v2：第一条 done=true 即终局。"""
+    for step in raw_steps:
+        raw = step.get("raw") or {}
+        if raw.get("done"):
+            return _raw_state(raw)
+    if raw_steps:
+        return _raw_state(raw_steps[-1].get("raw") or {})
+    return {
+        "done": False, "termination_reason": None, "reward": None,
+        "reward_valid": None, "reward_type": None,
+        "purchase_success": None, "purchase": {},
+    }
+
+
+def _find_new_session(tmp_home: Path, known: set[str]) -> Path | None:
+    sessions = sorted(
+        (tmp_home / "sessions").glob("**/session-*"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    for s in sessions:
+        if s.name not in known:
+            return s
+    return None
+
+
+def _export_session(session_file: Path, out_dir: Path, task_id, reset_path: Path) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        [
+            sys.executable, str(REPO_ROOT / "scripts" / "export_trace.py"),
+            str(session_file), "--out-dir", str(out_dir),
+            "--id", str(task_id),
+            "--reset", str(reset_path),
+        ],
+        capture_output=True,
+        text=True,
+    )
+
+
+def run_purchase_verifier(task_id, task_text, purchase, price_resolution):
+    """用公开 query + 购买回执做确定性数量/价格核验（修复 3）。
+
+    只读公开信息：需求文本用公开 query（不含画像/隐藏目标）；价格用
+    回执或 price_resolution。返回 {quantity, price} 两个判定（带
+    requirement_id / status / reason / 证据）。
+    """
+    selected_options = purchase.get("options") or {}
+    # 回执里没有 price_resolution 时，从 purchase 记录推导最小价格解析。
+    if not isinstance(price_resolution, dict):
+        if purchase.get("price") is not None:
+            price_resolution = {"status": "pass", "price": purchase.get("price")}
+        else:
+            price_resolution = {"status": "unverifiable", "price": None}
+    quantity = verify_quantity(
+        required_id=f"q-{task_id}",
+        requirement_version=1,
+        required_text=task_text,
+        selected_options=selected_options,
+    )
+    price = verify_price(
+        required_id=f"p-{task_id}",
+        requirement_version=1,
+        required_text=task_text,
+        price_resolution=price_resolution,
+        selected_options=selected_options,
+        display_base_price=purchase.get("display_base_price"),
+    )
+    return {"quantity": quantity, "price": price}
+
+
 # --------------------------------------------------------------------------- #
 # 单任务执行
 # --------------------------------------------------------------------------- #
@@ -161,13 +312,17 @@ def run_one_task(
     task_id: int,
     *,
     profile: str,
+    controls: dict,
     base_env: dict,
     run_dir: Path,
     dsh_checkout: Path,
     shared_home: Path,
     shopper_url: str | None,
 ) -> dict:
-    """跑一条任务，返回结果记录 dict。任何异常都不向上抛，转为 failed 记录。"""
+    """跑一条任务，返回结果记录 dict。任何异常都不向上抛，转为 failed 记录。
+
+    controls：{purchase_verifier}，决定是否启用 E1 行为性控制（h0 全关 → 基线）。
+    """
     shopsim_base_url = base_env.get("SHOPSIM_BASE_URL") or DEFAULT_SHOPSIM_BASE_URL
     result = {
         "task_id": task_id,
@@ -210,72 +365,111 @@ def run_one_task(
 
         task_text = build_task_text(reset_result)
 
-        # 2. 预热 shopper 会话
+        # 2. 预热 shopper 会话（run/task 会话身份）
         if shopper_url:
-            shopper_start(shopper_url, task_id)
+            shopper_start(shopper_url, task_id, run_id=run_dir.name)
 
-        # 3. 跑 dsh（独立 DSH_HOME）
+        # 3. 跑 dsh（独立 DSH_HOME）；同一 env/shopper 会话多轮控制（B3）。
         env = dict(base_env)
         env.update({
             "DSH_HOME": str(tmp_home),
             "SHOPSIM_ENV_IDX": str(env_idx),
             "SHOPSIM_TASK_IDX": str(task_id),
+            # run 前缀进入 shopper 会话身份与事件溯源（不改变 Agent 策略）
+            "SHOPSIM_RUN_ID": run_dir.name,
             "SHOPSIM_BASE_URL": shopsim_base_url,
             "SHOPPER_BASE_URL": shopper_url or "",
         })
-        with log_file.open("w", encoding="utf-8") as logf:
+        known_sessions: set[str] = set()
+        # 单次执行：一个任务只跑一个 dsh 进程。模型需要用户信息时应通过
+        # ask_shopper 工具（同步返回、回复进同一上下文），不靠 runner 重跑。
+        with log_file.open("a", encoding="utf-8") as logf:
             proc = subprocess.run(
                 ["pnpm", "dsh", "--profile", profile, task_text],
                 cwd=str(dsh_checkout),
                 env=env,
-                stdout=logf,
+                stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
             )
-        # dsh 返回非零不视为致命——session 可能仍产出（对齐 run_batch.sh 的 `|| true`）
+            logf.write(proc.stdout.decode("utf-8", "replace"))
+        result["turn_count"] = 1
+        final_text = ""
+        session_file = _find_new_session(tmp_home, known_sessions)
+        if session_file is not None:
+            known_sessions.add(session_file.name)
+            export_proc = _export_session(
+                session_file / "session.jsonl.zstd", run_dir / "traces",
+                task_id, run_dir / "reset" / f"{task_id}.json",
+            )
+            if export_proc.returncode == 0:
+                model_trace = json.loads(
+                    (run_dir / "traces" / f"{task_id}.model_trace.json").read_text(encoding="utf-8")
+                )
+                raw_trace = json.loads(
+                    (run_dir / "traces" / f"{task_id}.raw_trace.json").read_text(encoding="utf-8")
+                )
+                # 从 stdout 提取最终 assistant 文本（headless 打印最后 assistant 文本）。
+                out_text = proc.stdout.decode("utf-8", "replace").strip().splitlines()
+                # headless 把 reasoning 流到 stderr、最终文本打到 stdout；取最后非空行。
+                final_text = next((line for line in reversed(out_text) if line.strip()), "")
+                # 诊断性分类（只记录、不重跑）：模型以何种方式结束本轮。
+                decision = classify_turn(model_trace, raw_trace, final_text)
+                result["terminal_decision"] = decision["decision"]
 
-        # 4. 释放 slot
+        # 释放 slot
         release_slot(shopsim_base_url, env_idx)
 
-        # 5. 找本任务的 session（dsh 会把 cwd 编码成一层中间目录，需要递归找）
-        sessions = sorted((tmp_home / "sessions").glob("**/session-*"))
-        if not sessions:
-            result["error"] = "未产生新 session（dsh 未正常跑）"
-            return result
-        session_uuid = sessions[0].name
-        result["session"] = session_uuid
-        session_file = sessions[0] / "session.jsonl.zstd"
-        if not session_file.exists():
-            result["error"] = f"session {session_uuid} 下无 session.jsonl.zstd"
-            return result
-        dest_session = run_dir / "sessions" / session_uuid
-        if not dest_session.exists():
-            import shutil
-
-            shutil.copytree(sessions[0], dest_session)
-
-        # 6. 导出 trace（复用 export_trace.py）
-        export_proc = subprocess.run(
-            [
-                sys.executable, str(REPO_ROOT / "scripts" / "export_trace.py"),
-                str(session_file), "--out-dir", str(run_dir / "traces"),
-                "--id", str(task_id),
-                "--reset", str(run_dir / "reset" / f"{task_id}.json"),
-            ],
-            capture_output=True,
-            text=True,
-        )
-        if export_proc.returncode != 0:
-            result["error"] = f"export_trace 失败: {export_proc.stderr.strip()[:300]}"
-            return result
-
-        # 读 reward / step_count（用于进度摘要）
+        # 收尾判断：读取最终 raw_trace（terminal 从 raw steps 按 v2 口径计算）。
         try:
             raw_trace = json.loads(
                 (run_dir / "traces" / f"{task_id}.raw_trace.json").read_text(encoding="utf-8")
             )
             result["step_count"] = raw_trace.get("step_count")
-            term = raw_trace.get("terminal") or {}
+            raw_steps = raw_trace.get("steps") or []
+            term = _compute_terminal_v2(raw_steps)
             result["reward"] = term.get("reward")
+            # 终局/停止一致性与公开回执（纯记录性字段，两 profile 都写，
+            # 不影响行为）。
+            terminal_done = term.get("done") is True
+            purchase = term.get("purchase") or {}
+            result["environment_done"] = terminal_done
+            result["purchase_asin"] = purchase.get("asin")
+            result["completion_claim_valid"] = terminal_done and bool(purchase.get("asin"))
+            if not terminal_done and not purchase.get("asin"):
+                stop_class = "non_terminal_agent_stop"
+            elif terminal_done and not purchase.get("asin"):
+                stop_class = "terminal_without_receipt"
+            else:
+                stop_class = "terminal_with_receipt"
+
+            # 价格解析：取第一次 done 步的 reward_detail.evidence.price_resolution。
+            price_resolution = None
+            for step in raw_steps:
+                raw = step.get("raw") or {}
+                if raw.get("done"):
+                    rd = raw.get("reward_detail") or {}
+                    ev = rd.get("evidence") if isinstance(rd.get("evidence"), dict) else None
+                    price_resolution = (ev or {}).get("price_resolution")
+                    break
+
+            # 数量/价格确定性核验（修复 3：purchase_verifier 接线）。
+            # 记录性字段 purchase_verdict 两 profile 都写；行为性后果仅 h1。
+            verdict = run_purchase_verifier(
+                task_id=task_id,
+                task_text=task_text,
+                purchase=purchase,
+                price_resolution=price_resolution,
+            )
+            result["purchase_verdict"] = verdict
+            if (
+                controls.get("purchase_verifier")
+                and stop_class == "terminal_with_receipt"
+                and (verdict.get("quantity") or {}).get("status") == VERDICT_VIOLATED
+            ):
+                # 行为性后果（仅 h1）：数量不符不得算完成；不篡改环境 reward。
+                stop_class = "terminal_with_receipt_but_quantity_violated"
+                result["completion_claim_valid"] = False
+            result["stop_class"] = stop_class
         except Exception:
             pass
 
@@ -447,10 +641,14 @@ def run_benchmark(args):
     records: list[dict] = []
     records_lock = threading.Lock()
 
+    controls = resolve_runtime_controls(args.profile, args.runtime_controls)
+    print(f"runtime_controls = {controls}")
+
     def worker(task_id: int) -> dict:
         rec = run_one_task(
             task_id,
             profile=args.profile,
+            controls=controls,
             base_env=base_env,
             run_dir=run_dir,
             dsh_checkout=dsh_checkout,
@@ -474,6 +672,7 @@ def run_benchmark(args):
         "run_ts": time.strftime("%Y-%m-%d %H:%M:%S"),
         "benchmark_id": bm_id,
         "profile": args.profile,
+        "runtime_controls": controls,
         "task_count": len(task_ids),
         "skipped": skipped,
         "goals": records,
@@ -510,6 +709,16 @@ def main(argv):
     parser.add_argument("--shopper-url", default=None, help="Shopper Simulator 地址（默认 http://127.0.0.1:5701）")
     parser.add_argument("--only", default=None, help="只跑逗号分隔的 task_id 子集")
     parser.add_argument("--resume", action="store_true", help="复用最近 run_dir，跳过已有 raw_trace 的任务")
+    parser.add_argument(
+        "--runtime-controls",
+        choices=["auto", "on", "off"],
+        default="auto",
+        help="运行时控制开关：auto=读 harness/<profile>/runtime_controls.json"
+             "（缺失回退内置表，未知 profile 一律 off）；on=全开；off=全关。"
+             "门控 Purchase Verifier 的行为性控制；"
+             "Completion Gate 的记录性字段两 profile 都写，行为性判定仅随 purchase_verifier；"
+             "Action Guard 由 profile 的 cordis.patch.yml 负责。",
+    )
     args = parser.parse_args(argv)
 
     if args.no_persona:

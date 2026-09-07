@@ -1,0 +1,137 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/1240",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为丁字鞋",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "丁字鞋",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "丁字鞋",
+      "source_events": [
+        "initial:1240"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "audience",
+      "description": "适用人群为儿童",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适合儿童穿",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适合儿童穿",
+      "source_events": [
+        "initial:1240"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "color",
+      "description": "颜色为浅粉色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "浅粉色",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "浅粉色",
+      "source_events": [
+        "initial:1240"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格在1300-1400元之间",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在1300-1400元之间",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在1300-1400元之间",
+      "source_events": [
+        "initial:1240"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1240",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "f989188b2c06784b4babc02e32e8510293586261b1ae689026134a0d9cada897",
+  "trace_hash": "70c44703cf66b132d91cb17eafe35586e4401d430aed64974982a3bdc6f8843b",
+  "events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 6,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.055015+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "cf60699bdf1dc2ff0efcd01efacc7f94997282eaeb5b45482be336f52bc1cfae"
+}

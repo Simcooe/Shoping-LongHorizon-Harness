@@ -1,0 +1,124 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/107",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为人体感应器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "人体感应器",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "人体感应器",
+      "source_events": [
+        "initial:107"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "budget",
+      "description": "价格预期约为200元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "200元左右预算",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "200元左右预算",
+      "source_events": [
+        "initial:107"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "107",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "44c6eb4487cbb2c7ceeda01e18e1c8307ec5651f1ffb6b0bf57ac74c076412fd",
+  "trace_hash": "7bf51d9cc3caafed038691daf5d0341e0bf5f7c562ab0bed47f15114c39e9db3",
+  "events_hash": "9828e407d79f4f0ef0dfd44c82e71c4712e73a6c9ec325bd6fdf7fd1a9b6ed71",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 29,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/107/conditional_accept/qa-0001",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/107/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/107",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 99.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "99元",
+      "conditions": [
+        "用户回复：我家需要能搭配米家亮灯联动、带电池的人体传感器，目标就是领普ES3电池版。想确认下99元那个是不是正品？毕竟价格差蛮大的。"
+      ],
+      "scope": {
+        "amount": 99.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 16
+    }
+  ],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.923539+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "e18b818cab420e179aa7fb8ddb259d0741a5e47ec85b7c3d70352d076497b41c"
+}

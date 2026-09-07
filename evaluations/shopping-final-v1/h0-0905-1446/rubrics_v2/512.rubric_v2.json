@@ -1,0 +1,142 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/512",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为胶囊咖啡",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "胶囊咖啡",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "胶囊咖啡",
+      "source_events": [
+        "initial:512"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "规格为40颗组合装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "40颗组合装",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "40颗组合装",
+      "source_events": [
+        "initial:512"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格预期约250元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在250元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在250元左右",
+      "source_events": [
+        "initial:512"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "512",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "3770457bd698717d3e37e6a0003361698dab3b5043bdd57b74a813ba2a0fc4ba",
+  "trace_hash": "8e64394a0a6da1e99a8deebb119937bb85ab740835b6f605196983b493f82ab7",
+  "events_hash": "ded2ceba29c1445a94219b2fd2db9122a785d442ffbb098723bb642462f16e8f",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 27,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/512/reject/qa-0001",
+      "status": "post_terminal_excluded",
+      "kind": "reject"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/512/reject/qa-0001",
+      "session": "h0-0905-1446/512",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "Peets那款40颗礼盒259元更接近预算但标注了\"临期\"（效期到2025年9月）；CafeRoyal芮耀40颗4口味228元不是临期。请问您更倾向哪一款？或者对品牌有特定要求（比如Nespresso原厂）吗？",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：嗯，我主要想找40颗装、含野草莓、冠军甄选、纯咖啡味和白茶这四种口味的组合。Peets和芮耀如果口味不全的话可能不合适。一定要凑齐这四款才行，价格倒可以在250上下。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "post_terminal_excluded",
+      "step_index": 22
+    }
+  ],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.972792+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "b70d059c684d56e877c2c01da1f8aef65a9cfa1f4d5165dca25100e23eaacea1"
+}

@@ -34,6 +34,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 DEFAULT_ENV = REPO_ROOT / ".env"
 
 DEFAULT_MODEL = "deepseek-v4-pro"
@@ -506,7 +508,23 @@ def main():
     ap.add_argument("--obs-max-chars", type=int, default=DEFAULT_OBS_MAX_CHARS,
                     help="每步 observation 截断长度（head+tail 保留证据）")
     ap.add_argument("--env", default=str(DEFAULT_ENV), help=".env 路径")
+    # ── rubric v2 分支（时间线化判定）──
+    ap.add_argument("--rubric-version", default="v1", choices=["v1", "v2"],
+                    help="v2：读取动态 rubric 时间线（--rubrics-v2），"
+                         "按决策时刻评判；v1 为历史口径。")
+    ap.add_argument("--rubrics-v2", default=None, help="rubric v2 目录（--rubric-version v2 必需）")
+    ap.add_argument("--judge-mode", default="llm", choices=["llm", "mock"],
+                    help="mock：确定性链路验证模式，输出显式标注，不得冒充真实模型")
+    ap.add_argument("--evidence-budget", type=int, default=120000,
+                    help="v2 证据预算（字符），超预算按步压缩并标记 truncated")
     args = ap.parse_args()
+
+    if args.rubric_version == "v2":
+        if not args.rubrics_v2:
+            print("--rubric-version v2 需要 --rubrics-v2", file=sys.stderr)
+            return 2
+        import eval.judge_v2 as judge_v2  # noqa: PLC0415
+        return judge_v2.run(args)
 
     env = load_env(args.env)
     api_key, base_url, model = resolve_model_config(env)

@@ -1,0 +1,73 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "768",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 17,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 16,
+      "position": 15,
+      "position_mapped": true,
+      "question": "这款小鹿犬专用冻干羊奶棒（哇米旗舰店）有几种50元以内的规格，请问您想要哪个？1）单罐羊奶鸡肉味50g，28元；2）买2送1共3罐（店铺推荐，性价比高），47元；3）1罐羊奶棒+250g牛肉粒，48元。",
+      "reply": "用户回复：第三个，1罐羊奶棒加250g牛肉粒这种正好，48元也在预算内。",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/768/budget/qa-0001",
+      "session": "h0-0905-1446/768",
+      "kind": "add",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 48.0,
+        "quote": "48元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "48元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 15
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

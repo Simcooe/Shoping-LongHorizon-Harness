@@ -33,6 +33,17 @@ NATURAL_TERMINALS = {
 # 硬停止（环境检测到异常强制终止，agent 可能继续后被后续终局覆盖）
 HARD_STOPS = {"repeat_loop", "max_steps"}
 
+# --------------------------------------------------------------------------- #
+# 终局协议版本
+# --------------------------------------------------------------------------- #
+# v1（历史口径）：第一条任务结果类自然终局为 canonical terminal，
+#   后来的自然终局会覆盖之前的硬停止（如 repeat_loop 后 finish）。
+# v2（统一终止协议）：第一条 done=true 的终局即锁定（与环境侧
+#   terminal-lock-v1 对齐）；硬停止之后的动作不得追认为停止前获得的信息。
+TERMINAL_PROTOCOL_V1 = "terminal-protocol-v1"
+TERMINAL_PROTOCOL_V2 = "terminal-protocol-v2"
+DEFAULT_TERMINAL_PROTOCOL = TERMINAL_PROTOCOL_V2
+
 # task_success 判据：reward_type 属于真正买中
 SUCCESS_TYPES = {"gold_purchase", "valid_alternative_purchase"}
 
@@ -100,12 +111,12 @@ def step_observation_state(step: dict) -> dict | None:
 
 
 def canonical_terminal_step(steps: list[dict]) -> tuple[int | None, dict | None]:
-    """返回 (0-based index, step) 的 canonical terminal。
+    """返回 (0-based index, step) 的 canonical terminal（terminal-protocol-v1，历史口径）。
 
     规则：第一条「任务结果类终局」（NATURAL_TERMINALS）作为 canonical terminal；
     若不存在任务结果终局，则退化为第一条硬停止（repeat_loop / max_steps）。
     这样 task 1151 的 repeat_loop（idx 11）会被后续 gold_purchase（idx 16）
-    覆盖，符合 spec 验收。
+    覆盖，符合旧 spec 验收。新协议请使用 first_terminal_step()。
     """
     first_hard_idx = None
     first_hard_step = None
@@ -121,6 +132,27 @@ def canonical_terminal_step(steps: list[dict]) -> tuple[int | None, dict | None]
     if first_hard_idx is not None:
         return first_hard_idx, first_hard_step
     return None, None
+
+
+def first_terminal_step(steps: list[dict]) -> tuple[int | None, dict | None]:
+    """terminal-protocol-v2：第一条 done=true 的终局即锁定。
+
+    与环境侧 terminal-lock-v1 对齐：硬停止（如 max_steps / repeat_loop）
+    之后的 finish / 购买不再改写终局；后续动作只能作为事后解释。
+    """
+    for index, step in enumerate(steps):
+        if step_is_done(step):
+            return index, step
+    return None, None
+
+
+def select_terminal(steps: list[dict], protocol: str) -> tuple[int | None, dict | None]:
+    """按协议版本选择终局。"""
+    if protocol == TERMINAL_PROTOCOL_V1:
+        return canonical_terminal_step(steps)
+    if protocol == TERMINAL_PROTOCOL_V2:
+        return first_terminal_step(steps)
+    raise ValueError(f"unknown terminal protocol: {protocol}")
 
 
 def replay_states(steps: list[dict], reset_state: dict | None) -> list[tuple[dict | None, dict | None]]:

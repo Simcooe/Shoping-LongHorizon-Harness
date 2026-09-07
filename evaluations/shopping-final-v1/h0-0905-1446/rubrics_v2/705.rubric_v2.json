@@ -1,0 +1,115 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/705",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为铝合金单板",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "铝合金单板",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "铝合金单板",
+      "source_events": [
+        "initial:705"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "商品可用于制作栅栏和建筑的外墙围护",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "可以用于制作栅栏和建筑的外墙围护",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "可以用于制作栅栏和建筑的外墙围护",
+      "source_events": [
+        "initial:705"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格不超过30元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在30元以内",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在30元以内",
+      "source_events": [
+        "initial:705"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "705",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "2f41640a1f4310c0b2df93bdafbcfcbe9539067ba557a3c97af404e279ecfc02",
+  "trace_hash": "02f5ff8950598f15ecc8547c5759c30ddb62940d67ec2b3b8b0d96163a0310de",
+  "events_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decision": {
+    "kind": "finish",
+    "position": 25,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.997176+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "9b8afbf6ec3eafc03e3adddaf9a449dc74fd00d17abbed400e4473b74265e34b"
+}

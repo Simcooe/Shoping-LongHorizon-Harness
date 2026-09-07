@@ -1,0 +1,146 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/484",
+  "requirement_version": 0,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为配件",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "配件",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "配件",
+      "source_events": [
+        "initial:484"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "audience",
+      "description": "商品需适用于小度在家设备",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "适用于小度在家",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "适用于小度在家",
+      "source_events": [
+        "initial:484"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格不超过30元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "30元以内",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "30元以内",
+      "source_events": [
+        "initial:484"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "484",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "a1dba1d7250a0b4626dc00754b8c578ba86feef37d54e59c36b78e9b8918f3f8",
+  "trace_hash": "ad27e57b9d3519ddb18a57b7d0639554c3c2c4f3e81a2976a3a214c3c7c330fc",
+  "events_hash": "326b731be51e40b2e1d6caf915c1bf6af34808f3249db35f5262348b40a41cf7",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 9,
+    "requirement_version": 0
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/484/conditional_accept/qa-0001",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/484/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/484",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 28.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "28元",
+      "conditions": [
+        "用户回复：对，我就是要小度4G版的那个电源开关小板，28元的话在预算内。麻烦看看有没有货？"
+      ],
+      "scope": {
+        "amount": 28.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 3
+    }
+  ],
+  "apply_log": [],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.968706+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "1e67cc97a7f172ae0059dcbca301591a1125130d68476bbc69ba0ec8117eb656"
+}

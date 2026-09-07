@@ -1,0 +1,261 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/1172",
+  "requirement_version": 2,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为弹弓",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "弹弓",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "弹弓",
+      "source_events": [
+        "initial:1172"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "弓头或皮筋固定方式为夹片式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "夹片式",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "夹片式",
+      "source_events": [
+        "initial:1172"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格预期约110元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "110元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/1172/budget/qa-0002",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "110元左右",
+      "source_events": [
+        "initial:1172"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"就116元\", \"upper\": 116.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/1172/budget/qa-0002",
+      "source_quote": "就116元",
+      "visible_from_event": "h0-0905-1446/1172/budget/qa-0002",
+      "effective_from_event": "h0-0905-1446/1172/budget/qa-0002",
+      "effective_until_event": null,
+      "supersedes": "c0003",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 116.0,
+        "quote": "就116元"
+      },
+      "source_events": [
+        "h0-0905-1446/1172/budget/qa-0002"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [
+    {
+      "event_id": "h0-0905-1446/1172/reject/qa-0001",
+      "requirement_key": "candidate",
+      "scope": {
+        "candidate": null
+      },
+      "source_quote": "用户回复：116元有点超我110的预算了，能不能便宜点？如果实在不行我再考虑。"
+    }
+  ],
+  "exclusions": [
+    {
+      "event_id": "h0-0905-1446/1172/reject/qa-0001",
+      "requirement_key": "candidate",
+      "value": "\"400钢珠+600弹丸+8条皮筋防滑圈\"配置价格为116元，最接近您的110元预算。是否按此配置购买？（也可以选择其他配置，如88元或132元档）",
+      "scope": {
+        "candidate": null
+      }
+    }
+  ],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/1172/reject/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 2,
+      "activated_by_event": "h0-0905-1446/1172/budget/qa-0002",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1172",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "54b92bb9a4232792aee112827bf018b1148317989107c86b513740e0ccad5e71",
+  "trace_hash": "1b5eca0c13127346a2460988c0045faa7a1e586034a3e7437a43a4fb87250a70",
+  "events_hash": "3ecf68f5a0adfe65ea6316527ae4a09a6b66fc1571172f2cbf32b9504bc374e6",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 19,
+    "requirement_version": 2
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/1172/conditional_accept/qa-0001",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/1172/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/1172",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 116.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "116元",
+      "conditions": [
+        "用户回复：116元有点超我110的预算了，能不能便宜点？如果实在不行我再考虑。"
+      ],
+      "scope": {
+        "amount": 116.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 10
+    },
+    {
+      "event_id": "h0-0905-1446/1172/reject/qa-0001",
+      "session": "h0-0905-1446/1172",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "\"400钢珠+600弹丸+8条皮筋防滑圈\"配置价格为116元，最接近您的110元预算。是否按此配置购买？（也可以选择其他配置，如88元或132元档）",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：116元有点超我110的预算了，能不能便宜点？如果实在不行我再考虑。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 2,
+      "status": "applied",
+      "step_index": 10
+    },
+    {
+      "event_id": "h0-0905-1446/1172/budget/qa-0002",
+      "session": "h0-0905-1446/1172",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 116.0,
+        "quote": "就116元"
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "就116元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 2,
+      "seq": 3,
+      "status": "applied",
+      "step_index": 15
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/1172/reject/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    },
+    {
+      "event_id": "h0-0905-1446/1172/budget/qa-0002",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.044768+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "e00fd29805c4b32e762adb6b9cb7cbddc6ae5f3cd5201ca51b24c1aa00972531"
+}

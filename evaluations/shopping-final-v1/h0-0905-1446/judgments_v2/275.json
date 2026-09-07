@@ -1,0 +1,127 @@
+{
+  "task_id": "275",
+  "schema_version": "shopping-judge-output-v2",
+  "rubric_version": "v2",
+  "frozen": true,
+  "judgment": {
+    "candidate_evidence": [
+      {
+        "constraint_id": "c0001",
+        "position": 30,
+        "quote": "真实树脂昆虫标本真虫甲虫蜘蛛锹甲天牛蝎子螳螂蜥蜴琥珀标本摆件"
+      },
+      {
+        "constraint_id": "c0002",
+        "position": 30,
+        "quote": "颜色分类 [SEP] ... [SEP] 黄蝎子"
+      },
+      {
+        "constraint_id": "c0003",
+        "position": 30,
+        "quote": "琥珀标本摆件"
+      },
+      {
+        "constraint_id": "c0005",
+        "position": 22,
+        "quote": "黄蝎子 [SEP] ... [SEP] 价格: 18.0"
+      }
+    ],
+    "final_requirement_verdicts": [
+      {
+        "constraint_id": "c0001",
+        "status": "unknown",
+        "requirement_version": 1,
+        "position_reference": [
+          30,
+          31
+        ],
+        "event_reference": [
+          "Step 31 click 938101056196",
+          "Step 32 click 黄蝎子"
+        ],
+        "reasoning": "最终点开的商品标题含蝎子标本且选择了黄蝎子选项，但轨迹在点击后终止，未见最终购买/确认所选候选的价格页或成交证据。"
+      },
+      {
+        "constraint_id": "c0002",
+        "status": "unknown",
+        "requirement_version": 1,
+        "position_reference": [
+          30,
+          31
+        ],
+        "event_reference": [
+          "Step 32 click 黄蝎子"
+        ],
+        "reasoning": "最终候选页面有“黄蝎子”颜色分类并被点击，但无后续最终选定/购买证据，不能判 satisfied。"
+      },
+      {
+        "constraint_id": "c0003",
+        "status": "unknown",
+        "requirement_version": 1,
+        "position_reference": [
+          30
+        ],
+        "event_reference": [
+          "Step 31 click 938101056196"
+        ],
+        "reasoning": "商品标题含“琥珀标本摆件”，可作摆件的候选证据存在，但没有最终购买/选定完成证据。"
+      },
+      {
+        "constraint_id": "c0005",
+        "status": "unknown",
+        "requirement_version": 1,
+        "position_reference": [
+          22,
+          30,
+          31
+        ],
+        "event_reference": [
+          "Step 23 click 黄蝎子",
+          "Step 31 click 938101056196",
+          "Step 32 click 黄蝎子"
+        ],
+        "reasoning": "同一商品此前选择黄蝎子时显示价格18元，符合≤18元预算；但最终再次进入该商品并点击黄蝎子后轨迹终止，未显示最终价格/成交证据。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    },
+    "dimension_reasons": {
+      "clarification_strategy": "在多个候选和预算边界不清时主动 ask_shopper，并给出可比较选项；用户回复后继续按18元预算和真虫树脂需求推进。",
+      "information_retention": "后续搜索与点击持续围绕黄蝎子、树脂/琥珀标本、摆件和预算，且用户澄清的18元预算被用于筛选候选。",
+      "search_strategy": "多次用不同关键词聚焦黄蝎子树脂标本/琥珀摆件，能找到多个相关商品与规格选项。",
+      "candidate_utilization": "识别并比较了多个候选，包括18元、28元、31元、35元等，但最终未把候选推进到明确购买/最终选定。",
+      "evidence_verification": "查看了价格、颜色分类，也点过 description/features/reviews，但部分页面无内容；用户追问是否真蝎子后未获得明确详情证据即结束。",
+      "decision_quality": "最终动作指向较符合需求的938101056196黄蝎子选项，但没有最终价格确认、购买或完成决定证据，决策闭环不足。",
+      "termination_efficiency": "轨迹在最终点击黄蝎子后直接 Episode finished，没有购买确认或总结；存在一定重复浏览，但总体未明显拖沓。"
+    }
+  },
+  "metadata": {
+    "judge_mode": "llm",
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-06T11:45:34.574608+00:00",
+    "trace_source": "model_trace_only",
+    "event_source": "retrospective",
+    "terminal_protocol": "terminal-protocol-v2",
+    "decision": {
+      "kind": "hard_stop",
+      "position": 31,
+      "requirement_version": 1
+    },
+    "requirement_version_at_decision": 1,
+    "evidence_coverage": {
+      "steps_total": 32,
+      "steps_included": 32,
+      "chars": 28667,
+      "evidence_budget": 120000,
+      "evidence_truncated": false
+    },
+    "attempts": 1
+  }
+}

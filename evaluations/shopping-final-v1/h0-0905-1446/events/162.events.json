@@ -1,0 +1,82 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "162",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 17,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 12,
+      "position": 11,
+      "position_mapped": true,
+      "question": "已找到符合\"长柄+排线轮\"的鱼竿（10米/10定位/长柄排线轮套装，405元）。请问您需要多长的竿？是否就选这款10米10定位套装，还是需要其他长度（如6.3米、7.2米、9米）？",
+      "reply": "用户回复：我就要10米的。不过想问下，这款是28调、内走线、短节那种吧？",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0002",
+      "step": 17,
+      "position": 16,
+      "position_mapped": true,
+      "question": "之前那款是19调（405元）。而达瓦紫鹫十定位这款28调+内走线+短节，10米10定位长柄排线轮套装375元。请问是否购买这款375元的28调鱼竿？",
+      "reply": "用户回复：这个28调的达瓦正好符合我的要求：10米、10定位、内走线短节，还带长柄排线轮。375元也在预算内，就选这款吧。",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/162/budget/qa-0002",
+      "session": "h0-0905-1446/162",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 375.0,
+        "quote": "375元"
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "375元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 16
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}
