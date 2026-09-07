@@ -1,0 +1,46 @@
+{
+  "task_id": "705",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "搜一款铝合金单板，可以用于制作栅栏和建筑的外墙围护，价格在30元以内。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为铝合金单板",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "铝合金单板",
+      "selection_reason": "Query 明确提出了商品类型，属于明确品类要求"
+    },
+    {
+      "id": "c0002",
+      "description": "商品可用于制作栅栏和建筑的外墙围护",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以用于制作栅栏和建筑的外墙围护",
+      "selection_reason": "Query 明确提出了使用功能/用途要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格不超过30元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格在30元以内",
+      "selection_reason": "Query 明确给出预算上限，属于硬性约束"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:26.370273+00:00",
+    "source_task_id": "705"
+  }
+}

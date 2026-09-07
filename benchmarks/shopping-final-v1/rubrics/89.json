@@ -1,0 +1,54 @@
+{
+  "task_id": "89",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想要一款适合混合油干皮的粉底液，像气垫、BB霜这类底妆产品的优势它也能兼顾，价格在30元以内。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为粉底液",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "粉底液",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适合混合油干皮肤质",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合混合油干皮",
+      "selection_reason": "Query 明确提出了适用肤质"
+    },
+    {
+      "id": "c0003",
+      "description": "希望兼具气垫、BB霜这类底妆产品的优势",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "像气垫、BB霜这类底妆产品的优势它也能兼顾",
+      "selection_reason": "「优势」表述模糊，未具体说明包含哪些功能，无法硬性验证，判 soft"
+    },
+    {
+      "id": "c0004",
+      "description": "价格不超过30元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格在30元以内",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:45.131224+00:00",
+    "source_task_id": "89"
+  }
+}

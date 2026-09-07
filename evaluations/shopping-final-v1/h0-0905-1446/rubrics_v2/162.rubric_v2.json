@@ -1,0 +1,200 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/162",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为鱼竿",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "鱼竿",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "鱼竿",
+      "source_events": [
+        "initial:162"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "鱼竿为长柄设计",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "长柄",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "长柄",
+      "source_events": [
+        "initial:162"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "鱼竿为排线轮式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "排线轮式",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "排线轮式",
+      "source_events": [
+        "initial:162"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格预期约400元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "400元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/162/budget/qa-0002",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "400元左右",
+      "source_events": [
+        "initial:162"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"375元\", \"upper\": 375.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/162/budget/qa-0002",
+      "source_quote": "375元",
+      "visible_from_event": "h0-0905-1446/162/budget/qa-0002",
+      "effective_from_event": "h0-0905-1446/162/budget/qa-0002",
+      "effective_until_event": null,
+      "supersedes": "c0004",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 375.0,
+        "quote": "375元"
+      },
+      "source_events": [
+        "h0-0905-1446/162/budget/qa-0002"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/162/budget/qa-0002",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "162",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "5653b616bfe2723a80478634c3dd78c981f795250546b2725f4082cd7e6804e4",
+  "trace_hash": "088b6dd136236ce5e6ca8b7287548899fdd1cb6cef79465e5c34f71d6acef583",
+  "events_hash": "aa2e2f715f04b32dbc366baaa0a9ec21930287fe7d7ccd7d6d0c7370ea340222",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 17,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/162/budget/qa-0002",
+      "session": "h0-0905-1446/162",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 375.0,
+        "quote": "375元"
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "375元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 16
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/162/budget/qa-0002",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.931932+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "1f1505abada77eced4e83dec5e39ec18e8670ad524d31c5b14a9469a911c6138"
+}

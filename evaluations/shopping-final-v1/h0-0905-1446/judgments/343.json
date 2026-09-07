@@ -1,0 +1,44 @@
+{
+  "task_id": "343",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想淘一款价格在230元上下的蓝色工作服。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 浏览了多款工作服/职业上衣候选但未最终购买或确认满足品类约束的商品，轨迹以 no_suitable_product 结束。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "轨迹中出现过蓝色/灰蓝色/深蓝色候选，但用户后续要求雾蓝色且未确认最终商品；没有最终满足或违反蓝色约束的明确证据。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 曾查看 238 元和 228 元候选，但用户拒绝且未最终购买；没有最终价格满足或明显违反约 230 元预期的证据。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:20:55.211500+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

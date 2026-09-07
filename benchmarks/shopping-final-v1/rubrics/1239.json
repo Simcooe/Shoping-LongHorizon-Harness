@@ -1,0 +1,54 @@
+{
+  "task_id": "1239",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "预算300元左右，给我挑选一款适合男生用的啫喱质地磨砂膏。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为磨砂膏",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "磨砂膏",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为男生",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合男生用",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "质地为啫喱质地",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "啫喱质地",
+      "selection_reason": "Query 明确提出了质地属性"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约300元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "300元左右",
+      "selection_reason": "「左右」为模糊价位表述，判为 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:07.778681+00:00",
+    "source_task_id": "1239"
+  }
+}

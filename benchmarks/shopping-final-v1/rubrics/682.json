@@ -1,0 +1,46 @@
+{
+  "task_id": "682",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "打算入手5罐鹰唛炼乳，要求售价控制在一百元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为鹰唛炼乳",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "鹰唛炼乳",
+      "selection_reason": "Query 明确指定了品牌与品类"
+    },
+    {
+      "id": "c0002",
+      "description": "购买数量为5罐",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "5罐",
+      "selection_reason": "Query 明确给出购买数量"
+    },
+    {
+      "id": "c0003",
+      "description": "售价预期约100元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "一百元左右",
+      "selection_reason": "「左右」属于模糊价位表述，判为软性价格预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:14.479938+00:00",
+    "source_task_id": "682"
+  }
+}

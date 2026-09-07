@@ -1,0 +1,55 @@
+{
+  "task_id": "29",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "我需要一些白色的单层板材，预算在80元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          12
+        ],
+        "reasoning": "Step 12 用户明确确认需要白色铝合金单板，且候选标题与颜色分类均为铝单板/单板类板材。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3,
+          14,
+          15
+        ],
+        "reasoning": "Step 2/8/14 商品页显示颜色分类为白色，Step 3/15 点击选择白色。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          8,
+          14
+        ],
+        "reasoning": "所选商品价格显示为58.0元，在约80元预算范围内。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T16:51:10.752006+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

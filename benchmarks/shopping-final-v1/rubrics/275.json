@@ -1,0 +1,54 @@
+{
+  "task_id": "275",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "搜一下能用来当摆件的黄蝎子标本，预算30元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为蝎子标本",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "蝎子标本",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为黄色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "黄",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "商品可用作摆件",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "能用来当摆件",
+      "selection_reason": "Query 明确提出了用途功能"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算30元左右",
+      "selection_reason": "「左右」表示模糊价位，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:15.888378+00:00",
+    "source_task_id": "275"
+  }
+}

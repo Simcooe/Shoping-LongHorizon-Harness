@@ -1,0 +1,70 @@
+{
+  "task_id": "196",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想给家里小孩买一件蓝色的打底衫，80cm的小朋友穿刚好，价格不超过20块钱。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为打底衫",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "打底衫",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为蓝色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "蓝色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "适用对象为儿童",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "小孩",
+      "selection_reason": "Query 明确说明是给小孩购买"
+    },
+    {
+      "id": "c0004",
+      "description": "尺码适合身高约80cm的小朋友",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "80cm",
+      "selection_reason": "Query 明确给出了适用身高"
+    },
+    {
+      "id": "c0005",
+      "description": "购买数量为一件",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "一件",
+      "selection_reason": "Query 明确提出了购买数量"
+    },
+    {
+      "id": "c0006",
+      "description": "价格不超过20元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "不超过20块钱",
+      "selection_reason": "Query 明确给出了预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 6,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:27.050022+00:00",
+    "source_task_id": "196"
+  }
+}

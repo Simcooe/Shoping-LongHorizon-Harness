@@ -1,0 +1,54 @@
+{
+  "task_id": "768",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找一款适合训练小鹿犬这种小型犬幼犬用的羊奶棒，可以当作奖励喂的，整体价格控制在五十元以下。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品类型为羊奶棒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "羊奶棒",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用对象为小鹿犬这类小型犬幼犬",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "小鹿犬这种小型犬幼犬",
+      "selection_reason": "Query 明确指定了适用犬种、体型和年龄"
+    },
+    {
+      "id": "c0003",
+      "description": "需可用作训练时的奖励喂食",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合训练小鹿犬这种小型犬幼犬用的羊奶棒，可以当作奖励喂的",
+      "selection_reason": "Query 连续片段明确表达了训练和奖励喂食用途"
+    },
+    {
+      "id": "c0004",
+      "description": "整体价格控制在五十元以下",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "整体价格控制在五十元以下",
+      "selection_reason": "Query 给出了明确的预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:25.556692+00:00",
+    "source_task_id": "768"
+  }
+}

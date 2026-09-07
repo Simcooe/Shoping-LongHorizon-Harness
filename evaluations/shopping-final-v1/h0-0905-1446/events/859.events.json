@@ -1,0 +1,166 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "859",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 11,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 7,
+      "position": 7,
+      "position_mapped": true,
+      "question": "是否为您购买这款 百钻低糖水洗红豆馅500g（11元，百钻官方旗舰店）？如果您更想要带皮/清甜款或其他款式，也可以告诉我。",
+      "reply": "用户回复：这个百钻的正好是我想要的低糖红豆沙，500g一斤装也合适，价格11元也在预算内。不过想确认下这款是无添加的吗？配料表干净不？我需要做流心月饼用呢。",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0002",
+      "step": 12,
+      "position": 12,
+      "position_mapped": true,
+      "question": "我核实了一下：百钻这款【低糖#甄选红小豆】水洗红豆馅500g（11元，安琪酵母旗舰店/百钻官方店）确实主打低糖，但商品页详情里没有明确标注\"无添加/0添加\"，我也未能查到完整配料表，无法100%向您确认它属于无添加产品。\n\n考虑到您要做流心月饼且需要配料干净，请问：1）仍购买这款百钻低糖水洗红豆馅？还是 2）希望我改找明确标注\"0添加/无添加\"的低糖红豆沙馅料（10元上下也有此类选择）？",
+      "reply": "用户回复：还是先帮我找明确标着无添加的吧，做月饼给孩子吃，配料干净一点才放心。价格控制在10块左右，500克装就行。",
+      "post_terminal": true
+    },
+    {
+      "qa_id": "qa-0003",
+      "step": 28,
+      "position": 29,
+      "position_mapped": true,
+      "question": "刚才我进入了\"For love 烘焙包装\"这款【低糖红豆沙…0添加】商品并选择了【1斤 + 低糖水洗红豆沙】后点击了购买，但页面在确认前就结束了，且未显示该组合的最终成交价（整店价格区间为8-159元，无法确认是否正好在10元左右）。\n\n为了稳妥，想和您确认：您更希望我继续购买这款（1斤低糖水洗红豆沙，标注低糖+0添加，符合您控糖和给孩子吃的需求），还是改买另一款明确标\"无添加\"、500g*1袋 11元的商品？请告诉我您的偏好。",
+      "reply": "用户回复：For love 那款标着0添加更符合我要求。你能帮我确认下实际结算价吗？如果就在10元上下，就买这款；要贵太多就先别下单了。",
+      "post_terminal": true
+    },
+    {
+      "qa_id": "qa-0004",
+      "step": 33,
+      "position": 34,
+      "position_mapped": true,
+      "question": "无法确认For love那款的具体结算价，我未下单。接下来您希望：1）改买已确认11元、标\"无添加\"（非低糖）的500g款；2）仍要我尝试下单For love低糖0添加款（价格可能略高于10元，需您接受该不确定性）；3）暂时不买，您再考虑？",
+      "reply": "用户回复：那先别买了吧。我想要的是低糖又无添加的，这两个都不完全符合。我再看看，有合适的再麻烦你。",
+      "post_terminal": true
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/859/conditional_accept/qa-0001",
+      "session": "h0-0905-1446/859",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 11.0
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "价格11元",
+      "conditions": [
+        "用户回复：这个百钻的正好是我想要的低糖红豆沙，500g一斤装也合适，价格11元也在预算内。不过想确认下这款是无添加的吗？配料表干净不？我需要做流心月饼用呢。"
+      ],
+      "scope": {
+        "amount": 11.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 7
+    },
+    {
+      "event_id": "h0-0905-1446/859/budget/qa-0002",
+      "session": "h0-0905-1446/859",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 11.0,
+        "quote": "在10块左右"
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "在10块左右",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 2,
+      "status": "post_terminal_excluded",
+      "step_index": 12
+    },
+    {
+      "event_id": "h0-0905-1446/859/conditional_accept/qa-0003",
+      "session": "h0-0905-1446/859",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 11.0
+      },
+      "source_reply_id": "qa-0003",
+      "source_quote": "在10元上下",
+      "conditions": [
+        "用户回复：For love 那款标着0添加更符合我要求。你能帮我确认下实际结算价吗？如果就在10元上下，就买这款；要贵太多就先别下单了。"
+      ],
+      "scope": {
+        "amount": 11.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 3,
+      "status": "pending_confirmation",
+      "step_index": 29
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

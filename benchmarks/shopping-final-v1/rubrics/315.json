@@ -1,0 +1,46 @@
+{
+  "task_id": "315",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想要一款适用于庭院、别墅或围墙柱体的柱体灯，预算在880元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为柱体灯",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "柱体灯",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "使用场景需适用于庭院、别墅或围墙柱体",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适用于庭院、别墅或围墙柱体",
+      "selection_reason": "Query 明确提出了适用场景/安装位置"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约880元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "880元左右",
+      "selection_reason": "「左右」为模糊价位表述，判为软性价格预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:29.153102+00:00",
+    "source_task_id": "315"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "benchmark_id": "shopping-final-v1",
+  "task_count": 200,
+  "evaluated_task_count": 200,
+  "panel1": {
+    "task_success_rate": 0.325,
+    "task_success_count": 65,
+    "environment_terminal_rate": 0.88,
+    "outcome_classes": {
+      "repeat_loop": 38,
+      "graceful_stop": 6,
+      "success_gold": 64,
+      "success_partial_alternative": 39,
+      "(null)": 24,
+      "reward_unverifiable": 10,
+      "early_abstain": 9,
+      "max_steps": 8,
+      "success_valid_alternative": 1,
+      "wrong_purchase": 1
+    }
+  },
+  "panel2": {
+    "verdict_counts": {
+      "satisfied": 611,
+      "violated": 8,
+      "unknown": 73,
+      "not_applicable": 0
+    },
+    "satisfaction_rate": 0.8829,
+    "hard_satisfaction_rate": 0.8934,
+    "soft_satisfaction_rate": 0.8372,
+    "unknown_rate": 0.1055
+  },
+  "panel3": {
+    "average_dimensions": {
+      "clarification_strategy": 1.945,
+      "information_retention": 1.95,
+      "search_strategy": 1.32,
+      "candidate_utilization": 1.32,
+      "evidence_verification": 1.245,
+      "decision_quality": 1.46,
+      "termination_efficiency": 1.08
+    },
+    "overall_average": 1.4743,
+    "dimension_distributions": {
+      "clarification_strategy": {
+        "2": 189,
+        "1": 11
+      },
+      "information_retention": {
+        "2": 190,
+        "1": 10
+      },
+      "search_strategy": {
+        "1": 136,
+        "2": 64
+      },
+      "candidate_utilization": {
+        "1": 134,
+        "2": 65,
+        "0": 1
+      },
+      "evidence_verification": {
+        "1": 149,
+        "2": 50,
+        "0": 1
+      },
+      "decision_quality": {
+        "1": 100,
+        "2": 96,
+        "0": 4
+      },
+      "termination_efficiency": {
+        "1": 166,
+        "2": 25,
+        "0": 9
+      }
+    },
+    "multi_turn": {
+      "ask_shopper_available": true,
+      "tasks_with_ask_shopper": 98,
+      "ask_shopper_usage_rate": 0.49,
+      "total_ask_shopper_calls": 134,
+      "avg_ask_shopper_calls_per_task": 0.67,
+      "dimension_comparison": {
+        "with_ask_shopper": {
+          "tasks": 98,
+          "avg_dimensions": {
+            "clarification_strategy": 1.888,
+            "information_retention": 1.908,
+            "search_strategy": 1.337,
+            "candidate_utilization": 1.408,
+            "evidence_verification": 1.245,
+            "decision_quality": 1.439,
+            "termination_efficiency": 1.051
+          }
+        },
+        "without_ask_shopper": {
+          "tasks": 102,
+          "avg_dimensions": {
+            "clarification_strategy": 2.0,
+            "information_retention": 1.99,
+            "search_strategy": 1.304,
+            "candidate_utilization": 1.235,
+            "evidence_verification": 1.245,
+            "decision_quality": 1.48,
+            "termination_efficiency": 1.108
+          }
+        }
+      }
+    }
+  },
+  "panel4": {
+    "average_steps": 18.46,
+    "median_steps": 16.0,
+    "anomaly_counts": {
+      "repeated_action": 2,
+      "no_progress": 48,
+      "inferred_invalid_click": 13,
+      "inferred_invalid_buy": 43,
+      "inferred_invalid_option": 41,
+      "inferred_invalid_navigation": 126,
+      "superseded_hard_stop": 21,
+      "post_terminal_action": 15
+    },
+    "failure_classes": {
+      "invalid_buy_then_false_completion": 22,
+      "non_terminal_agent_stop": 2
+    }
+  },
+  "metadata": {
+    "benchmark_id": "shopping-final-v1",
+    "task_count": 200,
+    "evaluated_task_count": 200,
+    "generated_at": "2026-09-06T00:07:46.764843+00:00",
+    "profile": "h0",
+    "run_dir": "runs/h0-0905-1446",
+    "deterministic_source": "reports/h0-0905-1446",
+    "judgment_source": "evaluations/shopping-final-v1/h0-0905-1446/judgments",
+    "rubric_source": "benchmarks/shopping-final-v1/rubrics",
+    "judge_model": "qwen3.8-max",
+    "judge_trace_source": "model_trace_only",
+    "model_trace_only_for_judge": true,
+    "rubric_version": "v1",
+    "rubric_strategy": "initial_query_only_v1",
+    "environment_version": "shopsimulator-environment-v2.1",
+    "ask_shopper_source": "model_trace",
+    "field_missing": null,
+    "warnings": null
+  }
+}

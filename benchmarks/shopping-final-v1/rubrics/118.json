@@ -1,0 +1,46 @@
+{
+  "task_id": "118",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "预算在550块以内，搜一款白蓝配色的羽毛球鞋。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为羽毛球鞋",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "羽毛球鞋",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为白蓝配色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "白蓝配色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格不超过550元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "550块以内",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:34.282358+00:00",
+    "source_task_id": "118"
+  }
+}

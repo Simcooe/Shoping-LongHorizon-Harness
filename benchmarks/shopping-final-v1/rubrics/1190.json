@@ -1,0 +1,46 @@
+{
+  "task_id": "1190",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "有没有一款炼乳是5罐价格不超过100元的？",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为炼乳",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "炼乳",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "规格数量为5罐",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "5罐",
+      "selection_reason": "Query 明确提出了购买数量规格"
+    },
+    {
+      "id": "c0003",
+      "description": "价格不超过100元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过100元",
+      "selection_reason": "Query 明确给出了预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 12,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:56.490993+00:00",
+    "source_task_id": "1190"
+  }
+}

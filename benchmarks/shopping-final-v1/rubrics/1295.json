@@ -1,0 +1,54 @@
+{
+  "task_id": "1295",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找找看芦荟绿色的水性洗衣液染料，我能接受的价格在三十块左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为洗衣液染料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "洗衣液染料",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为芦荟绿色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "芦荟绿色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "产品属性为水性",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "水性",
+      "selection_reason": "Query 明确提出了产品属性"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约三十元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "三十块左右",
+      "selection_reason": "「左右」为模糊价位表述，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:35.565625+00:00",
+    "source_task_id": "1295"
+  }
+}

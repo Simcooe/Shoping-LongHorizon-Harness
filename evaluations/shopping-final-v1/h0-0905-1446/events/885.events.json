@@ -1,0 +1,157 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "885",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 35,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 2,
+      "position": 1,
+      "position_mapped": true,
+      "question": "请问这款人体存在传感器是否必须支持接入米家APP（用于智能场景联动）？还是说接入其他生态（如涂鸦/易微联等）也可以接受？",
+      "reply": "用户回复：必须支持米家APP的，我要用它做智能场景联动，其他生态不行。",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0002",
+      "step": 36,
+      "position": 37,
+      "position_mapped": true,
+      "question": "综合价格（90元左右）与米家兼容性，我筛选出以下几款最佳候选：\n1. PTX平头熊人体存在传感器 支架款 89元（平头熊官方旗舰店，可调角度）\n2. 领普ES1人体存在传感器 侧装版 87元（linptech，米家生态链品牌）\n3. 24G毫米波人体存在传感器顶装版 99元（已接入米家APP）\n请问您更倾向哪一款？或有安装方式（顶装/侧装/支架）偏好？",
+      "reply": "用户回复：这几款都是人体存在传感器吧？我想确认下，它们是不是都需要搭配蓝牙网关才能联动？我家是通过蓝牙Mesh连接的。",
+      "post_terminal": true
+    },
+    {
+      "qa_id": "qa-0003",
+      "step": 38,
+      "position": 39,
+      "position_mapped": true,
+      "question": "是的，这几款都是\"人体存在传感器\"（采用毫米波雷达，可检测静止/微动的人体存在，比普通人体移动传感器更高端）。关于联动：这类传感器接入米家大多是蓝牙Mesh直连，只要您家已有米家蓝牙Mesh网关/中枢（如中枢网关、带蓝牙Mesh的小爱音箱、多模网关等），绑定后即可直接做智能场景联动，无需再单买网关。真正需要确认的是产品本身协议——若标注\"需蓝牙网关连接\"的是Zigbee版，而蓝牙Mesh版则直接适配您的网络。\n\n在90元左右的候选中，最推荐 领普ES1人体存在传感器侧装版（87元，linptech米家生态链）或 PTX平头熊人体存在传感器支架款（89元）。请问我为您下单哪一款？",
+      "reply": "用户回复：这两款我看了下描述，好像都是普通的人体存在传感器？我需要的是一体式的“二合一感应”，也就是带光照度检测那种，能根据光线和人体联动。能不能帮我确认下它们是否有二合一版本，价格不超过99？",
+      "post_terminal": true
+    },
+    {
+      "qa_id": "qa-0004",
+      "step": 39,
+      "position": 40,
+      "position_mapped": true,
+      "question": "根据我看到的商品配置，先回答您的疑问：\n• 领普ES1 与 PTX平头熊 这两款我看到的分支都是\"顶装/侧装/支架\"版本，属于单一人体存在感应，未发现带光照度检测的\"二合一\"版本（尤其99元内）。\n• 但市面上确实有符合您\"人体存在+光照度二合一、米家APP、≤99元\"要求的产品，我已找到两款：\n  A. 飞含智慧家居【二合一感应】24g版-高灵敏，87元，已接入米家APP（人体存在+光照）；\n  B. 领普ES3电池版【红外光感雷达三合一】，99元，米家生态链品牌（含光感+存在+红外，与您近期关注的领普ES3一致）。\n请问下单哪一款？A 或 B？",
+      "reply": "用户回复：先别下单。我得确认一下，这两款都是蓝牙Mesh连接吗？需要额外网关吗？我要的是能配合蓝牙网关直接用的那种。",
+      "post_terminal": true
+    },
+    {
+      "qa_id": "qa-0005",
+      "step": 40,
+      "position": 41,
+      "position_mapped": true,
+      "question": "关于连接方式，我向您说明：\n• 领普ES3电池版：采用蓝牙Mesh接入米家。您家既然是蓝牙Mesh组网，说明已具备米家蓝牙Mesh网关（中枢网关/带Mesh的小爱音箱/多模网关等），传感器绑定后即可直接联动，无需再买额外网关。它含\"毫米波存在+红外+光照度\"三合一，正是您要的能根据光线和人体联动的类型，价格99元。\n• 飞含那款：我从其选项看到多个分支明确标注\"需蓝牙网关连接\"，并非Mesh直连，需额外网关，不符合您\"直接配合蓝牙网关用\"的要求，因此不推荐。\n\n所以我的建议是下单 B：领普ES3电池版（99元，蓝牙Mesh直连米家）。请问确认下单吗？",
+      "reply": "用户回复：好的，确认下单B，领普ES3电池版99元。这款正好符合我的需求，可以。",
+      "post_terminal": true
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/885/reject/qa-0001",
+      "session": "h0-0905-1446/885",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "请问这款人体存在传感器是否必须支持接入米家APP（用于智能场景联动）？还是说接入其他生态（如涂鸦/易微联等）也可以接受？",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：必须支持米家APP的，我要用它做智能场景联动，其他生态不行。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 1
+    },
+    {
+      "event_id": "h0-0905-1446/885/conditional_accept/qa-0005",
+      "session": "h0-0905-1446/885",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 99.0
+      },
+      "source_reply_id": "qa-0005",
+      "source_quote": "99元",
+      "conditions": [
+        "用户回复：好的，确认下单B，领普ES3电池版99元。这款正好符合我的需求，可以。"
+      ],
+      "scope": {
+        "amount": 99.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 2,
+      "status": "pending_confirmation",
+      "step_index": 41
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

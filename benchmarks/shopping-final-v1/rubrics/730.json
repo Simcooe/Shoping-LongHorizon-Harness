@@ -1,0 +1,62 @@
+{
+  "task_id": "730",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想为家里的电动牙刷买6支白色替换刷头，预算在30元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为替换刷头",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "替换刷头",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用对象为电动牙刷",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "电动牙刷",
+      "selection_reason": "Query 明确说明是给电动牙刷使用的替换刷头"
+    },
+    {
+      "id": "c0003",
+      "description": "购买数量为6支",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "6支",
+      "selection_reason": "Query 明确给出了购买数量"
+    },
+    {
+      "id": "c0004",
+      "description": "颜色为白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "白色",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0005",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算在30元左右",
+      "selection_reason": "「左右」为模糊价位表述，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:30.520876+00:00",
+    "source_task_id": "730"
+  }
+}

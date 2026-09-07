@@ -1,0 +1,53 @@
+{
+  "task_id": "1119",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "需要一款多功能补光灯，价格在20元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          19,
+          20,
+          30,
+          37
+        ],
+        "reasoning": "Agent 最终点击购买的商品页标题为“手臂补光灯…三色环形灯”，且选择了“8寸补光灯+三脚架+手机位”规格，明确属于补光灯。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "最终商品标题/规格未明确显示“多功能”属性；虽然带三脚架和手机位，但 observation 中无明确多功能证据。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          20,
+          30,
+          36
+        ],
+        "reasoning": "所选“8寸补光灯+三脚架+手机位”页面价格为19元，且用户确认价格合适、在预算内。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:31:29.937147+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

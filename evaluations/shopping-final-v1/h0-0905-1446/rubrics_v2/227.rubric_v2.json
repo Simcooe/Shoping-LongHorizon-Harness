@@ -1,0 +1,271 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/227",
+  "requirement_version": 2,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为西裤",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "西裤",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "西裤",
+      "source_events": [
+        "initial:227"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "audience",
+      "description": "适用性别为男士",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "男士",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "男士",
+      "source_events": [
+        "initial:227"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "color",
+      "description": "颜色为黑色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "黑色",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "黑色",
+      "source_events": [
+        "initial:227"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "other",
+      "description": "适合夏天穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "夏天穿的",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "夏天穿的",
+      "source_events": [
+        "initial:227"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "价格预期约180元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在180元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在180元左右",
+      "source_events": [
+        "initial:227"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0001",
+      "requirement_key": "candidate",
+      "scope": {
+        "candidate": null
+      },
+      "source_quote": "用户回复：是的，我要九分裤的，不要标准长度的。"
+    },
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0002",
+      "requirement_key": "candidate",
+      "scope": {
+        "candidate": null
+      },
+      "source_quote": "用户回复：宽松直筒的吧，穿着舒服点，不要太紧身。"
+    }
+  ],
+  "exclusions": [
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0001",
+      "requirement_key": "candidate",
+      "value": "您想要的黑色夏季西裤是\"九分裤\"还是\"标准长度长裤\"呢？（考虑到您的历史偏好偏向九分裤，但想跟您确认一下）",
+      "scope": {
+        "candidate": null
+      }
+    },
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0002",
+      "requirement_key": "candidate",
+      "value": "您的黑色九分西裤偏好\"修身直筒\"版型，还是\"宽松直筒/阔腿\"版型呢？",
+      "scope": {
+        "candidate": null
+      }
+    }
+  ],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/227/reject/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 2,
+      "activated_by_event": "h0-0905-1446/227/reject/qa-0002",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "227",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "16e91e27482186e78c99af07647fe63a7e5fdc56bc7d094fe0f2bd5ebd7e8887",
+  "trace_hash": "4ae2aaf5cbc02bcf9dc32ef4ed1a6fd494702beadf56f060de3ffae6a64d3cc3",
+  "events_hash": "4c4bd68b050e24b5f2f430c34ce2ae6fa7d5260ea5db747b22b7d647e4693424",
+  "decision": {
+    "kind": "purchase_attempt",
+    "position": 9,
+    "requirement_version": 2
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0001",
+      "session": "h0-0905-1446/227",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "您想要的黑色夏季西裤是\"九分裤\"还是\"标准长度长裤\"呢？（考虑到您的历史偏好偏向九分裤，但想跟您确认一下）",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：是的，我要九分裤的，不要标准长度的。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 5
+    },
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0002",
+      "session": "h0-0905-1446/227",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "您的黑色九分西裤偏好\"修身直筒\"版型，还是\"宽松直筒/阔腿\"版型呢？",
+      "source_reply_id": "qa-0002",
+      "source_quote": "用户回复：宽松直筒的吧，穿着舒服点，不要太紧身。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 2,
+      "seq": 2,
+      "status": "applied",
+      "step_index": 6
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    },
+    {
+      "event_id": "h0-0905-1446/227/reject/qa-0002",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.940599+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "a658622265e50b00912020f0932717a0f07c4dac8684d7b97b1948f2a7c4392e"
+}

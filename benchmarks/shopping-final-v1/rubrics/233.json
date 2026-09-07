@@ -1,0 +1,54 @@
+{
+  "task_id": "233",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为适合给鸡打疫苗使用的药物。",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合给鸡打疫苗用的药物",
+      "selection_reason": "Query 明确了商品的用途与类型，属于功能性硬性需求。"
+    },
+    {
+      "id": "c0002",
+      "description": "商品数量为一瓶。",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "一瓶",
+      "selection_reason": "Query 明确给出了购买数量。"
+    },
+    {
+      "id": "c0003",
+      "description": "有效期到2025年7月。",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "25年7月到期",
+      "selection_reason": "Query 明确要求了商品有效期。"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期在5元左右。",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在5元左右",
+      "selection_reason": "「左右」表示模糊价位，属于软性价格预期。"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 1,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:54.838359+00:00",
+    "source_task_id": "233"
+  }
+}

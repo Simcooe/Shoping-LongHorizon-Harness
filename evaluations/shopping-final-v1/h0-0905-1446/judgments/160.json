@@ -1,0 +1,44 @@
+{
+  "task_id": "160",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想买一款60元左右价格的汽车内饰保护膜。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          2,
+          4
+        ],
+        "reasoning": "Step 1 搜索汽车内饰保护膜，Step 2/4 进入并选中 24款奔驰E级内饰保护膜的外门拉手 TPU 选项，品类明确匹配。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          4
+        ],
+        "reasoning": "Step 4 选中“24款奔驰e级【外门拉手】tpu”后页面显示价格为 60.0，符合约60元的价格预期。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 0
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:00:51.530572+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

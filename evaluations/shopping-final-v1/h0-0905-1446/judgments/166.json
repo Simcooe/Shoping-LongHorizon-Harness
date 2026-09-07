@@ -1,0 +1,52 @@
+{
+  "task_id": "166",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "能在家喝的伏特加有吗？要不超过50元的那种。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          11,
+          12
+        ],
+        "reasoning": "Step 11/12 页面明确显示「绝对ABSOLUT伏特加经典原味200ml」且选中「绝对伏特加200ml」，品类为伏特加。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          13
+        ],
+        "reasoning": "Step 13 用户通过 ask_shopper 明确确认这款原味200ml适合且可以下单，认可在家饮用场景。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          7,
+          13
+        ],
+        "reasoning": "Step 7 选中「绝对伏特加原味200ml」后价格显示为45元，Step 13 用户确认价格在预算内，均不超过50元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 2,
+      "candidate_utilization": 2,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:04:17.688490+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

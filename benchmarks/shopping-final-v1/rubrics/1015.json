@@ -1,0 +1,46 @@
+{
+  "task_id": "1015",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找找看红茶色的水性染料，价格在30块钱上下。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为水性染料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "水性染料",
+      "selection_reason": "Query 明确提出了商品类型及属性"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为红茶色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "红茶色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在30块钱上下",
+      "selection_reason": "「上下」为模糊价位表述，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 8,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:59.142636+00:00",
+    "source_task_id": "1015"
+  }
+}

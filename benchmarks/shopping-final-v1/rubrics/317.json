@@ -1,0 +1,46 @@
+{
+  "task_id": "317",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找一条夏季穿着的男款运动长裤，预算在500元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为男款运动长裤",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "男款运动长裤",
+      "selection_reason": "Query 明确提出了品类和适用性别"
+    },
+    {
+      "id": "c0002",
+      "description": "适合夏季穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "夏季穿着",
+      "selection_reason": "Query 明确提出了季节适用要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约500元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "500元左右",
+      "selection_reason": "「左右」为模糊价位，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 8,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:30.853829+00:00",
+    "source_task_id": "317"
+  }
+}

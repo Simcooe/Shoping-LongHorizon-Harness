@@ -1,0 +1,54 @@
+{
+  "task_id": "265",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "帮我看看适合PSV主机的硬质包，还包邮，价格在20元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为硬质包",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "硬质包",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品需适合 PSV 主机使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "PSV主机",
+      "selection_reason": "Query 明确给出了适用主机型号"
+    },
+    {
+      "id": "c0003",
+      "description": "商品需包邮，不另外支付运费",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "还包邮",
+      "selection_reason": "Query 明确提出了包邮要求"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约为20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在20元左右",
+      "selection_reason": "「左右」属于模糊价位，未给出明确上下限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 1,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:37:57.340499+00:00",
+    "source_task_id": "265"
+  }
+}

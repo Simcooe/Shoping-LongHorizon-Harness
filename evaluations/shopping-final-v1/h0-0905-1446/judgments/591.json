@@ -1,0 +1,56 @@
+{
+  "task_id": "591",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "给我搜一款价格不超过10元，能附送挂绳的保护套。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          14,
+          15,
+          16
+        ],
+        "reasoning": "Step 14/15 商品页标题为新款PSV软包/海绵布包，Step 16 对该保护套类商品点击 Buy Now。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          14,
+          15,
+          16
+        ],
+        "reasoning": "Step 14/15 商品页明确显示价格为 5.0 元，不超过 10 元，随后 Step 16 购买。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          14,
+          15,
+          16
+        ],
+        "reasoning": "Step 14/15 颜色分类明确显示“软包+挂绳”，标题也写“带手绳”，Step 16 购买该选项。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:34:23.669882+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "task_id": "657",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          8
+        ],
+        "reasoning": "Step 2/8 商品标题明确为“齐鲁疫苗猪细小病毒病灭活疫苗…兽用疫苗”，属于动物用疫苗。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3,
+          8,
+          9
+        ],
+        "reasoning": "Step 2/8 显示规格“1瓶（2头份）”，Step 3/9 选中“2头份x10瓶”，对应每瓶可打2头猪。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          3,
+          9
+        ],
+        "reasoning": "Step 3/9 明确选择“2头份x10瓶”，购买数量为10瓶。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          3,
+          9
+        ],
+        "reasoning": "Step 3/9 选中该规格后价格显示为48.0，接近用户“五十元左右”的预期。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:39:31.179672+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

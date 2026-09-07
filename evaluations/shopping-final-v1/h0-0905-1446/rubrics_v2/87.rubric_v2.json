@@ -1,0 +1,200 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/87",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为睡衣",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "睡衣",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "睡衣",
+      "source_events": [
+        "initial:87"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "color",
+      "description": "颜色为粉色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "粉色",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "粉色",
+      "source_events": [
+        "initial:87"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "style",
+      "description": "厚度偏薄的款式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "薄",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "薄",
+      "source_events": [
+        "initial:87"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "价格预期约20元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "20元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/87/budget/qa-0002",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "20元左右",
+      "source_events": [
+        "initial:87"
+      ]
+    },
+    {
+      "id": "c0005",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"48块\", \"upper\": 48.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/87/budget/qa-0002",
+      "source_quote": "48块",
+      "visible_from_event": "h0-0905-1446/87/budget/qa-0002",
+      "effective_from_event": "h0-0905-1446/87/budget/qa-0002",
+      "effective_until_event": null,
+      "supersedes": "c0004",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 48.0,
+        "quote": "48块"
+      },
+      "source_events": [
+        "h0-0905-1446/87/budget/qa-0002"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/87/budget/qa-0002",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003",
+        "c0005"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "87",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "9dd63a16ca35656ae81b82e4b8bb8c1d44508893623a5d5b37a0c2023e42d595",
+  "trace_hash": "6dc4584063d101da8531363569ad3e7f29d4eb46d8dc4a8e91b5faa019a41163",
+  "events_hash": "ffd0e5b4a17cb534d0a49b9770426d29253feb562a7fa6327ae9a0315f6cd4cb",
+  "decision": {
+    "kind": "finish",
+    "position": 37,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0005"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/87/budget/qa-0002",
+      "session": "h0-0905-1446/87",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 48.0,
+        "quote": "48块"
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "48块",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 28
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/87/budget/qa-0002",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:44.919541+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "380bb140b2a636d02fd19bc04a1920bdead221eae54ba92017f21612003e0b9f"
+}

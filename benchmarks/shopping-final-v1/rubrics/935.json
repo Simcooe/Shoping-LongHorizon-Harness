@@ -1,0 +1,62 @@
+{
+  "task_id": "935",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "准备入手一件适合小女孩夏天穿的运动背心，用来徒步爬山或者打网球的时候穿，价格不要超过90元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为运动背心",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "运动背心",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为小女孩",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合小女孩",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "适合夏天穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "夏天穿",
+      "selection_reason": "Query 明确提出了穿着季节"
+    },
+    {
+      "id": "c0004",
+      "description": "适用于徒步爬山或打网球等运动场景",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "用来徒步爬山或者打网球的时候穿",
+      "selection_reason": "Query 明确提出了使用场景"
+    },
+    {
+      "id": "c0005",
+      "description": "价格不超过90元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不要超过90元",
+      "selection_reason": "Query 明确给出了预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:14.799855+00:00",
+    "source_task_id": "935"
+  }
+}

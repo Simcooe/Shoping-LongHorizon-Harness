@@ -1,0 +1,54 @@
+{
+  "task_id": "1142",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求安利一双适合小朋友穿的灰色小鞋子，尺码要33的，预算大概在350元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为适合小朋友穿的鞋子",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合小朋友穿",
+      "selection_reason": "Query 明确提出了适用人群和品类，判 hard"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为灰色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "灰色",
+      "selection_reason": "Query 明确提出了颜色，判 hard"
+    },
+    {
+      "id": "c0003",
+      "description": "鞋码为33码",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "尺码要33",
+      "selection_reason": "Query 明确提出了尺码，判 hard"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约350元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "大概在350元左右",
+      "selection_reason": "「大概...左右」属于模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:46.618605+00:00",
+    "source_task_id": "1142"
+  }
+}

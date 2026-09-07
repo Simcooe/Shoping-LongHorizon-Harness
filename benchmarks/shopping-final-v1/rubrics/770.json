@@ -1,0 +1,54 @@
+{
+  "task_id": "770",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "请推荐一款有透明磨砂纹理质感的汽车贴膜，价格在15元以内，要能买一赠一。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为汽车贴膜",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "汽车贴膜",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "具有透明磨砂纹理质感",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "透明磨砂纹理质感",
+      "selection_reason": "Query 明确提出了外观质感属性"
+    },
+    {
+      "id": "c0003",
+      "description": "价格不超过15元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "15元以内",
+      "selection_reason": "Query 明确给出预算上限"
+    },
+    {
+      "id": "c0004",
+      "description": "须支持买一赠一的促销形式",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "买一赠一",
+      "selection_reason": "Query 明确要求赠品促销方式"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:45.184926+00:00",
+    "source_task_id": "770"
+  }
+}

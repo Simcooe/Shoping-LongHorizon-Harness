@@ -1,0 +1,46 @@
+{
+  "task_id": "510",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找一款场效应管，单只价格在一元左右，想要五只。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为场效应管",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "场效应管",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "单只价格预期约1元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "单只价格在一元左右",
+      "selection_reason": "「左右」表示模糊价位，未给出明确上限，判 soft"
+    },
+    {
+      "id": "c0003",
+      "description": "购买数量为五只",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "想要五只",
+      "selection_reason": "Query 明确提出了购买数量"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:39:19.672629+00:00",
+    "source_task_id": "510"
+  }
+}

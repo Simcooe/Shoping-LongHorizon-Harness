@@ -1,0 +1,62 @@
+{
+  "task_id": "1116",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想入手一款全国联保的紫色助听器，预算在1100元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          23,
+          24
+        ],
+        "reasoning": "Step 23/24 打开并选中“西万博助听器原西门子P6莲花...”商品，品类为助听器。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          24
+        ],
+        "reasoning": "Step 24 明确选择颜色分类“深紫色”，与用户要求的紫色匹配。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "violated",
+        "step_reference": [
+          20,
+          23,
+          24,
+          25
+        ],
+        "reasoning": "Step 20 用户明确选择放弃全国联保、接受旗舰店售后，随后 Agent 仍购买未显示全国联保的深紫色款，原全国联保约束未被满足。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          24
+        ],
+        "reasoning": "Step 24 选中深紫色后价格显示为1118元，符合约1100元预算。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 2,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:31:25.388926+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

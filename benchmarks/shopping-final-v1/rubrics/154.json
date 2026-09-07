@@ -1,0 +1,54 @@
+{
+  "task_id": "154",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为舒缓乳贴",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "舒缓乳贴",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "购买数量为三盒",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "三盒",
+      "selection_reason": "Query 明确给出购买数量"
+    },
+    {
+      "id": "c0003",
+      "description": "每盒规格为16片",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "每盒16片",
+      "selection_reason": "Query 明确给出单盒片数"
+    },
+    {
+      "id": "c0004",
+      "description": "总价预期约1000元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "1000元左右",
+      "selection_reason": "「左右」为模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:48.511770+00:00",
+    "source_task_id": "154"
+  }
+}

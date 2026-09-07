@@ -1,0 +1,54 @@
+{
+  "task_id": "1290",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我想要一款可定制的延长线组件，需要用于延长电动汽车的充电枪，我的预算在200元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为延长线组件",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "延长线组件",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品需要支持定制",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可定制",
+      "selection_reason": "Query 明确提出可定制要求"
+    },
+    {
+      "id": "c0003",
+      "description": "用途为延长电动汽车的充电枪",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "用于延长电动汽车的充电枪",
+      "selection_reason": "Query 明确说明使用场景和用途"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约200元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "200元左右",
+      "selection_reason": "「左右」为模糊价位，判为 soft 预算预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 6,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:24.932181+00:00",
+    "source_task_id": "1290"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "task_id": "1134",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "想入一台空调，功率要达到2匹，要有长期质保的，价位差不多四千块吧，买贵还能退差价。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为空调",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "空调",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "空调功率须达到2匹",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "功率要达到2匹",
+      "selection_reason": "Query 明确提出了功率规格要求"
+    },
+    {
+      "id": "c0003",
+      "description": "需要有长期质保服务",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "要有长期质保",
+      "selection_reason": "Query 明确提出了质保服务要求，且用「要有」表达必要约束"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约4000元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价位差不多四千块吧",
+      "selection_reason": "「差不多」属于模糊价位表述，判为价格预期而非硬性上限"
+    },
+    {
+      "id": "c0005",
+      "description": "需要支持买贵退差价",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "买贵还能退差价",
+      "selection_reason": "Query 明确提出了价格保障服务要求"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:42:28.328889+00:00",
+    "source_task_id": "1134"
+  }
+}

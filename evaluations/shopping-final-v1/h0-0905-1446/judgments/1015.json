@@ -1,0 +1,52 @@
+{
+  "task_id": "1015",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "找找看红茶色的水性染料，价格在30块钱上下。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          2,
+          3
+        ],
+        "reasoning": "Step 2/3 商品标题明确为“高浓度塑料专用水性染料”，且页面展示为水性染料商品页。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          3,
+          8
+        ],
+        "reasoning": "Step 3 和 Step 8 中 Agent 明确点击选择了“红茶色”规格。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          3
+        ],
+        "reasoning": "Step 3 选择红茶色后价格显示为 15.0，属于“30块钱上下”的合理范围；Step 8 的 31.0 也接近 30。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 2,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:27:58.603643+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

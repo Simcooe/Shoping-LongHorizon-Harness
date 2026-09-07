@@ -1,0 +1,46 @@
+{
+  "task_id": "284",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "找一款代购的揉腹仪，价格在300元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为揉腹仪",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "揉腹仪",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "商品为代购渠道商品",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "代购",
+      "selection_reason": "Query 明确要求代购的揉腹仪"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约300元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在300元左右",
+      "selection_reason": "「左右」为模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:16.422332+00:00",
+    "source_task_id": "284"
+  }
+}

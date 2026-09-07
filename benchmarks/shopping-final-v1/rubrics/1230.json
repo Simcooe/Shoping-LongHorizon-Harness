@@ -1,0 +1,46 @@
+{
+  "task_id": "1230",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "请筛选一款可以安装在电动车上的儿童座椅，售价约120元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为儿童座椅",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "儿童座椅",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "可安装在电动车上使用",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以安装在电动车上",
+      "selection_reason": "Query 明确提出了适用安装对象"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约120元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "售价约120元左右",
+      "selection_reason": "“约”“左右”属于模糊价位，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:09.562691+00:00",
+    "source_task_id": "1230"
+  }
+}

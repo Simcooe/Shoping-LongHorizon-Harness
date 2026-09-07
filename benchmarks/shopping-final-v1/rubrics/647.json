@@ -1,0 +1,54 @@
+{
+  "task_id": "647",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我正在寻找一款低糖的乌龙茶馅料，可以用来做广式月饼，售价约350元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为乌龙茶馅料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "乌龙茶馅料",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "产品应为低糖类型或低糖配方",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "低糖",
+      "selection_reason": "Query 明确提出了低糖属性"
+    },
+    {
+      "id": "c0003",
+      "description": "适用于制作广式月饼",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "可以用来做广式月饼",
+      "selection_reason": "Query 明确表达了使用场景/功能"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约350元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "售价约350元",
+      "selection_reason": "「约」表示模糊价位，按规则判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 2,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:40:04.782583+00:00",
+    "source_task_id": "647"
+  }
+}

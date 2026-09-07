@@ -1,0 +1,70 @@
+{
+  "task_id": "36",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "帮我找一款适合女生的金色圆框的纯钛近视眼镜，价格不超过240元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为近视眼镜",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "近视眼镜",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "适用人群为女生/女性",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "适合女生",
+      "selection_reason": "Query 明确提出了适用人群"
+    },
+    {
+      "id": "c0003",
+      "description": "镜框颜色为金色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "金色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0004",
+      "description": "镜框形状为圆框",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "圆框",
+      "selection_reason": "Query 明确提出了款式/形状"
+    },
+    {
+      "id": "c0005",
+      "description": "材质为纯钛",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "纯钛",
+      "selection_reason": "Query 明确提出了材质"
+    },
+    {
+      "id": "c0006",
+      "description": "价格不超过240元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过240元",
+      "selection_reason": "Query 明确给出了预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 6,
+    "hidden_candidate_constraint_count": 4,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:17.647235+00:00",
+    "source_task_id": "36"
+  }
+}

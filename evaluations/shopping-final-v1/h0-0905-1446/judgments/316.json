@@ -1,0 +1,54 @@
+{
+  "task_id": "316",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想买一款适合安装在入户门的壁灯，预算约350元。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          14,
+          18,
+          28,
+          35
+        ],
+        "reasoning": "多次搜索与候选均为壁灯/户外长条壁灯类商品，Step 15/29/33 等商品标题与页面明确为壁灯。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          1,
+          12,
+          13
+        ],
+        "reasoning": "初始搜索包含入户门壁灯，Step 13 用户明确确认安装在室外入户门且能晒到太阳，Agent 后续围绕该场景搜索。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 未最终购买或确认商品；虽发现多款价格接近或超预算，但没有明确选择/购买不满足约350元预算的商品，证据不足。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:20:07.505360+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

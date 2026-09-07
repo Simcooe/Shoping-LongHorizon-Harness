@@ -1,0 +1,44 @@
+{
+  "task_id": "434",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "预算在500元以内，帮忙找一款黑白红拼色的羽毛球鞋。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 浏览了多款羽毛球鞋但未最终选择或购买商品，无法确认最终满足品类约束。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "轨迹中未出现明确的黑白红拼色候选被选中，最终也未购买，证据不足。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "Agent 查看过多个500元以内商品，但未最终确定或购买商品，无法判定最终价格约束满足。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 2,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:25:16.870494+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

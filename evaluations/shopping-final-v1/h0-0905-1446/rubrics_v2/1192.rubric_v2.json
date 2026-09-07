@@ -1,0 +1,207 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/1192",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品为三阶魔方",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "三阶魔方",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "三阶魔方",
+      "source_events": [
+        "initial:1192"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "other",
+      "description": "适合比赛使用（比赛专用）",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "比赛专用",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "比赛专用",
+      "source_events": [
+        "initial:1192"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "budget",
+      "description": "价格预期约为100元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价格在100元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/1192/budget/qa-0003",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "价格在100元左右",
+      "source_events": [
+        "initial:1192"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"107元\", \"upper\": 107.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/1192/budget/qa-0003",
+      "source_quote": "107元",
+      "visible_from_event": "h0-0905-1446/1192/budget/qa-0003",
+      "effective_from_event": "h0-0905-1446/1192/budget/qa-0003",
+      "effective_until_event": null,
+      "supersedes": "c0003",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 107.0,
+        "quote": "107元"
+      },
+      "source_events": [
+        "h0-0905-1446/1192/budget/qa-0003"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/1192/budget/qa-0003",
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1192",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "4353e4ccebba8a7fe7b8228194a8454dd35ad31e0d7437c725baf76b4ac0d02a",
+  "trace_hash": "a77fe691e32e322ac1f078d6e02dc05aab43b0dc095aae91a8550da7036a554d",
+  "events_hash": "b3d67804c745057de2ad309aad28222eda49b0127240b489759f48a09a0ccbb3",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 37,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0002",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [
+    {
+      "event_id": "h0-0905-1446/1192/conditional_accept/qa-0002",
+      "status": "pending_confirmation",
+      "kind": "conditional_accept"
+    }
+  ],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/1192/conditional_accept/qa-0002",
+      "session": "h0-0905-1446/1192",
+      "kind": "conditional_accept",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "amount": 107.0
+      },
+      "source_reply_id": "qa-0002",
+      "source_quote": "107元",
+      "conditions": [
+        "用户回复：这个107元是爆款推荐的那个i carry E智能磁力版吗？我听说有个爆款配置带专属配件，想确认下是不是同款，别买错了。"
+      ],
+      "scope": {
+        "amount": 107.0
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "pending_confirmation",
+      "step_index": 28
+    },
+    {
+      "event_id": "h0-0905-1446/1192/budget/qa-0003",
+      "session": "h0-0905-1446/1192",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 107.0,
+        "quote": "107元"
+      },
+      "source_reply_id": "qa-0003",
+      "source_quote": "107元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 2,
+      "status": "applied",
+      "step_index": 34
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/1192/budget/qa-0003",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.049911+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "879486919ad3a3cb85d660c42af6a0eff7d39c21cda181eb724da84f6b49c604"
+}

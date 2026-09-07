@@ -1,0 +1,46 @@
+{
+  "task_id": "333",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "有没有散装的花毛峰茉莉花茶，预算两百出头。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为花毛峰茉莉花茶",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "花毛峰茉莉花茶",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "包装规格为散装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "散装",
+      "selection_reason": "Query 明确提出了包装规格"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约两百元出头",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算两百出头",
+      "selection_reason": "「出头」表模糊价位，未给出精确上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:38:46.468978+00:00",
+    "source_task_id": "333"
+  }
+}

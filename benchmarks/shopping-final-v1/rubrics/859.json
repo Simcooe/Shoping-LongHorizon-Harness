@@ -1,0 +1,38 @@
+{
+  "task_id": "859",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "推荐一款价格在10元左右的红豆沙馅料。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为红豆沙馅料",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "红豆沙馅料",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "价格预期约10元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "价格在10元左右",
+      "selection_reason": "「左右」属于模糊价位表述，判为软性价格预期"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 2,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:41:13.745245+00:00",
+    "source_task_id": "859"
+  }
+}

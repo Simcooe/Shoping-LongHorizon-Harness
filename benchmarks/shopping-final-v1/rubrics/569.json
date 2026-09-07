@@ -1,0 +1,62 @@
+{
+  "task_id": "569",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求一款红色马面裙，适合春季办婚礼敬酒穿的，价格不超过260元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为马面裙",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "马面裙",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为红色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "红色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "适用季节为春季",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "春季",
+      "selection_reason": "Query 明确提出了适用季节"
+    },
+    {
+      "id": "c0004",
+      "description": "适用场合为婚礼敬酒穿着",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "办婚礼敬酒穿",
+      "selection_reason": "Query 明确提出了适用场合/功能"
+    },
+    {
+      "id": "c0005",
+      "description": "价格不超过260元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格不超过260元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:39:47.748628+00:00",
+    "source_task_id": "569"
+  }
+}

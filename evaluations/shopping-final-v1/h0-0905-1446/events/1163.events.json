@@ -1,0 +1,69 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1163",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 13,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 10,
+      "position": 9,
+      "position_mapped": true,
+      "question": "请问您的搬运车具体是哪个型号？商品下有「搬运车承重轮密封圈挡圈新款(20元)」「搬运车密封圈挡圈老款」「小金刚承重轮密封圈挡圈」等规格，我需要确认您需要的是哪一款（例如合力力达2.0吨460新款）以免买错。",
+      "reply": "用户回复：我不太清楚具体型号，就是2.0吨的电动搬运车，要新款密封挡圈，大概20元那种。",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/1163/budget/qa-0001",
+      "session": "h0-0905-1446/1163",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 20.0,
+        "quote": "20元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "20元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 9
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

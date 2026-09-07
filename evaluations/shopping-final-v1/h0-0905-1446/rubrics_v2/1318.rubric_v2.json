@@ -1,0 +1,177 @@
+{
+  "schema_version": "shopping-rubric-schema-v2",
+  "requirement_protocol": "requirement-protocol-v1",
+  "session": "h0-0905-1446/1318",
+  "requirement_version": 1,
+  "constraints": [
+    {
+      "id": "c0001",
+      "requirement_key": "category",
+      "description": "商品品类为和纸胶带",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "和纸胶带",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "和纸胶带",
+      "source_events": [
+        "initial:1318"
+      ]
+    },
+    {
+      "id": "c0002",
+      "requirement_key": "budget",
+      "description": "价格预期约30元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "价位在30元左右",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": "h0-0905-1446/1318/budget/qa-0001",
+      "supersedes": null,
+      "lifecycle_status": "superseded",
+      "scope": {},
+      "conditions": [],
+      "value": "价位在30元左右",
+      "source_events": [
+        "initial:1318"
+      ]
+    },
+    {
+      "id": "c0003",
+      "requirement_key": "other",
+      "description": "要求商品可以现货现发",
+      "hardness": "hard",
+      "source": "initial_query",
+      "source_event_id": null,
+      "source_quote": "要现货现发",
+      "visible_from_event": null,
+      "effective_from_event": null,
+      "effective_until_event": null,
+      "supersedes": null,
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": "要现货现发",
+      "source_events": [
+        "initial:1318"
+      ]
+    },
+    {
+      "id": "c0004",
+      "requirement_key": "budget",
+      "description": "budget: {\"quote\": \"34元\", \"upper\": 34.0}",
+      "hardness": "hard",
+      "source": "shopper_clarification",
+      "source_event_id": "h0-0905-1446/1318/budget/qa-0001",
+      "source_quote": "34元",
+      "visible_from_event": "h0-0905-1446/1318/budget/qa-0001",
+      "effective_from_event": "h0-0905-1446/1318/budget/qa-0001",
+      "effective_until_event": null,
+      "supersedes": "c0002",
+      "lifecycle_status": "active",
+      "scope": {},
+      "conditions": [],
+      "value": {
+        "upper": 34.0,
+        "quote": "34元"
+      },
+      "source_events": [
+        "h0-0905-1446/1318/budget/qa-0001"
+      ]
+    }
+  ],
+  "conditional_permissions": [],
+  "rejections": [],
+  "exclusions": [],
+  "requirement_versions": [
+    {
+      "requirement_version": 0,
+      "activated_by_event": null,
+      "active_constraint_ids": [
+        "c0001",
+        "c0002",
+        "c0003"
+      ],
+      "active_permission_ids": []
+    },
+    {
+      "requirement_version": 1,
+      "activated_by_event": "h0-0905-1446/1318/budget/qa-0001",
+      "active_constraint_ids": [
+        "c0001",
+        "c0003",
+        "c0004"
+      ],
+      "active_permission_ids": []
+    }
+  ],
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "1318",
+  "trial_id": "t0",
+  "event_source": "retrospective",
+  "base_rubric_hash": "46c0cf9c29b04d60b33da65e20d485c8e5b9b319b9eed5d84780ceadd3879065",
+  "trace_hash": "611a1066241a25367e0fc5cd20edead7f19bc9b8e05c774c8c162b1d5505bf56",
+  "events_hash": "7b536fc05113a55e3797f7fcc113feb992c036bde36470a80033a050184ad51c",
+  "decision": {
+    "kind": "hard_stop",
+    "position": 17,
+    "requirement_version": 1
+  },
+  "final_constraint_ids": [
+    "c0001",
+    "c0003",
+    "c0004"
+  ],
+  "final_permission_ids": [],
+  "skipped_events": [],
+  "requirement_events": [
+    {
+      "event_id": "h0-0905-1446/1318/budget/qa-0001",
+      "session": "h0-0905-1446/1318",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 34.0,
+        "quote": "34元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "34元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": 1,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 15
+    }
+  ],
+  "apply_log": [
+    {
+      "event_id": "h0-0905-1446/1318/budget/qa-0001",
+      "applied": true,
+      "reason": "ok",
+      "phase": "pre_decision"
+    }
+  ],
+  "compiler_version": "rubric-v2-compiler-v1",
+  "generated_at": "2026-09-06T08:11:45.061615+00:00",
+  "metadata": {
+    "extractor": {
+      "name": "heuristic",
+      "version": "heuristic-v1"
+    },
+    "note": "final 集合取决策时刻；其后事件仅保留时间线，不影响最终判定。"
+  },
+  "input_fingerprint": "b0343325ba1e6d8da80052e329dcd528100d62cac2bab1c729a2f064117d289f"
+}

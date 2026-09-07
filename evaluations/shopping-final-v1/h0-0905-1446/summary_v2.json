@@ -1,0 +1,409 @@
+{
+  "report_schema": "shopping-report-v2",
+  "benchmark_id": "shopping-final-v1",
+  "task_count": 200,
+  "evaluated_task_count": 200,
+  "panel1": {
+    "task_success_count": 60,
+    "task_success_rate": 0.3,
+    "outcome_classes": {
+      "repeat_loop": 50,
+      "max_steps": 17,
+      "success_gold": 59,
+      "success_partial_alternative": 39,
+      "reward_unverifiable": 9,
+      "success_valid_alternative": 1,
+      "wrong_purchase": 1
+    },
+    "price_data_gap_count": 9,
+    "active_requirement_result": "unavailable（历史 run 无环境动态裁判）"
+  },
+  "panel2": {
+    "final_constraint_sample_count": 693,
+    "final_verdict_counts": {
+      "satisfied": 481,
+      "violated": 0,
+      "unknown": 212,
+      "not_applicable": 0
+    },
+    "final_satisfaction_rate": 0.6941,
+    "final_satisfaction_denominator": 693,
+    "initial_reference_satisfaction_rate": 0.6942,
+    "initial_reference_denominator": 677,
+    "hard_satisfaction_rate": 0.6995,
+    "hard_denominator": 579,
+    "soft_satisfaction_rate": 0.6667,
+    "soft_denominator": 114,
+    "lifecycle_counts": {
+      "active": 693,
+      "superseded": 15
+    },
+    "clarified_constraints_timeline": 16,
+    "clarified_constraints_final_active": {
+      "satisfied": 11,
+      "unknown": 5
+    },
+    "conditional_permissions": {
+      "total": 0,
+      "lifecycle": {},
+      "note": "条件许可单独展示，不计入满足项分母。"
+    }
+  },
+  "panel3": {
+    "dimensions": {
+      "clarification_strategy": {
+        "mean": 1.985,
+        "distribution": {
+          "2": 197,
+          "1": 3
+        },
+        "sample_count": 200
+      },
+      "information_retention": {
+        "mean": 1.51,
+        "distribution": {
+          "1": 98,
+          "2": 102
+        },
+        "sample_count": 200
+      },
+      "search_strategy": {
+        "mean": 1.91,
+        "distribution": {
+          "2": 182,
+          "1": 18
+        },
+        "sample_count": 200
+      },
+      "candidate_utilization": {
+        "mean": 1.87,
+        "distribution": {
+          "2": 175,
+          "1": 24,
+          "0": 1
+        },
+        "sample_count": 200
+      },
+      "evidence_verification": {
+        "mean": 1.91,
+        "distribution": {
+          "1": 18,
+          "2": 182
+        },
+        "sample_count": 200
+      },
+      "decision_quality": {
+        "mean": 1.68,
+        "distribution": {
+          "1": 60,
+          "2": 138,
+          "0": 2
+        },
+        "sample_count": 200
+      },
+      "termination_efficiency": {
+        "mean": 1.48,
+        "distribution": {
+          "1": 34,
+          "2": 131,
+          "0": 35
+        },
+        "sample_count": 200
+      }
+    },
+    "reason_samples": {
+      "clarification_strategy": [
+        {
+          "task_id": 6,
+          "reason": "mock：ask_shopper 1 次（机械统计）"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：ask_shopper 1 次（机械统计）"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：ask_shopper 4 次（机械统计）"
+        }
+      ],
+      "information_retention": [
+        {
+          "task_id": 6,
+          "reason": "mock：存在澄清但保持情况未验证"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：存在澄清但保持情况未验证"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：存在澄清但保持情况未验证"
+        }
+      ],
+      "search_strategy": [
+        {
+          "task_id": 6,
+          "reason": "mock：search 8 次"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：search 11 次"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：search 6 次"
+        }
+      ],
+      "candidate_utilization": [
+        {
+          "task_id": 6,
+          "reason": "mock：打开候选 8 个"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：打开候选 9 个"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：打开候选 4 个"
+        }
+      ],
+      "evidence_verification": [
+        {
+          "task_id": 6,
+          "reason": "mock：子页查看 0 次"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：子页查看 0 次"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：子页查看 3 次"
+        }
+      ],
+      "decision_quality": [
+        {
+          "task_id": 6,
+          "reason": "mock：决策类型 hard_stop"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：决策类型 finish"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：决策类型 hard_stop"
+        }
+      ],
+      "termination_efficiency": [
+        {
+          "task_id": 6,
+          "reason": "mock：决策类型 hard_stop"
+        },
+        {
+          "task_id": 10,
+          "reason": "mock：决策类型 finish"
+        },
+        {
+          "task_id": 17,
+          "reason": "mock：终局后仍有动作"
+        }
+      ]
+    },
+    "by_clarification": {
+      "no_clarification": {
+        "sample_count": 102,
+        "clarification_strategy": 2.0,
+        "information_retention": 2.0,
+        "search_strategy": 1.8824,
+        "candidate_utilization": 1.8235,
+        "evidence_verification": 1.9118,
+        "decision_quality": 1.7941,
+        "termination_efficiency": 1.5686
+      },
+      "with_clarification": {
+        "sample_count": 98,
+        "clarification_strategy": 1.9694,
+        "information_retention": 1.0,
+        "search_strategy": 1.9388,
+        "candidate_utilization": 1.9184,
+        "evidence_verification": 1.9082,
+        "decision_quality": 1.5612,
+        "termination_efficiency": 1.3878
+      }
+    },
+    "by_complexity": {
+      "high": {
+        "sample_count": 84,
+        "clarification_strategy": 1.9881,
+        "information_retention": 1.5119,
+        "search_strategy": 1.9048,
+        "candidate_utilization": 1.8571,
+        "evidence_verification": 1.881,
+        "decision_quality": 1.6905,
+        "termination_efficiency": 1.4524
+      },
+      "low": {
+        "sample_count": 20,
+        "clarification_strategy": 1.95,
+        "information_retention": 1.45,
+        "search_strategy": 1.9,
+        "candidate_utilization": 1.85,
+        "evidence_verification": 1.9,
+        "decision_quality": 1.45,
+        "termination_efficiency": 1.15
+      },
+      "medium": {
+        "sample_count": 96,
+        "clarification_strategy": 1.9896,
+        "information_retention": 1.5208,
+        "search_strategy": 1.9167,
+        "candidate_utilization": 1.8854,
+        "evidence_verification": 1.9375,
+        "decision_quality": 1.7188,
+        "termination_efficiency": 1.5729
+      }
+    },
+    "by_domain": {
+      "休闲娱乐文教": {
+        "sample_count": 23,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.4783,
+        "search_strategy": 1.913,
+        "candidate_utilization": 1.913,
+        "evidence_verification": 1.9565,
+        "decision_quality": 1.6957,
+        "termination_efficiency": 1.4348
+      },
+      "家居家装": {
+        "sample_count": 23,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.6087,
+        "search_strategy": 1.9565,
+        "candidate_utilization": 1.8696,
+        "evidence_verification": 1.913,
+        "decision_quality": 1.4348,
+        "termination_efficiency": 1.3478
+      },
+      "家用电器数码": {
+        "sample_count": 22,
+        "clarification_strategy": 1.9545,
+        "information_retention": 1.3182,
+        "search_strategy": 1.8636,
+        "candidate_utilization": 1.8636,
+        "evidence_verification": 1.9545,
+        "decision_quality": 1.6818,
+        "termination_efficiency": 1.2273
+      },
+      "服饰鞋包饰品": {
+        "sample_count": 22,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.6364,
+        "search_strategy": 1.9091,
+        "candidate_utilization": 1.9091,
+        "evidence_verification": 1.8182,
+        "decision_quality": 1.8182,
+        "termination_efficiency": 1.6818
+      },
+      "母婴儿童": {
+        "sample_count": 22,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.5,
+        "search_strategy": 1.8636,
+        "candidate_utilization": 1.8182,
+        "evidence_verification": 1.7273,
+        "decision_quality": 1.5909,
+        "termination_efficiency": 1.5
+      },
+      "生产材料农用品": {
+        "sample_count": 22,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.4545,
+        "search_strategy": 1.9091,
+        "candidate_utilization": 1.8636,
+        "evidence_verification": 1.9545,
+        "decision_quality": 1.7273,
+        "termination_efficiency": 1.7727
+      },
+      "美妆个护健康": {
+        "sample_count": 22,
+        "clarification_strategy": 2.0,
+        "information_retention": 1.5455,
+        "search_strategy": 1.8636,
+        "candidate_utilization": 1.8182,
+        "evidence_verification": 1.9545,
+        "decision_quality": 1.8182,
+        "termination_efficiency": 1.7273
+      },
+      "运动户外交通": {
+        "sample_count": 22,
+        "clarification_strategy": 1.9545,
+        "information_retention": 1.4545,
+        "search_strategy": 2.0,
+        "candidate_utilization": 1.9091,
+        "evidence_verification": 1.9545,
+        "decision_quality": 1.7727,
+        "termination_efficiency": 1.4545
+      },
+      "食品饮品": {
+        "sample_count": 22,
+        "clarification_strategy": 1.9545,
+        "information_retention": 1.5909,
+        "search_strategy": 1.9091,
+        "candidate_utilization": 1.8636,
+        "evidence_verification": 1.9545,
+        "decision_quality": 1.5909,
+        "termination_efficiency": 1.1818
+      }
+    },
+    "note": "初始与动态指标分开；不同约束数的任务不混算单一总满足率。"
+  },
+  "panel4": {
+    "decision_kinds": {
+      "hard_stop": 44,
+      "finish": 15,
+      "purchase_attempt": 139,
+      "agent_stop": 2
+    },
+    "anomaly_task_counts": {
+      "no_progress": 48,
+      "post_terminal_action": 34,
+      "inferred_invalid_navigation": 125,
+      "inferred_invalid_option": 41,
+      "inferred_invalid_buy": 43,
+      "inferred_invalid_click": 13,
+      "repeated_action": 2
+    },
+    "anomaly_action_counts": {
+      "no_progress": 48,
+      "post_terminal_action": 179,
+      "inferred_invalid_navigation": 217,
+      "inferred_invalid_option": 53,
+      "inferred_invalid_buy": 44,
+      "inferred_invalid_click": 16,
+      "repeated_action": 2
+    },
+    "sync_issue_counts": {},
+    "post_terminal_event_count": 5
+  },
+  "metadata": {
+    "report_schema": "shopping-report-v2",
+    "schema_version": "shopping-rubric-schema-v2",
+    "benchmark_id": "shopping-final-v1",
+    "task_count": 200,
+    "evaluated_task_count": 200,
+    "generated_at": "2026-09-06T08:11:56.479813+00:00",
+    "deterministic_source": "reports/h0-0905-1446-terminal-v2",
+    "rubrics_v2_source": "evaluations/shopping-final-v1/h0-0905-1446/rubrics_v2",
+    "judgments_v2_source": "evaluations/shopping-final-v1/h0-0905-1446/judgments_v2_mock",
+    "events_source": "evaluations/shopping-final-v1/h0-0905-1446/events",
+    "deterministic_terminal_protocol": "terminal-protocol-v2",
+    "judge_mode": [
+      "mock"
+    ],
+    "judge_mode_note": "mock 判定仅用于链路验证，不是真实模型成绩。",
+    "environment_version": "shopsimulator-environment-v2.1",
+    "warnings": null
+  }
+}

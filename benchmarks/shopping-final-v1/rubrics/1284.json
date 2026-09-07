@@ -1,0 +1,54 @@
+{
+  "task_id": "1284",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "搜一下黑色外观的高端音响套装，预计价格在15000元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为音响套装",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "音响套装",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "外观颜色为黑色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "黑色外观",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "音响套装应为高端定位",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "高端",
+      "selection_reason": "高端属于主观品质定位，未给出具体品牌或参数，判 soft"
+    },
+    {
+      "id": "c0004",
+      "description": "价格预期约15000元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "15000元左右",
+      "selection_reason": "左右属于模糊价位表达，不是明确上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 4,
+    "hidden_candidate_constraint_count": 7,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:43:25.538848+00:00",
+    "source_task_id": "1284"
+  }
+}

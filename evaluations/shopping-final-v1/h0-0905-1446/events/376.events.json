@@ -1,0 +1,68 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "376",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 12,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 10,
+      "position": 9,
+      "position_mapped": true,
+      "question": "请问您看中的是否是这款「欧诗漫去角质啫喱（135g，99元）」？确认后我就为您购买。",
+      "reply": "用户回复：这款欧诗漫的去角质啫喱正好是135g，价格99元，规格和价格都合适。它是啫喱质地吗？毕竟我需要的是啫喱质地的清洁毛孔产品。",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/376/budget/qa-0001",
+      "session": "h0-0905-1446/376",
+      "kind": "modify",
+      "requirement_key": "budget",
+      "old_value": null,
+      "new_value": {
+        "upper": 99.0,
+        "quote": "价格99元"
+      },
+      "source_reply_id": "qa-0001",
+      "source_quote": "价格99元",
+      "conditions": [],
+      "scope": null,
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 9
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}

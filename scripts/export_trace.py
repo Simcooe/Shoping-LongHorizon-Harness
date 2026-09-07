@@ -70,7 +70,18 @@ def _raw_state(raw: dict) -> dict:
     }
 
 
-def build_traces(events: list[dict], reset_result: dict | None = None) -> tuple[dict, dict]:
+def build_traces(events: list[dict], reset_result: dict | None = None,
+                 terminal_protocol: str = "terminal-protocol-v2") -> tuple[dict, dict]:
+    """构造双视角 trace。
+
+    terminal_protocol：
+    - terminal-protocol-v2（默认，与统一终止协议对齐）：摘要取第一次
+      done=true 的真实终局；其后的锁定响应/动作不改写终局。
+    - terminal-protocol-v1（显式旧口径）：取最后一次 done=true，保留对
+      历史轨迹的旧解释，不得与 v2 混用而不声明。
+    """
+    if terminal_protocol not in ("terminal-protocol-v1", "terminal-protocol-v2"):
+        raise ValueError(f"unknown terminal protocol: {terminal_protocol}")
     task = ""
     for event in events:
         if event.get("type") != "user/message":
@@ -84,6 +95,7 @@ def build_traces(events: list[dict], reset_result: dict | None = None) -> tuple[
     raw_steps = []
 
     pending = None
+    requirement_events = []
     for event in events:
         t = event.get("type")
         data = event.get("data", {})
@@ -112,24 +124,46 @@ def build_traces(events: list[dict], reset_result: dict | None = None) -> tuple[
                     "observation": text_of_message(message),
                 }
             )
-            if raw is not None:
-                raw_steps.append(
-                    {
-                        "step": pending["step"],
-                        "tool_name": pending["tool_name"],
-                        "tool_args": pending["tool_args"],
-                        "raw": raw,
-                    }
-                )
+            # 缺 raw 的结果也必须占位：否则 raw_trace 与 model_trace
+            # 按数组位置错配。显式标记 raw_missing，不静默丢弃。
+            raw_steps.append(
+                {
+                    "step": pending["step"],
+                    "tool_name": pending["tool_name"],
+                    "tool_args": pending["tool_args"],
+                    "raw": raw if raw is not None else {"raw_missing": True},
+                }
+            )
+            # 运行时需求事件与可信同步诊断（ask_shopper 产物）：
+            # 按调用关联收集，供 rubric v2 / report v2 使用。
+            if isinstance(raw, dict):
+                if isinstance(raw.get("events"), list):
+                    for ev in raw["events"]:
+                        if isinstance(ev, dict):
+                            requirement_events.append(ev)
+                if isinstance(raw.get("sync"), dict):
+                    requirement_events.append(
+                        {"_sync_result": raw["sync"]}
+                    )
             pending = None
 
     terminal = None
     if raw_steps:
-        for step in reversed(raw_steps):
-            raw = step.get("raw") or {}
-            if raw.get("done"):
-                terminal = _raw_state(raw)
-                break
+        if terminal_protocol == "terminal-protocol-v2":
+            # 第一次真实 done 即终局（锁定协议）；锁定响应的 raw 带同一
+            # 终局快照，不会覆盖。
+            for step in raw_steps:
+                raw = step.get("raw") or {}
+                if raw.get("done"):
+                    terminal = _raw_state(raw)
+                    break
+        else:
+            # v1 旧口径：最后一次 done 覆盖（历史解释，显式选择才可用）。
+            for step in reversed(raw_steps):
+                raw = step.get("raw") or {}
+                if raw.get("done"):
+                    terminal = _raw_state(raw)
+                    break
         if terminal is None:
             terminal = _raw_state(raw_steps[-1].get("raw") or {})
     else:
@@ -144,12 +178,15 @@ def build_traces(events: list[dict], reset_result: dict | None = None) -> tuple[
         "step_count": len(model_steps),
         "steps": model_steps,
         "terminal": terminal,
+        "terminal_protocol": terminal_protocol,
     }
     raw_trace = {
         "task": task,
         "step_count": len(raw_steps),
         "reset": reset_result,
         "steps": raw_steps,
+        "terminal_protocol": terminal_protocol,
+        "requirement_events": requirement_events,
     }
     return model_trace, raw_trace
 
@@ -160,6 +197,12 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--out-dir", required=True, help="trace 输出目录")
     parser.add_argument("--id", required=True, help="trace 文件的 id 前缀")
     parser.add_argument("--reset", default=None, help="reset 原生返回 JSON 文件")
+    parser.add_argument(
+        "--terminal-protocol",
+        default="terminal-protocol-v2",
+        choices=["terminal-protocol-v1", "terminal-protocol-v2"],
+        help="终局摘要口径：v2=第一次真实 done 锁定（默认）；v1=旧口径（最后 done）。",
+    )
     args = parser.parse_args(argv)
 
     session_file = resolve_session_file(Path(args.session))
@@ -173,7 +216,10 @@ def main(argv: list[str]) -> int:
             payload = json.loads(reset_path.read_text(encoding="utf-8"))
             reset_result = payload.get("result") if isinstance(payload, dict) else None
 
-    model_trace, raw_trace = build_traces(read_session(session_file), reset_result=reset_result)
+    model_trace, raw_trace = build_traces(
+        read_session(session_file), reset_result=reset_result,
+        terminal_protocol=args.terminal_protocol,
+    )
 
     model_path = out_dir / f"{args.id}.model_trace.json"
     raw_path = out_dir / f"{args.id}.raw_trace.json"

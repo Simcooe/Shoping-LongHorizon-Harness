@@ -1,0 +1,46 @@
+{
+  "task_id": "29",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "我需要一些白色的单层板材，预算在80元左右。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品为单层板材",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "单层板材",
+      "selection_reason": "Query 明确提出了商品类型与结构"
+    },
+    {
+      "id": "c0002",
+      "description": "颜色为白色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "白色的",
+      "selection_reason": "Query 明确提出了颜色要求"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预算约80元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "预算在80元左右",
+      "selection_reason": "「左右」属于模糊价位，写成价格预期约80元，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:16.385684+00:00",
+    "source_task_id": "29"
+  }
+}

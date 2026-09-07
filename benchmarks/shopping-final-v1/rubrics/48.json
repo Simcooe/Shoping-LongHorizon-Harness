@@ -1,0 +1,62 @@
+{
+  "task_id": "48",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "有没有33码的银色演出鞋？走秀或者弹钢琴穿的，价格别超过160元。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为演出鞋",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "演出鞋",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "尺码为33码",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "33码",
+      "selection_reason": "Query 明确提出了尺码"
+    },
+    {
+      "id": "c0003",
+      "description": "颜色为银色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "银色",
+      "selection_reason": "Query 明确提出了颜色"
+    },
+    {
+      "id": "c0004",
+      "description": "适用于走秀或弹钢琴场景",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "走秀或者弹钢琴穿的",
+      "selection_reason": "Query 明确提出了适用场景"
+    },
+    {
+      "id": "c0005",
+      "description": "价格不超过160元",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "价格别超过160元",
+      "selection_reason": "Query 明确给出预算上限"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 5,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:22.539738+00:00",
+    "source_task_id": "48"
+  }
+}

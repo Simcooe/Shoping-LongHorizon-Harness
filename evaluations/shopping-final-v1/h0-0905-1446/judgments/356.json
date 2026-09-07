@@ -1,0 +1,45 @@
+{
+  "task_id": "356",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "选一选儿童轮滑鞋套装，预算不超300元。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          4,
+          5,
+          18,
+          21,
+          22,
+          23
+        ],
+        "reasoning": "Agent 打开并选择了迪卡侬儿童轮滑鞋的“梦幻独角兽五件套（鞋+头盔+护具+袜子+包）”及尺码后点击 Buy Now，页面明确为儿童轮滑鞋套装。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "unknown",
+        "step_reference": [],
+        "reasoning": "商品页仅显示价格区间299.0至609.0，未显示所选“梦幻独角兽五件套”和26-29码对应的最终价格，无法证明不超过300元。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:21:32.399473+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

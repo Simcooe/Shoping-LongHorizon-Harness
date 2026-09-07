@@ -1,0 +1,64 @@
+{
+  "task_id": "201",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "想要入一件适合身高120小女孩的冲锋衣，要紫黑拼色款，预算700元以内。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "reasoning": "Step 11-14 浏览并选择蕉内小氧气302Proof儿童单壳冲锋衣，商品页明确为冲锋衣。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          11,
+          13
+        ],
+        "reasoning": "Step 11 商品页有参考身高120，Step 13 点击选择120，证据明确匹配身高120。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "violated",
+        "step_reference": [
+          12,
+          36
+        ],
+        "reasoning": "Step 12 选择的是薄雾紫拼色，页面未显示紫黑拼色；Step 36 用户仍表示女儿喜欢紫黑搭配，未见明确确认接受该颜色替代。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          12,
+          13
+        ],
+        "reasoning": "Step 12/13 选中薄雾紫拼色和120码后价格显示359.0，未超过700元预算。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:07:03.864484+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "150",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "求推荐一款售价1430元左右的粉色外观的电吉他综合效果器。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为电吉他综合效果器",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "电吉他综合效果器",
+      "selection_reason": "Query 明确提出了商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "外观颜色为粉色",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "粉色外观",
+      "selection_reason": "Query 明确提出了外观颜色"
+    },
+    {
+      "id": "c0003",
+      "description": "价格预期约1430元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "售价1430元左右",
+      "selection_reason": "「左右」为模糊价位表述，判为 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 3,
+    "hidden_candidate_constraint_count": 5,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:41.887328+00:00",
+    "source_task_id": "150"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "task_id": "219",
+  "schema_version": "shopping-judge-output-v2",
+  "rubric_version": "v2",
+  "frozen": true,
+  "judgment": {
+    "candidate_evidence": [
+      {
+        "constraint_id": "c0001",
+        "position": 15,
+        "quote": "玻璃钢休闲椅木纹椅子商场座椅写字楼休息椅商业广场坐凳户外座椅"
+      },
+      {
+        "constraint_id": "c0002",
+        "position": 15,
+        "quote": "玻璃钢休闲椅木纹椅子商场座椅写字楼休息椅商业广场坐凳户外座椅"
+      },
+      {
+        "constraint_id": "c0003",
+        "position": 15,
+        "quote": "商场座椅写字楼休息椅商业广场坐凳户外座椅"
+      },
+      {
+        "constraint_id": "c0004",
+        "position": 15,
+        "quote": "价格: 501.0 to 2400.0"
+      }
+    ],
+    "final_requirement_verdicts": [
+      {
+        "constraint_id": "c0001",
+        "status": "unknown",
+        "requirement_version": 0,
+        "position_reference": [
+          15,
+          16
+        ],
+        "event_reference": [
+          "Step 16 click 597270817766 进入商品页，标题含‘休闲椅’",
+          "Step 17 click l2400*w450*h450 后 Episode finished，未见购买/最终选定确认"
+        ],
+        "reasoning": "最终停留商品标题显示为休闲椅，但决策时刻只有规格点击且随即结束，没有购买或最终候选确认证据。"
+      },
+      {
+        "constraint_id": "c0002",
+        "status": "unknown",
+        "requirement_version": 0,
+        "position_reference": [
+          15,
+          16
+        ],
+        "event_reference": [
+          "Step 16 商品页标题含‘玻璃钢休闲椅’",
+          "Step 17 选择规格后 Episode finished，未显示成交或最终确认"
+        ],
+        "reasoning": "候选商品标题含玻璃钢，但最终没有购买/选定完成的 model-visible 证据，只能判未知。"
+      },
+      {
+        "constraint_id": "c0003",
+        "status": "unknown",
+        "requirement_version": 0,
+        "position_reference": [
+          15,
+          16
+        ],
+        "event_reference": [
+          "Step 16 商品页标题含‘商场座椅写字楼休息椅商业广场坐凳户外座椅’",
+          "Step 17 后 Episode finished，无最终购买/确认"
+        ],
+        "reasoning": "标题覆盖商城/写字楼/广场休息区场景，但缺少最终决定证据，不能判满足。"
+      },
+      {
+        "constraint_id": "c0004",
+        "status": "unknown",
+        "requirement_version": 0,
+        "position_reference": [
+          7,
+          15,
+          16
+        ],
+        "event_reference": [
+          "Step 8 选择 l2400*w450*h450 时价格显示 2400.0",
+          "Step 16 再次进入该商品页，价格区间 501.0 to 2400.0",
+          "Step 17 选择该规格后 Episode finished，未见最终购买价格确认"
+        ],
+        "reasoning": "候选规格价格约2400元接近2500元，但最终没有购买/最终候选完成的可见证据。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 0,
+      "termination_efficiency": 1
+    },
+    "dimension_reasons": {
+      "clarification_strategy": "初始 query 已包含品类、材质、场景和预算，未额外澄清不构成问题。",
+      "information_retention": "后续搜索持续围绕玻璃钢休闲椅与约2500元预算，未丢失关键约束。",
+      "search_strategy": "先搜核心词，再补充木纹关键词并回到候选，方向基本合理，但重复搜索同一关键词且未扩展更多有效候选。",
+      "candidate_utilization": "识别并多次回到 597270817766 这一较匹配候选，也查看了规格和价格，但未完成最终选择或购买。",
+      "evidence_verification": "查看了商品页、规格选项和价格，也点击过 description/features，但描述/特征页未展示实质信息，证据核验不充分。",
+      "decision_quality": "最终只停留在规格选择页并 Episode finished，没有购买确认或明确最终候选，决策未完成。",
+      "termination_efficiency": "在找到较匹配候选后反复返回搜索并重复同一搜索，最后未成交即结束，效率一般。"
+    }
+  },
+  "metadata": {
+    "judge_mode": "llm",
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-06T11:11:50.557660+00:00",
+    "trace_source": "model_trace_only",
+    "event_source": "retrospective",
+    "terminal_protocol": "terminal-protocol-v2",
+    "decision": {
+      "kind": "hard_stop",
+      "position": 16,
+      "requirement_version": 0
+    },
+    "requirement_version_at_decision": 0,
+    "evidence_coverage": {
+      "steps_total": 17,
+      "steps_included": 17,
+      "chars": 13342,
+      "evidence_budget": 120000,
+      "evidence_truncated": false
+    },
+    "attempts": 1
+  }
+}

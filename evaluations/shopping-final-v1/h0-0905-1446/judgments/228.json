@@ -1,0 +1,59 @@
+{
+  "task_id": "228",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query": "我想给家庭影院买一款黑色的回音壁音响，价格在7200元左右。",
+  "judgment": {
+    "rubric_verdicts": [
+      {
+        "rubric_id": "c0001",
+        "status": "satisfied",
+        "step_reference": [
+          22,
+          23
+        ],
+        "reasoning": "Step 22 商品标题为 BOSE Soundbar Ultra950 850 家庭影院回音壁音响，Step 23 选中 smart850音柱黑色，属于回音壁音响类别。"
+      },
+      {
+        "rubric_id": "c0002",
+        "status": "satisfied",
+        "step_reference": [
+          22
+        ],
+        "reasoning": "Step 22 商品标题明确包含“家庭影院”，与家庭影院使用场景匹配。"
+      },
+      {
+        "rubric_id": "c0003",
+        "status": "satisfied",
+        "step_reference": [
+          23
+        ],
+        "reasoning": "Step 23 明确选中“smart850音柱 黑色【国行】全国联保”，颜色为黑色。"
+      },
+      {
+        "rubric_id": "c0004",
+        "status": "satisfied",
+        "step_reference": [
+          23
+        ],
+        "reasoning": "Step 23 选中该黑色 850 音柱后页面显示价格为 7200.0，正好符合约7200元预期。"
+      }
+    ],
+    "dimension_scores": {
+      "clarification_strategy": 2,
+      "information_retention": 2,
+      "search_strategy": 1,
+      "candidate_utilization": 1,
+      "evidence_verification": 1,
+      "decision_quality": 1,
+      "termination_efficiency": 1
+    }
+  },
+  "metadata": {
+    "model": "qwen3.8-max",
+    "generated_at": "2026-09-05T17:09:07.184705+00:00",
+    "trace_source": "model_trace_only",
+    "rubric_source": "frozen_query_grounded_v1",
+    "attempts": 1
+  }
+}

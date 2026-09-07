@@ -1,0 +1,38 @@
+{
+  "task_id": "108",
+  "rubric_version": "v1",
+  "frozen": true,
+  "query_mode": "initial_instruction_simple",
+  "query": "预算在350块左右，找一款车用空调压缩机。",
+  "constraints": [
+    {
+      "id": "c0001",
+      "description": "商品品类为车用空调压缩机",
+      "hardness": "hard",
+      "source": "initial_query",
+      "query_quote": "车用空调压缩机",
+      "selection_reason": "Query 明确提出了所需商品类型"
+    },
+    {
+      "id": "c0002",
+      "description": "价格预期约350元",
+      "hardness": "soft",
+      "source": "initial_query",
+      "query_quote": "350块左右",
+      "selection_reason": "「左右」表示模糊价位，Query 未给出明确预算上限，判 soft"
+    }
+  ],
+  "metadata": {
+    "strategy": "initial_query_only_v1",
+    "information_gap": true,
+    "clarification_required": true,
+    "initial_constraint_count": 2,
+    "hidden_candidate_constraint_count": 3,
+    "note": "hidden 候选约束仅为内部计数；Agent 未通过 ask_shopper 澄清前不得视为其已知约束。"
+  },
+  "generation_metadata": {
+    "model": "deepseek-v4-pro",
+    "generated_at": "2026-09-05T14:36:33.438387+00:00",
+    "source_task_id": "108"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "shopping-requirement-events-v1",
+  "event_source": "retrospective",
+  "benchmark_id": "shopping-final-v1",
+  "run_id": "h0-0905-1446",
+  "task_id": "277",
+  "trial_id": "t0",
+  "terminal_boundary": {
+    "first_terminal_position": 36,
+    "protocol": "terminal-protocol-v2"
+  },
+  "ask_shopper_qa": [
+    {
+      "qa_id": "qa-0001",
+      "step": 17,
+      "position": 17,
+      "position_mapped": true,
+      "question": "您希望柱头灯是哪种风格？我看到有现代简约款（简洁方/圆造型）和新中式款（福字、雕花、全铜等）。考虑到您提到园林庭院，想确认一下您的偏好。",
+      "reply": "用户回复：现代简约吧，我家是别墅花园，围墙和大门两侧用，不要太花哨，颜色偏古铜或黑色哑光都行。",
+      "post_terminal": false
+    },
+    {
+      "qa_id": "qa-0002",
+      "step": 32,
+      "position": 32,
+      "position_mapped": true,
+      "question": "您希望选哪一档？A：黑色现代款40cm太阳能 259元（最接近且更大方）；B：黑色现代款30cm太阳能 158元（偏矮更实惠）；C：先看看其它更接近200元的现代款。请告诉我您的选择（围墙/大门柱子的高度也可一并说明）。",
+      "reply": "用户回复：这两个都不太合适，我明确要20厘米以内的矮款。B虽然矮些但还是超过20厘米了。你能帮我看看有没有真正20厘米的太阳能款吗？",
+      "post_terminal": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "h0-0905-1446/277/reject/qa-0001",
+      "session": "h0-0905-1446/277",
+      "kind": "reject",
+      "requirement_key": "candidate",
+      "old_value": null,
+      "new_value": "您希望柱头灯是哪种风格？我看到有现代简约款（简洁方/圆造型）和新中式款（福字、雕花、全铜等）。考虑到您提到园林庭院，想确认一下您的偏好。",
+      "source_reply_id": "qa-0001",
+      "source_quote": "用户回复：现代简约吧，我家是别墅花园，围墙和大门两侧用，不要太花哨，颜色偏古铜或黑色哑光都行。",
+      "conditions": [],
+      "scope": {
+        "candidate": null
+      },
+      "references_event": null,
+      "expected_version": null,
+      "result_version": null,
+      "seq": 1,
+      "status": "applied",
+      "step_index": 17
+    }
+  ],
+  "step_id_map": {
+    "note": "step 编号可能重复；position 为 trace 内出现顺序，供追溯。",
+    "positions": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ]
+  },
+  "extractor": {
+    "name": "heuristic",
+    "version": "heuristic-v1"
+  }
+}
