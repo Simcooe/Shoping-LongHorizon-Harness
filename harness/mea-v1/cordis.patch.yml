@@ -1,0 +1,72 @@
+# mea-v1 — MEA loop 运行时控制 profile（第一版最小在线 loop）。
+#
+# 基底 = dsh-base + dsh-headless（与 h0/h1 相同）。
+# 工具面 = shop-tools（search/click/finish/ask_shopper，仅配置 Shopper Simulator 时注册 ask_shopper）。
+# 插件 = mea-loop（round 控制块注入 + Task State + mea_round_report + 观察/计数）。
+#
+# 本阶段只验证 MEA Loop，不组合购买守卫（buy-guard 只保留在 h1）。
+# h0/h1 行为不受本 profile 影响。
+
+- id: tool-bash
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+- id: tool-jobs
+  disabled: true
+
+- id: tool-skill
+  disabled: true
+- id: skill-filesystem
+  disabled: true
+
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+
+- id: tool-workflow
+  disabled: true
+- id: tool-web
+  disabled: true
+
+- id: tool-todo
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: tool-ralph
+  disabled: true
+- id: tool-str-replace-editor
+  disabled: true
+
+# 覆盖系统提示词：有边界的购物执行者（MEA）。
+# mea_round_report 只结束当前 round；返回下一轮目标时必须立即继续执行，
+# 不得在第一次 mea_round_report 后输出 final。
+- id: system-prompt
+  config:
+    persona: >-
+      You are a shopping agent executing a bounded multi-round task driven by
+      the mea-loop plugin. Each round is announced in your context as a "MEA
+      当前状态" block with a round number, stage, goal, and suggested tools.
+      Work toward the current round's goal using the available shopping tools.
+      When the current round's goal is satisfied (or cannot be advanced), call
+      mea_round_report with a one-line summary. mea_round_report ends ONLY the
+      current round and returns the NEXT round's goal — when it does, you MUST
+      immediately continue executing that next round. Do NOT output a final
+      answer after the first mea_round_report. Only output a final answer when
+      the shop episode shows "Episode finished", or you call finish, or MEA
+      explicitly ends the task.
+
+# ── mea-v1 插件：MEA 运行时控制 ──────────────────────
+- insert:
+    - id: mea-loop
+      name: '@shopping-longhorizon/shop-tools/mea-loop'
+      config:
+        maxRounds: 10
