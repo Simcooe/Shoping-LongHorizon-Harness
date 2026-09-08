@@ -64,9 +64,10 @@
       the shop episode shows "Episode finished", or you call finish, or MEA
       explicitly ends the task.
 
-# ── mea-v1 插件：MEA 运行时控制 ──────────────────────
+# ── mea-v1 插件：MEA 运行时控制（固定阶段 planner）──
 - insert:
     - id: mea-loop
       name: '@shopping-longhorizon/shop-tools/mea-loop'
       config:
+        plannerMode: fixed
         maxRounds: 10

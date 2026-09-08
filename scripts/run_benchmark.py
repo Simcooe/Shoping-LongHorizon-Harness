@@ -30,6 +30,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 import threading
@@ -304,6 +305,23 @@ def run_purchase_verifier(task_id, task_text, purchase, price_resolution):
     return {"quantity": quantity, "price": price}
 
 
+def _save_mea_artifacts(tmp_home: Path, run_dir: Path, task_id) -> None:
+    """把每个任务临时 DSH_HOME 下的 MEA 产物复制到 runs/<run-id>/mea/<task-id>/。
+
+    只保存实验产物；不存在的 MEA 目录直接跳过；不改 h0/h1 行为。
+    """
+    src = tmp_home / "mea"
+    if not src.is_dir():
+        return
+    dst = run_dir / "mea" / str(task_id)
+    try:
+        if dst.exists():
+            shutil.rmtree(dst, ignore_errors=True)
+        shutil.copytree(src, dst)
+    except Exception:
+        pass
+
+
 # --------------------------------------------------------------------------- #
 # 单任务执行
 # --------------------------------------------------------------------------- #
@@ -394,6 +412,8 @@ def run_one_task(
             logf.write(proc.stdout.decode("utf-8", "replace"))
         result["turn_count"] = 1
         final_text = ""
+        # 保存 MEA 实验产物（state/rounds/evidence/manager），不改 h0/h1 行为。
+        _save_mea_artifacts(tmp_home, run_dir, task_id)
         session_file = _find_new_session(tmp_home, known_sessions)
         if session_file is not None:
             known_sessions.add(session_file.name)
