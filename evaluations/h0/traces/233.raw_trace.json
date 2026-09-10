@@ -1,0 +1,1806 @@
+{
+  "task": "麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.4, \"复购率\": 0.65, \"平均客单价\": 15.06, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 120.5, \"近90天订单数\": 8}, \"人口属性\": {\"会员等级\": \"普通会员\", \"年龄段\": \"45-54, \", \"性别\": \"男\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"海利生物\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"大成饲料\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"三联生物\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 30, \"最小值\": 1}, \"功能\": [\"抗球虫\", \"家禽保健\", \"便于储存\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"塑料\", \"玻璃\"], \"颜色\": [\"透明\", \"白色\"], \"风格\": [\"实用\"]}, \"类目偏好\": {\"农资园艺\": \"高\", \"家居生活\": \"中\", \"数码配件\": \"低\", \"服饰鞋包\": \"低\"}}, \"地区信息\": {\"区县\": \"金寨县\", \"城市\": \"六安市\", \"时区\": \"GMT+8, \", \"省份\": \"安徽省\"}, \"最后更新时间\": \"2024-06-21T08:30:00Z\", \"注册时间\": \"2019-03-15T06:42:00Z\", \"注册渠道\": \"H5网页\", \"用户ID\": \"U28736492, \", \"用户标签\": [\"农村散养户\", \"家禽养殖\", \"价格敏感\", \"农资高频采购\", \"移动端活跃\"], \"行为特征\": {\"常用设备\": \"安卓手机\", \"日均浏览时长\": 180, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"地克珠利溶液药物\"], \"最近14天收藏商品\": [], \"活跃时间段\": [6, 20, 21], \"近7天访问次数\": 10}}",
+  "step_count": 12,
+  "reset": {
+    "env_idx": 3,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "1瓶地克珠利溶液25年7月到期"
+    ],
+    "idx": 233,
+    "instruction": "Instruction: 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。",
+    "instruction_simple": "麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。",
+    "message": "Task 233 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.4,
+        "复购率": 0.65,
+        "平均客单价": 15.06,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 120.5,
+        "近90天订单数": 8
+      },
+      "人口属性": {
+        "会员等级": "普通会员",
+        "年龄段": "45-54, ",
+        "性别": "男",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "海利生物"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "大成饲料"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "三联生物"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 30,
+            "最小值": 1
+          },
+          "功能": [
+            "抗球虫",
+            "家禽保健",
+            "便于储存"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "塑料",
+            "玻璃"
+          ],
+          "颜色": [
+            "透明",
+            "白色"
+          ],
+          "风格": [
+            "实用"
+          ]
+        },
+        "类目偏好": {
+          "农资园艺": "高",
+          "家居生活": "中",
+          "数码配件": "低",
+          "服饰鞋包": "低"
+        }
+      },
+      "地区信息": {
+        "区县": "金寨县",
+        "城市": "六安市",
+        "时区": "GMT+8, ",
+        "省份": "安徽省"
+      },
+      "最后更新时间": "2024-06-21T08:30:00Z",
+      "注册时间": "2019-03-15T06:42:00Z",
+      "注册渠道": "H5网页",
+      "用户ID": "U28736492, ",
+      "用户标签": [
+        "农村散养户",
+        "家禽养殖",
+        "价格敏感",
+        "农资高频采购",
+        "移动端活跃"
+      ],
+      "行为特征": {
+        "常用设备": "安卓手机",
+        "日均浏览时长": 180,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "地克珠利溶液药物"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          6,
+          20,
+          21
+        ],
+        "近7天访问次数": 10
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "鸡疫苗"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] Page 1 of 6 (Total results: 118) [SEP] Query: 鸡疫苗 | Normalized query: 鸡疫苗 [SEP] Next > [SEP] 912906443399 [SEP] 齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗 [SEP] 12.0 to 65.0 [SEP] 713369185395 [SEP] 鸡疫苗新支二联H120株活疫苗新城疫支气管炎鸡鸽子禽用鸡瘟疫苗 [SEP] 45.0 to 129.0 [SEP] 744106457749 [SEP] 哈药新流腺三联疫苗鸡用预防安卡拉病腺病毒疫苗鸡疫苗250ml兽药 [SEP] 90.0 [SEP] 740608724845 [SEP] 哈药新流二联鸡新城疫禽流感h9鸡疫苗禽疫苗禽药兽药包邮 [SEP] 38.0 to 380.0 [SEP] 869537800370 [SEP] 益格小鸡全套马立克鸡疫苗滴鼻新城疫饮水四系鸡瘟鸡痘鸡用禽流感 [SEP] 20.0 to 62.0 [SEP] 709137932437 [SEP] 小鸡全套疫苗500羽小鸡疫苗大全新城疫鸡马立克氏鸡痘传支传 [SEP] 15.0 to 80.0 [SEP] 850462544251 [SEP] 华畜鸡新城疫活疫苗传支二联专用饮水口服鸡瘟马立克小鸡疫苗全套 [SEP] 12.0 to 60.0 [SEP] 868759241611 [SEP] 小鸡疫苗全套马立克鸡疫苗滴鼻新城疫饮水四系鸡瘟鸡痘鸡用禽流感 [SEP] 21.0 to 63.0 [SEP] 772697197687 [SEP] 鸡疫苗新城疫禽流感新流腺新支流法多联疫苗腺病毒减蛋综合征疫苗 [SEP] 38.0 to 110.0 [SEP] 789408893134 [SEP] 鸡疫苗新城疫禽流感新流腺新支流法多联疫苗腺病毒减蛋综合征疫苗 [SEP] 45.0 to 110.0 [SEP] 742180246680 [SEP] 小鸡疫苗禽流感鸡痘法氏囊新城疫马立克支气管炎滴鼻点眼饮水疫苗 [SEP] 14.0 to 24.0 [SEP] 729340064896 [SEP] 小鸡疫苗禽流感鸡痘法氏囊新城疫马立克支气管炎滴鼻点眼饮水疫苗 [SEP] 14.0 to 55.0 [SEP] 754129266881 [SEP] 鸡疫苗大全 鸡瘟禽流感法氏囊安卡拉传支支原体霍乱痘鸡鸽用疫苗 [SEP] 28.0 to 310.0 [SEP] 772492677364 [SEP] 小鸡疫苗全套七种疫苗鸡瘟马立克传支鸡痘腹泻小鸡疫苗鸡防疫套装 [SEP] 20.0 to 95.0 [SEP] 784724042297 [SEP] 小鸡饮水口服疫苗全套法氏囊鸡痘豆新城疫新支二联芦丁鸡出壳雏鸡 [SEP] 12.0 to 99.0 [SEP] 718627082736 [SEP] 中牧幼犬四联+狂犬疫苗犬细小狗狗四联预防针幼犬成犬疫苗套餐针 [SEP] 16.0 to 43.0 [SEP] 725719788378 [SEP] 禽流感疫苗鸡鸭鹅禽流感灭活疫苗哈药重组禽流感5+7三价250ml兽药 [SEP] 68.0 [SEP] 735512614655 [SEP] 球可宁 鸡球虫病三价活疫苗1000羽 肉鸡血便球虫预防赫莱恩特正典 [SEP] 110.0 [SEP] 775892412031 [SEP] 科细宁猪细小病毒灭活疫苗 猪细小疫苗母猪疫苗4ml/10瓶整盒包邮 [SEP] 26.0 to 300.0 [SEP] 861055647519 [SEP] 中牧猪传染性胃肠炎流行性腹泻猪疫苗 猪疫苗胃流二联疫苗兽药 [SEP] 48.0 to 438.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"912906443399\", \"713369185395\", \"744106457749\", \"740608724845\", \"869537800370\", \"709137932437\", \"850462544251\", \"868759241611\", \"772697197687\", \"789408893134\", \"742180246680\", \"729340064896\", \"754129266881\", \"772492677364\", \"784724042297\", \"718627082736\", \"725719788378\", \"735512614655\", \"775892412031\", \"861055647519\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "912906443399",
+            "713369185395",
+            "744106457749",
+            "740608724845",
+            "869537800370",
+            "709137932437",
+            "850462544251",
+            "868759241611",
+            "772697197687",
+            "789408893134",
+            "742180246680",
+            "729340064896",
+            "754129266881",
+            "772492677364",
+            "784724042297",
+            "718627082736",
+            "725719788378",
+            "735512614655",
+            "775892412031",
+            "861055647519"
+          ],
+          "normalized_query": "鸡疫苗",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "912906443399",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡用",
+                "新城疫",
+                "Clone30株",
+                "活疫苗"
+              ],
+              "price": "12.0 to 65.0",
+              "rank": 1,
+              "title": "齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗"
+            },
+            {
+              "asin": "713369185395",
+              "brand": "康牧动物疫苗商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "传染性支气管炎",
+                "禽用"
+              ],
+              "price": "45.0 to 129.0",
+              "rank": 2,
+              "title": "鸡疫苗新支二联H120株活疫苗新城疫支气管炎鸡鸽子禽用鸡瘟疫苗"
+            },
+            {
+              "asin": "744106457749",
+              "brand": "天祥兽药商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "三联"
+              ],
+              "price": "90.0",
+              "rank": 3,
+              "title": "哈药新流腺三联疫苗鸡用预防安卡拉病腺病毒疫苗鸡疫苗250ml兽药"
+            },
+            {
+              "asin": "740608724845",
+              "brand": "汇鑫兽药疫苗批发",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "禽药"
+              ],
+              "price": "38.0 to 380.0",
+              "rank": 4,
+              "title": "哈药新流二联鸡新城疫禽流感h9鸡疫苗禽疫苗禽药兽药包邮"
+            },
+            {
+              "asin": "869537800370",
+              "brand": "疫苗大全",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "小鸡适用",
+                "滴鼻适用",
+                "饮水适用",
+                "鸡瘟",
+                "鸡痘",
+                "鸡用",
+                "禽流感",
+                "马立克"
+              ],
+              "price": "20.0 to 62.0",
+              "rank": 5,
+              "title": "益格小鸡全套马立克鸡疫苗滴鼻新城疫饮水四系鸡瘟鸡痘鸡用禽流感"
+            },
+            {
+              "asin": "709137932437",
+              "brand": "达康动保企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡马立克氏病",
+                "鸡传染性支气管炎",
+                "新城疫",
+                "鸡传染病",
+                "鸡痘",
+                "小鸡"
+              ],
+              "price": "15.0 to 80.0",
+              "rank": 6,
+              "title": "小鸡全套疫苗500羽小鸡疫苗大全新城疫鸡马立克氏鸡痘传支传"
+            },
+            {
+              "asin": "850462544251",
+              "brand": "华畜好兽医专卖店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "华畜",
+                "新城疫",
+                "鸡传染性支气管炎",
+                "饮水"
+              ],
+              "price": "12.0 to 60.0",
+              "rank": 7,
+              "title": "华畜鸡新城疫活疫苗传支二联专用饮水口服鸡瘟马立克小鸡疫苗全套"
+            },
+            {
+              "asin": "868759241611",
+              "brand": "年年有榆兽药经营部",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡马立克氏病",
+                "新城疫",
+                "鸡瘟",
+                "鸡痘",
+                "禽流感"
+              ],
+              "price": "21.0 to 63.0",
+              "rank": 8,
+              "title": "小鸡疫苗全套马立克鸡疫苗滴鼻新城疫饮水四系鸡瘟鸡痘鸡用禽流感"
+            },
+            {
+              "asin": "772697197687",
+              "brand": "康牧动物疫苗商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "禽流感"
+              ],
+              "price": "38.0 to 110.0",
+              "rank": 9,
+              "title": "鸡疫苗新城疫禽流感新流腺新支流法多联疫苗腺病毒减蛋综合征疫苗"
+            },
+            {
+              "asin": "789408893134",
+              "brand": "牧一动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "禽流感",
+                "新支流法多联疫苗腺病毒减蛋综合征",
+                "鸡"
+              ],
+              "price": "45.0 to 110.0",
+              "rank": 10,
+              "title": "鸡疫苗新城疫禽流感新流腺新支流法多联疫苗腺病毒减蛋综合征疫苗"
+            },
+            {
+              "asin": "742180246680",
+              "brand": "兴牧康畜牧疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "滴鼻",
+                "点眼",
+                "饮水",
+                "鸡禽流感",
+                "鸡痘",
+                "传染性法氏囊病",
+                "马立克支气管炎"
+              ],
+              "price": "14.0 to 24.0",
+              "rank": 11,
+              "title": "小鸡疫苗禽流感鸡痘法氏囊新城疫马立克支气管炎滴鼻点眼饮水疫苗"
+            },
+            {
+              "asin": "729340064896",
+              "brand": "康牧动物疫苗商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "小鸡适用",
+                "新城疫",
+                "马立克",
+                "支气管炎",
+                "滴鼻",
+                "点眼"
+              ],
+              "price": "14.0 to 55.0",
+              "rank": 12,
+              "title": "小鸡疫苗禽流感鸡痘法氏囊新城疫马立克支气管炎滴鼻点眼饮水疫苗"
+            },
+            {
+              "asin": "754129266881",
+              "brand": "禽药疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡",
+                "鸽"
+              ],
+              "price": "28.0 to 310.0",
+              "rank": 13,
+              "title": "鸡疫苗大全 鸡瘟禽流感法氏囊安卡拉传支支原体霍乱痘鸡鸽用疫苗"
+            },
+            {
+              "asin": "772492677364",
+              "brand": "嘉牧动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "小鸡",
+                "鸡瘟",
+                "鸡马立克氏病",
+                "鸡传染性支气管炎病",
+                "鸡痘",
+                "腹泻"
+              ],
+              "price": "20.0 to 95.0",
+              "rank": 14,
+              "title": "小鸡疫苗全套七种疫苗鸡瘟马立克传支鸡痘腹泻小鸡疫苗鸡防疫套装"
+            },
+            {
+              "asin": "784724042297",
+              "brand": "兴牧疫苗供应",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡传染性法氏囊病",
+                "鸡传染性支气管炎",
+                "鸡新城疫",
+                "雏鸡"
+              ],
+              "price": "12.0 to 99.0",
+              "rank": 15,
+              "title": "小鸡饮水口服疫苗全套法氏囊鸡痘豆新城疫新支二联芦丁鸡出壳雏鸡"
+            },
+            {
+              "asin": "718627082736",
+              "brand": "毅新疫苗供应",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "幼犬",
+                "成犬",
+                "犬细小"
+              ],
+              "price": "16.0 to 43.0",
+              "rank": 16,
+              "title": "中牧幼犬四联+狂犬疫苗犬细小狗狗四联预防针幼犬成犬疫苗套餐针"
+            },
+            {
+              "asin": "725719788378",
+              "brand": "康牧动物疫苗商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡",
+                "鸭",
+                "鹅"
+              ],
+              "price": "68.0",
+              "rank": 17,
+              "title": "禽流感疫苗鸡鸭鹅禽流感灭活疫苗哈药重组禽流感5+7三价250ml兽药"
+            },
+            {
+              "asin": "735512614655",
+              "brand": "禽药疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡球虫病",
+                "三价",
+                "肉鸡",
+                "血便"
+              ],
+              "price": "110.0",
+              "rank": 18,
+              "title": "球可宁 鸡球虫病三价活疫苗1000羽 肉鸡血便球虫预防赫莱恩特正典"
+            },
+            {
+              "asin": "775892412031",
+              "brand": "猪大夫动物疫苗批发店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪细小病毒",
+                "灭活疫苗",
+                "母猪",
+                "包邮"
+              ],
+              "price": "26.0 to 300.0",
+              "rank": 19,
+              "title": "科细宁猪细小病毒灭活疫苗 猪细小疫苗母猪疫苗4ml/10瓶整盒包邮"
+            },
+            {
+              "asin": "861055647519",
+              "brand": "中郑疫苗兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪传染性胃肠炎",
+                "二联"
+              ],
+              "price": "48.0 to 438.0",
+              "rank": 20,
+              "title": "中牧猪传染性胃肠炎流行性腹泻猪疫苗 猪疫苗胃流二联疫苗兽药"
+            }
+          ],
+          "query": "鸡疫苗",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 6,
+          "total_results": 118
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"鸡疫苗\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:54eb68fd54bb92b34b415b414a9eb1db6556c166355fea781d961f0e187821b3"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:54eb68fd54bb92b34b415b414a9eb1db6556c166355fea781d961f0e187821b3"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:54eb68fd54bb92b34b415b414a9eb1db6556c166355fea781d961f0e187821b3"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "912906443399"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 1瓶价+滴瓶 [SEP] 1盒价（送滴瓶） [SEP] 1瓶价 [SEP] 齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗 [SEP] 价格: 12.0 to 65.0 [SEP] 店铺: 乐诚动保 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"1瓶价+滴瓶\", \"1盒价（送滴瓶）\", \"1瓶价\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "1瓶价+滴瓶",
+            "1盒价（送滴瓶）",
+            "1瓶价"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "1瓶价+滴瓶",
+              "1盒价（送滴瓶）",
+              "1瓶价"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "912906443399",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡用",
+              "新城疫",
+              "Clone30株",
+              "活疫苗"
+            ],
+            "price": "12.0 to 65.0",
+            "title": "齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"912906443399\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:912906443399",
+            "constraint:912906443399:category:pass",
+            "constraint:912906443399:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:912906443399",
+            "constraint:912906443399:category:pass",
+            "constraint:912906443399:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:912906443399",
+            "constraint:912906443399:category:pass",
+            "constraint:912906443399:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "鸡新城疫活疫苗"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] Page 1 of 7 (Total results: 122) [SEP] Query: 鸡新城疫活疫苗 | Normalized query: 鸡新城疫活疫苗 [SEP] Next > [SEP] 913689510975 [SEP] 齐鲁鸡新城疫活疫苗 La Sota株4系活疫苗疫苗禽药兽药正品 [SEP] 15.0 to 75.0 [SEP] 747453140051 [SEP] 兽用哈药欣匹克鸡新城疫活疫苗 La Sota株4系活疫苗疫苗禽药 [SEP] 18.0 to 70.0 [SEP] 933880969268 [SEP] 青岛易邦新城疫疫苗鸡鸽用疫苗新流腺三联苗鸡新城疫活疫苗鸽用 [SEP] 128.0 [SEP] 835335489397 [SEP] 华畜鸡用疫苗鸽疫苗鸡新城疫活疫苗新静鸡新城疫禽用疫苗LaSota株 [SEP] 19.0 to 69.0 [SEP] 850462544251 [SEP] 华畜鸡新城疫活疫苗传支二联专用饮水口服鸡瘟马立克小鸡疫苗全套 [SEP] 12.0 to 60.0 [SEP] 926733245786 [SEP] 易邦四系疫苗鸡新城疫活疫苗鸡瘟疫苗信鸽赛鸽子新城疫疫苗饮水 [SEP] 19.0 to 118.0 [SEP] 912906443399 [SEP] 齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗 [SEP] 12.0 to 65.0 [SEP] 916924446256 [SEP] 鸡用新城疫疫苗鸡新城疫灭活疫苗 LaSota株新城疫四系4系单联油苗 [SEP] 80.0 to 98.0 [SEP] 697533445159 [SEP] 哈药新传匹克鸡新城疫支气管炎新支二联活疫苗小鸡瘟鸽禽用药H52 [SEP] 12.0 to 93.0 [SEP] 719264925528 [SEP] 齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗 [SEP] 120.0 [SEP] 671381175156 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 4.0 to 108.0 [SEP] 766400875865 [SEP] 禽用新城疫活疫苗Clone30株小鸡鸽子家禽滴鼻点眼饮水克隆30疫苗 [SEP] 22.0 to 129.0 [SEP] 713369185395 [SEP] 鸡疫苗新支二联H120株活疫苗新城疫支气管炎鸡鸽子禽用鸡瘟疫苗 [SEP] 45.0 to 129.0 [SEP] 740608724845 [SEP] 哈药新流二联鸡新城疫禽流感h9鸡疫苗禽疫苗禽药兽药包邮 [SEP] 38.0 to 380.0 [SEP] 929931641434 [SEP] 易邦C30鸡新城疫疫苗鸡瘟疫苗滴鼻点眼弱毒饮水C30疫苗正品鸡鸽子 [SEP] 19.0 to 139.0 [SEP] 736803942255 [SEP] 新支流法腺五联灭活疫苗 新城疫支气管禽流感法氏囊腺病毒安卡拉 [SEP] 100.0 to 130.0 [SEP] 709137932437 [SEP] 小鸡全套疫苗500羽小鸡疫苗大全新城疫鸡马立克氏鸡痘传支传 [SEP] 15.0 to 80.0 [SEP] 722931410406 [SEP] 新城疫疫苗雏鸡土鸡蛋鸡肉鸡鸽子用疫苗新城疫4系La Sata株活疫苗 [SEP] 25.0 to 150.0 [SEP] 692984469695 [SEP] 小鸡鸽新支法流四联灭活疫苗H9禽流感新城疫传支法氏囊腺油苗哈药 [SEP] 42.0 to 72.0 [SEP] 784724042297 [SEP] 小鸡饮水口服疫苗全套法氏囊鸡痘豆新城疫新支二联芦丁鸡出壳雏鸡 [SEP] 12.0 to 99.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"913689510975\", \"747453140051\", \"933880969268\", \"835335489397\", \"850462544251\", \"926733245786\", \"912906443399\", \"916924446256\", \"697533445159\", \"719264925528\", \"671381175156\", \"766400875865\", \"713369185395\", \"740608724845\", \"929931641434\", \"736803942255\", \"709137932437\", \"722931410406\", \"692984469695\", \"784724042297\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "913689510975",
+            "747453140051",
+            "933880969268",
+            "835335489397",
+            "850462544251",
+            "926733245786",
+            "912906443399",
+            "916924446256",
+            "697533445159",
+            "719264925528",
+            "671381175156",
+            "766400875865",
+            "713369185395",
+            "740608724845",
+            "929931641434",
+            "736803942255",
+            "709137932437",
+            "722931410406",
+            "692984469695",
+            "784724042297"
+          ],
+          "normalized_query": "鸡新城疫活疫苗",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "913689510975",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "齐鲁",
+                "La Sota株",
+                "鸡新城疫",
+                "正品"
+              ],
+              "price": "15.0 to 75.0",
+              "rank": 1,
+              "title": "齐鲁鸡新城疫活疫苗 La Sota株4系活疫苗疫苗禽药兽药正品"
+            },
+            {
+              "asin": "747453140051",
+              "brand": "亿戎动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "哈药",
+                "鸡新城疫",
+                " La Sota株"
+              ],
+              "price": "18.0 to 70.0",
+              "rank": 2,
+              "title": "兽用哈药欣匹克鸡新城疫活疫苗 La Sota株4系活疫苗疫苗禽药"
+            },
+            {
+              "asin": "933880969268",
+              "brand": "牧兴动物保健",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "易邦",
+                "新城疫",
+                "禽流感",
+                "腺病毒",
+                "三联",
+                "鸡",
+                "鸽子"
+              ],
+              "price": "128.0",
+              "rank": 3,
+              "title": "青岛易邦新城疫疫苗鸡鸽用疫苗新流腺三联苗鸡新城疫活疫苗鸽用"
+            },
+            {
+              "asin": "835335489397",
+              "brand": "华畜哼哼猪专卖店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡",
+                "鸽子",
+                "华畜"
+              ],
+              "price": "19.0 to 69.0",
+              "rank": 4,
+              "title": "华畜鸡用疫苗鸽疫苗鸡新城疫活疫苗新静鸡新城疫禽用疫苗LaSota株"
+            },
+            {
+              "asin": "850462544251",
+              "brand": "华畜好兽医专卖店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "华畜",
+                "新城疫",
+                "鸡传染性支气管炎",
+                "饮水"
+              ],
+              "price": "12.0 to 60.0",
+              "rank": 5,
+              "title": "华畜鸡新城疫活疫苗传支二联专用饮水口服鸡瘟马立克小鸡疫苗全套"
+            },
+            {
+              "asin": "926733245786",
+              "brand": "兴牧康畜牧疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "信鸽",
+                "赛鸽",
+                "饮水"
+              ],
+              "price": "19.0 to 118.0",
+              "rank": 6,
+              "title": "易邦四系疫苗鸡新城疫活疫苗鸡瘟疫苗信鸽赛鸽子新城疫疫苗饮水"
+            },
+            {
+              "asin": "912906443399",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡用",
+                "新城疫",
+                "Clone30株",
+                "活疫苗"
+              ],
+              "price": "12.0 to 65.0",
+              "rank": 7,
+              "title": "齐鲁鸡用禽类疫苗鸡新城疫Clone30株C30活疫苗克隆30鸡疫苗"
+            },
+            {
+              "asin": "916924446256",
+              "brand": "欣欣兽药批发店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡新城疫",
+                " LaSota株",
+                "油苗"
+              ],
+              "price": "80.0 to 98.0",
+              "rank": 8,
+              "title": "鸡用新城疫疫苗鸡新城疫灭活疫苗 LaSota株新城疫四系4系单联油苗"
+            },
+            {
+              "asin": "697533445159",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡新城疫",
+                "鸡传染性支气管炎",
+                "二联活疫苗",
+                "小鸡",
+                "H52株"
+              ],
+              "price": "12.0 to 93.0",
+              "rank": 9,
+              "title": "哈药新传匹克鸡新城疫支气管炎新支二联活疫苗小鸡瘟鸽禽用药H52"
+            },
+            {
+              "asin": "719264925528",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "禽流感H9亚型",
+                "禽腺病毒病",
+                "三联",
+                "鸡"
+              ],
+              "price": "120.0",
+              "rank": 10,
+              "title": "齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗"
+            },
+            {
+              "asin": "671381175156",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡"
+              ],
+              "price": "4.0 to 108.0",
+              "rank": 11,
+              "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+            },
+            {
+              "asin": "766400875865",
+              "brand": "禽畜宠动保企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "小鸡",
+                "鸽子",
+                "新城疫Clone30株",
+                "滴鼻",
+                "点眼",
+                "饮水"
+              ],
+              "price": "22.0 to 129.0",
+              "rank": 12,
+              "title": "禽用新城疫活疫苗Clone30株小鸡鸽子家禽滴鼻点眼饮水克隆30疫苗"
+            },
+            {
+              "asin": "713369185395",
+              "brand": "康牧动物疫苗商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "传染性支气管炎",
+                "禽用"
+              ],
+              "price": "45.0 to 129.0",
+              "rank": 13,
+              "title": "鸡疫苗新支二联H120株活疫苗新城疫支气管炎鸡鸽子禽用鸡瘟疫苗"
+            },
+            {
+              "asin": "740608724845",
+              "brand": "汇鑫兽药疫苗批发",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "禽药"
+              ],
+              "price": "38.0 to 380.0",
+              "rank": 14,
+              "title": "哈药新流二联鸡新城疫禽流感h9鸡疫苗禽疫苗禽药兽药包邮"
+            },
+            {
+              "asin": "929931641434",
+              "brand": "嘉牧动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "C30株",
+                "滴鼻",
+                "点眼",
+                "饮水",
+                "鸡",
+                "鸽子",
+                "易邦"
+              ],
+              "price": "19.0 to 139.0",
+              "rank": 15,
+              "title": "易邦C30鸡新城疫疫苗鸡瘟疫苗滴鼻点眼弱毒饮水C30疫苗正品鸡鸽子"
+            },
+            {
+              "asin": "736803942255",
+              "brand": "禽药疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "五联",
+                "新城疫",
+                "传染性支气管炎",
+                "禽流感",
+                "传染性法氏囊病",
+                "腺病毒"
+              ],
+              "price": "100.0 to 130.0",
+              "rank": 16,
+              "title": "新支流法腺五联灭活疫苗 新城疫支气管禽流感法氏囊腺病毒安卡拉"
+            },
+            {
+              "asin": "709137932437",
+              "brand": "达康动保企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡马立克氏病",
+                "鸡传染性支气管炎",
+                "新城疫",
+                "鸡传染病",
+                "鸡痘",
+                "小鸡"
+              ],
+              "price": "15.0 to 80.0",
+              "rank": 17,
+              "title": "小鸡全套疫苗500羽小鸡疫苗大全新城疫鸡马立克氏鸡痘传支传"
+            },
+            {
+              "asin": "722931410406",
+              "brand": "朝国动保官方企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫4系",
+                "La Sata株",
+                "鸡类",
+                "鸽子"
+              ],
+              "price": "25.0 to 150.0",
+              "rank": 18,
+              "title": "新城疫疫苗雏鸡土鸡蛋鸡肉鸡鸽子用疫苗新城疫4系La Sata株活疫苗"
+            },
+            {
+              "asin": "692984469695",
+              "brand": "牧多邦动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡",
+                "四联",
+                "鸽子"
+              ],
+              "price": "42.0 to 72.0",
+              "rank": 19,
+              "title": "小鸡鸽新支法流四联灭活疫苗H9禽流感新城疫传支法氏囊腺油苗哈药"
+            },
+            {
+              "asin": "784724042297",
+              "brand": "兴牧疫苗供应",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡传染性法氏囊病",
+                "鸡传染性支气管炎",
+                "鸡新城疫",
+                "雏鸡"
+              ],
+              "price": "12.0 to 99.0",
+              "rank": 20,
+              "title": "小鸡饮水口服疫苗全套法氏囊鸡痘豆新城疫新支二联芦丁鸡出壳雏鸡"
+            }
+          ],
+          "query": "鸡新城疫活疫苗",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 7,
+          "total_results": 122
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"鸡新城疫活疫苗\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:70e05aa4fc91688aff1b0d005aedbf9df0b8cc0aafc1c6c0c11d957473ffcf8c"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:70e05aa4fc91688aff1b0d005aedbf9df0b8cc0aafc1c6c0c11d957473ffcf8c"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 14,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:70e05aa4fc91688aff1b0d005aedbf9df0b8cc0aafc1c6c0c11d957473ffcf8c"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "671381175156"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 科*新静10瓶26年8月12到期 [SEP] 科*新静1瓶26年8月12到期 [SEP] 1瓶双黄连口服液25年10月到期 [SEP] 1套家禽常用常备药品 [SEP] 欣匹克1瓶+滴瓶1个 [SEP] 1瓶苗佐 [SEP] 1瓶地克珠利溶液25年7月到期 [SEP] 欣匹克10瓶27年1月19到期 [SEP] 欣匹克1瓶27年1月19到期 [SEP] 科*新静1瓶+滴瓶1个 [SEP] 1盒灭菌注射用水 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 价格: 4.0 to 108.0 [SEP] 店铺: 源全兽药 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"科*新静10瓶26年8月12到期\", \"科*新静1瓶26年8月12到期\", \"1瓶双黄连口服液25年10月到期\", \"1套家禽常用常备药品\", \"欣匹克1瓶+滴瓶1个\", \"1瓶苗佐\", \"1瓶地克珠利溶液25年7月到期\", \"欣匹克10瓶27年1月19到期\", \"欣匹克1瓶27年1月19到期\", \"科*新静1瓶+滴瓶1个\", \"1盒灭菌注射用水\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "科*新静10瓶26年8月12到期",
+            "科*新静1瓶26年8月12到期",
+            "1瓶双黄连口服液25年10月到期",
+            "1套家禽常用常备药品",
+            "欣匹克1瓶+滴瓶1个",
+            "1瓶苗佐",
+            "1瓶地克珠利溶液25年7月到期",
+            "欣匹克10瓶27年1月19到期",
+            "欣匹克1瓶27年1月19到期",
+            "科*新静1瓶+滴瓶1个",
+            "1盒灭菌注射用水"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "科*新静10瓶26年8月12到期",
+              "科*新静1瓶26年8月12到期",
+              "1瓶双黄连口服液25年10月到期",
+              "1套家禽常用常备药品",
+              "欣匹克1瓶+滴瓶1个",
+              "1瓶苗佐",
+              "1瓶地克珠利溶液25年7月到期",
+              "欣匹克10瓶27年1月19到期",
+              "欣匹克1瓶27年1月19到期",
+              "科*新静1瓶+滴瓶1个",
+              "1盒灭菌注射用水"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "671381175156",
+            "brand": "源全兽药",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡"
+            ],
+            "price": "4.0 to 108.0",
+            "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"671381175156\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:671381175156",
+            "constraint:671381175156:category:pass",
+            "constraint:671381175156:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:671381175156",
+            "constraint:671381175156:category:pass",
+            "constraint:671381175156:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:671381175156",
+            "constraint:671381175156:category:pass",
+            "constraint:671381175156:budget:pass"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "1瓶地克珠利溶液25年7月到期"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 科*新静10瓶26年8月12到期 [SEP] 科*新静1瓶26年8月12到期 [SEP] 1瓶双黄连口服液25年10月到期 [SEP] 1套家禽常用常备药品 [SEP] 欣匹克1瓶+滴瓶1个 [SEP] 1瓶苗佐 [SEP] 1瓶地克珠利溶液25年7月到期 [SEP] 欣匹克10瓶27年1月19到期 [SEP] 欣匹克1瓶27年1月19到期 [SEP] 科*新静1瓶+滴瓶1个 [SEP] 1盒灭菌注射用水 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 价格: 4.0 [SEP] 店铺: 源全兽药 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"科*新静10瓶26年8月12到期\", \"科*新静1瓶26年8月12到期\", \"1瓶双黄连口服液25年10月到期\", \"1套家禽常用常备药品\", \"欣匹克1瓶+滴瓶1个\", \"1瓶苗佐\", \"1瓶地克珠利溶液25年7月到期\", \"欣匹克10瓶27年1月19到期\", \"欣匹克1瓶27年1月19到期\", \"科*新静1瓶+滴瓶1个\", \"1盒灭菌注射用水\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "科*新静10瓶26年8月12到期",
+            "科*新静1瓶26年8月12到期",
+            "1瓶双黄连口服液25年10月到期",
+            "1套家禽常用常备药品",
+            "欣匹克1瓶+滴瓶1个",
+            "1瓶苗佐",
+            "1瓶地克珠利溶液25年7月到期",
+            "欣匹克10瓶27年1月19到期",
+            "欣匹克1瓶27年1月19到期",
+            "科*新静1瓶+滴瓶1个",
+            "1盒灭菌注射用水"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "科*新静10瓶26年8月12到期",
+              "科*新静1瓶26年8月12到期",
+              "1瓶双黄连口服液25年10月到期",
+              "1套家禽常用常备药品",
+              "欣匹克1瓶+滴瓶1个",
+              "1瓶苗佐",
+              "1瓶地克珠利溶液25年7月到期",
+              "欣匹克10瓶27年1月19到期",
+              "欣匹克1瓶27年1月19到期",
+              "科*新静1瓶+滴瓶1个",
+              "1盒灭菌注射用水"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "671381175156",
+            "brand": "源全兽药",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡"
+            ],
+            "price": "4.0 to 108.0",
+            "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "1瓶地克珠利溶液25年7月到期"
+          },
+          "selected_price": 4
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"1瓶地克珠利溶液25年7月到期\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:671381175156:color:1瓶地克珠利溶液25年7月到期"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:671381175156:color:1瓶地克珠利溶液25年7月到期"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:671381175156:color:1瓶地克珠利溶液25年7月到期"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "科*新静10瓶26年8月12到期",
+              "科*新静1瓶26年8月12到期",
+              "1瓶双黄连口服液25年10月到期",
+              "1套家禽常用常备药品",
+              "欣匹克1瓶+滴瓶1个",
+              "1瓶苗佐",
+              "1瓶地克珠利溶液25年7月到期",
+              "欣匹克10瓶27年1月19到期",
+              "欣匹克1瓶27年1月19到期",
+              "科*新静1瓶+滴瓶1个",
+              "1盒灭菌注射用水"
+            ]
+          },
+          "content": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "671381175156",
+            "brand": "源全兽药",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡"
+            ],
+            "price": "4.0 to 108.0",
+            "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "1瓶地克珠利溶液25年7月到期"
+          },
+          "selected_price": 4,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:671381175156:description"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:671381175156:description"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:671381175156:description"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "科*新静10瓶26年8月12到期",
+              "科*新静1瓶26年8月12到期",
+              "1瓶双黄连口服液25年10月到期",
+              "1套家禽常用常备药品",
+              "欣匹克1瓶+滴瓶1个",
+              "1瓶苗佐",
+              "1瓶地克珠利溶液25年7月到期",
+              "欣匹克10瓶27年1月19到期",
+              "欣匹克1瓶27年1月19到期",
+              "科*新静1瓶+滴瓶1个",
+              "1盒灭菌注射用水"
+            ]
+          },
+          "content": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "671381175156",
+            "brand": "源全兽药",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡"
+            ],
+            "price": "4.0 to 108.0",
+            "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "1瓶地克珠利溶液25年7月到期"
+          },
+          "selected_price": 4,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:671381175156:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:671381175156:features"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:671381175156:features"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 34,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "地克珠利溶液"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] Page 1 of 1 (Total results: 3) [SEP] Query: 地克珠利溶液 | Normalized query: 地克珠利溶液 [SEP] 671381175156 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 4.0 to 108.0 [SEP] 758414253205 [SEP] 双氧水化学实验食用级洗鞋衣服漂白粉过氧化氢溶液工业用7.5% [SEP] 11.0 to 75.0 [SEP] 682289622347 [SEP] 氢氧小气泡美容仪器吸黑头毛孔清洁射频导入美容院专用 [SEP] 650.0 to 4000.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"671381175156\", \"758414253205\", \"682289622347\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "671381175156",
+            "758414253205",
+            "682289622347"
+          ],
+          "normalized_query": "地克珠利溶液",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "671381175156",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡"
+              ],
+              "price": "4.0 to 108.0",
+              "rank": 1,
+              "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+            },
+            {
+              "asin": "758414253205",
+              "brand": "启禾衣服染色剂",
+              "category": "工业油品/胶粘/化学/实验室用品›染料",
+              "key_attributes": [
+                "化学实验",
+                "洗鞋衣服",
+                "工业",
+                "7.5"
+              ],
+              "price": "11.0 to 75.0",
+              "rank": 2,
+              "title": "双氧水化学实验食用级洗鞋衣服漂白粉过氧化氢溶液工业用7.5%"
+            },
+            {
+              "asin": "682289622347",
+              "brand": "欧光美容仪器厂家",
+              "category": "美容美体仪器›电子美容仪（器械）",
+              "key_attributes": [],
+              "price": "650.0 to 4000.0",
+              "rank": 3,
+              "title": "氢氧小气泡美容仪器吸黑头毛孔清洁射频导入美容院专用"
+            }
+          ],
+          "query": "地克珠利溶液",
+          "rank_end": 3,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 1,
+          "total_results": 3
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"地克珠利溶液\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 2,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] Page 1 of 1 (Total results: 3) [SEP] Query: 地克珠利溶液 | Normalized query: 地克珠利溶液 [SEP] 671381175156 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 4.0 to 108.0 [SEP] 758414253205 [SEP] 双氧水化学实验食用级洗鞋衣服漂白粉过氧化氢溶液工业用7.5% [SEP] 11.0 to 75.0 [SEP] 682289622347 [SEP] 氢氧小气泡美容仪器吸黑头毛孔清洁射频导入美容院专用 [SEP] 650.0 to 4000.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"671381175156\", \"758414253205\", \"682289622347\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "671381175156",
+            "758414253205",
+            "682289622347"
+          ],
+          "normalized_query": "地克珠利溶液",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "671381175156",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸡"
+              ],
+              "price": "4.0 to 108.0",
+              "rank": 1,
+              "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+            },
+            {
+              "asin": "758414253205",
+              "brand": "启禾衣服染色剂",
+              "category": "工业油品/胶粘/化学/实验室用品›染料",
+              "key_attributes": [
+                "化学实验",
+                "洗鞋衣服",
+                "工业",
+                "7.5"
+              ],
+              "price": "11.0 to 75.0",
+              "rank": 2,
+              "title": "双氧水化学实验食用级洗鞋衣服漂白粉过氧化氢溶液工业用7.5%"
+            },
+            {
+              "asin": "682289622347",
+              "brand": "欧光美容仪器厂家",
+              "category": "美容美体仪器›电子美容仪（器械）",
+              "key_attributes": [],
+              "price": "650.0 to 4000.0",
+              "rank": 3,
+              "title": "氢氧小气泡美容仪器吸黑头毛孔清洁射频导入美容院专用"
+            }
+          ],
+          "query": "地克珠利溶液",
+          "rank_end": 3,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 1,
+          "total_results": 3
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "671381175156"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-233",
+        "instruction": "Instruction: [SEP] 麻烦帮我找一瓶适合给鸡打疫苗用的药物，要25年7月到期的，价格在5元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 科*新静10瓶26年8月12到期 [SEP] 科*新静1瓶26年8月12到期 [SEP] 1瓶双黄连口服液25年10月到期 [SEP] 1套家禽常用常备药品 [SEP] 欣匹克1瓶+滴瓶1个 [SEP] 1瓶苗佐 [SEP] 1瓶地克珠利溶液25年7月到期 [SEP] 欣匹克10瓶27年1月19到期 [SEP] 欣匹克1瓶27年1月19到期 [SEP] 科*新静1瓶+滴瓶1个 [SEP] 1盒灭菌注射用水 [SEP] 鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗 [SEP] 价格: 4.0 to 108.0 [SEP] 店铺: 源全兽药 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"科*新静10瓶26年8月12到期\", \"科*新静1瓶26年8月12到期\", \"1瓶双黄连口服液25年10月到期\", \"1套家禽常用常备药品\", \"欣匹克1瓶+滴瓶1个\", \"1瓶苗佐\", \"1瓶地克珠利溶液25年7月到期\", \"欣匹克10瓶27年1月19到期\", \"欣匹克1瓶27年1月19到期\", \"科*新静1瓶+滴瓶1个\", \"1盒灭菌注射用水\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "科*新静10瓶26年8月12到期",
+            "科*新静1瓶26年8月12到期",
+            "1瓶双黄连口服液25年10月到期",
+            "1套家禽常用常备药品",
+            "欣匹克1瓶+滴瓶1个",
+            "1瓶苗佐",
+            "1瓶地克珠利溶液25年7月到期",
+            "欣匹克10瓶27年1月19到期",
+            "欣匹克1瓶27年1月19到期",
+            "科*新静1瓶+滴瓶1个",
+            "1盒灭菌注射用水"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "科*新静10瓶26年8月12到期",
+              "科*新静1瓶26年8月12到期",
+              "1瓶双黄连口服液25年10月到期",
+              "1套家禽常用常备药品",
+              "欣匹克1瓶+滴瓶1个",
+              "1瓶苗佐",
+              "1瓶地克珠利溶液25年7月到期",
+              "欣匹克10瓶27年1月19到期",
+              "欣匹克1瓶27年1月19到期",
+              "科*新静1瓶+滴瓶1个",
+              "1盒灭菌注射用水"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "671381175156",
+            "brand": "源全兽药",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "鸡"
+            ],
+            "price": "4.0 to 108.0",
+            "title": "鸡用疫苗鸽子疫苗 哈药欣匹克 鸡新城疫活疫苗鸡新城疫四系禽疫苗"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": true,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"671381175156\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 4,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 12,
+          "termination_reason": "repeat_loop",
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": -0.65,
+        "reward_detail": {
+          "dimension_scores": {},
+          "evidence": {},
+          "evidence_coverage": 0,
+          "hard_gates": {},
+          "purchase_success": false,
+          "reward": -0.65,
+          "reward_type": "repeat_loop",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": -0.65,
+          "termination_reason": "repeat_loop",
+          "weighted_score": 0
+        },
+        "reward_valid": true,
+        "termination_reason": "repeat_loop"
+      }
+    }
+  ]
+}

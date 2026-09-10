@@ -1,0 +1,3087 @@
+{
+  "task": "想找一款白色的家用动感单车，价格控制在1500元以内。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.28, \"复购率\": 0.64, \"平均客单价\": 130.6, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": true, \"近30天消费金额\": 2350.5, \"近90天订单数\": 18}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"30-39, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"Keep\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"麦瑞克\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"小米\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Babycare\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"舒华\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 2000, \"最小值\": 500}, \"功能\": [\"智能互联\", \"静音\", \"磁控阻力\", \"自发电\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"铝合金\", \"ABS\", \"橡胶\"], \"颜色\": [\"白色\", \"灰色\", \"浅木色\"], \"风格\": [\"极简\", \"北欧\", \"清新\"]}, \"类目偏好\": {\"家用电器\": \"中\", \"智能家居\": \"中\", \"服饰鞋包\": \"低\", \"母婴用品\": \"高\", \"美妆护肤\": \"低\", \"运动户外\": \"高\", \"食品饮料\": \"中\"}}, \"地区信息\": {\"区县\": \"南山区\", \"城市\": \"深圳市\", \"时区\": \"UTC+8, \", \"省份\": \"广东省\"}, \"最后更新时间\": \"2024-06-06T10:00:00Z\", \"注册时间\": \"2019-08-15T09:20:00Z\", \"注册渠道\": \"App\", \"用户ID\": \"U20240606001, \", \"用户标签\": [\"产后恢复\", \"居家健身\", \"智能设备尝鲜者\", \"价格理性派\", \"轻中消费层级\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 1200, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"智能自发电的动感单车\", \"静音磁控新款动感单车\"], \"最近14天收藏商品\": [], \"活跃时间段\": [6, 7, 21, 22], \"近7天访问次数\": 17}}",
+  "step_count": 17,
+  "reset": {
+    "env_idx": 3,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "白色-自发电版"
+    ],
+    "idx": 1064,
+    "instruction": "Instruction: 想找一款白色的家用动感单车，价格控制在1500元以内。",
+    "instruction_simple": "想找一款白色的家用动感单车，价格控制在1500元以内。",
+    "message": "Task 1064 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.28,
+        "复购率": 0.64,
+        "平均客单价": 130.6,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": true,
+        "近30天消费金额": 2350.5,
+        "近90天订单数": 18
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "30-39, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "Keep"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "麦瑞克"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "小米"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Babycare"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "舒华"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 2000,
+            "最小值": 500
+          },
+          "功能": [
+            "智能互联",
+            "静音",
+            "磁控阻力",
+            "自发电"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "铝合金",
+            "ABS",
+            "橡胶"
+          ],
+          "颜色": [
+            "白色",
+            "灰色",
+            "浅木色"
+          ],
+          "风格": [
+            "极简",
+            "北欧",
+            "清新"
+          ]
+        },
+        "类目偏好": {
+          "家用电器": "中",
+          "智能家居": "中",
+          "服饰鞋包": "低",
+          "母婴用品": "高",
+          "美妆护肤": "低",
+          "运动户外": "高",
+          "食品饮料": "中"
+        }
+      },
+      "地区信息": {
+        "区县": "南山区",
+        "城市": "深圳市",
+        "时区": "UTC+8, ",
+        "省份": "广东省"
+      },
+      "最后更新时间": "2024-06-06T10:00:00Z",
+      "注册时间": "2019-08-15T09:20:00Z",
+      "注册渠道": "App",
+      "用户ID": "U20240606001, ",
+      "用户标签": [
+        "产后恢复",
+        "居家健身",
+        "智能设备尝鲜者",
+        "价格理性派",
+        "轻中消费层级"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 1200,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "智能自发电的动感单车",
+          "静音磁控新款动感单车"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          6,
+          7,
+          21,
+          22
+        ],
+        "近7天访问次数": 17
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "白色 家用动感单车 静音磁控"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 白色 家用动感单车 静音磁控 | Normalized query: 白色 家用动感单车 静音磁控 [SEP] Next > [SEP] 944515489229 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 1345.0 to 2691.0 [SEP] 944462493405 [SEP] 英尔健磁控健身车家用动感单车超静音运动减肥室内健身器材自行车 [SEP] 1363.0 [SEP] 641406677034 [SEP] 动感单车家用带心率智能APP静音磁控阻力减肥健身车Spinning bike [SEP] 2899.0 to 3149.0 [SEP] 737429092449 [SEP] Keep智能动感单车家用健身器材自行车室内运动磁控静音减肥专业版 [SEP] 4978.0 [SEP] 728293688210 [SEP] 麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3 [SEP] 2299.0 [SEP] 722086785729 [SEP] 商用动感单车静音自行车健身房专用健身车家用有氧运动健身器材 [SEP] 1776.0 [SEP] 552185413393 [SEP] 美国乔山健身车Matrix-R50豪华家用室内卧式健身动感单车磁控静音 [SEP] 56500.0 to 64500.0 [SEP] 775570335477 [SEP] 舒华动感单车家用健身器材小型磁控运动静音自行车健身单车B382 [SEP] 2999.0 [SEP] 711653822175 [SEP] 乔森花式专业动感单车大飞轮家用健身自行车磁控专业健身房超静音 [SEP] 2880.0 [SEP] 846843115200 [SEP] 舒华动感单车家用健身器材室内运动自行车磁控静音暴汗健身车卫士 [SEP] 4200.0 [SEP] 912338415369 [SEP] [国补15%]舒华B386G动感单车952旗舰店动家用磁控静音卫士自发电 [SEP] 9999.0 [SEP] 680622338381 [SEP] 麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT [SEP] 2599.0 to 2866.0 [SEP] 945682944145 [SEP] 麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家 [SEP] 1198.0 to 1618.0 [SEP] 636272525731 [SEP] SHUA舒华动感单车家用健身车室内磁控静音健身器材旗舰店A5-S [SEP] 5999.0 [SEP] 898998602161 [SEP] 麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini [SEP] 974.0 to 1329.0 [SEP] 620330493361 [SEP] 亿迈动感单车家用室内自行车健身器材超静音运动单车磁控健身车 [SEP] 2000.0 to 4000.0 [SEP] 687937059257 [SEP] 动感单车家用室内运动磁控静音健身器材健身房自行车机脚踏健身器 [SEP] 1200.0 to 2999.0 [SEP] 804129264064 [SEP] 动感单车磁控超静音智能家用室内健身自行车运动器材健身房专用 [SEP] 1999.0 to 2099.0 [SEP] 575201892230 [SEP] 卧式健身车家用动感单车老年人智能静音款运动自行车康复健身器材 [SEP] 3999.0 to 6999.0 [SEP] 728105684706 [SEP] 立久佳动感单车健身家用款智能磁控自行车室内减肥器材静音追风X [SEP] 1899.0 to 2999.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"944515489229\", \"944462493405\", \"641406677034\", \"737429092449\", \"728293688210\", \"722086785729\", \"552185413393\", \"775570335477\", \"711653822175\", \"846843115200\", \"912338415369\", \"680622338381\", \"945682944145\", \"636272525731\", \"898998602161\", \"620330493361\", \"687937059257\", \"804129264064\", \"575201892230\", \"728105684706\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "944515489229",
+            "944462493405",
+            "641406677034",
+            "737429092449",
+            "728293688210",
+            "722086785729",
+            "552185413393",
+            "775570335477",
+            "711653822175",
+            "846843115200",
+            "912338415369",
+            "680622338381",
+            "945682944145",
+            "636272525731",
+            "898998602161",
+            "620330493361",
+            "687937059257",
+            "804129264064",
+            "575201892230",
+            "728105684706"
+          ],
+          "normalized_query": "白色 家用动感单车 静音磁控",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "944515489229",
+              "brand": "优品惠多商城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "智能",
+                "磁控",
+                "静音设计"
+              ],
+              "price": "1345.0 to 2691.0",
+              "rank": 1,
+              "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+            },
+            {
+              "asin": "944462493405",
+              "brand": "精品阁楼3",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "健身",
+                "磁控",
+                "静音",
+                "室内适用"
+              ],
+              "price": "1363.0",
+              "rank": 2,
+              "title": "英尔健磁控健身车家用动感单车超静音运动减肥室内健身器材自行车"
+            },
+            {
+              "asin": "641406677034",
+              "brand": "洛克琪富健身馆",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥",
+                "Spinning风格"
+              ],
+              "price": "2899.0 to 3149.0",
+              "rank": 3,
+              "title": "动感单车家用带心率智能APP静音磁控阻力减肥健身车Spinning bike"
+            },
+            {
+              "asin": "737429092449",
+              "brand": "东辰一号厂",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥",
+                "智能功能"
+              ],
+              "price": "4978.0",
+              "rank": 4,
+              "title": "Keep智能动感单车家用健身器材自行车室内运动磁控静音减肥专业版"
+            },
+            {
+              "asin": "728293688210",
+              "brand": "天猫超市",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "磁控骑行",
+                "月轮设计"
+              ],
+              "price": "2299.0",
+              "rank": 5,
+              "title": "麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3"
+            },
+            {
+              "asin": "722086785729",
+              "brand": "久久健身器材",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "商用专业级",
+                "静音",
+                "专业场所适用",
+                "家用",
+                "有氧训练功能"
+              ],
+              "price": "1776.0",
+              "rank": 6,
+              "title": "商用动感单车静音自行车健身房专用健身车家用有氧运动健身器材"
+            },
+            {
+              "asin": "552185413393",
+              "brand": "乐享健康运动生活馆",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "卧式",
+                "磁控",
+                "静音"
+              ],
+              "price": "56500.0 to 64500.0",
+              "rank": 7,
+              "title": "美国乔山健身车Matrix-R50豪华家用室内卧式健身动感单车磁控静音"
+            },
+            {
+              "asin": "775570335477",
+              "brand": "舒华运动旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用健身",
+                "小巧设计",
+                "磁控",
+                "静音"
+              ],
+              "price": "2999.0",
+              "rank": 8,
+              "title": "舒华动感单车家用健身器材小型磁控运动静音自行车健身单车B382"
+            },
+            {
+              "asin": "711653822175",
+              "brand": "JONSYL乔森旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "大飞轮稳定系统",
+                "磁控",
+                "静音设计",
+                "花式骑行专用",
+                "专业级健身车"
+              ],
+              "price": "2880.0",
+              "rank": 9,
+              "title": "乔森花式专业动感单车大飞轮家用健身自行车磁控专业健身房超静音"
+            },
+            {
+              "asin": "846843115200",
+              "brand": "舒华优智达授权店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "静音"
+              ],
+              "price": "4200.0",
+              "rank": 10,
+              "title": "舒华动感单车家用健身器材室内运动自行车磁控静音暴汗健身车卫士"
+            },
+            {
+              "asin": "912338415369",
+              "brand": "喵住官方旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "国家补贴",
+                "家用",
+                "静音",
+                "自发电"
+              ],
+              "price": "9999.0",
+              "rank": 11,
+              "title": "[国补15%]舒华B386G动感单车952旗舰店动家用磁控静音卫士自发电"
+            },
+            {
+              "asin": "680622338381",
+              "brand": "燃烧卡路里运动健身器材",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "静音",
+                "磁控"
+              ],
+              "price": "2599.0 to 2866.0",
+              "rank": 12,
+              "title": "麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT"
+            },
+            {
+              "asin": "945682944145",
+              "brand": "诚信办公用品企业",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "高效燃脂功能",
+                "静音",
+                "磁控智能版"
+              ],
+              "price": "1198.0 to 1618.0",
+              "rank": 13,
+              "title": "麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家"
+            },
+            {
+              "asin": "636272525731",
+              "brand": "舒华官方旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内专用",
+                "磁力阻力系统",
+                "静音",
+                "上市公司专业保障"
+              ],
+              "price": "5999.0",
+              "rank": 14,
+              "title": "SHUA舒华动感单车家用健身车室内磁控静音健身器材旗舰店A5-S"
+            },
+            {
+              "asin": "898998602161",
+              "brand": "MERACH麦瑞克健身用品店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能磁控调阻",
+                "静音结构"
+              ],
+              "price": "974.0 to 1329.0",
+              "rank": 15,
+              "title": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini"
+            },
+            {
+              "asin": "620330493361",
+              "brand": "山东亿迈健身官方店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "超静音",
+                "磁控"
+              ],
+              "price": "2000.0 to 4000.0",
+              "rank": 16,
+              "title": "亿迈动感单车家用室内自行车健身器材超静音运动单车磁控健身车"
+            },
+            {
+              "asin": "687937059257",
+              "brand": "fitness center",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "运动",
+                "静音",
+                "健身器材",
+                "脚踏健身器"
+              ],
+              "price": "1200.0 to 2999.0",
+              "rank": 17,
+              "title": "动感单车家用室内运动磁控静音健身器材健身房自行车机脚踏健身器"
+            },
+            {
+              "asin": "804129264064",
+              "brand": "健知美旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "智能",
+                "磁控",
+                "超静音"
+              ],
+              "price": "1999.0 to 2099.0",
+              "rank": 18,
+              "title": "动感单车磁控超静音智能家用室内健身自行车运动器材健身房专用"
+            },
+            {
+              "asin": "575201892230",
+              "brand": "杰森运动健康科技",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能",
+                "静音"
+              ],
+              "price": "3999.0 to 6999.0",
+              "rank": 19,
+              "title": "卧式健身车家用动感单车老年人智能静音款运动自行车康复健身器材"
+            },
+            {
+              "asin": "728105684706",
+              "brand": "立久佳运动旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "磁控",
+                "家用",
+                "室内",
+                "静音",
+                "健身",
+                "减肥"
+              ],
+              "price": "1899.0 to 2999.0",
+              "rank": 20,
+              "title": "立久佳动感单车健身家用款智能磁控自行车室内减肥器材静音追风X"
+            }
+          ],
+          "query": "白色 家用动感单车 静音磁控",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"白色 家用动感单车 静音磁控\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:049ec6b31d4058a7c627c03898865de548e947ca631a09e01593a8d2aa8a6d7b"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:049ec6b31d4058a7c627c03898865de548e947ca631a09e01593a8d2aa8a6d7b"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:049ec6b31d4058a7c627c03898865de548e947ca631a09e01593a8d2aa8a6d7b"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "898998602161"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] s17手动调阻-不插电 [SEP] s17智能调阻-绝影mini [SEP] s13智能调阻丨绝影mini [SEP] s13自发电版】不插电-绝影mini [SEP] 麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini [SEP] 价格: 974.0 to 1329.0 [SEP] 店铺: MERACH麦瑞克健身用品店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"s17手动调阻-不插电\", \"s17智能调阻-绝影mini\", \"s13智能调阻丨绝影mini\", \"s13自发电版】不插电-绝影mini\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "s17手动调阻-不插电",
+            "s17智能调阻-绝影mini",
+            "s13智能调阻丨绝影mini",
+            "s13自发电版】不插电-绝影mini"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "s17手动调阻-不插电",
+              "s17智能调阻-绝影mini",
+              "s13智能调阻丨绝影mini",
+              "s13自发电版】不插电-绝影mini"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "898998602161",
+            "brand": "MERACH麦瑞克健身用品店",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "智能磁控调阻",
+              "静音结构"
+            ],
+            "price": "974.0 to 1329.0",
+            "title": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"898998602161\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:898998602161",
+            "constraint:898998602161:category:pass",
+            "constraint:898998602161:budget:unverifiable"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:898998602161",
+            "constraint:898998602161:category:pass",
+            "constraint:898998602161:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:898998602161",
+            "constraint:898998602161:category:pass",
+            "constraint:898998602161:budget:unverifiable"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "s17手动调阻-不插电",
+              "s17智能调阻-绝影mini",
+              "s13智能调阻丨绝影mini",
+              "s13自发电版】不插电-绝影mini"
+            ]
+          },
+          "content": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "898998602161",
+            "brand": "MERACH麦瑞克健身用品店",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "智能磁控调阻",
+              "静音结构"
+            ],
+            "price": "974.0 to 1329.0",
+            "title": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:898998602161:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:898998602161:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:898998602161:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "动感单车 家用 白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 动感单车 家用 白色 | Normalized query: 动感单车 家用 白色 [SEP] Next > [SEP] 857557178929 [SEP] 新款YESOUL/野小兽动感单车M1系列 自发电家用多功能智能健身燃脂 [SEP] 2199.0 to 2999.0 [SEP] 828035356072 [SEP] Yesoul野小兽M1动感单车磁控健身车室内健身房商用康复脚踏车家用 [SEP] 1710.0 [SEP] 930109898468 [SEP] Keep动感单车mini精灵版/家用健身减肥健身自行车 [SEP] 2447.0 [SEP] 896535071741 [SEP] 轻便动感单车家用带屏幕室内健身车健身房用自行车健身运动器材 [SEP] 880.0 [SEP] 846900134585 [SEP] 可折叠动感单车家用室内用健身车健身房器材减肥超静音运动自行车 [SEP] 263.0 [SEP] 944515489229 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 1345.0 to 2691.0 [SEP] 737429092449 [SEP] Keep智能动感单车家用健身器材自行车室内运动磁控静音减肥专业版 [SEP] 4978.0 [SEP] 728293688210 [SEP] 麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3 [SEP] 2299.0 [SEP] 844432539709 [SEP] 直销黑色室内运动健身车家居时尚动感单车 家用健身器材 [SEP] 642.0 [SEP] 725158355618 [SEP] HARISON美国汉臣动感单车家用健身车室内自行车运动健身器材X6 [SEP] 953.0 [SEP] 903684197015 [SEP] 乔山HORIZON系列GR7动感单车家用室内健身车健身房运动脚踏车 [SEP] 6949.0 [SEP] 777361833899 [SEP] 蓝堡pooboo动感单车家用健身房室内减肥锻炼运动器材商用健身车LD [SEP] 3445.0 [SEP] 784769535985 [SEP] 小米米家动感单车自发电款无线充版家用骑行运动健身减肥器材静音 [SEP] 2399.0 [SEP] 808611935044 [SEP] 【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女 [SEP] 2688.0 [SEP] 944462493405 [SEP] 英尔健磁控健身车家用动感单车超静音运动减肥室内健身器材自行车 [SEP] 1363.0 [SEP] 743992871738 [SEP] 麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one [SEP] 2899.0 to 3099.0 [SEP] 826418213504 [SEP] 麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10 [SEP] 1229.0 to 3029.0 [SEP] 681290886071 [SEP] SND动感家用单车锻炼超静音运动减肥器材室内可折叠健身自行车 [SEP] 1399.0 to 1499.0 [SEP] 669631198678 [SEP] 乔山动感单车家用7.0IC室内专业健身自行车磁控阻力小型 [SEP] 8499.0 [SEP] 914052229827 [SEP] 美力德s5动感单车家用减肥器健身房专用健身单车静音健身器材商用 [SEP] 2648.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"857557178929\", \"828035356072\", \"930109898468\", \"896535071741\", \"846900134585\", \"944515489229\", \"737429092449\", \"728293688210\", \"844432539709\", \"725158355618\", \"903684197015\", \"777361833899\", \"784769535985\", \"808611935044\", \"944462493405\", \"743992871738\", \"826418213504\", \"681290886071\", \"669631198678\", \"914052229827\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "857557178929",
+            "828035356072",
+            "930109898468",
+            "896535071741",
+            "846900134585",
+            "944515489229",
+            "737429092449",
+            "728293688210",
+            "844432539709",
+            "725158355618",
+            "903684197015",
+            "777361833899",
+            "784769535985",
+            "808611935044",
+            "944462493405",
+            "743992871738",
+            "826418213504",
+            "681290886071",
+            "669631198678",
+            "914052229827"
+          ],
+          "normalized_query": "动感单车 家用 白色",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "857557178929",
+              "brand": "小米智能家居",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "多功能",
+                "家用",
+                "燃脂健身",
+                "新款"
+              ],
+              "price": "2199.0 to 2999.0",
+              "rank": 1,
+              "title": "新款YESOUL/野小兽动感单车M1系列 自发电家用多功能智能健身燃脂"
+            },
+            {
+              "asin": "828035356072",
+              "brand": "润利百货商城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "支持康复辅助",
+                "磁控阻力",
+                "野小兽M1"
+              ],
+              "price": "1710.0",
+              "rank": 2,
+              "title": "Yesoul野小兽M1动感单车磁控健身车室内健身房商用康复脚踏车家用"
+            },
+            {
+              "asin": "930109898468",
+              "brand": "蜜柚户外",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用"
+              ],
+              "price": "2447.0",
+              "rank": 3,
+              "title": "Keep动感单车mini精灵版/家用健身减肥健身自行车"
+            },
+            {
+              "asin": "896535071741",
+              "brand": "含苞欲放2024",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "轻便便携",
+                "带屏幕",
+                "家庭健身"
+              ],
+              "price": "880.0",
+              "rank": 4,
+              "title": "轻便动感单车家用带屏幕室内健身车健身房用自行车健身运动器材"
+            },
+            {
+              "asin": "846900134585",
+              "brand": "广隆海商贸",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内专用",
+                "减肥",
+                "超静音"
+              ],
+              "price": "263.0",
+              "rank": 5,
+              "title": "可折叠动感单车家用室内用健身车健身房器材减肥超静音运动自行车"
+            },
+            {
+              "asin": "944515489229",
+              "brand": "优品惠多商城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "智能",
+                "磁控",
+                "静音设计"
+              ],
+              "price": "1345.0 to 2691.0",
+              "rank": 6,
+              "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+            },
+            {
+              "asin": "737429092449",
+              "brand": "东辰一号厂",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥",
+                "智能功能"
+              ],
+              "price": "4978.0",
+              "rank": 7,
+              "title": "Keep智能动感单车家用健身器材自行车室内运动磁控静音减肥专业版"
+            },
+            {
+              "asin": "728293688210",
+              "brand": "天猫超市",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "磁控骑行",
+                "月轮设计"
+              ],
+              "price": "2299.0",
+              "rank": 8,
+              "title": "麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3"
+            },
+            {
+              "asin": "844432539709",
+              "brand": "有信诚挚",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "直销渠道",
+                "黑色",
+                "家居风格",
+                "时尚",
+                "家用",
+                "室内"
+              ],
+              "price": "642.0",
+              "rank": 9,
+              "title": "直销黑色室内运动健身车家居时尚动感单车 家用健身器材"
+            },
+            {
+              "asin": "725158355618",
+              "brand": "本雅商贸城的小店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "美系品牌",
+                "家用",
+                "室内"
+              ],
+              "price": "953.0",
+              "rank": 10,
+              "title": "HARISON美国汉臣动感单车家用健身车室内自行车运动健身器材X6"
+            },
+            {
+              "asin": "903684197015",
+              "brand": "博纳体育城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "乔山HORIZON系列",
+                "家用",
+                "健身房"
+              ],
+              "price": "6949.0",
+              "rank": 11,
+              "title": "乔山HORIZON系列GR7动感单车家用室内健身车健身房运动脚踏车"
+            },
+            {
+              "asin": "777361833899",
+              "brand": "gvgyijjyhp的小店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "健身房",
+                "室内",
+                "锻炼",
+                "减肥"
+              ],
+              "price": "3445.0",
+              "rank": 12,
+              "title": "蓝堡pooboo动感单车家用健身房室内减肥锻炼运动器材商用健身车LD"
+            },
+            {
+              "asin": "784769535985",
+              "brand": "小米之家智能家居 MI",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "小米米家品牌",
+                "无线充电技术",
+                "家用",
+                "减肥",
+                "静音"
+              ],
+              "price": "2399.0",
+              "rank": 13,
+              "title": "小米米家动感单车自发电款无线充版家用骑行运动健身减肥器材静音"
+            },
+            {
+              "asin": "808611935044",
+              "brand": "Mearch麦瑞运动品牌店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "男女适用"
+              ],
+              "price": "2688.0",
+              "rank": 14,
+              "title": "【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女"
+            },
+            {
+              "asin": "944462493405",
+              "brand": "精品阁楼3",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "健身",
+                "磁控",
+                "静音",
+                "室内适用"
+              ],
+              "price": "1363.0",
+              "rank": 15,
+              "title": "英尔健磁控健身车家用动感单车超静音运动减肥室内健身器材自行车"
+            },
+            {
+              "asin": "743992871738",
+              "brand": "MERACH麦瑞克官方旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "超静音"
+              ],
+              "price": "2899.0 to 3099.0",
+              "rank": 16,
+              "title": "麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one"
+            },
+            {
+              "asin": "826418213504",
+              "brand": "摩尔电器壹号店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥"
+              ],
+              "price": "1229.0 to 3029.0",
+              "rank": 17,
+              "title": "麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10"
+            },
+            {
+              "asin": "681290886071",
+              "brand": "施耐德泽谦专卖店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "SND品牌",
+                "家用",
+                "折叠",
+                "静音",
+                "8档阻力",
+                "小型",
+                "减肥"
+              ],
+              "price": "1399.0 to 1499.0",
+              "rank": 18,
+              "title": "SND动感家用单车锻炼超静音运动减肥器材室内可折叠健身自行车"
+            },
+            {
+              "asin": "669631198678",
+              "brand": "乔山旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "专业",
+                "磁控阻力",
+                "小型",
+                "50档阻力级别",
+                "高清LCD屏幕",
+                "占地仅0.48平米"
+              ],
+              "price": "8499.0",
+              "rank": 19,
+              "title": "乔山动感单车家用7.0IC室内专业健身自行车磁控阻力小型"
+            },
+            {
+              "asin": "914052229827",
+              "brand": "亿美健身器材",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "健身房",
+                "静音设计",
+                "减脂适用"
+              ],
+              "price": "2648.0",
+              "rank": 20,
+              "title": "美力德s5动感单车家用减肥器健身房专用健身单车静音健身器材商用"
+            }
+          ],
+          "query": "动感单车 家用 白色",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"动感单车 家用 白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:6c27993e7495ea6ba29fe41652f2ac0dbd63a06a42284a4f1bebaebb1b8b4f56"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:6c27993e7495ea6ba29fe41652f2ac0dbd63a06a42284a4f1bebaebb1b8b4f56"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 16,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "result_set:6c27993e7495ea6ba29fe41652f2ac0dbd63a06a42284a4f1bebaebb1b8b4f56"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "944515489229"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色-自发电版 [SEP] 白色-彩屏版 [SEP] 白色 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 价格: 1345.0 to 2691.0 [SEP] 店铺: 优品惠多商城 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色-自发电版\", \"白色-彩屏版\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色-自发电版",
+            "白色-彩屏版",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"944515489229\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:944515489229",
+            "constraint:944515489229:category:pass",
+            "constraint:944515489229:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:944515489229",
+            "constraint:944515489229:category:pass",
+            "constraint:944515489229:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "product:944515489229",
+            "constraint:944515489229:category:pass",
+            "constraint:944515489229:budget:pass"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色-自发电版 [SEP] 白色-彩屏版 [SEP] 白色 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 价格: 1345.0 [SEP] 店铺: 优品惠多商城 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色-自发电版\", \"白色-彩屏版\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色-自发电版",
+            "白色-彩屏版",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 1345
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:944515489229:color:白色"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:944515489229:color:白色"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "option:944515489229:color:白色"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 1345,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:944515489229:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:944515489229:features"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:944515489229:features"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "白色-自发电版"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 1345,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"白色-自发电版\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:944515489229:白色-自发电版"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:944515489229:白色-自发电版"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:944515489229:白色-自发电版"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "麦瑞克 绝影ONE2 动感单车"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 麦瑞克 绝影one2 动感单车 | Normalized query: 麦瑞克 绝影one2 动感单车 [SEP] Next > [SEP] 944515489229 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 1345.0 to 2691.0 [SEP] 826418213504 [SEP] 麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10 [SEP] 1229.0 to 3029.0 [SEP] 898998602161 [SEP] 麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini [SEP] 974.0 to 1329.0 [SEP] 743992871738 [SEP] 麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one [SEP] 2899.0 to 3099.0 [SEP] 808611935044 [SEP] 【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女 [SEP] 2688.0 [SEP] 641989323334 [SEP] 麦瑞克动感单车家用运动健身智能自行车减肥器超静音健身车绝影CC [SEP] 1999.0 to 6999.0 [SEP] 728293688210 [SEP] 麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3 [SEP] 2299.0 [SEP] 680622338381 [SEP] 麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT [SEP] 2599.0 to 2866.0 [SEP] 945682944145 [SEP] 麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家 [SEP] 1198.0 to 1618.0 [SEP] 922715640702 [SEP] [新品]麦瑞克动感单车家用款减肥运动静音健身器材黑曜骑士Turbo [SEP] 1799.0 [SEP] 901751506589 [SEP] 麦瑞克动感单车智能超静音室内运动脚踏款健身车减肥健身房器材 [SEP] 2418.0 to 7920.0 [SEP] 803096633144 [SEP] 麦瑞克MR-S12黑耀骑士运动潮流动感单车商用级室内健身骑行自行车 [SEP] 1799.0 to 4599.0 [SEP] 905671589191 [SEP] 健身车家用小XENJOY小型室内动感单车静音运动木马健身器材绝影 [SEP] 2899.0 [SEP] 901470143628 [SEP] 麦瑞克动感单车运动健身器材室内超静音磁控智能健身房减肥自行车 [SEP] 698.0 to 2032.0 [SEP] 772939482326 [SEP] 165mmx20mm英尔健动感单车配件中轴健身运动自行车脚踏轴6004轴承 [SEP] 58.0 [SEP] 640699914390 [SEP] 动感单车脚垫平衡垫单车配件健身车动感单车垫脚健身房配件地胶垫 [SEP] 5.0 to 8.0 [SEP] 940716481566 [SEP] 动感单车配件磁控车阻力s调节旋钮微调健身器材配件拆叠运动健身 [SEP] 70.0 to 76.0 [SEP] 777361833899 [SEP] 蓝堡pooboo动感单车家用健身房室内减肥锻炼运动器材商用健身车LD [SEP] 3445.0 [SEP] 844432539709 [SEP] 直销黑色室内运动健身车家居时尚动感单车 家用健身器材 [SEP] 642.0 [SEP] 725158355618 [SEP] HARISON美国汉臣动感单车家用健身车室内自行车运动健身器材X6 [SEP] 953.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"944515489229\", \"826418213504\", \"898998602161\", \"743992871738\", \"808611935044\", \"641989323334\", \"728293688210\", \"680622338381\", \"945682944145\", \"922715640702\", \"901751506589\", \"803096633144\", \"905671589191\", \"901470143628\", \"772939482326\", \"640699914390\", \"940716481566\", \"777361833899\", \"844432539709\", \"725158355618\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "944515489229",
+            "826418213504",
+            "898998602161",
+            "743992871738",
+            "808611935044",
+            "641989323334",
+            "728293688210",
+            "680622338381",
+            "945682944145",
+            "922715640702",
+            "901751506589",
+            "803096633144",
+            "905671589191",
+            "901470143628",
+            "772939482326",
+            "640699914390",
+            "940716481566",
+            "777361833899",
+            "844432539709",
+            "725158355618"
+          ],
+          "normalized_query": "麦瑞克 绝影one2 动感单车",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "944515489229",
+              "brand": "优品惠多商城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "智能",
+                "磁控",
+                "静音设计"
+              ],
+              "price": "1345.0 to 2691.0",
+              "rank": 1,
+              "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+            },
+            {
+              "asin": "826418213504",
+              "brand": "摩尔电器壹号店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥"
+              ],
+              "price": "1229.0 to 3029.0",
+              "rank": 2,
+              "title": "麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10"
+            },
+            {
+              "asin": "898998602161",
+              "brand": "MERACH麦瑞克健身用品店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能磁控调阻",
+                "静音结构"
+              ],
+              "price": "974.0 to 1329.0",
+              "rank": 3,
+              "title": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini"
+            },
+            {
+              "asin": "743992871738",
+              "brand": "MERACH麦瑞克官方旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "超静音"
+              ],
+              "price": "2899.0 to 3099.0",
+              "rank": 4,
+              "title": "麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one"
+            },
+            {
+              "asin": "808611935044",
+              "brand": "Mearch麦瑞运动品牌店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "男女适用"
+              ],
+              "price": "2688.0",
+              "rank": 5,
+              "title": "【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女"
+            },
+            {
+              "asin": "641989323334",
+              "brand": "merach麦瑞克健身体验店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "麦瑞克品牌",
+                "绝影CC系列",
+                "家用",
+                "超静音",
+                "减肥"
+              ],
+              "price": "1999.0 to 6999.0",
+              "rank": 6,
+              "title": "麦瑞克动感单车家用运动健身智能自行车减肥器超静音健身车绝影CC"
+            },
+            {
+              "asin": "728293688210",
+              "brand": "天猫超市",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "磁控骑行",
+                "月轮设计"
+              ],
+              "price": "2299.0",
+              "rank": 7,
+              "title": "麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3"
+            },
+            {
+              "asin": "680622338381",
+              "brand": "燃烧卡路里运动健身器材",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "静音",
+                "磁控"
+              ],
+              "price": "2599.0 to 2866.0",
+              "rank": 8,
+              "title": "麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT"
+            },
+            {
+              "asin": "945682944145",
+              "brand": "诚信办公用品企业",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "高效燃脂功能",
+                "静音",
+                "磁控智能版"
+              ],
+              "price": "1198.0 to 1618.0",
+              "rank": 9,
+              "title": "麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家"
+            },
+            {
+              "asin": "922715640702",
+              "brand": "华宇体育科技",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "新上市",
+                "家用",
+                "减肥",
+                "静音",
+                "骑士系列设计"
+              ],
+              "price": "1799.0",
+              "rank": 10,
+              "title": "[新品]麦瑞克动感单车家用款减肥运动静音健身器材黑曜骑士Turbo"
+            },
+            {
+              "asin": "901751506589",
+              "brand": "奥莱健身运动直销店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能",
+                "超静音",
+                "脚踏款",
+                "室内",
+                "运动",
+                "减肥"
+              ],
+              "price": "2418.0 to 7920.0",
+              "rank": 11,
+              "title": "麦瑞克动感单车智能超静音室内运动脚踏款健身车减肥健身房器材"
+            },
+            {
+              "asin": "803096633144",
+              "brand": "华宇体育科技",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "运动风",
+                "商用专业级",
+                "潮流"
+              ],
+              "price": "1799.0 to 4599.0",
+              "rank": 12,
+              "title": "麦瑞克MR-S12黑耀骑士运动潮流动感单车商用级室内健身骑行自行车"
+            },
+            {
+              "asin": "905671589191",
+              "brand": "悠悠全品甄选",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用小型",
+                "静音设计",
+                "室内健身"
+              ],
+              "price": "2899.0",
+              "rank": 13,
+              "title": "健身车家用小XENJOY小型室内动感单车静音运动木马健身器材绝影"
+            },
+            {
+              "asin": "901470143628",
+              "brand": "奥莱健身运动直销店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "室内专用设计",
+                "超静音"
+              ],
+              "price": "698.0 to 2032.0",
+              "rank": 14,
+              "title": "麦瑞克动感单车运动健身器材室内超静音磁控智能健身房减肥自行车"
+            },
+            {
+              "asin": "772939482326",
+              "brand": "东莞希立户外店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "动感单车配件",
+                "中轴替换件"
+              ],
+              "price": "58.0",
+              "rank": 15,
+              "title": "165mmx20mm英尔健动感单车配件中轴健身运动自行车脚踏轴6004轴承"
+            },
+            {
+              "asin": "640699914390",
+              "brand": "嘉杰运动直销店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [],
+              "price": "5.0 to 8.0",
+              "rank": 16,
+              "title": "动感单车脚垫平衡垫单车配件健身车动感单车垫脚健身房配件地胶垫"
+            },
+            {
+              "asin": "940716481566",
+              "brand": "嘎达科技工厂",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "磁控阻力",
+                "动感单车配件"
+              ],
+              "price": "70.0 to 76.0",
+              "rank": 17,
+              "title": "动感单车配件磁控车阻力s调节旋钮微调健身器材配件拆叠运动健身"
+            },
+            {
+              "asin": "777361833899",
+              "brand": "gvgyijjyhp的小店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "健身房",
+                "室内",
+                "锻炼",
+                "减肥"
+              ],
+              "price": "3445.0",
+              "rank": 18,
+              "title": "蓝堡pooboo动感单车家用健身房室内减肥锻炼运动器材商用健身车LD"
+            },
+            {
+              "asin": "844432539709",
+              "brand": "有信诚挚",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "直销渠道",
+                "黑色",
+                "家居风格",
+                "时尚",
+                "家用",
+                "室内"
+              ],
+              "price": "642.0",
+              "rank": 19,
+              "title": "直销黑色室内运动健身车家居时尚动感单车 家用健身器材"
+            },
+            {
+              "asin": "725158355618",
+              "brand": "本雅商贸城的小店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "美系品牌",
+                "家用",
+                "室内"
+              ],
+              "price": "953.0",
+              "rank": 20,
+              "title": "HARISON美国汉臣动感单车家用健身车室内自行车运动健身器材X6"
+            }
+          ],
+          "query": "麦瑞克 绝影one2 动感单车",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"麦瑞克 绝影one2 动感单车\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:b2262aa8efafa24a5f3f73548beaa6176dd93d100625b6e270df48e2a3cc9593"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "result_set:b2262aa8efafa24a5f3f73548beaa6176dd93d100625b6e270df48e2a3cc9593"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 9,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "result_set:b2262aa8efafa24a5f3f73548beaa6176dd93d100625b6e270df48e2a3cc9593"
+          ],
+          "seen_asin_count": 45,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "826418213504"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 绝影cc典雅白飞梭版智能调阻 [SEP] 绝影one2代【自发电加强版】 [SEP] 绝影one2代【自发电版】 [SEP] 白色-彩屏版 [SEP] 绝影one 2代【插电版 [SEP] 麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10 [SEP] 价格: 1229.0 to 3029.0 [SEP] 店铺: 摩尔电器壹号店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"绝影cc典雅白飞梭版智能调阻\", \"绝影one2代【自发电加强版】\", \"绝影one2代【自发电版】\", \"白色-彩屏版\", \"绝影one 2代【插电版\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "绝影cc典雅白飞梭版智能调阻",
+            "绝影one2代【自发电加强版】",
+            "绝影one2代【自发电版】",
+            "白色-彩屏版",
+            "绝影one 2代【插电版"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "绝影cc典雅白飞梭版智能调阻",
+              "绝影one2代【自发电加强版】",
+              "绝影one2代【自发电版】",
+              "白色-彩屏版",
+              "绝影one 2代【插电版"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "826418213504",
+            "brand": "摩尔电器壹号店",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "静音",
+              "减肥"
+            ],
+            "price": "1229.0 to 3029.0",
+            "title": "麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"826418213504\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:826418213504",
+            "constraint:826418213504:category:pass",
+            "constraint:826418213504:budget:unverifiable"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "product:826418213504",
+            "constraint:826418213504:category:pass",
+            "constraint:826418213504:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "product:826418213504",
+            "constraint:826418213504:category:pass",
+            "constraint:826418213504:budget:unverifiable"
+          ],
+          "seen_asin_count": 45,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 45,
+          "step_count": 13,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "麦瑞克 绝影ONE2代 白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 麦瑞克 绝影one2代 白色 | Normalized query: 麦瑞克 绝影one2代 白色 [SEP] Next > [SEP] 944515489229 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 1345.0 to 2691.0 [SEP] 826418213504 [SEP] 麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10 [SEP] 1229.0 to 3029.0 [SEP] 743992871738 [SEP] 麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one [SEP] 2899.0 to 3099.0 [SEP] 898998602161 [SEP] 麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini [SEP] 974.0 to 1329.0 [SEP] 808611935044 [SEP] 【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女 [SEP] 2688.0 [SEP] 641989323334 [SEP] 麦瑞克动感单车家用运动健身智能自行车减肥器超静音健身车绝影CC [SEP] 1999.0 to 6999.0 [SEP] 728293688210 [SEP] 麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3 [SEP] 2299.0 [SEP] 680622338381 [SEP] 麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT [SEP] 2599.0 to 2866.0 [SEP] 945682944145 [SEP] 麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家 [SEP] 1198.0 to 1618.0 [SEP] 755262790923 [SEP] 父亲节西屋UK5颈椎按摩器肩膀斜方肌按摩肩颈脖子腰背部揉捏热敷 [SEP] 250.0 to 300.0 [SEP] 922715640702 [SEP] [新品]麦瑞克动感单车家用款减肥运动静音健身器材黑曜骑士Turbo [SEP] 1799.0 [SEP] 803096633144 [SEP] 麦瑞克MR-S12黑耀骑士运动潮流动感单车商用级室内健身骑行自行车 [SEP] 1799.0 to 4599.0 [SEP] 901751506589 [SEP] 麦瑞克动感单车智能超静音室内运动脚踏款健身车减肥健身房器材 [SEP] 2418.0 to 7920.0 [SEP] 901470143628 [SEP] 麦瑞克动感单车运动健身器材室内超静音磁控智能健身房减肥自行车 [SEP] 698.0 to 2032.0 [SEP] 938207803518 [SEP] 全新港版PS5游戏光盘 NS绝影战士赤影战士重置 中文 双人现货 [SEP] 199.0 [SEP] 905671589191 [SEP] 健身车家用小XENJOY小型室内动感单车静音运动木马健身器材绝影 [SEP] 2899.0 [SEP] 736015258094 [SEP] 丹麦瑞声达耳内式助听器旗舰店隐形定制蓝牙重度智钥门店同款正品 [SEP] 100.0 to 6300.0 [SEP] 929896341196 [SEP] 中国李宁绝影VTG休闲鞋男鞋25新款?科技缓震反光运动鞋 [SEP] 1099.0 [SEP] 828730003555 [SEP] 龙泉宝剑20寸千层钢绝影唐横刀黑檀一体刀剑刀具防身冷兵器未开刃 [SEP] 2980.0 [SEP] 857464066299 [SEP] 鱼肝油儿童d3艾瑞可艾瑞克官方DHA维生素AD鳕鱼肝油胶囊 [SEP] 180.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"944515489229\", \"826418213504\", \"743992871738\", \"898998602161\", \"808611935044\", \"641989323334\", \"728293688210\", \"680622338381\", \"945682944145\", \"755262790923\", \"922715640702\", \"803096633144\", \"901751506589\", \"901470143628\", \"938207803518\", \"905671589191\", \"736015258094\", \"929896341196\", \"828730003555\", \"857464066299\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "944515489229",
+            "826418213504",
+            "743992871738",
+            "898998602161",
+            "808611935044",
+            "641989323334",
+            "728293688210",
+            "680622338381",
+            "945682944145",
+            "755262790923",
+            "922715640702",
+            "803096633144",
+            "901751506589",
+            "901470143628",
+            "938207803518",
+            "905671589191",
+            "736015258094",
+            "929896341196",
+            "828730003555",
+            "857464066299"
+          ],
+          "normalized_query": "麦瑞克 绝影one2代 白色",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "944515489229",
+              "brand": "优品惠多商城",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "智能",
+                "磁控",
+                "静音设计"
+              ],
+              "price": "1345.0 to 2691.0",
+              "rank": 1,
+              "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+            },
+            {
+              "asin": "826418213504",
+              "brand": "摩尔电器壹号店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "减肥"
+              ],
+              "price": "1229.0 to 3029.0",
+              "rank": 2,
+              "title": "麦瑞克动感单车绝影ONE2代家用超静音自行健身运动减肥器材MR-S10"
+            },
+            {
+              "asin": "743992871738",
+              "brand": "MERACH麦瑞克官方旗舰店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "超静音"
+              ],
+              "price": "2899.0 to 3099.0",
+              "rank": 3,
+              "title": "麦瑞克动感单车家用智能超静音健身自行车运动减肥器材绝影one"
+            },
+            {
+              "asin": "898998602161",
+              "brand": "MERACH麦瑞克健身用品店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能磁控调阻",
+                "静音结构"
+              ],
+              "price": "974.0 to 1329.0",
+              "rank": 4,
+              "title": "麦瑞克S13动感单车家用运动健身磁控自行车器材室内静音绝影Mini"
+            },
+            {
+              "asin": "808611935044",
+              "brand": "Mearch麦瑞运动品牌店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "男女适用"
+              ],
+              "price": "2688.0",
+              "rank": 5,
+              "title": "【咨询优惠】麦瑞克绝影CC动感单车绝影TT健身车绝影mini家用男女"
+            },
+            {
+              "asin": "641989323334",
+              "brand": "merach麦瑞克健身体验店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "麦瑞克品牌",
+                "绝影CC系列",
+                "家用",
+                "超静音",
+                "减肥"
+              ],
+              "price": "1999.0 to 6999.0",
+              "rank": 6,
+              "title": "麦瑞克动感单车家用运动健身智能自行车减肥器超静音健身车绝影CC"
+            },
+            {
+              "asin": "728293688210",
+              "brand": "天猫超市",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "静音",
+                "磁控骑行",
+                "月轮设计"
+              ],
+              "price": "2299.0",
+              "rank": 7,
+              "title": "麦瑞克动感单车家用静音健身自行车室内磁控骑行锻炼器材绝影S3"
+            },
+            {
+              "asin": "680622338381",
+              "brand": "燃烧卡路里运动健身器材",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "室内",
+                "静音",
+                "磁控"
+              ],
+              "price": "2599.0 to 2866.0",
+              "rank": 8,
+              "title": "麦瑞克动感单车运动磁控健身家用减肥自行车室内静音器材绝影TT"
+            },
+            {
+              "asin": "945682944145",
+              "brand": "诚信办公用品企业",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用",
+                "高效燃脂功能",
+                "静音",
+                "磁控智能版"
+              ],
+              "price": "1198.0 to 1618.0",
+              "rank": 9,
+              "title": "麦瑞克磁控绝影cc智能版动感单车超燃脂运动merach家用静音健厂家"
+            },
+            {
+              "asin": "755262790923",
+              "brand": "麦瑞克智慧生活店",
+              "category": "个人护理/保健/按摩器材›按摩器材›颈椎按摩器/枕",
+              "key_attributes": [
+                "父亲节",
+                "肩膀",
+                "斜方肌",
+                "腰",
+                "背部",
+                "揉捏",
+                "热敷"
+              ],
+              "price": "250.0 to 300.0",
+              "rank": 10,
+              "title": "父亲节西屋UK5颈椎按摩器肩膀斜方肌按摩肩颈脖子腰背部揉捏热敷"
+            },
+            {
+              "asin": "922715640702",
+              "brand": "华宇体育科技",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "新上市",
+                "家用",
+                "减肥",
+                "静音",
+                "骑士系列设计"
+              ],
+              "price": "1799.0",
+              "rank": 11,
+              "title": "[新品]麦瑞克动感单车家用款减肥运动静音健身器材黑曜骑士Turbo"
+            },
+            {
+              "asin": "803096633144",
+              "brand": "华宇体育科技",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "运动风",
+                "商用专业级",
+                "潮流"
+              ],
+              "price": "1799.0 to 4599.0",
+              "rank": 12,
+              "title": "麦瑞克MR-S12黑耀骑士运动潮流动感单车商用级室内健身骑行自行车"
+            },
+            {
+              "asin": "901751506589",
+              "brand": "奥莱健身运动直销店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "智能",
+                "超静音",
+                "脚踏款",
+                "室内",
+                "运动",
+                "减肥"
+              ],
+              "price": "2418.0 to 7920.0",
+              "rank": 13,
+              "title": "麦瑞克动感单车智能超静音室内运动脚踏款健身车减肥健身房器材"
+            },
+            {
+              "asin": "901470143628",
+              "brand": "奥莱健身运动直销店",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "室内专用设计",
+                "超静音"
+              ],
+              "price": "698.0 to 2032.0",
+              "rank": 14,
+              "title": "麦瑞克动感单车运动健身器材室内超静音磁控智能健身房减肥自行车"
+            },
+            {
+              "asin": "938207803518",
+              "brand": "叉烧电玩",
+              "category": "电玩/配件/游戏/攻略›游戏软件›PS游戏软件",
+              "key_attributes": [
+                "绝影战士",
+                "双人",
+                "现货"
+              ],
+              "price": "199.0",
+              "rank": 15,
+              "title": "全新港版PS5游戏光盘 NS绝影战士赤影战士重置 中文 双人现货"
+            },
+            {
+              "asin": "905671589191",
+              "brand": "悠悠全品甄选",
+              "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "key_attributes": [
+                "家用小型",
+                "静音设计",
+                "室内健身"
+              ],
+              "price": "2899.0",
+              "rank": 16,
+              "title": "健身车家用小XENJOY小型室内动感单车静音运动木马健身器材绝影"
+            },
+            {
+              "asin": "736015258094",
+              "brand": "悦听医疗器械专营",
+              "category": "医疗器械›助听器",
+              "key_attributes": [
+                "丹麦",
+                "耳内式",
+                "隐形",
+                "蓝牙",
+                "重度",
+                "门店同款",
+                "正品"
+              ],
+              "price": "100.0 to 6300.0",
+              "rank": 17,
+              "title": "丹麦瑞声达耳内式助听器旗舰店隐形定制蓝牙重度智钥门店同款正品"
+            },
+            {
+              "asin": "929896341196",
+              "brand": "中国李宁旗舰店",
+              "category": "运动鞋new›运动休闲鞋",
+              "key_attributes": [
+                "男",
+                "新款",
+                "缓震",
+                "反光"
+              ],
+              "price": "1099.0",
+              "rank": 18,
+              "title": "中国李宁绝影VTG休闲鞋男鞋25新款?科技缓震反光运动鞋"
+            },
+            {
+              "asin": "828730003555",
+              "brand": "龙泉旗舰店",
+              "category": "特色手工艺›地区民间特色手工艺›刀剑相关›刀剑",
+              "key_attributes": [
+                "龙泉",
+                "千层钢",
+                "唐横刀款式",
+                "黑檀",
+                "一体锻造",
+                "防身",
+                "未开刃",
+                "品质保证"
+              ],
+              "price": "2980.0",
+              "rank": 19,
+              "title": "龙泉宝剑20寸千层钢绝影唐横刀黑檀一体刀剑刀具防身冷兵器未开刃"
+            },
+            {
+              "asin": "857464066299",
+              "brand": "环球国际保健品牌折扣店",
+              "category": "奶粉/辅食/营养品/零食›婴童营养品›鱼肝油",
+              "key_attributes": [
+                "d3",
+                "官方",
+                "DHA",
+                "维生素AD",
+                "鳕鱼",
+                "胶囊"
+              ],
+              "price": "180.0",
+              "rank": 20,
+              "title": "鱼肝油儿童d3艾瑞可艾瑞克官方DHA维生素AD鳕鱼肝油胶囊"
+            }
+          ],
+          "query": "麦瑞克 绝影one2代 白色",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"麦瑞克 绝影one2代 白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 6,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "result_set:1ea29c0e15a45379c7766e52ac05f2b0c7cc7dad625a5a2c3bf1a2c6677648de"
+          ],
+          "seen_asin_count": 51,
+          "step_count": 14,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "944515489229"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色-自发电版 [SEP] 白色-彩屏版 [SEP] 白色 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 价格: 1345.0 to 2691.0 [SEP] 店铺: 优品惠多商城 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色-自发电版\", \"白色-彩屏版\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色-自发电版",
+            "白色-彩屏版",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"944515489229\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 51,
+          "step_count": 15,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 16,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 3,
+        "goal": {},
+        "idx": "slot-3-1064",
+        "instruction": "Instruction: [SEP] 想找一款白色的家用动感单车，价格控制在1500元以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色-自发电版 [SEP] 白色-彩屏版 [SEP] 白色 [SEP] 麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销 [SEP] 价格: 1345.0 [SEP] 店铺: 优品惠多商城 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色-自发电版\", \"白色-彩屏版\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色-自发电版",
+            "白色-彩屏版",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色-自发电版",
+              "白色-彩屏版",
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "944515489229",
+            "brand": "优品惠多商城",
+            "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+            "key_attributes": [
+              "家用",
+              "智能",
+              "磁控",
+              "静音设计"
+            ],
+            "price": "1345.0 to 2691.0",
+            "title": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 1345
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 51,
+          "step_count": 16,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 17,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 3,
+        "goal": {
+          "asin": "944515489229",
+          "attributes": [
+            "家用",
+            "智能",
+            "磁控",
+            "静音设计"
+          ],
+          "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "家用",
+            "智能",
+            "磁控",
+            "静音设计"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "白色-自发电版"
+          ],
+          "instruction_full": "想找一款适合家用的白色智能动感单车，要新款升级设计的，带智能技术和磁阻力系统，超安静运行的，支持自发电，价格控制在1500元以内，有推荐的吗？",
+          "instruction_simple": "想找一款白色的家用动感单车，价格控制在1500元以内。",
+          "instruction_text": "想找一款白色的家用动感单车，价格控制在1500元以内。",
+          "name": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": 1500,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "白色-自发电版"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.28,
+              "复购率": 0.64,
+              "平均客单价": 130.6,
+              "支付方式偏好": "微信支付",
+              "是否促销敏感": true,
+              "近30天消费金额": 2350.5,
+              "近90天订单数": 18
+            },
+            "人口属性": {
+              "会员等级": "黄金会员",
+              "年龄段": "30-39, ",
+              "性别": "女",
+              "消费等级": "中"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Keep"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "麦瑞克"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "小米"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Babycare"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "舒华"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 2000,
+                  "最小值": 500
+                },
+                "功能": [
+                  "智能互联",
+                  "静音",
+                  "磁控阻力",
+                  "自发电"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  "铝合金",
+                  "ABS",
+                  "橡胶"
+                ],
+                "颜色": [
+                  "白色",
+                  "灰色",
+                  "浅木色"
+                ],
+                "风格": [
+                  "极简",
+                  "北欧",
+                  "清新"
+                ]
+              },
+              "类目偏好": {
+                "家用电器": "中",
+                "智能家居": "中",
+                "服饰鞋包": "低",
+                "母婴用品": "高",
+                "美妆护肤": "低",
+                "运动户外": "高",
+                "食品饮料": "中"
+              }
+            },
+            "地区信息": {
+              "区县": "南山区",
+              "城市": "深圳市",
+              "时区": "UTC+8, ",
+              "省份": "广东省"
+            },
+            "最后更新时间": "2024-06-06T10:00:00Z",
+            "注册时间": "2019-08-15T09:20:00Z",
+            "注册渠道": "App",
+            "用户ID": "U20240606001, ",
+            "用户标签": [
+              "产后恢复",
+              "居家健身",
+              "智能设备尝鲜者",
+              "价格理性派",
+              "轻中消费层级"
+            ],
+            "行为特征": {
+              "常用设备": "iOS手机",
+              "日均浏览时长": 1200,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "智能自发电的动感单车",
+                "静音磁控新款动感单车"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                6,
+                7,
+                21,
+                22
+              ],
+              "近7天访问次数": 17
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-3-1064",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 944515489229 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"\\u767d\\u8272\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] 0.04375000000000001 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "944515489229",
+          "attributes": [
+            "家用",
+            "智能",
+            "磁控",
+            "静音设计"
+          ],
+          "category": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+          "instruction_text": "想找一款适合家用的白色智能动感单车，要新款升级设计的，带智能技术和磁阻力系统，超安静运行的，支持自发电，价格控制在1500元以内，有推荐的吗？",
+          "name": "麦瑞克MERACH新升级智能动感单车绝影ONE2代 家用静音磁控健直销",
+          "options": {
+            "颜色分类": "白色"
+          },
+          "price": 1345,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": 0.04375000000000001,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 1,
+            "key_options": 0,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": false,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 4,
+                  "required_count": 4,
+                  "results": [
+                    {
+                      "actual": [
+                        "家用",
+                        "智能",
+                        "磁控",
+                        "静音设计"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "家用"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "家用"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "家用",
+                        "智能",
+                        "磁控",
+                        "静音设计"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "智能"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "智能"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "家用",
+                        "智能",
+                        "磁控",
+                        "静音设计"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "磁控"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "磁控"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "家用",
+                        "智能",
+                        "磁控",
+                        "静音设计"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "静音设计"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "静音设计"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 4
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 0,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "白色"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [],
+                        "missing_axes": [],
+                        "unavailable_values": [],
+                        "wrong_values": [
+                          {
+                            "axis": "color",
+                            "required": "白色-自发电版",
+                            "selected": "白色"
+                          }
+                        ]
+                      },
+                      "passed": false,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "白色-自发电版"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "fail",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 0,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 0.625,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {
+                "effective_price_axis": "color"
+              },
+              "method": "unique_effective_price_axis",
+              "price": 1345,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 1345,
+              "comparator": "variant_price_budget_v1",
+              "evidence": {
+                "evidence": {
+                  "effective_price_axis": "color"
+                },
+                "method": "unique_effective_price_axis",
+                "price": 1345,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": 1500,
+              "source_field": "variant_price",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "运动/瑜伽/健身/球迷用品",
+                      "跑步机/大型健身器械",
+                      "健身车/动感单车"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "运动/瑜伽/健身/球迷用品›跑步机/大型健身器械›健身车/动感单车"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": false,
+          "reward": 0.04375000000000001,
+          "reward_type": "partial_alternative_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": true,
+          "terminal_utility": 0.04375000000000001,
+          "termination_reason": "partial_alternative_purchase",
+          "weighted_score": 0.625
+        },
+        "reward_valid": true,
+        "termination_reason": "partial_alternative_purchase"
+      }
+    }
+  ]
+}

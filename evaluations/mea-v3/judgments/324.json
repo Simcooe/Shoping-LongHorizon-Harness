@@ -1,0 +1,319 @@
+{
+  "task_id": "324",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 17,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 17,
+    "kind": "purchase",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求数量一条，始终有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求九分裤。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确黑色，且 shopper 在 step 7 确认正黑色。"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 明确男士。"
+    },
+    {
+      "requirement_id": "r0005",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0005"
+        }
+      ],
+      "reasoning": "初始 Query 明确预算 270 元以内。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，本次轨迹中用户从未告知或确认运动裤类别，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，用户未告知夏季新款需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 7,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "shopper 回复表示想要冰丝、拒绝速干材质，激活冰丝梭织要求。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 7,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "shopper 在回复中主动询问并关注防晒透气功能，视作被激活。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 7,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "shopper 明确回复尺码要 S 码，激活该要求。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 17,
+          "field": "tool_args"
+        }
+      ],
+      "reasoning": "Buy Now 单件下单且未修改数量，符合一条。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品标题明确为男子梭织九分裤。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 15,
+          "field": "tool_args"
+        }
+      ],
+      "reasoning": "页面提供正黑色选项且 Agent 已选择正黑色，shopper 亦确认正黑色。"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品标题明确为男子款。"
+    },
+    {
+      "requirement_id": "r0005",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品价格 239 元，未超过 270 元预算。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "用户未要求该事实，不作为本次有效需求；但商品标题显示为运动裤。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "用户未要求夏季新款，不作为有效需求；标题含 2025 夏季新款。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 7,
+          "field": "observation",
+          "event": "shopper_reply"
+        },
+        {
+          "source": "model_trace",
+          "step": 14,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "shopper 要求冰丝并拒绝速干，所选商品标题为冰丝梭织九分裤。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "shopper 关注防晒透气，但所选特步商品页面未展示 features/description 内容，无法核验该功能。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 7,
+          "field": "observation",
+          "event": "shopper_reply"
+        },
+        {
+          "source": "model_trace",
+          "step": 16,
+          "field": "tool_args"
+        }
+      ],
+      "reasoning": "shopper 要求 S 码，页面提供 s 选项且 Agent 已选择 s 码。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:08:42.629979+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

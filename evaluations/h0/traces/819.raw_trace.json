@@ -1,0 +1,1765 @@
+{
+  "task": "需要一款大货车能用的顶置空调，预算在3300元左右。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.35, \"复购率\": 0.68, \"平均客单价\": 358.4, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 6450.5, \"近90天订单数\": 18}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"35-44, \", \"性别\": \"男\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"海尔\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"米其林\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"小米\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"牧高笛\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"安克创新\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 5000, \"最小值\": 300}, \"功能\": [\"低功耗\", \"静音\", \"快速制冷\", \"顶置安装\", \"直流变频\", \"远程遥控\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"ABS\", \"铝合金\", \"EPP泡沫\"], \"颜色\": [\"深灰\", \"黑\", \"卡其\"], \"风格\": [\"实用主义\", \"工业风\", \"户外极简\"]}, \"类目偏好\": {\"奢侈品\": \"无\", \"家居生活\": \"低\", \"户外运动\": \"中\", \"数码3C\": \"中\", \"汽配工具\": \"高\", \"美妆护肤\": \"无\", \"车载电器\": \"高\", \"食品饮料\": \"中\"}}, \"地区信息\": {\"区县\": \"天桥区\", \"城市\": \"济南市\", \"时区\": \"+08:00, \", \"省份\": \"山东省\"}, \"最后更新时间\": \"2024-06-13T08:00:00Z\", \"注册时间\": \"2020-11-15T06:42:17Z\", \"注册渠道\": \"App\", \"用户ID\": \"U09485721, \", \"用户标签\": [\"长途货运司机\", \"海尔空调忠诚者\", \"车载电器重度用户\", \"中消费稳定型\", \"影音书籍收听者\", \"凌晨活跃人群\", \"健康零食偏好\", \"家庭型责任人\", \"技术参数关注\", \"非促销敏感\", \"品牌理性主义\"], \"行为特征\": {\"常用设备\": \"安卓手机\", \"日均浏览时长\": 4200, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"2.0版24V空调\", \"制冷改装直流变频空调\"], \"最近14天收藏商品\": [], \"活跃时间段\": [7, 8, 13, 20, 21], \"近7天访问次数\": 22}}",
+  "step_count": 12,
+  "reset": {
+    "env_idx": 4,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "顶置空调2.0"
+    ],
+    "idx": 819,
+    "instruction": "Instruction: 需要一款大货车能用的顶置空调，预算在3300元左右。",
+    "instruction_simple": "需要一款大货车能用的顶置空调，预算在3300元左右。",
+    "message": "Task 819 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.35,
+        "复购率": 0.68,
+        "平均客单价": 358.4,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 6450.5,
+        "近90天订单数": 18
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "35-44, ",
+        "性别": "男",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "海尔"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "米其林"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "小米"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "牧高笛"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "安克创新"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 5000,
+            "最小值": 300
+          },
+          "功能": [
+            "低功耗",
+            "静音",
+            "快速制冷",
+            "顶置安装",
+            "直流变频",
+            "远程遥控"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "ABS",
+            "铝合金",
+            "EPP泡沫"
+          ],
+          "颜色": [
+            "深灰",
+            "黑",
+            "卡其"
+          ],
+          "风格": [
+            "实用主义",
+            "工业风",
+            "户外极简"
+          ]
+        },
+        "类目偏好": {
+          "奢侈品": "无",
+          "家居生活": "低",
+          "户外运动": "中",
+          "数码3C": "中",
+          "汽配工具": "高",
+          "美妆护肤": "无",
+          "车载电器": "高",
+          "食品饮料": "中"
+        }
+      },
+      "地区信息": {
+        "区县": "天桥区",
+        "城市": "济南市",
+        "时区": "+08:00, ",
+        "省份": "山东省"
+      },
+      "最后更新时间": "2024-06-13T08:00:00Z",
+      "注册时间": "2020-11-15T06:42:17Z",
+      "注册渠道": "App",
+      "用户ID": "U09485721, ",
+      "用户标签": [
+        "长途货运司机",
+        "海尔空调忠诚者",
+        "车载电器重度用户",
+        "中消费稳定型",
+        "影音书籍收听者",
+        "凌晨活跃人群",
+        "健康零食偏好",
+        "家庭型责任人",
+        "技术参数关注",
+        "非促销敏感",
+        "品牌理性主义"
+      ],
+      "行为特征": {
+        "常用设备": "安卓手机",
+        "日均浏览时长": 4200,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "2.0版24V空调",
+          "制冷改装直流变频空调"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          7,
+          8,
+          13,
+          20,
+          21
+        ],
+        "近7天访问次数": 22
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "大货车顶置空调 24V"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 大货车顶置空调 24v | Normalized query: 大货车顶置空调 24v [SEP] Next > [SEP] 593292327917 [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用 [SEP] 2650.0 to 3250.0 [SEP] 855488436918 [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0 [SEP] 2499.0 to 4349.0 [SEP] 717678404979 [SEP] 汽车空调三档开关总成大货车暖风AC开关旋钮开关车用通用改装开关 [SEP] 8.0 to 12.0 [SEP] 778203348233 [SEP] 海信驻车空调t600一体机24v货车专用节能冷暖智能重卡车载空调 [SEP] 2622.0 to 3888.0 [SEP] 907635943271 [SEP] 汽车空调404蒸发器三档调速器ac旋钮 大货车挖机暖风开关改装通用 [SEP] 12.0 [SEP] 44896170427 [SEP] 508压缩机507改装空调压缩机通用12V 24V货车工程车压缩机势力周 [SEP] 18.0 to 450.0 [SEP] 785516575416 [SEP] 大货车厢把把手胶套锁具把把套货车把手套胶套软硬把手套挂车把套 [SEP] 8.0 to 29.0 [SEP] 929208397807 [SEP] 大货车恶魔之眼挡风前后玻璃后窗汽车载动态贴片动态LED眼睛灯 [SEP] 59.0 [SEP] 796847772441 [SEP] 太阳能车尾爆闪灯大货车太阳能警示灯太阳能夜间警示闪光灯同频 [SEP] 16.0 to 23.0 [SEP] 929635099480 [SEP] 门防风固定绳皮筋大货车高栏高弹力苫布篷布橡拉绳卡车雨布挂钩弹 [SEP] 11.0 to 28.0 [SEP] 937068397079 [SEP] 太阳能车顶鼠标灯货车皮卡车顶猛禽感应灯汽车防追尾爆闪警示灯 [SEP] 14.0 to 91.0 [SEP] 810570463660 [SEP] 12V 24V三音录音喊话警报器喇叭 汽车货车收割机工程车用喊话喇叭 [SEP] 71.0 to 75.0 [SEP] 680024727186 [SEP] 24V/12V货车天线灯领航跑马灯中网流光灯LED电动车汽车七彩流水灯 [SEP] 45.0 to 135.0 [SEP] 551979151283 [SEP] 汽车空调冷凝器总成货车工程车挖掘机农用车收割机散热网风扇改装 [SEP] 300.0 to 580.0 [SEP] 763560025282 [SEP] 货车车标灯流水跑马一下灯带24V车标LED氛围装饰灯带通用防水灯条 [SEP] 9.0 to 24.0 [SEP] 644660868275 [SEP] 508压缩机密封圈修理包汽车空调货车709维修配件大修包胶圈缸体胶 [SEP] 15.0 [SEP] 716961034286 [SEP] 汽车空调冷凝器改装通用工程货车农用车挖机铲车装载机用散热网片 [SEP] 14.0 to 138.0 [SEP] 549896751449 [SEP] 货车空调卡车空调220V驻车空调小1P纽圣分体移动空调自行拆装空调 [SEP] 2580.0 [SEP] 898217280217 [SEP] 轿车恶魔之眼车灯大货车汽车灯挂车玻璃led大眼睛灯usb免接线后窗 [SEP] 19.0 to 20.0 [SEP] 893985805357 [SEP] 便携式空调挂窗小型移动24V变频车床豪言驻车免安装压缩机单冷 [SEP] 3499.0 to 3899.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"593292327917\", \"855488436918\", \"717678404979\", \"778203348233\", \"907635943271\", \"44896170427\", \"785516575416\", \"929208397807\", \"796847772441\", \"929635099480\", \"937068397079\", \"810570463660\", \"680024727186\", \"551979151283\", \"763560025282\", \"644660868275\", \"716961034286\", \"549896751449\", \"898217280217\", \"893985805357\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "593292327917",
+            "855488436918",
+            "717678404979",
+            "778203348233",
+            "907635943271",
+            "44896170427",
+            "785516575416",
+            "929208397807",
+            "796847772441",
+            "929635099480",
+            "937068397079",
+            "810570463660",
+            "680024727186",
+            "551979151283",
+            "763560025282",
+            "644660868275",
+            "716961034286",
+            "549896751449",
+            "898217280217",
+            "893985805357"
+          ],
+          "normalized_query": "大货车顶置空调 24v",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "593292327917",
+              "brand": "杭州冰龙空调名创车品汽配",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "海尔车载空调机",
+                "大货车专用"
+              ],
+              "price": "2650.0 to 3250.0",
+              "rank": 1,
+              "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+            },
+            {
+              "asin": "855488436918",
+              "brand": "驻车空调锂电池发电机批发总汇",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "24V海尔",
+                "顶置一体机",
+                "电动大货车",
+                "车载驻车空调5.0"
+              ],
+              "price": "2499.0 to 4349.0",
+              "rank": 2,
+              "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+            },
+            {
+              "asin": "717678404979",
+              "brand": "兴盛汽车汽配",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "汽车空调",
+                "大货车",
+                "AC开关"
+              ],
+              "price": "8.0 to 12.0",
+              "rank": 3,
+              "title": "汽车空调三档开关总成大货车暖风AC开关旋钮开关车用通用改装开关"
+            },
+            {
+              "asin": "778203348233",
+              "brand": "驻车空调直销优惠店铺",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "海信",
+                "驻车空调",
+                "货车专用"
+              ],
+              "price": "2622.0 to 3888.0",
+              "rank": 4,
+              "title": "海信驻车空调t600一体机24v货车专用节能冷暖智能重卡车载空调"
+            },
+            {
+              "asin": "907635943271",
+              "brand": "趣缘车品旗舰店",
+              "category": "汽车零部件/养护/美容/维保›内饰系统›空调旋钮",
+              "key_attributes": [
+                "我开的半挂车制冷箱体不工作了",
+                "空调旋钮的风速调节功能没反应",
+                "控制温度的开关能单独购买吗？预算在15元左右。"
+              ],
+              "price": "12.0",
+              "rank": 5,
+              "title": "汽车空调404蒸发器三档调速器ac旋钮 大货车挖机暖风开关改装通用"
+            },
+            {
+              "asin": "44896170427",
+              "brand": "杭州鑫诚汽车空调",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "12V系统",
+                "507改装空调压缩机"
+              ],
+              "price": "18.0 to 450.0",
+              "rank": 6,
+              "title": "508压缩机507改装空调压缩机通用12V 24V货车工程车压缩机势力周"
+            },
+            {
+              "asin": "785516575416",
+              "brand": "锦隆工具",
+              "category": "橡塑材料及制品›塑料型材›PVC管",
+              "key_attributes": [
+                "大货车适用"
+              ],
+              "price": "8.0 to 29.0",
+              "rank": 7,
+              "title": "大货车厢把把手胶套锁具把把套货车把手套胶套软硬把手套挂车把套"
+            },
+            {
+              "asin": "929208397807",
+              "brand": "许愿發財店铺",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "动态",
+                "贴片",
+                "大货车",
+                "LED眼睛灯"
+              ],
+              "price": "59.0",
+              "rank": 8,
+              "title": "大货车恶魔之眼挡风前后玻璃后窗汽车载动态贴片动态LED眼睛灯"
+            },
+            {
+              "asin": "796847772441",
+              "brand": "车载警示灯大全",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "警示灯",
+                "太阳能",
+                "大货车",
+                "夜间场景"
+              ],
+              "price": "16.0 to 23.0",
+              "rank": 9,
+              "title": "太阳能车尾爆闪灯大货车太阳能警示灯太阳能夜间警示闪光灯同频"
+            },
+            {
+              "asin": "929635099480",
+              "brand": "飞蓝谷旗舰店",
+              "category": "基础建材›家用五金›门用配件›闭门器",
+              "key_attributes": [
+                "门",
+                "防风",
+                "固定",
+                "大货车适用",
+                "高弹力",
+                "篷布"
+              ],
+              "price": "11.0 to 28.0",
+              "rank": 10,
+              "title": "门防风固定绳皮筋大货车高栏高弹力苫布篷布橡拉绳卡车雨布挂钩弹"
+            },
+            {
+              "asin": "937068397079",
+              "brand": "美鸿车饰",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "防追尾",
+                "警示",
+                "车顶鼠标灯"
+              ],
+              "price": "14.0 to 91.0",
+              "rank": 11,
+              "title": "太阳能车顶鼠标灯货车皮卡车顶猛禽感应灯汽车防追尾爆闪警示灯"
+            },
+            {
+              "asin": "810570463660",
+              "brand": "澜鑫实业",
+              "category": "电动车/配件/交通工具›电动车装备区›电动车音响/音箱",
+              "key_attributes": [
+                "三音",
+                "录音",
+                "喊话",
+                "警报",
+                "收割机"
+              ],
+              "price": "71.0 to 75.0",
+              "rank": 12,
+              "title": "12V 24V三音录音喊话警报器喇叭 汽车货车收割机工程车用喊话喇叭"
+            },
+            {
+              "asin": "680024727186",
+              "brand": "靓个灯饰车品店",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "货车天线灯"
+              ],
+              "price": "45.0 to 135.0",
+              "rank": 13,
+              "title": "24V/12V货车天线灯领航跑马灯中网流光灯LED电动车汽车七彩流水灯"
+            },
+            {
+              "asin": "551979151283",
+              "brand": "智冷汽车空调配件",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "工程车",
+                "空调冷凝器散热风扇"
+              ],
+              "price": "300.0 to 580.0",
+              "rank": 14,
+              "title": "汽车空调冷凝器总成货车工程车挖掘机农用车收割机散热网风扇改装"
+            },
+            {
+              "asin": "763560025282",
+              "brand": "平安汽贸配件",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "装饰车标",
+                "防水"
+              ],
+              "price": "9.0 to 24.0",
+              "rank": 15,
+              "title": "货车车标灯流水跑马一下灯带24V车标LED氛围装饰灯带通用防水灯条"
+            },
+            {
+              "asin": "644660868275",
+              "brand": "中达汽车空调配件店A",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "货车709",
+                "空调压缩机",
+                "密封圈",
+                "修理包"
+              ],
+              "price": "15.0",
+              "rank": 16,
+              "title": "508压缩机密封圈修理包汽车空调货车709维修配件大修包胶圈缸体胶"
+            },
+            {
+              "asin": "716961034286",
+              "brand": "三冬商贸",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "改装",
+                "工程车",
+                "空调冷凝器散热器",
+                "改装"
+              ],
+              "price": "14.0 to 138.0",
+              "rank": 17,
+              "title": "汽车空调冷凝器改装通用工程货车农用车挖机铲车装载机用散热网片"
+            },
+            {
+              "asin": "549896751449",
+              "brand": "纽圣电器专营店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "货车适用",
+                "卡车适用",
+                "驻车适用",
+                "分体式",
+                "可自行拆装"
+              ],
+              "price": "2580.0",
+              "rank": 18,
+              "title": "货车空调卡车空调220V驻车空调小1P纽圣分体移动空调自行拆装空调"
+            },
+            {
+              "asin": "898217280217",
+              "brand": "七曜车品",
+              "category": "汽车用品/电子/清洗/改装›汽车加装›汽车氛围灯/装饰灯/日行灯",
+              "key_attributes": [
+                "眼睛灯",
+                "免接线安装"
+              ],
+              "price": "19.0 to 20.0",
+              "rank": 19,
+              "title": "轿车恶魔之眼车灯大货车汽车灯挂车玻璃led大眼睛灯usb免接线后窗"
+            },
+            {
+              "asin": "893985805357",
+              "brand": "手提空调源头工厂",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "挂窗式",
+                "小型",
+                "移动式"
+              ],
+              "price": "3499.0 to 3899.0",
+              "rank": 20,
+              "title": "便携式空调挂窗小型移动24V变频车床豪言驻车免安装压缩机单冷"
+            }
+          ],
+          "query": "大货车顶置空调 24v",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"大货车顶置空调 24v\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:159f97dbcc5e8e9787af72db55845382a8ee11fd42ef08cc4299c59052dd3e8c"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:159f97dbcc5e8e9787af72db55845382a8ee11fd42ef08cc4299c59052dd3e8c"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:159f97dbcc5e8e9787af72db55845382a8ee11fd42ef08cc4299c59052dd3e8c"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "855488436918"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 24v 海尔1.5后背分体机【白色】经典款 [SEP] 24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线 [SEP] 24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线 [SEP] 24v海尔3.0后背分体机【白色】 [SEP] 24v海尔2.0顶置分体机【白色】轻卡中卡 [SEP] 24v海尔6.0顶置一体机智领二代【红色】行驻两用 [SEP] 24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线 [SEP] 24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线 [SEP] 24v  海尔6.0顶置一体机智领二代【金色】行驻两用 [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0 [SEP] 价格: 2499.0 to 4349.0 [SEP] 店铺: 驻车空调锂电池发电机批发总汇 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"24v 海尔1.5后背分体机【白色】经典款\", \"24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线\", \"24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线\", \"24v海尔3.0后背分体机【白色】\", \"24v海尔2.0顶置分体机【白色】轻卡中卡\", \"24v海尔6.0顶置一体机智领二代【红色】行驻两用\", \"24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线\", \"24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线\", \"24v  海尔6.0顶置一体机智领二代【金色】行驻两用\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "24v 海尔1.5后背分体机【白色】经典款",
+            "24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线",
+            "24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线",
+            "24v海尔3.0后背分体机【白色】",
+            "24v海尔2.0顶置分体机【白色】轻卡中卡",
+            "24v海尔6.0顶置一体机智领二代【红色】行驻两用",
+            "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线",
+            "24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线",
+            "24v  海尔6.0顶置一体机智领二代【金色】行驻两用"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "24v 海尔1.5后背分体机【白色】经典款",
+              "24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线",
+              "24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线",
+              "24v海尔3.0后背分体机【白色】",
+              "24v海尔2.0顶置分体机【白色】轻卡中卡",
+              "24v海尔6.0顶置一体机智领二代【红色】行驻两用",
+              "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线",
+              "24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线",
+              "24v  海尔6.0顶置一体机智领二代【金色】行驻两用"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "855488436918",
+            "brand": "驻车空调锂电池发电机批发总汇",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "24V海尔",
+              "顶置一体机",
+              "电动大货车",
+              "车载驻车空调5.0"
+            ],
+            "price": "2499.0 to 4349.0",
+            "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"855488436918\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:855488436918",
+            "constraint:855488436918:category:pass",
+            "constraint:855488436918:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:855488436918",
+            "constraint:855488436918:category:pass",
+            "constraint:855488436918:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:855488436918",
+            "constraint:855488436918:category:pass",
+            "constraint:855488436918:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "24v 海尔1.5后背分体机【白色】经典款",
+              "24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线",
+              "24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线",
+              "24v海尔3.0后背分体机【白色】",
+              "24v海尔2.0顶置分体机【白色】轻卡中卡",
+              "24v海尔6.0顶置一体机智领二代【红色】行驻两用",
+              "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线",
+              "24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线",
+              "24v  海尔6.0顶置一体机智领二代【金色】行驻两用"
+            ]
+          },
+          "content": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "855488436918",
+            "brand": "驻车空调锂电池发电机批发总汇",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "24V海尔",
+              "顶置一体机",
+              "电动大货车",
+              "车载驻车空调5.0"
+            ],
+            "price": "2499.0 to 4349.0",
+            "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:855488436918:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:855488436918:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:855488436918:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "24v 海尔1.5后背分体机【白色】经典款",
+              "24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线",
+              "24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线",
+              "24v海尔3.0后背分体机【白色】",
+              "24v海尔2.0顶置分体机【白色】轻卡中卡",
+              "24v海尔6.0顶置一体机智领二代【红色】行驻两用",
+              "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线",
+              "24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线",
+              "24v  海尔6.0顶置一体机智领二代【金色】行驻两用"
+            ]
+          },
+          "content": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "855488436918",
+            "brand": "驻车空调锂电池发电机批发总汇",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "24V海尔",
+              "顶置一体机",
+              "电动大货车",
+              "车载驻车空调5.0"
+            ],
+            "price": "2499.0 to 4349.0",
+            "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:855488436918:24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:855488436918:24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:855488436918:24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "24v 海尔1.5后背分体机【白色】经典款",
+              "24v海尔5.0pro顶置一体机尚越【灰色】7.5米电源线",
+              "24v海尔5.0顶置一体机海尚行-尚品【红色】10.5米电源线",
+              "24v海尔3.0后背分体机【白色】",
+              "24v海尔2.0顶置分体机【白色】轻卡中卡",
+              "24v海尔6.0顶置一体机智领二代【红色】行驻两用",
+              "24v海尔5.0顶置一体机海尚行-尚品【灰色】10.5米电源线",
+              "24v海尔5.0pro顶置一体机尚越【红色】7.5米电源线",
+              "24v  海尔6.0顶置一体机智领二代【金色】行驻两用"
+            ]
+          },
+          "content": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "855488436918",
+            "brand": "驻车空调锂电池发电机批发总汇",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "24V海尔",
+              "顶置一体机",
+              "电动大货车",
+              "车载驻车空调5.0"
+            ],
+            "price": "2499.0 to 4349.0",
+            "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:855488436918:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:855488436918:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:855488436918:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "海尔驻车空调 顶置一体机 大货车"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 海尔驻车空调 顶置一体机 大货车 | Normalized query: 海尔驻车空调 顶置一体机 大货车 [SEP] Next > [SEP] 855488436918 [SEP] 海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0 [SEP] 2499.0 to 4349.0 [SEP] 593292327917 [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用 [SEP] 2650.0 to 3250.0 [SEP] 778203348233 [SEP] 海信驻车空调t600一体机24v货车专用节能冷暖智能重卡车载空调 [SEP] 2622.0 to 3888.0 [SEP] 717678404979 [SEP] 汽车空调三档开关总成大货车暖风AC开关旋钮开关车用通用改装开关 [SEP] 8.0 to 12.0 [SEP] 549896751449 [SEP] 货车空调卡车空调220V驻车空调小1P纽圣分体移动空调自行拆装空调 [SEP] 2580.0 [SEP] 815253068023 [SEP] 荣事达移动空调单冷一体机车载驻车12V24V露营货车厨房家用小空调 [SEP] 4598.0 to 6798.0 [SEP] 907635943271 [SEP] 汽车空调404蒸发器三档调速器ac旋钮 大货车挖机暖风开关改装通用 [SEP] 12.0 [SEP] 902855958147 [SEP] 驻车户外露营车载空调移动空调单冷一体机制冷免排水便携冷暖两用 [SEP] 2999.0 [SEP] 678236320610 [SEP] 海尔可移动式小空调单冷免安装一体机1P匹小型制冷户外无不带外机 [SEP] 1799.0 to 3299.0 [SEP] 644660868275 [SEP] 508压缩机密封圈修理包汽车空调货车709维修配件大修包胶圈缸体胶 [SEP] 15.0 [SEP] 894034048043 [SEP] 追米便携驻车空调户外露营帐篷移动空调挂窗分体24V直流变频 [SEP] 2880.0 to 6364.0 [SEP] 911549472173 [SEP] 玺扬户外露营帐篷移动空调便携车载驻车空调免安装单冷小型无外机 [SEP] 1899.0 [SEP] 916700621794 [SEP] 乐静怡2025新款分体式移动空调便携式免安装露营帐篷空调驻车空调 [SEP] 2080.0 to 2400.0 [SEP] 708624349685 [SEP] 野营驻车载车用一体机小型免安装无外机户外移动空调压缩机制冷气 [SEP] 2999.0 [SEP] 587170789750 [SEP] 房车空调卡车220V驻车空调小1P纽圣分体移动空调自行拆装纽胜空调 [SEP] 2530.0 to 2700.0 [SEP] 899162705915 [SEP] 豪言便携驻车空调户外露营帐篷移动空调挂窗分体24V直流变频车载 [SEP] 2996.0 to 7798.0 [SEP] 44896170427 [SEP] 508压缩机507改装空调压缩机通用12V 24V货车工程车压缩机势力周 [SEP] 18.0 to 450.0 [SEP] 788902557125 [SEP] 海尔移动空调小1.5P家用厨房单冷可移动式一体式无外机免安装排水 [SEP] 3599.0 [SEP] 551979151283 [SEP] 汽车空调冷凝器总成货车工程车挖掘机农用车收割机散热网风扇改装 [SEP] 300.0 to 580.0 [SEP] 936976979352 [SEP] 追米小型移动空调压缩机制冷一体机帐篷户外露营便携式单冷车载 [SEP] 914.0 to 1313.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"855488436918\", \"593292327917\", \"778203348233\", \"717678404979\", \"549896751449\", \"815253068023\", \"907635943271\", \"902855958147\", \"678236320610\", \"644660868275\", \"894034048043\", \"911549472173\", \"916700621794\", \"708624349685\", \"587170789750\", \"899162705915\", \"44896170427\", \"788902557125\", \"551979151283\", \"936976979352\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "855488436918",
+            "593292327917",
+            "778203348233",
+            "717678404979",
+            "549896751449",
+            "815253068023",
+            "907635943271",
+            "902855958147",
+            "678236320610",
+            "644660868275",
+            "894034048043",
+            "911549472173",
+            "916700621794",
+            "708624349685",
+            "587170789750",
+            "899162705915",
+            "44896170427",
+            "788902557125",
+            "551979151283",
+            "936976979352"
+          ],
+          "normalized_query": "海尔驻车空调 顶置一体机 大货车",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "855488436918",
+              "brand": "驻车空调锂电池发电机批发总汇",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "24V海尔",
+                "顶置一体机",
+                "电动大货车",
+                "车载驻车空调5.0"
+              ],
+              "price": "2499.0 to 4349.0",
+              "rank": 1,
+              "title": "海尔驻车空调24V海尔顶置一体机6.0电动大货车车载驻车空调5.0"
+            },
+            {
+              "asin": "593292327917",
+              "brand": "杭州冰龙空调名创车品汽配",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "海尔车载空调机",
+                "大货车专用"
+              ],
+              "price": "2650.0 to 3250.0",
+              "rank": 2,
+              "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+            },
+            {
+              "asin": "778203348233",
+              "brand": "驻车空调直销优惠店铺",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "海信",
+                "驻车空调",
+                "货车专用"
+              ],
+              "price": "2622.0 to 3888.0",
+              "rank": 3,
+              "title": "海信驻车空调t600一体机24v货车专用节能冷暖智能重卡车载空调"
+            },
+            {
+              "asin": "717678404979",
+              "brand": "兴盛汽车汽配",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "汽车空调",
+                "大货车",
+                "AC开关"
+              ],
+              "price": "8.0 to 12.0",
+              "rank": 4,
+              "title": "汽车空调三档开关总成大货车暖风AC开关旋钮开关车用通用改装开关"
+            },
+            {
+              "asin": "549896751449",
+              "brand": "纽圣电器专营店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "货车适用",
+                "卡车适用",
+                "驻车适用",
+                "分体式",
+                "可自行拆装"
+              ],
+              "price": "2580.0",
+              "rank": 5,
+              "title": "货车空调卡车空调220V驻车空调小1P纽圣分体移动空调自行拆装空调"
+            },
+            {
+              "asin": "815253068023",
+              "brand": "智能电器制造工厂企业店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "露营适用",
+                "家用",
+                "移动式"
+              ],
+              "price": "4598.0 to 6798.0",
+              "rank": 6,
+              "title": "荣事达移动空调单冷一体机车载驻车12V24V露营货车厨房家用小空调"
+            },
+            {
+              "asin": "907635943271",
+              "brand": "趣缘车品旗舰店",
+              "category": "汽车零部件/养护/美容/维保›内饰系统›空调旋钮",
+              "key_attributes": [
+                "我开的半挂车制冷箱体不工作了",
+                "空调旋钮的风速调节功能没反应",
+                "控制温度的开关能单独购买吗？预算在15元左右。"
+              ],
+              "price": "12.0",
+              "rank": 7,
+              "title": "汽车空调404蒸发器三档调速器ac旋钮 大货车挖机暖风开关改装通用"
+            },
+            {
+              "asin": "902855958147",
+              "brand": "本臣旗舰店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "户外露营适用",
+                "驻车适用",
+                "免排水",
+                "一体机",
+                "双管设计",
+                "可调节风向"
+              ],
+              "price": "2999.0",
+              "rank": 8,
+              "title": "驻车户外露营车载空调移动空调单冷一体机制冷免排水便携冷暖两用"
+            },
+            {
+              "asin": "678236320610",
+              "brand": "海尔海享家专卖店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "不带外机",
+                "一体机",
+                "户外",
+                "可移动式"
+              ],
+              "price": "1799.0 to 3299.0",
+              "rank": 9,
+              "title": "海尔可移动式小空调单冷免安装一体机1P匹小型制冷户外无不带外机"
+            },
+            {
+              "asin": "644660868275",
+              "brand": "中达汽车空调配件店A",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "货车709",
+                "空调压缩机",
+                "密封圈",
+                "修理包"
+              ],
+              "price": "15.0",
+              "rank": 10,
+              "title": "508压缩机密封圈修理包汽车空调货车709维修配件大修包胶圈缸体胶"
+            },
+            {
+              "asin": "894034048043",
+              "brand": "追米旗舰店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "户外",
+                "露营",
+                "移动式",
+                "变频式",
+                "可挂窗",
+                "帐篷",
+                "驻车"
+              ],
+              "price": "2880.0 to 6364.0",
+              "rank": 11,
+              "title": "追米便携驻车空调户外露营帐篷移动空调挂窗分体24V直流变频"
+            },
+            {
+              "asin": "911549472173",
+              "brand": "玺扬众听慧专卖店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "便携式",
+                "车载适用",
+                "驻车适用",
+                "露营适用",
+                "无外机"
+              ],
+              "price": "1899.0",
+              "rank": 12,
+              "title": "玺扬户外露营帐篷移动空调便携车载驻车空调免安装单冷小型无外机"
+            },
+            {
+              "asin": "916700621794",
+              "brand": "乐静怡旗舰店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "露营适用",
+                "便携式",
+                "免安装",
+                "驻车适用"
+              ],
+              "price": "2080.0 to 2400.0",
+              "rank": 13,
+              "title": "乐静怡2025新款分体式移动空调便携式免安装露营帐篷空调驻车空调"
+            },
+            {
+              "asin": "708624349685",
+              "brand": "本臣旗舰店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "手提式",
+                "小型",
+                "野营场景",
+                "驻车",
+                "无外机",
+                "声音小",
+                "1小时0.3度"
+              ],
+              "price": "2999.0",
+              "rank": 14,
+              "title": "野营驻车载车用一体机小型免安装无外机户外移动空调压缩机制冷气"
+            },
+            {
+              "asin": "587170789750",
+              "brand": "喜之购电器",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "房车",
+                "移动式",
+                "220V",
+                "小1P",
+                "分体式"
+              ],
+              "price": "2530.0 to 2700.0",
+              "rank": 15,
+              "title": "房车空调卡车220V驻车空调小1P纽圣分体移动空调自行拆装纽胜空调"
+            },
+            {
+              "asin": "899162705915",
+              "brand": "四季电器生活馆",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "露营适用",
+                "分体设计",
+                "挂窗式"
+              ],
+              "price": "2996.0 to 7798.0",
+              "rank": 16,
+              "title": "豪言便携驻车空调户外露营帐篷移动空调挂窗分体24V直流变频车载"
+            },
+            {
+              "asin": "44896170427",
+              "brand": "杭州鑫诚汽车空调",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "12V系统",
+                "507改装空调压缩机"
+              ],
+              "price": "18.0 to 450.0",
+              "rank": 17,
+              "title": "508压缩机507改装空调压缩机通用12V 24V货车工程车压缩机势力周"
+            },
+            {
+              "asin": "788902557125",
+              "brand": "海尔鑫科特专卖店",
+              "category": "大家电›移动空调",
+              "key_attributes": [
+                "家用",
+                "厨房适用",
+                "海尔",
+                "无外机",
+                "一体式",
+                "免排水"
+              ],
+              "price": "3599.0",
+              "rank": 18,
+              "title": "海尔移动空调小1.5P家用厨房单冷可移动式一体式无外机免安装排水"
+            },
+            {
+              "asin": "551979151283",
+              "brand": "智冷汽车空调配件",
+              "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+              "key_attributes": [
+                "工程车",
+                "空调冷凝器散热风扇"
+              ],
+              "price": "300.0 to 580.0",
+              "rank": 19,
+              "title": "汽车空调冷凝器总成货车工程车挖掘机农用车收割机散热网风扇改装"
+            },
+            {
+              "asin": "936976979352",
+              "brand": "冷业电器工厂直销店",
+              "category": "居家日用›家居智能设备",
+              "key_attributes": [
+                "小型",
+                "移动",
+                "便携式"
+              ],
+              "price": "914.0 to 1313.0",
+              "rank": 20,
+              "title": "追米小型移动空调压缩机制冷一体机帐篷户外露营便携式单冷车载"
+            }
+          ],
+          "query": "海尔驻车空调 顶置一体机 大货车",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"海尔驻车空调 顶置一体机 大货车\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:bf958e9cb1103afd16f3f58786fccc36de20739108afbf8c9f55acf5ab54ce7e"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:bf958e9cb1103afd16f3f58786fccc36de20739108afbf8c9f55acf5ab54ce7e"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 11,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "result_set:bf958e9cb1103afd16f3f58786fccc36de20739108afbf8c9f55acf5ab54ce7e"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "593292327917"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 顶置空调2.0 [SEP] 背包式空调1.5 [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用 [SEP] 价格: 2650.0 to 3250.0 [SEP] 店铺: 杭州冰龙空调名创车品汽配 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"顶置空调2.0\", \"背包式空调1.5\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "顶置空调2.0",
+            "背包式空调1.5"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顶置空调2.0",
+              "背包式空调1.5"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "593292327917",
+            "brand": "杭州冰龙空调名创车品汽配",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "海尔车载空调机",
+              "大货车专用"
+            ],
+            "price": "2650.0 to 3250.0",
+            "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"593292327917\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:593292327917",
+            "constraint:593292327917:category:pass",
+            "constraint:593292327917:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:593292327917",
+            "constraint:593292327917:category:pass",
+            "constraint:593292327917:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "product:593292327917",
+            "constraint:593292327917:category:pass",
+            "constraint:593292327917:budget:pass"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "顶置空调2.0"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 顶置空调2.0 [SEP] 背包式空调1.5 [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用 [SEP] 价格: 3250.0 [SEP] 店铺: 杭州冰龙空调名创车品汽配 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"顶置空调2.0\", \"背包式空调1.5\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "顶置空调2.0",
+            "背包式空调1.5"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顶置空调2.0",
+              "背包式空调1.5"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "593292327917",
+            "brand": "杭州冰龙空调名创车品汽配",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "海尔车载空调机",
+              "大货车专用"
+            ],
+            "price": "2650.0 to 3250.0",
+            "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "顶置空调2.0"
+          },
+          "selected_price": 3250
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"顶置空调2.0\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:593292327917:color:顶置空调2.0"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:593292327917:color:顶置空调2.0"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "option:593292327917:color:顶置空调2.0"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顶置空调2.0",
+              "背包式空调1.5"
+            ]
+          },
+          "content": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "593292327917",
+            "brand": "杭州冰龙空调名创车品汽配",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "海尔车载空调机",
+              "大货车专用"
+            ],
+            "price": "2650.0 to 3250.0",
+            "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "顶置空调2.0"
+          },
+          "selected_price": 3250,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:593292327917:description"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:593292327917:description"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "runtime_progress_added": [
+            "subpage:593292327917:description"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顶置空调2.0",
+              "背包式空调1.5"
+            ]
+          },
+          "content": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "593292327917",
+            "brand": "杭州冰龙空调名创车品汽配",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "海尔车载空调机",
+              "大货车专用"
+            ],
+            "price": "2650.0 to 3250.0",
+            "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "顶置空调2.0"
+          },
+          "selected_price": 3250,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:593292327917:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:593292327917:features"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 5
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 5
+          },
+          "runtime_progress_added": [
+            "subpage:593292327917:features"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-819",
+        "instruction": "Instruction: [SEP] 需要一款大货车能用的顶置空调，预算在3300元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顶置空调2.0",
+              "背包式空调1.5"
+            ]
+          },
+          "content": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "593292327917",
+            "brand": "杭州冰龙空调名创车品汽配",
+            "category": "汽车零部件/养护/美容/维保›冷却系统›压缩机及空调部件",
+            "key_attributes": [
+              "海尔车载空调机",
+              "大货车专用"
+            ],
+            "price": "2650.0 to 3250.0",
+            "title": "海尔车载空调机24V货车挖机驻车空调制冷改装直流变频大货车专用"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "顶置空调2.0"
+          },
+          "selected_price": 3250,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"buy now\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:593292327917:buy now"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:593292327917:buy now"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 6
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 6
+          },
+          "runtime_progress_added": [
+            "subpage:593292327917:buy now"
+          ],
+          "seen_asin_count": 31,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    }
+  ]
+}

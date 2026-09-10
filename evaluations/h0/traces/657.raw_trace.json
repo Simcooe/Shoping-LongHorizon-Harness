@@ -1,0 +1,1923 @@
+{
+  "task": "找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.42, \"复购率\": 0.78, \"平均客单价\": 159.5, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 3580.5, \"近90天订单数\": 22}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"45-54, \", \"性别\": \"男\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"齐鲁动保\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"华南生物\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"海尔\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"小米\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 600, \"最小值\": 30}, \"功能\": [\"免疫预防\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\", \"], \"颜色\": [\"蓝色\", \"白色\"], \"风格\": [\"实用\", \"耐用\"]}, \"类目偏好\": {\"农资农具\": \"高\", \"图书音像\": \"中\", \"宠物/宠物食品及用品\": \"中\", \"家居生活\": \"低\", \"数码家电\": \"中\", \"服饰鞋包\": \"低\", \"美妆护肤\": \"无\"}}, \"地区信息\": {\"区县\": \"诸城市\", \"城市\": \"潍坊市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"山东省\"}, \"最后更新时间\": \"2024-06-16T12:00:00Z\", \"注册时间\": \"2020-04-18T09:42:17Z\", \"注册渠道\": \"App\", \"用户ID\": \"U8F2C64B7, \", \"用户标签\": [\"中型猪场老板\", \"农资高频买家\", \"品牌理性选择\", \"不促销敏感\", \"农村电商活跃用户\"], \"行为特征\": {\"常用设备\": \"安卓手机\", \"日均浏览时长\": 1800, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"预防流产、死胎、木乃伊胎的疫苗\", \"治疗猪细小病毒病的疫苗\"], \"最近14天收藏商品\": [], \"活跃时间段\": [6, 7, 21], \"近7天访问次数\": 12}}",
+  "step_count": 10,
+  "reset": {
+    "env_idx": 1,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "2头份X10瓶"
+    ],
+    "idx": 657,
+    "instruction": "Instruction: 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。",
+    "instruction_simple": "找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。",
+    "message": "Task 657 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.42,
+        "复购率": 0.78,
+        "平均客单价": 159.5,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 3580.5,
+        "近90天订单数": 22
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "45-54, ",
+        "性别": "男",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "齐鲁动保"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "华南生物"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "海尔"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "小米"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 600,
+            "最小值": 30
+          },
+          "功能": [
+            "免疫预防"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            ", "
+          ],
+          "颜色": [
+            "蓝色",
+            "白色"
+          ],
+          "风格": [
+            "实用",
+            "耐用"
+          ]
+        },
+        "类目偏好": {
+          "农资农具": "高",
+          "图书音像": "中",
+          "宠物/宠物食品及用品": "中",
+          "家居生活": "低",
+          "数码家电": "中",
+          "服饰鞋包": "低",
+          "美妆护肤": "无"
+        }
+      },
+      "地区信息": {
+        "区县": "诸城市",
+        "城市": "潍坊市",
+        "时区": "Asia/Shanghai",
+        "省份": "山东省"
+      },
+      "最后更新时间": "2024-06-16T12:00:00Z",
+      "注册时间": "2020-04-18T09:42:17Z",
+      "注册渠道": "App",
+      "用户ID": "U8F2C64B7, ",
+      "用户标签": [
+        "中型猪场老板",
+        "农资高频买家",
+        "品牌理性选择",
+        "不促销敏感",
+        "农村电商活跃用户"
+      ],
+      "行为特征": {
+        "常用设备": "安卓手机",
+        "日均浏览时长": 1800,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "预防流产、死胎、木乃伊胎的疫苗",
+          "治疗猪细小病毒病的疫苗"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          6,
+          7,
+          21
+        ],
+        "近7天访问次数": 12
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "猪用疫苗 每瓶2头"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 猪用疫苗 每瓶2头 | Normalized query: 猪用疫苗 每瓶2头 [SEP] Next > [SEP] 712914902032 [SEP] 普莱柯猪用疫苗圆柯欣猪圆环病毒2型疫苗僵猪生长缓慢猪圆环疫苗 [SEP] 138.0 to 1285.0 [SEP] 670759034032 [SEP] 猪用疫苗普莱柯圆柯欣圆健猪圆环病毒2型亚单位疫苗 僵猪生长缓慢 [SEP] 30.0 to 1280.0 [SEP] 696602025602 [SEP] 兽药科前科链宁猪链球菌灭活疫苗败血型脑炎链球菌2型7型猪用疫苗 [SEP] 22.0 to 295.0 [SEP] 670253947108 [SEP] 猪用疫苗 伪美瑞哈药 猪伪狂犬病活疫苗 K61株 母猪疫苗 小猪喷鼻 [SEP] 8.0 to 147.0 [SEP] 855834277552 [SEP] 猪疫苗哈兽研猪圆环疫苗蓝耳疫苗猪瘟疫苗胃流轮伪狂犬猪用疫苗 [SEP] 70.0 to 510.0 [SEP] 718855843529 [SEP] 猪用疫苗普莱柯圆柯欣稳柯健普宁柯喘宁圆副二联猪瘟伪狂犬支原体 [SEP] 15.0 to 1280.0 [SEP] 708668541887 [SEP] 猪用疫苗猪瘟伪狂犬链球菌大肠杆菌传乙脑细小支原体圆环口蹄蓝耳 [SEP] 7.0 to 224.0 [SEP] 844818561871 [SEP] 科前科菌净猪链球菌副猪嗜血杆菌病二联灭活疫苗每瓶10头份猪疫苗 [SEP] 50.0 to 320.0 [SEP] 883118113174 [SEP] 科前生物科伪宁猪用伪狂犬活疫苗伪狂犬K61株小猪滴鼻疫苗兽用药 [SEP] 10.0 to 188.0 [SEP] 697471419877 [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 12.0 to 48.0 [SEP] 722931410406 [SEP] 新城疫疫苗雏鸡土鸡蛋鸡肉鸡鸽子用疫苗新城疫4系La Sata株活疫苗 [SEP] 25.0 to 150.0 [SEP] 719264925528 [SEP] 齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗 [SEP] 120.0 [SEP] 882732782657 [SEP] 科前科伟净HB2000猪伪狂犬病母猪小猪用预防伪狂犬活疫苗可滴鼻 [SEP] 28.0 to 238.0 [SEP] 933880969268 [SEP] 青岛易邦新城疫疫苗鸡鸽用疫苗新流腺三联苗鸡新城疫活疫苗鸽用 [SEP] 128.0 [SEP] 697483523330 [SEP] 武汉科前 科稳宁猪瘟活疫苗细胞苗兽药兽用猪用母猪仔猪疫苗 [SEP] 10.0 to 99.0 [SEP] 697077306529 [SEP] 科前科伟净HB2000猪伪狂犬病耐热保护猪用伪狂犬活疫苗可滴鼻兽药 [SEP] 27.0 to 245.0 [SEP] 711353287039 [SEP] 齐鲁禽用疫苗鸭黄病毒鸭坦布苏病毒病活疫苗瘫痪软脚翻翅水禽鸭苗 [SEP] 64.0 to 584.0 [SEP] 697568273045 [SEP] 哈药鸡用疫苗鸡马立克氏病火鸡疱疹病毒活疫苗FC126株兽药正品 [SEP] 26.0 to 353.0 [SEP] 873487254944 [SEP] 齐鲁金文捷猪瘟活疫苗猪瘟兔化弱毒株C株兽药正品预防猪瘟用疫苗 [SEP] 15.0 to 400.0 [SEP] 697474543010 [SEP] 齐鲁伟捷猪牛羊用疫苗伪狂犬病活疫苗K61株母猪小猪正品兽药 [SEP] 24.0 to 132.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"712914902032\", \"670759034032\", \"696602025602\", \"670253947108\", \"855834277552\", \"718855843529\", \"708668541887\", \"844818561871\", \"883118113174\", \"697471419877\", \"722931410406\", \"719264925528\", \"882732782657\", \"933880969268\", \"697483523330\", \"697077306529\", \"711353287039\", \"697568273045\", \"873487254944\", \"697474543010\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "712914902032",
+            "670759034032",
+            "696602025602",
+            "670253947108",
+            "855834277552",
+            "718855843529",
+            "708668541887",
+            "844818561871",
+            "883118113174",
+            "697471419877",
+            "722931410406",
+            "719264925528",
+            "882732782657",
+            "933880969268",
+            "697483523330",
+            "697077306529",
+            "711353287039",
+            "697568273045",
+            "873487254944",
+            "697474543010"
+          ],
+          "normalized_query": "猪用疫苗 每瓶2头",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "712914902032",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪圆环病毒2型",
+                "僵猪",
+                "生长缓慢猪",
+                "普莱柯"
+              ],
+              "price": "138.0 to 1285.0",
+              "rank": 1,
+              "title": "普莱柯猪用疫苗圆柯欣猪圆环病毒2型疫苗僵猪生长缓慢猪圆环疫苗"
+            },
+            {
+              "asin": "670759034032",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪圆环病毒2型",
+                "亚单位疫苗",
+                "僵猪",
+                "生长缓慢"
+              ],
+              "price": "30.0 to 1280.0",
+              "rank": 2,
+              "title": "猪用疫苗普莱柯圆柯欣圆健猪圆环病毒2型亚单位疫苗 僵猪生长缓慢"
+            },
+            {
+              "asin": "696602025602",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪链球菌2型",
+                "猪链球菌7型",
+                "猪链球菌败血症",
+                "猪链球菌性脑膜炎",
+                "科前"
+              ],
+              "price": "22.0 to 295.0",
+              "rank": 3,
+              "title": "兽药科前科链宁猪链球菌灭活疫苗败血型脑炎链球菌2型7型猪用疫苗"
+            },
+            {
+              "asin": "670253947108",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪伪狂犬病",
+                "K61株",
+                "母猪",
+                "小猪",
+                "喷鼻"
+              ],
+              "price": "8.0 to 147.0",
+              "rank": 4,
+              "title": "猪用疫苗 伪美瑞哈药 猪伪狂犬病活疫苗 K61株 母猪疫苗 小猪喷鼻"
+            },
+            {
+              "asin": "855834277552",
+              "brand": "惠牧动保商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "蓝耳病"
+              ],
+              "price": "70.0 to 510.0",
+              "rank": 5,
+              "title": "猪疫苗哈兽研猪圆环疫苗蓝耳疫苗猪瘟疫苗胃流轮伪狂犬猪用疫苗"
+            },
+            {
+              "asin": "718855843529",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪瘟"
+              ],
+              "price": "15.0 to 1280.0",
+              "rank": 6,
+              "title": "猪用疫苗普莱柯圆柯欣稳柯健普宁柯喘宁圆副二联猪瘟伪狂犬支原体"
+            },
+            {
+              "asin": "708668541887",
+              "brand": "乐丰兽药有限责任公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [],
+              "price": "7.0 to 224.0",
+              "rank": 7,
+              "title": "猪用疫苗猪瘟伪狂犬链球菌大肠杆菌传乙脑细小支原体圆环口蹄蓝耳"
+            },
+            {
+              "asin": "844818561871",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪",
+                "链球菌病",
+                "猪副嗜血杆菌病",
+                "二联灭活疫苗"
+              ],
+              "price": "50.0 to 320.0",
+              "rank": 8,
+              "title": "科前科菌净猪链球菌副猪嗜血杆菌病二联灭活疫苗每瓶10头份猪疫苗"
+            },
+            {
+              "asin": "883118113174",
+              "brand": "峰起兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "滴鼻",
+                "猪用",
+                "伪狂犬",
+                "K61株"
+              ],
+              "price": "10.0 to 188.0",
+              "rank": 9,
+              "title": "科前生物科伪宁猪用伪狂犬活疫苗伪狂犬K61株小猪滴鼻疫苗兽用药"
+            },
+            {
+              "asin": "697471419877",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪细小病毒病",
+                "流产",
+                "死胎",
+                "木乃伊胎"
+              ],
+              "price": "12.0 to 48.0",
+              "rank": 10,
+              "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+            },
+            {
+              "asin": "722931410406",
+              "brand": "朝国动保官方企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫4系",
+                "La Sata株",
+                "鸡类",
+                "鸽子"
+              ],
+              "price": "25.0 to 150.0",
+              "rank": 11,
+              "title": "新城疫疫苗雏鸡土鸡蛋鸡肉鸡鸽子用疫苗新城疫4系La Sata株活疫苗"
+            },
+            {
+              "asin": "719264925528",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "禽流感H9亚型",
+                "禽腺病毒病",
+                "三联",
+                "鸡"
+              ],
+              "price": "120.0",
+              "rank": 12,
+              "title": "齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗"
+            },
+            {
+              "asin": "882732782657",
+              "brand": "峰起兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "HB2000株",
+                "猪伪狂犬病",
+                "母猪",
+                "小猪",
+                "滴鼻",
+                "科前"
+              ],
+              "price": "28.0 to 238.0",
+              "rank": 13,
+              "title": "科前科伟净HB2000猪伪狂犬病母猪小猪用预防伪狂犬活疫苗可滴鼻"
+            },
+            {
+              "asin": "933880969268",
+              "brand": "牧兴动物保健",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "易邦",
+                "新城疫",
+                "禽流感",
+                "腺病毒",
+                "三联",
+                "鸡",
+                "鸽子"
+              ],
+              "price": "128.0",
+              "rank": 14,
+              "title": "青岛易邦新城疫疫苗鸡鸽用疫苗新流腺三联苗鸡新城疫活疫苗鸽用"
+            },
+            {
+              "asin": "697483523330",
+              "brand": "乐丰兽药有限责任公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪瘟",
+                "母猪",
+                "仔猪"
+              ],
+              "price": "10.0 to 99.0",
+              "rank": 15,
+              "title": "武汉科前 科稳宁猪瘟活疫苗细胞苗兽药兽用猪用母猪仔猪疫苗"
+            },
+            {
+              "asin": "697077306529",
+              "brand": "乐丰兽药有限责任公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "HB2000株",
+                "猪伪狂犬病",
+                "滴鼻",
+                "猪",
+                "耐热保护",
+                "科前"
+              ],
+              "price": "27.0 to 245.0",
+              "rank": 16,
+              "title": "科前科伟净HB2000猪伪狂犬病耐热保护猪用伪狂犬活疫苗可滴鼻兽药"
+            },
+            {
+              "asin": "711353287039",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸭坦布苏病毒",
+                "齐鲁"
+              ],
+              "price": "64.0 to 584.0",
+              "rank": 17,
+              "title": "齐鲁禽用疫苗鸭黄病毒鸭坦布苏病毒病活疫苗瘫痪软脚翻翅水禽鸭苗"
+            },
+            {
+              "asin": "697568273045",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "火鸡疱疹病毒",
+                "FC126株",
+                "鸡马立克氏病",
+                "正品"
+              ],
+              "price": "26.0 to 353.0",
+              "rank": 18,
+              "title": "哈药鸡用疫苗鸡马立克氏病火鸡疱疹病毒活疫苗FC126株兽药正品"
+            },
+            {
+              "asin": "873487254944",
+              "brand": "峰起兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪瘟",
+                "猪瘟兔化弱毒株",
+                "齐鲁"
+              ],
+              "price": "15.0 to 400.0",
+              "rank": 19,
+              "title": "齐鲁金文捷猪瘟活疫苗猪瘟兔化弱毒株C株兽药正品预防猪瘟用疫苗"
+            },
+            {
+              "asin": "697474543010",
+              "brand": "乐丰兽药有限责任公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪",
+                "牛",
+                "羊",
+                "伪狂犬病",
+                "K61株",
+                "齐鲁"
+              ],
+              "price": "24.0 to 132.0",
+              "rank": 20,
+              "title": "齐鲁伟捷猪牛羊用疫苗伪狂犬病活疫苗K61株母猪小猪正品兽药"
+            }
+          ],
+          "query": "猪用疫苗 每瓶2头",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"猪用疫苗 每瓶2头\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:23dd97cd37e1758d928df9979b4544e512ace858a8cfdd62f8f4dc66716e035c"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:23dd97cd37e1758d928df9979b4544e512ace858a8cfdd62f8f4dc66716e035c"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:23dd97cd37e1758d928df9979b4544e512ace858a8cfdd62f8f4dc66716e035c"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "697471419877"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 2头份x10瓶 [SEP] 1瓶（2头份） [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 价格: 12.0 to 48.0 [SEP] 店铺: 乐诚动保 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"2头份x10瓶\", \"1瓶（2头份）\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "2头份x10瓶",
+            "1瓶（2头份）"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"697471419877\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:697471419877",
+            "constraint:697471419877:category:pass",
+            "constraint:697471419877:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:697471419877",
+            "constraint:697471419877:category:pass",
+            "constraint:697471419877:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:697471419877",
+            "constraint:697471419877:category:pass",
+            "constraint:697471419877:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "2头份x10瓶"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 2头份x10瓶 [SEP] 1瓶（2头份） [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 价格: 48.0 [SEP] 店铺: 乐诚动保 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"2头份x10瓶\", \"1瓶（2头份）\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "2头份x10瓶",
+            "1瓶（2头份）"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "2头份x10瓶"
+          },
+          "selected_price": 48
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"2头份x10瓶\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:697471419877:color:2头份x10瓶"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:697471419877:color:2头份x10瓶"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:697471419877:color:2头份x10瓶"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "content": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "2头份x10瓶"
+          },
+          "selected_price": 48,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:697471419877:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:697471419877:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:697471419877:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "&lt; prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "content": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "2头份x10瓶"
+          },
+          "selected_price": 48,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"&lt; prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:697471419877:&lt; prev"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:697471419877:&lt; prev"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:697471419877:&lt; prev"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "齐鲁 猪细小病毒病灭活疫苗"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 齐鲁 猪细小病毒病灭活疫苗 | Normalized query: 齐鲁 猪细小病毒病灭活疫苗 [SEP] Next > [SEP] 697471419877 [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 12.0 to 48.0 [SEP] 697345367422 [SEP] 科前齐鲁科细宁猪细小病毒病灭活疫苗母猪疫苗流产死胎WH-1株兽用 [SEP] 8.0 to 160.0 [SEP] 809895998322 [SEP] 科前科细宁猪疫苗细小病毒病灭活疫苗母猪疫苗流产死胎WH-1株兽用 [SEP] 4.0 to 45.0 [SEP] 775892412031 [SEP] 科细宁猪细小病毒灭活疫苗 猪细小疫苗母猪疫苗4ml/10瓶整盒包邮 [SEP] 26.0 to 300.0 [SEP] 669672673098 [SEP] 猪疫苗科细前宁哈药细美瑞猪细小病毒灭活苗母猪流产死胎木乃伊胎 [SEP] 6.0 to 173.0 [SEP] 719264925528 [SEP] 齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗 [SEP] 120.0 [SEP] 711353287039 [SEP] 齐鲁禽用疫苗鸭黄病毒鸭坦布苏病毒病活疫苗瘫痪软脚翻翅水禽鸭苗 [SEP] 64.0 to 584.0 [SEP] 782748976184 [SEP] 吉林特研犬特威二联疫苗养殖场专用预防犬瘟细小肉狗防疫幼犬二联 [SEP] 20.0 to 255.0 [SEP] 736803942255 [SEP] 新支流法腺五联灭活疫苗 新城疫支气管禽流感法氏囊腺病毒安卡拉 [SEP] 100.0 to 130.0 [SEP] 716416851751 [SEP] 禽流感病毒三价灭活疫苗H5+H7小鸡鸭鹅鸽禽用兽药变异株哈药正品 [SEP] 80.0 to 85.0 [SEP] 762330189365 [SEP] 吉林和元犬狂犬病灭活疫苗 犬猫用狂犬 贝倍旺犬疫苗猫狗疫苗 [SEP] 6.0 to 57.0 [SEP] 702849948942 [SEP] 齐鲁鸭鹅传染性浆膜炎三价灭活疫苗鸭用浆膜炎疫苗血清1型2型7型 [SEP] 89.0 [SEP] 910134768920 [SEP] 利巴韦林狗用平替犬毒必治宠物狗呕吐拉稀腹泻细小病毒犬瘟热兽药 [SEP] 22.0 to 58.0 [SEP] 839307023058 [SEP] 金倍安犬二联疫苗狗预防犬瘟热犬细小幼犬28天接种平替英特威二联 [SEP] 13.0 to 499.0 [SEP] 900820443174 [SEP] 金宇哞乐优牛病毒性腹泻粘膜病传染性鼻气管炎二联灭活疫苗正品 [SEP] 380.0 [SEP] 891820225543 [SEP] 金宇生物金圆支猪圆环病毒2型支原体肺炎二联灭活疫苗预圆环病毒 [SEP] 78.0 to 700.0 [SEP] 764628106284 [SEP] 中牧犬四联犬四联国产犬疫苗犬四联犬瘟热犬细小副流感狗狗疫苗 [SEP] 57.0 to 530.0 [SEP] 669913450654 [SEP] 猪疫苗科流前感伪狂圆环蓝耳胃肠炎传胸鼻炎乙脑链球菌副猪瘟细小 [SEP] 64.0 to 4250.0 [SEP] 708668541887 [SEP] 猪用疫苗猪瘟伪狂犬链球菌大肠杆菌传乙脑细小支原体圆环口蹄蓝耳 [SEP] 7.0 to 224.0 [SEP] 886115406795 [SEP] 狗狗细小检测试纸犬细小病毒CPV检测卡宠物检测纸宠宝熊顺丰包邮 [SEP] 15.0 to 52.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"697471419877\", \"697345367422\", \"809895998322\", \"775892412031\", \"669672673098\", \"719264925528\", \"711353287039\", \"782748976184\", \"736803942255\", \"716416851751\", \"762330189365\", \"702849948942\", \"910134768920\", \"839307023058\", \"900820443174\", \"891820225543\", \"764628106284\", \"669913450654\", \"708668541887\", \"886115406795\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "697471419877",
+            "697345367422",
+            "809895998322",
+            "775892412031",
+            "669672673098",
+            "719264925528",
+            "711353287039",
+            "782748976184",
+            "736803942255",
+            "716416851751",
+            "762330189365",
+            "702849948942",
+            "910134768920",
+            "839307023058",
+            "900820443174",
+            "891820225543",
+            "764628106284",
+            "669913450654",
+            "708668541887",
+            "886115406795"
+          ],
+          "normalized_query": "齐鲁 猪细小病毒病灭活疫苗",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "697471419877",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪细小病毒病",
+                "流产",
+                "死胎",
+                "木乃伊胎"
+              ],
+              "price": "12.0 to 48.0",
+              "rank": 1,
+              "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+            },
+            {
+              "asin": "697345367422",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "灭活疫苗",
+                "母猪",
+                "流产",
+                "死胎",
+                "WH-1株"
+              ],
+              "price": "8.0 to 160.0",
+              "rank": 2,
+              "title": "科前齐鲁科细宁猪细小病毒病灭活疫苗母猪疫苗流产死胎WH-1株兽用"
+            },
+            {
+              "asin": "809895998322",
+              "brand": "亿戎动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "细小病毒病",
+                "母猪",
+                "流产",
+                "死胎",
+                "WH-1株",
+                "科前"
+              ],
+              "price": "4.0 to 45.0",
+              "rank": 3,
+              "title": "科前科细宁猪疫苗细小病毒病灭活疫苗母猪疫苗流产死胎WH-1株兽用"
+            },
+            {
+              "asin": "775892412031",
+              "brand": "猪大夫动物疫苗批发店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪细小病毒",
+                "灭活疫苗",
+                "母猪",
+                "包邮"
+              ],
+              "price": "26.0 to 300.0",
+              "rank": 4,
+              "title": "科细宁猪细小病毒灭活疫苗 猪细小疫苗母猪疫苗4ml/10瓶整盒包邮"
+            },
+            {
+              "asin": "669672673098",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪细小病毒",
+                "母猪",
+                "猪流产",
+                "猪死胎",
+                "猪木乃伊胎"
+              ],
+              "price": "6.0 to 173.0",
+              "rank": 5,
+              "title": "猪疫苗科细前宁哈药细美瑞猪细小病毒灭活苗母猪流产死胎木乃伊胎"
+            },
+            {
+              "asin": "719264925528",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "新城疫",
+                "禽流感H9亚型",
+                "禽腺病毒病",
+                "三联",
+                "鸡"
+              ],
+              "price": "120.0",
+              "rank": 6,
+              "title": "齐鲁齐先达鸡新城疫禽流感H9亚型禽腺病毒三联灭活疫苗鸡用疫苗"
+            },
+            {
+              "asin": "711353287039",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸭坦布苏病毒",
+                "齐鲁"
+              ],
+              "price": "64.0 to 584.0",
+              "rank": 7,
+              "title": "齐鲁禽用疫苗鸭黄病毒鸭坦布苏病毒病活疫苗瘫痪软脚翻翅水禽鸭苗"
+            },
+            {
+              "asin": "782748976184",
+              "brand": "毅新疫苗供应",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "特研的",
+                "二联",
+                "犬瘟热",
+                "犬细小病毒病"
+              ],
+              "price": "20.0 to 255.0",
+              "rank": 8,
+              "title": "吉林特研犬特威二联疫苗养殖场专用预防犬瘟细小肉狗防疫幼犬二联"
+            },
+            {
+              "asin": "736803942255",
+              "brand": "禽药疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "五联",
+                "新城疫",
+                "传染性支气管炎",
+                "禽流感",
+                "传染性法氏囊病",
+                "腺病毒"
+              ],
+              "price": "100.0 to 130.0",
+              "rank": 9,
+              "title": "新支流法腺五联灭活疫苗 新城疫支气管禽流感法氏囊腺病毒安卡拉"
+            },
+            {
+              "asin": "716416851751",
+              "brand": "天祥兽药商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "禽流感病毒",
+                "H5",
+                "H7",
+                "三价灭活疫苗"
+              ],
+              "price": "80.0 to 85.0",
+              "rank": 10,
+              "title": "禽流感病毒三价灭活疫苗H5+H7小鸡鸭鹅鸽禽用兽药变异株哈药正品"
+            },
+            {
+              "asin": "762330189365",
+              "brand": "兽康畜牧用品",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "宠物用"
+              ],
+              "price": "6.0 to 57.0",
+              "rank": 11,
+              "title": "吉林和元犬狂犬病灭活疫苗 犬猫用狂犬 贝倍旺犬疫苗猫狗疫苗"
+            },
+            {
+              "asin": "702849948942",
+              "brand": "乐诚动保",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "鸭传染性浆膜炎",
+                "三价",
+                "鸭",
+                "鹅"
+              ],
+              "price": "89.0",
+              "rank": 12,
+              "title": "齐鲁鸭鹅传染性浆膜炎三价灭活疫苗鸭用浆膜炎疫苗血清1型2型7型"
+            },
+            {
+              "asin": "910134768920",
+              "brand": "利牧兴疫苗正品商城",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "小狗",
+                "狗呕吐",
+                "狗拉稀",
+                "狗细小病毒感染",
+                "犬瘟热"
+              ],
+              "price": "22.0 to 58.0",
+              "rank": 13,
+              "title": "利巴韦林狗用平替犬毒必治宠物狗呕吐拉稀腹泻细小病毒犬瘟热兽药"
+            },
+            {
+              "asin": "839307023058",
+              "brand": "享福迪宠物医院航母店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "犬瘟热",
+                "犬细小病毒病",
+                "狗",
+                "金倍安"
+              ],
+              "price": "13.0 to 499.0",
+              "rank": 14,
+              "title": "金倍安犬二联疫苗狗预防犬瘟热犬细小幼犬28天接种平替英特威二联"
+            },
+            {
+              "asin": "900820443174",
+              "brand": "双惠动物疫苗企业店",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "牛病毒性腹泻/粘膜病",
+                "传染性鼻气管炎",
+                "二联"
+              ],
+              "price": "380.0",
+              "rank": 15,
+              "title": "金宇哞乐优牛病毒性腹泻粘膜病传染性鼻气管炎二联灭活疫苗正品"
+            },
+            {
+              "asin": "891820225543",
+              "brand": "峰起兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪圆环病毒2型",
+                "猪支原体肺炎",
+                "二联"
+              ],
+              "price": "78.0 to 700.0",
+              "rank": 16,
+              "title": "金宇生物金圆支猪圆环病毒2型支原体肺炎二联灭活疫苗预圆环病毒"
+            },
+            {
+              "asin": "764628106284",
+              "brand": "芸熙生物科技有限公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "犬瘟热",
+                "犬细小病毒",
+                "狗流感",
+                "犬四联",
+                "国产"
+              ],
+              "price": "57.0 to 530.0",
+              "rank": 17,
+              "title": "中牧犬四联犬四联国产犬疫苗犬四联犬瘟热犬细小副流感狗狗疫苗"
+            },
+            {
+              "asin": "669913450654",
+              "brand": "源全兽药",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [
+                "猪伪狂犬病",
+                "猪圆环病毒病",
+                "猪蓝耳病",
+                "猪传染性胃肠炎",
+                "猪传染性胸膜肺炎",
+                "猪鼻炎",
+                "猪乙脑",
+                "猪链球菌病",
+                "猪副嗜血杆菌病",
+                "猪瘟"
+              ],
+              "price": "64.0 to 4250.0",
+              "rank": 18,
+              "title": "猪疫苗科流前感伪狂圆环蓝耳胃肠炎传胸鼻炎乙脑链球菌副猪瘟细小"
+            },
+            {
+              "asin": "708668541887",
+              "brand": "乐丰兽药有限责任公司",
+              "category": "畜牧/养殖物资›兽药›动物疫苗",
+              "key_attributes": [],
+              "price": "7.0 to 224.0",
+              "rank": 19,
+              "title": "猪用疫苗猪瘟伪狂犬链球菌大肠杆菌传乙脑细小支原体圆环口蹄蓝耳"
+            },
+            {
+              "asin": "886115406795",
+              "brand": "宠宝熊宠物生活店",
+              "category": "宠物/宠物食品及用品›猫/狗医疗用品（非药品）›特色医疗用品",
+              "key_attributes": [
+                "犬细小病毒",
+                "顺丰",
+                "检测纸"
+              ],
+              "price": "15.0 to 52.0",
+              "rank": 20,
+              "title": "狗狗细小检测试纸犬细小病毒CPV检测卡宠物检测纸宠宝熊顺丰包邮"
+            }
+          ],
+          "query": "齐鲁 猪细小病毒病灭活疫苗",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"齐鲁 猪细小病毒病灭活疫苗\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:236af3c97d8b554143e709b347dc16d7174e8c7541bf8c7dd7f8503531a5276c"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:236af3c97d8b554143e709b347dc16d7174e8c7541bf8c7dd7f8503531a5276c"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 16,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "result_set:236af3c97d8b554143e709b347dc16d7174e8c7541bf8c7dd7f8503531a5276c"
+          ],
+          "seen_asin_count": 36,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "697471419877"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 2头份x10瓶 [SEP] 1瓶（2头份） [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 价格: 12.0 to 48.0 [SEP] 店铺: 乐诚动保 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"2头份x10瓶\", \"1瓶（2头份）\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "2头份x10瓶",
+            "1瓶（2头份）"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"697471419877\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "2头份x10瓶"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-657",
+        "instruction": "Instruction: [SEP] 找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 2头份x10瓶 [SEP] 1瓶（2头份） [SEP] 齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮 [SEP] 价格: 48.0 [SEP] 店铺: 乐诚动保 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"2头份x10瓶\", \"1瓶（2头份）\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "2头份x10瓶",
+            "1瓶（2头份）"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "2头份x10瓶",
+              "1瓶（2头份）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "697471419877",
+            "brand": "乐诚动保",
+            "category": "畜牧/养殖物资›兽药›动物疫苗",
+            "key_attributes": [
+              "猪细小病毒病",
+              "流产",
+              "死胎",
+              "木乃伊胎"
+            ],
+            "price": "12.0 to 48.0",
+            "title": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "2头份x10瓶"
+          },
+          "selected_price": 48
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"2头份x10瓶\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 36,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 1,
+        "goal": {
+          "asin": "697471419877",
+          "attributes": [
+            "猪细小病毒病",
+            "流产",
+            "死胎",
+            "木乃伊胎"
+          ],
+          "category": "畜牧/养殖物资›兽药›动物疫苗",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "猪细小病毒病",
+            "流产",
+            "死胎",
+            "木乃伊胎"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "2头份X10瓶"
+          ],
+          "instruction_full": "我在寻找一款能预防猪细小病毒病的疫苗，要能防止流产、死胎和木乃伊胎这些症状，每瓶打2头，要10瓶，价格大约50元左右。",
+          "instruction_simple": "找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。",
+          "instruction_text": "找一款动物用的疫苗，每瓶可打2头猪，要10瓶，价格在五十元左右就行。",
+          "name": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": null,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "2头份X10瓶"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.42,
+              "复购率": 0.78,
+              "平均客单价": 159.5,
+              "支付方式偏好": "支付宝",
+              "是否促销敏感": false,
+              "近30天消费金额": 3580.5,
+              "近90天订单数": 22
+            },
+            "人口属性": {
+              "会员等级": "黄金会员",
+              "年龄段": "45-54, ",
+              "性别": "男",
+              "消费等级": "中"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "齐鲁动保"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "华南生物"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "海尔"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "小米"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 600,
+                  "最小值": 30
+                },
+                "功能": [
+                  "免疫预防"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  ", "
+                ],
+                "颜色": [
+                  "蓝色",
+                  "白色"
+                ],
+                "风格": [
+                  "实用",
+                  "耐用"
+                ]
+              },
+              "类目偏好": {
+                "农资农具": "高",
+                "图书音像": "中",
+                "宠物/宠物食品及用品": "中",
+                "家居生活": "低",
+                "数码家电": "中",
+                "服饰鞋包": "低",
+                "美妆护肤": "无"
+              }
+            },
+            "地区信息": {
+              "区县": "诸城市",
+              "城市": "潍坊市",
+              "时区": "Asia/Shanghai",
+              "省份": "山东省"
+            },
+            "最后更新时间": "2024-06-16T12:00:00Z",
+            "注册时间": "2020-04-18T09:42:17Z",
+            "注册渠道": "App",
+            "用户ID": "U8F2C64B7, ",
+            "用户标签": [
+              "中型猪场老板",
+              "农资高频买家",
+              "品牌理性选择",
+              "不促销敏感",
+              "农村电商活跃用户"
+            ],
+            "行为特征": {
+              "常用设备": "安卓手机",
+              "日均浏览时长": 1800,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "预防流产、死胎、木乃伊胎的疫苗",
+                "治疗猪细小病毒病的疫苗"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                6,
+                7,
+                21
+              ],
+              "近7天访问次数": 12
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-1-657",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 697471419877 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"2\\u5934\\u4efdx10\\u74f6\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] 1.0 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "697471419877",
+          "attributes": [
+            "猪细小病毒病",
+            "流产",
+            "死胎",
+            "木乃伊胎"
+          ],
+          "category": "畜牧/养殖物资›兽药›动物疫苗",
+          "instruction_text": "我在寻找一款能预防猪细小病毒病的疫苗，要能防止流产、死胎和木乃伊胎这些症状，每瓶打2头，要10瓶，价格大约50元左右。",
+          "name": "齐鲁疫苗猪细小病毒病灭活疫苗预防流产死胎木乃伊胎兽用疫苗包邮",
+          "options": {
+            "颜色分类": "2头份x10瓶"
+          },
+          "price": 48,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": 1,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 1,
+            "key_options": 1,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": true,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 4,
+                  "required_count": 4,
+                  "results": [
+                    {
+                      "actual": [
+                        "猪细小病毒病",
+                        "流产",
+                        "死胎",
+                        "木乃伊胎"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "猪细小病毒病"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "猪细小病毒病"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "猪细小病毒病",
+                        "流产",
+                        "死胎",
+                        "木乃伊胎"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "流产"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "流产"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "猪细小病毒病",
+                        "流产",
+                        "死胎",
+                        "木乃伊胎"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "死胎"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "死胎"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "猪细小病毒病",
+                        "流产",
+                        "死胎",
+                        "木乃伊胎"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "木乃伊胎"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "木乃伊胎"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 4
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 1,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "2头份x10瓶"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [
+                          {
+                            "axis": "color",
+                            "source_axis": "颜色分类",
+                            "value": "2头份X10瓶"
+                          }
+                        ],
+                        "missing_axes": [],
+                        "unavailable_values": [],
+                        "wrong_values": []
+                      },
+                      "passed": true,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "2头份X10瓶"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 1,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {
+                "effective_price_axis": "color"
+              },
+              "method": "unique_effective_price_axis",
+              "price": 48,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 48,
+              "comparator": "budget_not_declared_v1",
+              "evidence": {
+                "evidence": {
+                  "effective_price_axis": "color"
+                },
+                "method": "unique_effective_price_axis",
+                "price": 48,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": null,
+              "source_field": "instruction",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "畜牧/养殖物资›兽药›动物疫苗",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "畜牧/养殖物资",
+                      "兽药",
+                      "动物疫苗"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "畜牧/养殖物资›兽药›动物疫苗"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": true,
+          "reward": 1,
+          "reward_type": "gold_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": true,
+          "terminal_utility": 1,
+          "termination_reason": "gold_purchase",
+          "weighted_score": 1
+        },
+        "reward_valid": true,
+        "termination_reason": "gold_purchase"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1366 @@
+{
+  "task": "给我推荐一款价格在720以内的粉底液。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.32, \"复购率\": 0.58, \"平均客单价\": 318.88, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 3826.5, \"近90天订单数\": 12}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"25-34, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"SUQQU\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"ALBION\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"IPSA\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"KANEBO\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"CANON\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 800, \"最小值\": 200}, \"功能\": [\"高遮瑕\", \"高保湿\", \"提亮\", \"长效持妆\", \"抗氧化\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\", \"], \"颜色\": [\"象牙白\", \"冷调粉\"], \"风格\": [\"日系极简\"]}, \"类目偏好\": {\"图书文创\": \"低\", \"宠物用品\": \"无\", \"家居生活\": \"低\", \"数码影音\": \"中\", \"服饰鞋包\": \"中\", \"美妆护肤\": \"高\"}}, \"地区信息\": {\"区县\": \"西湖区\", \"城市\": \"杭州市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"浙江省\"}, \"最后更新时间\": \"2024-06-30T10:11:00Z\", \"注册时间\": \"2019-08-17T14:23:45Z\", \"注册渠道\": \"App\", \"用户ID\": \"U86429XJ38, \", \"用户标签\": [\"COS摄影爱好者\", \"日系彩妆重度用户\", \"冷白皮\", \"成分党\", \"黄金会员\", \"敏感肌\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 5400, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"奶油肌适用的新版30g装粉底液\", \"#105色号的中性最白色粉底液\", \"日本进口正品但国内发货的粉底液\"], \"最近14天收藏商品\": [], \"活跃时间段\": [10, 12, 21, 22], \"近7天访问次数\": 15}}",
+  "step_count": 8,
+  "reset": {
+    "env_idx": 5,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "#105 中性最白色（日本正品 现货拼邮国内发）",
+      "30g"
+    ],
+    "idx": 1188,
+    "instruction": "Instruction: 给我推荐一款价格在720以内的粉底液。",
+    "instruction_simple": "给我推荐一款价格在720以内的粉底液。",
+    "message": "Task 1188 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.32,
+        "复购率": 0.58,
+        "平均客单价": 318.88,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 3826.5,
+        "近90天订单数": 12
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "25-34, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "SUQQU"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "ALBION"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "IPSA"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "KANEBO"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "CANON"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 800,
+            "最小值": 200
+          },
+          "功能": [
+            "高遮瑕",
+            "高保湿",
+            "提亮",
+            "长效持妆",
+            "抗氧化"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            ", "
+          ],
+          "颜色": [
+            "象牙白",
+            "冷调粉"
+          ],
+          "风格": [
+            "日系极简"
+          ]
+        },
+        "类目偏好": {
+          "图书文创": "低",
+          "宠物用品": "无",
+          "家居生活": "低",
+          "数码影音": "中",
+          "服饰鞋包": "中",
+          "美妆护肤": "高"
+        }
+      },
+      "地区信息": {
+        "区县": "西湖区",
+        "城市": "杭州市",
+        "时区": "Asia/Shanghai",
+        "省份": "浙江省"
+      },
+      "最后更新时间": "2024-06-30T10:11:00Z",
+      "注册时间": "2019-08-17T14:23:45Z",
+      "注册渠道": "App",
+      "用户ID": "U86429XJ38, ",
+      "用户标签": [
+        "COS摄影爱好者",
+        "日系彩妆重度用户",
+        "冷白皮",
+        "成分党",
+        "黄金会员",
+        "敏感肌"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 5400,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "奶油肌适用的新版30g装粉底液",
+          "#105色号的中性最白色粉底液",
+          "日本进口正品但国内发货的粉底液"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          10,
+          12,
+          21,
+          22
+        ],
+        "近7天访问次数": 15
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "粉底液"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 粉底液 | Normalized query: 粉底液 [SEP] Next > [SEP] 764459828860 [SEP] colorcandy糖果彩色星钻干皮救星百钻雾感持妆粉底液干皮持久遮瑕 [SEP] 69.0 [SEP] 815096100197 [SEP] LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641 [SEP] 49.0 [SEP] 838218008228 [SEP] 【U先】花西子好气色粉底液五连包体验礼*持色持妆/服贴 [SEP] 999.0 [SEP] 816143954571 [SEP] 【天猫U先】akf盈润光感粉底液女干混油皮亲妈控油持久脱妆遮瑕 [SEP] 160.0 [SEP] 939575509696 [SEP] 水凝粉底霜长瓶101色号 柔光啫喱粉底液30ml 无盒！23年产 [SEP] 99.0 [SEP] 907842181806 [SEP] 日本addiction粉底液The Foundation30mlSpf12 21年产包邮 [SEP] 56.0 [SEP] 936534541987 [SEP] 孤品秒杀！ysl超模粉底液b20明彩精粹水粉霜持久控油女效期25.08 [SEP] 199.0 [SEP] 807061163726 [SEP] 玖瑟美白防晒粉底液隔离三合一遮瑕不掉妆防汗防水持妆控油不卡粉 [SEP] 49.0 [SEP] 649033246418 [SEP] 植村秀小方瓶粉底液35ML 羽纱持妆自然清透控油不脱妆 #584 #774 [SEP] 388.0 to 430.0 [SEP] 651324172445 [SEP] 美肌颜泡泡粉底液持久不脱妆持妆遮瑕隔离油皮干皮官方旗舰店正品 [SEP] 98.0 [SEP] 795645232036 [SEP] 【唯一官旗】 ARTDECO雅蔻白玫瑰柔光精华粉底液遮瑕不脱妆油皮 [SEP] 480.0 [SEP] 920395902644 [SEP] Sedell诗黛尔盈润无暇焕颜精华粉底膏服帖定妆粉底液舒适遮瑕补水 [SEP] 225.0 [SEP] 901541964503 [SEP] 【 烈儿宝贝直播间】IORE粉底液中样轻透服帖持妆自然官方旗舰店 [SEP] 29.0 [SEP] 786006233967 [SEP] 德國 Catrice Soft Glam Filter Fluid 柔和濾鏡 遮瑕粉底液 代購 [SEP] 82.0 [SEP] 891562277101 [SEP] Nars超绒瓶粉底液 L2绒雾持妆遮瑕控油45ml 雾面控油持妆 [SEP] 200.0 [SEP] 919612661149 [SEP] 屈臣粉底液小样遮瑕隔离持久不脱妆奶油肌不卡粉干油皮控油女 [SEP] 1.0 to 4.0 [SEP] 682335293076 [SEP] KIKO经典雾面哑光粉底液磨皮持久遮瑕控油粉底 [SEP] 139.0 [SEP] 763051114647 [SEP] 10片包邮 Valentino华伦天奴光影持妆粉底液1ml小样 持久 遮瑕 [SEP] 2.0 [SEP] 657715057567 [SEP] 如新觅色沁润粉底液Nuskin国产官网正品旗舰养肤油皮持久持妆新 [SEP] 189.0 [SEP] 765834893129 [SEP] 【无暇套装】雪露紫臻美精华粉底液遮瑕膏黑松露养肤持久定妆补妆 [SEP] 980.0 to 1380.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"764459828860\", \"815096100197\", \"838218008228\", \"816143954571\", \"939575509696\", \"907842181806\", \"936534541987\", \"807061163726\", \"649033246418\", \"651324172445\", \"795645232036\", \"920395902644\", \"901541964503\", \"786006233967\", \"891562277101\", \"919612661149\", \"682335293076\", \"763051114647\", \"657715057567\", \"765834893129\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "764459828860",
+            "815096100197",
+            "838218008228",
+            "816143954571",
+            "939575509696",
+            "907842181806",
+            "936534541987",
+            "807061163726",
+            "649033246418",
+            "651324172445",
+            "795645232036",
+            "920395902644",
+            "901541964503",
+            "786006233967",
+            "891562277101",
+            "919612661149",
+            "682335293076",
+            "763051114647",
+            "657715057567",
+            "765834893129"
+          ],
+          "normalized_query": "粉底液",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "764459828860",
+              "brand": "小表妹百货",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "干皮",
+                "雾面",
+                "遮瑕",
+                "持妆"
+              ],
+              "price": "69.0",
+              "rank": 1,
+              "title": "colorcandy糖果彩色星钻干皮救星百钻雾感持妆粉底液干皮持久遮瑕"
+            },
+            {
+              "asin": "815096100197",
+              "brand": "肥木美妆生活馆",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "均匀肤色"
+              ],
+              "price": "49.0",
+              "rank": 2,
+              "title": "LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641"
+            },
+            {
+              "asin": "838218008228",
+              "brand": "花西子旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "五连包",
+                "体验"
+              ],
+              "price": "999.0",
+              "rank": 3,
+              "title": "【U先】花西子好气色粉底液五连包体验礼*持色持妆/服贴"
+            },
+            {
+              "asin": "816143954571",
+              "brand": "恒骊祥化妆品专营店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "akf",
+                "粉底液",
+                "自然色"
+              ],
+              "price": "160.0",
+              "rank": 4,
+              "title": "【天猫U先】akf盈润光感粉底液女干混油皮亲妈控油持久脱妆遮瑕"
+            },
+            {
+              "asin": "939575509696",
+              "brand": "小鱼吃不饱",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "水凝",
+                "长瓶",
+                "柔光感"
+              ],
+              "price": "99.0",
+              "rank": 5,
+              "title": "水凝粉底霜长瓶101色号 柔光啫喱粉底液30ml 无盒！23年产"
+            },
+            {
+              "asin": "907842181806",
+              "brand": "心心正品瑕疵清货店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "日本",
+                "21年"
+              ],
+              "price": "56.0",
+              "rank": 6,
+              "title": "日本addiction粉底液The Foundation30mlSpf12 21年产包邮"
+            },
+            {
+              "asin": "936534541987",
+              "brand": "笑blue齿工作室",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "控油"
+              ],
+              "price": "199.0",
+              "rank": 7,
+              "title": "孤品秒杀！ysl超模粉底液b20明彩精粹水粉霜持久控油女效期25.08"
+            },
+            {
+              "asin": "807061163726",
+              "brand": "猫唇女",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "隔离",
+                "三合一",
+                "不卡粉",
+                "遮瑕",
+                "持妆",
+                "防汗",
+                "防水",
+                "控油"
+              ],
+              "price": "49.0",
+              "rank": 8,
+              "title": "玖瑟美白防晒粉底液隔离三合一遮瑕不掉妆防汗防水持妆控油不卡粉"
+            },
+            {
+              "asin": "649033246418",
+              "brand": "波妞正能量",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "植村秀",
+                "粉底液",
+                "35ML",
+                "粉底刷"
+              ],
+              "price": "388.0 to 430.0",
+              "rank": 9,
+              "title": "植村秀小方瓶粉底液35ML 羽纱持妆自然清透控油不脱妆 #584 #774"
+            },
+            {
+              "asin": "651324172445",
+              "brand": "美肌颜体验店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮",
+                "干皮"
+              ],
+              "price": "98.0",
+              "rank": 10,
+              "title": "美肌颜泡泡粉底液持久不脱妆持妆遮瑕隔离油皮干皮官方旗舰店正品"
+            },
+            {
+              "asin": "795645232036",
+              "brand": "ARTDECO旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮"
+              ],
+              "price": "480.0",
+              "rank": 11,
+              "title": "【唯一官旗】 ARTDECO雅蔻白玫瑰柔光精华粉底液遮瑕不脱妆油皮"
+            },
+            {
+              "asin": "920395902644",
+              "brand": "大皇帝",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "舒适",
+                "服帖",
+                "组合装"
+              ],
+              "price": "225.0",
+              "rank": 12,
+              "title": "Sedell诗黛尔盈润无暇焕颜精华粉底膏服帖定妆粉底液舒适遮瑕补水"
+            },
+            {
+              "asin": "901541964503",
+              "brand": "IORE瑷亦旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "中样"
+              ],
+              "price": "29.0",
+              "rank": 13,
+              "title": "【 烈儿宝贝直播间】IORE粉底液中样轻透服帖持妆自然官方旗舰店"
+            },
+            {
+              "asin": "786006233967",
+              "brand": "歐洲荷蘭商店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "遮瑕",
+                "德国"
+              ],
+              "price": "82.0",
+              "rank": 14,
+              "title": "德國 Catrice Soft Glam Filter Fluid 柔和濾鏡 遮瑕粉底液 代購"
+            },
+            {
+              "asin": "891562277101",
+              "brand": "叶彬儿彩妆护肤",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "绒雾",
+                "持妆",
+                "控油",
+                "遮瑕"
+              ],
+              "price": "200.0",
+              "rank": 15,
+              "title": "Nars超绒瓶粉底液 L2绒雾持妆遮瑕控油45ml 雾面控油持妆"
+            },
+            {
+              "asin": "919612661149",
+              "brand": "格林美妆店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "不卡粉",
+                "干油皮"
+              ],
+              "price": "1.0 to 4.0",
+              "rank": 16,
+              "title": "屈臣粉底液小样遮瑕隔离持久不脱妆奶油肌不卡粉干油皮控油女"
+            },
+            {
+              "asin": "682335293076",
+              "brand": "王小花海外购",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "雾面",
+                "哑光",
+                "遮瑕",
+                "持久",
+                "控油"
+              ],
+              "price": "139.0",
+              "rank": 17,
+              "title": "KIKO经典雾面哑光粉底液磨皮持久遮瑕控油粉底"
+            },
+            {
+              "asin": "763051114647",
+              "brand": "青蛙美妆店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "持妆",
+                "小样",
+                "持久",
+                "遮瑕"
+              ],
+              "price": "2.0",
+              "rank": 18,
+              "title": "10片包邮 Valentino华伦天奴光影持妆粉底液1ml小样 持久 遮瑕"
+            },
+            {
+              "asin": "657715057567",
+              "brand": "如新小哥 Nuskin",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮",
+                "养肤",
+                "持久持妆",
+                "官网正品",
+                "国产"
+              ],
+              "price": "189.0",
+              "rank": 19,
+              "title": "如新觅色沁润粉底液Nuskin国产官网正品旗舰养肤油皮持久持妆新"
+            },
+            {
+              "asin": "765834893129",
+              "brand": "lavillosa雪露紫旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "黑松露",
+                "养肤",
+                "持久定妆",
+                "补妆"
+              ],
+              "price": "980.0 to 1380.0",
+              "rank": 20,
+              "title": "【无暇套装】雪露紫臻美精华粉底液遮瑕膏黑松露养肤持久定妆补妆"
+            }
+          ],
+          "query": "粉底液",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"粉底液\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:490ef42ad2b4fd142227a88aa6796ab7a5fae2f72ceb567e7e4c6be225b1f043"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:490ef42ad2b4fd142227a88aa6796ab7a5fae2f72ceb567e7e4c6be225b1f043"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:490ef42ad2b4fd142227a88aa6796ab7a5fae2f72ceb567e7e4c6be225b1f043"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "SUQQU 粉底液"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: suqqu 粉底液 | Normalized query: suqqu 粉底液 [SEP] Next > [SEP] 932522324449 [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版 [SEP] 718.0 to 738.0 [SEP] 673530844895 [SEP] 新版！日本新版SUQQU粉霜苏酷粉底霜奶油养肤持久粉底液遮瑕110 [SEP] 351.0 [SEP] 624773066102 [SEP] 现货 SUQQU新版养肤持久滋润保湿奶油粉霜粉底液110 105 115遮瑕 [SEP] 395.0 to 655.0 [SEP] 890866917866 [SEP] 新版！suqqu新品金盖 绝致艳泽粉底霜粉霜110养肤粉底液 4g中小样 [SEP] 48.0 to 98.0 [SEP] 754155383861 [SEP] 【保税发货】SUQQU晶采艳泽粉霜30g奶油粉底液细腻遮瑕持久自然 [SEP] 999.0 [SEP] 684254433679 [SEP] SUQQU苏酷粉霜小样23年新版粉底霜黑瓶记忆塑型奶油肌粉底液试用 [SEP] 8.0 to 104.0 [SEP] 577696810601 [SEP] 23年新版SUQQU苏酷奶油粉霜持久遮瑕黑罐粉底液4g/30g奶油肌#110 [SEP] 35.0 to 799.0 [SEP] 618006635490 [SEP] 奶油肌鼻祖~日本新版SUQQU贵妇记忆粉霜粉底 奶油肌遮瑕持久自然 [SEP] 188.0 to 288.0 [SEP] 546995212071 [SEP] 现货 【日本本土版】SUQQU苏酷记忆塑形奶油肌粉底霜30g控油持久 [SEP] 512.0 to 618.0 [SEP] 764459828860 [SEP] colorcandy糖果彩色星钻干皮救星百钻雾感持妆粉底液干皮持久遮瑕 [SEP] 69.0 [SEP] 815096100197 [SEP] LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641 [SEP] 49.0 [SEP] 838218008228 [SEP] 【U先】花西子好气色粉底液五连包体验礼*持色持妆/服贴 [SEP] 999.0 [SEP] 816143954571 [SEP] 【天猫U先】akf盈润光感粉底液女干混油皮亲妈控油持久脱妆遮瑕 [SEP] 160.0 [SEP] 939575509696 [SEP] 水凝粉底霜长瓶101色号 柔光啫喱粉底液30ml 无盒！23年产 [SEP] 99.0 [SEP] 907842181806 [SEP] 日本addiction粉底液The Foundation30mlSpf12 21年产包邮 [SEP] 56.0 [SEP] 936534541987 [SEP] 孤品秒杀！ysl超模粉底液b20明彩精粹水粉霜持久控油女效期25.08 [SEP] 199.0 [SEP] 807061163726 [SEP] 玖瑟美白防晒粉底液隔离三合一遮瑕不掉妆防汗防水持妆控油不卡粉 [SEP] 49.0 [SEP] 649033246418 [SEP] 植村秀小方瓶粉底液35ML 羽纱持妆自然清透控油不脱妆 #584 #774 [SEP] 388.0 to 430.0 [SEP] 651324172445 [SEP] 美肌颜泡泡粉底液持久不脱妆持妆遮瑕隔离油皮干皮官方旗舰店正品 [SEP] 98.0 [SEP] 795645232036 [SEP] 【唯一官旗】 ARTDECO雅蔻白玫瑰柔光精华粉底液遮瑕不脱妆油皮 [SEP] 480.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"932522324449\", \"673530844895\", \"624773066102\", \"890866917866\", \"754155383861\", \"684254433679\", \"577696810601\", \"618006635490\", \"546995212071\", \"764459828860\", \"815096100197\", \"838218008228\", \"816143954571\", \"939575509696\", \"907842181806\", \"936534541987\", \"807061163726\", \"649033246418\", \"651324172445\", \"795645232036\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "932522324449",
+            "673530844895",
+            "624773066102",
+            "890866917866",
+            "754155383861",
+            "684254433679",
+            "577696810601",
+            "618006635490",
+            "546995212071",
+            "764459828860",
+            "815096100197",
+            "838218008228",
+            "816143954571",
+            "939575509696",
+            "907842181806",
+            "936534541987",
+            "807061163726",
+            "649033246418",
+            "651324172445",
+            "795645232036"
+          ],
+          "normalized_query": "suqqu 粉底液",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "932522324449",
+              "brand": "shelly定居日本大阪",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底液"
+              ],
+              "price": "718.0 to 738.0",
+              "rank": 1,
+              "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+            },
+            {
+              "asin": "673530844895",
+              "brand": "小丸子只喝美式",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "养肤",
+                "遮瑕"
+              ],
+              "price": "351.0",
+              "rank": 2,
+              "title": "新版！日本新版SUQQU粉霜苏酷粉底霜奶油养肤持久粉底液遮瑕110"
+            },
+            {
+              "asin": "624773066102",
+              "brand": "白菜日代",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "养肤",
+                "粉底液",
+                "奶油肌",
+                "遮瑕"
+              ],
+              "price": "395.0 to 655.0",
+              "rank": 3,
+              "title": "现货 SUQQU新版养肤持久滋润保湿奶油粉霜粉底液110 105 115遮瑕"
+            },
+            {
+              "asin": "890866917866",
+              "brand": "顾喵喵是个小小小代购",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "suqqu品牌",
+                "粉霜小样",
+                "养肤"
+              ],
+              "price": "48.0 to 98.0",
+              "rank": 4,
+              "title": "新版！suqqu新品金盖 绝致艳泽粉底霜粉霜110养肤粉底液 4g中小样"
+            },
+            {
+              "asin": "754155383861",
+              "brand": "百亿补贴官方频道",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "奶油质地",
+                "粉质细腻",
+                "妆效持久"
+              ],
+              "price": "999.0",
+              "rank": 5,
+              "title": "【保税发货】SUQQU晶采艳泽粉霜30g奶油粉底液细腻遮瑕持久自然"
+            },
+            {
+              "asin": "684254433679",
+              "brand": "西瓜猫正品中小样仅此一家",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "SUQQU",
+                "小样"
+              ],
+              "price": "8.0 to 104.0",
+              "rank": 6,
+              "title": "SUQQU苏酷粉霜小样23年新版粉底霜黑瓶记忆塑型奶油肌粉底液试用"
+            },
+            {
+              "asin": "577696810601",
+              "brand": "脸妹脸掌柜",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "奶油肌"
+              ],
+              "price": "35.0 to 799.0",
+              "rank": 7,
+              "title": "23年新版SUQQU苏酷奶油粉霜持久遮瑕黑罐粉底液4g/30g奶油肌#110"
+            },
+            {
+              "asin": "618006635490",
+              "brand": "还是那个屠苏",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "日本",
+                "奶油肌",
+                "遮瑕",
+                "贵妇"
+              ],
+              "price": "188.0 to 288.0",
+              "rank": 8,
+              "title": "奶油肌鼻祖~日本新版SUQQU贵妇记忆粉霜粉底 奶油肌遮瑕持久自然"
+            },
+            {
+              "asin": "546995212071",
+              "brand": "昔颜日本代购",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "日本",
+                "本土版",
+                "粉底霜",
+                "奶油肌"
+              ],
+              "price": "512.0 to 618.0",
+              "rank": 9,
+              "title": "现货 【日本本土版】SUQQU苏酷记忆塑形奶油肌粉底霜30g控油持久"
+            },
+            {
+              "asin": "764459828860",
+              "brand": "小表妹百货",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "干皮",
+                "雾面",
+                "遮瑕",
+                "持妆"
+              ],
+              "price": "69.0",
+              "rank": 10,
+              "title": "colorcandy糖果彩色星钻干皮救星百钻雾感持妆粉底液干皮持久遮瑕"
+            },
+            {
+              "asin": "815096100197",
+              "brand": "肥木美妆生活馆",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "均匀肤色"
+              ],
+              "price": "49.0",
+              "rank": 11,
+              "title": "LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641"
+            },
+            {
+              "asin": "838218008228",
+              "brand": "花西子旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "五连包",
+                "体验"
+              ],
+              "price": "999.0",
+              "rank": 12,
+              "title": "【U先】花西子好气色粉底液五连包体验礼*持色持妆/服贴"
+            },
+            {
+              "asin": "816143954571",
+              "brand": "恒骊祥化妆品专营店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "akf",
+                "粉底液",
+                "自然色"
+              ],
+              "price": "160.0",
+              "rank": 13,
+              "title": "【天猫U先】akf盈润光感粉底液女干混油皮亲妈控油持久脱妆遮瑕"
+            },
+            {
+              "asin": "939575509696",
+              "brand": "小鱼吃不饱",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "水凝",
+                "长瓶",
+                "柔光感"
+              ],
+              "price": "99.0",
+              "rank": 14,
+              "title": "水凝粉底霜长瓶101色号 柔光啫喱粉底液30ml 无盒！23年产"
+            },
+            {
+              "asin": "907842181806",
+              "brand": "心心正品瑕疵清货店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "日本",
+                "21年"
+              ],
+              "price": "56.0",
+              "rank": 15,
+              "title": "日本addiction粉底液The Foundation30mlSpf12 21年产包邮"
+            },
+            {
+              "asin": "936534541987",
+              "brand": "笑blue齿工作室",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "控油"
+              ],
+              "price": "199.0",
+              "rank": 16,
+              "title": "孤品秒杀！ysl超模粉底液b20明彩精粹水粉霜持久控油女效期25.08"
+            },
+            {
+              "asin": "807061163726",
+              "brand": "猫唇女",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "隔离",
+                "三合一",
+                "不卡粉",
+                "遮瑕",
+                "持妆",
+                "防汗",
+                "防水",
+                "控油"
+              ],
+              "price": "49.0",
+              "rank": 17,
+              "title": "玖瑟美白防晒粉底液隔离三合一遮瑕不掉妆防汗防水持妆控油不卡粉"
+            },
+            {
+              "asin": "649033246418",
+              "brand": "波妞正能量",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "植村秀",
+                "粉底液",
+                "35ML",
+                "粉底刷"
+              ],
+              "price": "388.0 to 430.0",
+              "rank": 18,
+              "title": "植村秀小方瓶粉底液35ML 羽纱持妆自然清透控油不脱妆 #584 #774"
+            },
+            {
+              "asin": "651324172445",
+              "brand": "美肌颜体验店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮",
+                "干皮"
+              ],
+              "price": "98.0",
+              "rank": 19,
+              "title": "美肌颜泡泡粉底液持久不脱妆持妆遮瑕隔离油皮干皮官方旗舰店正品"
+            },
+            {
+              "asin": "795645232036",
+              "brand": "ARTDECO旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮"
+              ],
+              "price": "480.0",
+              "rank": 20,
+              "title": "【唯一官旗】 ARTDECO雅蔻白玫瑰柔光精华粉底液遮瑕不脱妆油皮"
+            }
+          ],
+          "query": "suqqu 粉底液",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"suqqu 粉底液\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:2c8e3146a1d9733c3ddd79e684ea4580b9d7bc7cd3f91c0f3aa85d5f9f180596"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:2c8e3146a1d9733c3ddd79e684ea4580b9d7bc7cd3f91c0f3aa85d5f9f180596"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 9,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:2c8e3146a1d9733c3ddd79e684ea4580b9d7bc7cd3f91c0f3aa85d5f9f180596"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "932522324449"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] #105 中性最白色（日本正品 日本直邮） [SEP] #110 中性一白（日本正品 日本直邮） [SEP] #105 中性最白色（日本正品 现货拼邮国内发） [SEP] #110 中性一白（日本正品 现货拼邮国内发） [SEP] 净含量 [SEP] 30g [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版 [SEP] 价格: 718.0 to 738.0 [SEP] 店铺: shelly定居日本大阪 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"#105 中性最白色（日本正品 日本直邮）\", \"#110 中性一白（日本正品 日本直邮）\", \"#105 中性最白色（日本正品 现货拼邮国内发）\", \"#110 中性一白（日本正品 现货拼邮国内发）\", \"30g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "#105 中性最白色（日本正品 日本直邮）",
+            "#110 中性一白（日本正品 日本直邮）",
+            "#105 中性最白色（日本正品 现货拼邮国内发）",
+            "#110 中性一白（日本正品 现货拼邮国内发）",
+            "30g"
+          ],
+          "available_options": {
+            "净含量": [
+              "30g"
+            ],
+            "颜色分类": [
+              "#105 中性最白色（日本正品 日本直邮）",
+              "#110 中性一白（日本正品 日本直邮）",
+              "#105 中性最白色（日本正品 现货拼邮国内发）",
+              "#110 中性一白（日本正品 现货拼邮国内发）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "932522324449",
+            "brand": "shelly定居日本大阪",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "粉底液"
+            ],
+            "price": "718.0 to 738.0",
+            "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"932522324449\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:932522324449",
+            "constraint:932522324449:category:pass",
+            "constraint:932522324449:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:932522324449",
+            "constraint:932522324449:category:pass",
+            "constraint:932522324449:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:932522324449",
+            "constraint:932522324449:category:pass",
+            "constraint:932522324449:budget:pass"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "#105 中性最白色（日本正品 现货拼邮国内发）"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] #105 中性最白色（日本正品 日本直邮） [SEP] #110 中性一白（日本正品 日本直邮） [SEP] #105 中性最白色（日本正品 现货拼邮国内发） [SEP] #110 中性一白（日本正品 现货拼邮国内发） [SEP] 净含量 [SEP] 30g [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版 [SEP] 价格: 718.0 [SEP] 店铺: shelly定居日本大阪 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"#105 中性最白色（日本正品 日本直邮）\", \"#110 中性一白（日本正品 日本直邮）\", \"#105 中性最白色（日本正品 现货拼邮国内发）\", \"#110 中性一白（日本正品 现货拼邮国内发）\", \"30g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "#105 中性最白色（日本正品 日本直邮）",
+            "#110 中性一白（日本正品 日本直邮）",
+            "#105 中性最白色（日本正品 现货拼邮国内发）",
+            "#110 中性一白（日本正品 现货拼邮国内发）",
+            "30g"
+          ],
+          "available_options": {
+            "净含量": [
+              "30g"
+            ],
+            "颜色分类": [
+              "#105 中性最白色（日本正品 日本直邮）",
+              "#110 中性一白（日本正品 日本直邮）",
+              "#105 中性最白色（日本正品 现货拼邮国内发）",
+              "#110 中性一白（日本正品 现货拼邮国内发）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "932522324449",
+            "brand": "shelly定居日本大阪",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "粉底液"
+            ],
+            "price": "718.0 to 738.0",
+            "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "#105 中性最白色（日本正品 现货拼邮国内发）"
+          },
+          "selected_price": 718
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"#105 中性最白色（日本正品 现货拼邮国内发）\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:932522324449:color:#105中性最白色(日本正品现货拼邮国内发)"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:932522324449:color:#105中性最白色(日本正品现货拼邮国内发)"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:932522324449:color:#105中性最白色(日本正品现货拼邮国内发)"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] < Prev [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "净含量": [
+              "30g"
+            ],
+            "颜色分类": [
+              "#105 中性最白色（日本正品 日本直邮）",
+              "#110 中性一白（日本正品 日本直邮）",
+              "#105 中性最白色（日本正品 现货拼邮国内发）",
+              "#110 中性一白（日本正品 现货拼邮国内发）"
+            ]
+          },
+          "content": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "932522324449",
+            "brand": "shelly定居日本大阪",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "粉底液"
+            ],
+            "price": "718.0 to 738.0",
+            "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "#105 中性最白色（日本正品 现货拼邮国内发）"
+          },
+          "selected_price": 718,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:932522324449:description"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:932522324449:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:932522324449:description"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] < Prev [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "净含量": [
+              "30g"
+            ],
+            "颜色分类": [
+              "#105 中性最白色（日本正品 日本直邮）",
+              "#110 中性一白（日本正品 日本直邮）",
+              "#105 中性最白色（日本正品 现货拼邮国内发）",
+              "#110 中性一白（日本正品 现货拼邮国内发）"
+            ]
+          },
+          "content": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "932522324449",
+            "brand": "shelly定居日本大阪",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "粉底液"
+            ],
+            "price": "718.0 to 738.0",
+            "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "#105 中性最白色（日本正品 现货拼邮国内发）"
+          },
+          "selected_price": 718,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:932522324449:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:932522324449:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:932522324449:features"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1188",
+        "instruction": "Instruction: [SEP] 给我推荐一款价格在720以内的粉底液。 [SEP] Back to Search [SEP] < Prev [SEP] 日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "净含量": [
+              "30g"
+            ],
+            "颜色分类": [
+              "#105 中性最白色（日本正品 日本直邮）",
+              "#110 中性一白（日本正品 日本直邮）",
+              "#105 中性最白色（日本正品 现货拼邮国内发）",
+              "#110 中性一白（日本正品 现货拼邮国内发）"
+            ]
+          },
+          "content": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "932522324449",
+            "brand": "shelly定居日本大阪",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "粉底液"
+            ],
+            "price": "718.0 to 738.0",
+            "title": "日本suqqu粉霜105苏库粉底液110suquu粉底霜奶油肌粉底苏酷新版"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "#105 中性最白色（日本正品 现货拼邮国内发）"
+          },
+          "selected_price": 718,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"buy now\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:932522324449:buy now"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:932522324449:buy now"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:932522324449:buy now"
+          ],
+          "seen_asin_count": 29,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    }
+  ]
+}

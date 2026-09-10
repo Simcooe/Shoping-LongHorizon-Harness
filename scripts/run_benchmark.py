@@ -43,7 +43,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from eval.interaction_router import classify_turn  # noqa: E402
+from eval.archive.interaction_router import classify_turn  # noqa: E402
 from eval.purchase_verifier import (  # noqa: E402
     VERDICT_VIOLATED,
     verify_price,

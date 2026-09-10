@@ -1,0 +1,1442 @@
+{
+  "task": "想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.3, \"复购率\": 0.67, \"平均客单价\": 195.6, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": false, \"近30天消费金额\": 3520.5, \"近90天订单数\": 18}, \"人口属性\": {\"会员等级\": \"铂金会员\", \"年龄段\": \"30-34, \", \"性别\": \"女\", \"消费等级\": \"高\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"Earth Mama\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Burt’s Bees Baby\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Lansinoh\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"Lululemon\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"Dyson\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 2000, \"最小值\": 200}, \"功能\": [\"孕妇安全\", \"防敏\", \"保湿\", \"可降解\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"有机棉\", \"竹纤维\"], \"颜色\": [\"莫兰迪色\", \"素白\"], \"风格\": [\"极简\", \"北欧\", \"自然\"]}, \"类目偏好\": {\"数码电器\": \"低\", \"有机食品\": \"高\", \"母婴用品\": \"高\", \"美妆护肤\": \"中\", \"运动户外\": \"中\"}}, \"地区信息\": {\"区县\": \"南山区\", \"城市\": \"深圳市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"广东省\"}, \"最后更新时间\": \"2024-06-23T11:46:00Z\", \"注册时间\": \"2020-11-18T08:27:14Z\", \"注册渠道\": \"App\", \"用户ID\": \"U84276329, \", \"用户标签\": [\"二胎孕妈\", \"植物配方忠实粉\", \"高客单高复购\", \"非促销驱动型\", \"夜猫子浏览习惯\", \"有机生活倡导者\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 2800, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"不含羊脂成分纯植物配方的舒缓乳贴\", \"宝宝入口成分安全的舒缓乳贴\", \"具有修护、滋润、防干裂功能的舒缓乳贴\", \"护理乳房、缓解疼痛的舒缓乳贴\"], \"最近14天收藏商品\": [], \"活跃时间段\": [10, 14, 23], \"近7天访问次数\": 9}}",
+  "step_count": 10,
+  "reset": {
+    "env_idx": 7,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "【省心囤货】舒缓乳贴16片*3盒"
+    ],
+    "idx": 154,
+    "instruction": "Instruction: 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。",
+    "instruction_simple": "想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。",
+    "message": "Task 154 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.3,
+        "复购率": 0.67,
+        "平均客单价": 195.6,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": false,
+        "近30天消费金额": 3520.5,
+        "近90天订单数": 18
+      },
+      "人口属性": {
+        "会员等级": "铂金会员",
+        "年龄段": "30-34, ",
+        "性别": "女",
+        "消费等级": "高"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "Earth Mama"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Burt’s Bees Baby"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Lansinoh"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "Lululemon"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "Dyson"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 2000,
+            "最小值": 200
+          },
+          "功能": [
+            "孕妇安全",
+            "防敏",
+            "保湿",
+            "可降解"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "有机棉",
+            "竹纤维"
+          ],
+          "颜色": [
+            "莫兰迪色",
+            "素白"
+          ],
+          "风格": [
+            "极简",
+            "北欧",
+            "自然"
+          ]
+        },
+        "类目偏好": {
+          "数码电器": "低",
+          "有机食品": "高",
+          "母婴用品": "高",
+          "美妆护肤": "中",
+          "运动户外": "中"
+        }
+      },
+      "地区信息": {
+        "区县": "南山区",
+        "城市": "深圳市",
+        "时区": "Asia/Shanghai",
+        "省份": "广东省"
+      },
+      "最后更新时间": "2024-06-23T11:46:00Z",
+      "注册时间": "2020-11-18T08:27:14Z",
+      "注册渠道": "App",
+      "用户ID": "U84276329, ",
+      "用户标签": [
+        "二胎孕妈",
+        "植物配方忠实粉",
+        "高客单高复购",
+        "非促销驱动型",
+        "夜猫子浏览习惯",
+        "有机生活倡导者"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 2800,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "不含羊脂成分纯植物配方的舒缓乳贴",
+          "宝宝入口成分安全的舒缓乳贴",
+          "具有修护、滋润、防干裂功能的舒缓乳贴",
+          "护理乳房、缓解疼痛的舒缓乳贴"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          10,
+          14,
+          23
+        ],
+        "近7天访问次数": 9
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "舒缓乳贴 16片"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-154",
+        "instruction": "Instruction: [SEP] 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 舒缓乳贴 16片 | Normalized query: 舒缓乳贴 16片 [SEP] Next > [SEP] 717744920069 [SEP] 睦清舒缓乳乳头膏防皲裂植物修护乳头霜非羊脂膏滋润舒缓不适乳贴 [SEP] 600.0 [SEP] 813247303871 [SEP] 盒损版德国舒缓乳贴乳膏乳头舒缓保护霜30ml红肿贴12片 [SEP] 99.0 to 108.0 [SEP] 883352975941 [SEP] 【自营】Multi-Mam睦清舒缓乳贴乳头霜哺乳期乳头疼痛皲裂修复霜 [SEP] 699.0 [SEP] 875325115797 [SEP] 兔小宝舒缓乳贴乳头贴缓解哺乳不适防皲裂修护贴滋润修护防裂乳贴 [SEP] 39.0 to 349.0 [SEP] 714442072254 [SEP] 【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂 [SEP] 362.0 [SEP] 890038955204 [SEP] 兔小宝舒缓乳贴乳修护防干裂乳头疼痛结痂小白泡修复非羊脂10片装 [SEP] 39.0 to 319.0 [SEP] 873387031365 [SEP] 【自营】睦清舒缓乳贴乳头膏套装孕产包滋润防皲裂植物修护非羊脂 [SEP] 379.0 [SEP] 896500755629 [SEP] 【自营】睦清舒缓乳贴3盒装防皲裂乳头植物修护干裂乳头膏非羊脂 [SEP] 2730.0 to 6545.0 [SEP] 17134221244 [SEP] 睦清舒缓乳贴-吸奶器搭档-乳头膏防皲裂植物修护防干裂皴裂乳头霜 [SEP] 458.0 to 1600.0 [SEP] 18781575019 [SEP] 睦清舒缓乳贴乳膏乳盾搭档防皲裂乳头植物修护防干裂乳头膏非羊脂 [SEP] 438.0 to 1600.0 [SEP] 22535408545 [SEP] 睦清植物修护膏搭档乳房护理乳贴滋润防干裂非羊脂赠孕妇喂养指南 [SEP] 539.0 to 1000.0 [SEP] 919001349564 [SEP] 羊毛脂凝胶乳头舒缓贴产后乳头红肿哺乳疼痛护理乳贴防皲裂保护贴 [SEP] 15.0 to 118.0 [SEP] 575104805791 [SEP] cabocreme美国卷心舒缓乳涨奶奶结疏通硬块通乳腺开奶下奶 30mlX2 [SEP] 578.0 [SEP] 818083301420 [SEP] 兔小宝水凝胶乳头舒缓贴产后乳头红肿皲裂哺乳疼痛护理乳头防皲裂 [SEP] 39.0 to 349.0 [SEP] 823406617357 [SEP] 飞利浦新安怡孕妇产后舒缓羊脂膏乳头皲裂哺乳疼痛护理羊毛脂膏贴 [SEP] 308.0 [SEP] 884283544624 [SEP] 鼻头大扫除！柏翠丝毛孔紧致舒缓冰膜/黑头导出液 清洁祛黑头粉刺 [SEP] 59.0 to 79.0 [SEP] 852726350657 [SEP] NTD氨基酸麒麟竭熬夜面膜舒缓补水保湿便携清洁涂抹免洗31 [SEP] 129.0 [SEP] 883727616907 [SEP] 龙牌金牌金门一条根精油贴布温热型8片舒缓手足肩颈关节腰背疼痛 [SEP] 94.0 to 116.0 [SEP] 775023020213 [SEP] 贝亲乳头保护罩蝶翼型乳盾奶头乳贴喂奶疼痛哺乳期保护器薄款亲肤 [SEP] 5.0 to 25.0 [SEP] 855838479728 [SEP] 米蓓尔焕颜修护蓝绷带3.0三代涂抹面膜130g补水保湿提亮修护舒缓 [SEP] 42.0 to 105.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"717744920069\", \"813247303871\", \"883352975941\", \"875325115797\", \"714442072254\", \"890038955204\", \"873387031365\", \"896500755629\", \"17134221244\", \"18781575019\", \"22535408545\", \"919001349564\", \"575104805791\", \"818083301420\", \"823406617357\", \"884283544624\", \"852726350657\", \"883727616907\", \"775023020213\", \"855838479728\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "717744920069",
+            "813247303871",
+            "883352975941",
+            "875325115797",
+            "714442072254",
+            "890038955204",
+            "873387031365",
+            "896500755629",
+            "17134221244",
+            "18781575019",
+            "22535408545",
+            "919001349564",
+            "575104805791",
+            "818083301420",
+            "823406617357",
+            "884283544624",
+            "852726350657",
+            "883727616907",
+            "775023020213",
+            "855838479728"
+          ],
+          "normalized_query": "舒缓乳贴 16片",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "717744920069",
+              "brand": "睦清旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "防皲裂",
+                "植物成分",
+                "不含羊脂",
+                "滋润",
+                "舒缓不适"
+              ],
+              "price": "600.0",
+              "rank": 1,
+              "title": "睦清舒缓乳乳头膏防皲裂植物修护乳头霜非羊脂膏滋润舒缓不适乳贴"
+            },
+            {
+              "asin": "813247303871",
+              "brand": "小十一海外淘",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "德国",
+                "舒缓红肿",
+                "保护"
+              ],
+              "price": "99.0 to 108.0",
+              "rank": 2,
+              "title": "盒损版德国舒缓乳贴乳膏乳头舒缓保护霜30ml红肿贴12片"
+            },
+            {
+              "asin": "883352975941",
+              "brand": "天猫国际自营全球超级店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "睦清",
+                "哺乳期",
+                "防皲裂",
+                "缓解疼痛"
+              ],
+              "price": "699.0",
+              "rank": 3,
+              "title": "【自营】Multi-Mam睦清舒缓乳贴乳头霜哺乳期乳头疼痛皲裂修复霜"
+            },
+            {
+              "asin": "875325115797",
+              "brand": "兔小宝母婴用品店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房护理工具",
+              "key_attributes": [
+                "舒缓乳贴",
+                "哺乳不适",
+                "防皲裂",
+                "滋润修护"
+              ],
+              "price": "39.0 to 349.0",
+              "rank": 4,
+              "title": "兔小宝舒缓乳贴乳头贴缓解哺乳不适防皲裂修护贴滋润修护防裂乳贴"
+            },
+            {
+              "asin": "714442072254",
+              "brand": "天猫国际自营全球超级店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "睦清",
+                "舒缓",
+                "防干裂",
+                "修护",
+                "植物成分",
+                "不含羊脂"
+              ],
+              "price": "362.0",
+              "rank": 5,
+              "title": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂"
+            },
+            {
+              "asin": "890038955204",
+              "brand": "兔小宝母婴用品店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "兔小宝",
+                "防干裂",
+                "缓解疼痛",
+                "减少结痂",
+                "减少白泡",
+                "不含羊脂成分"
+              ],
+              "price": "39.0 to 319.0",
+              "rank": 6,
+              "title": "兔小宝舒缓乳贴乳修护防干裂乳头疼痛结痂小白泡修复非羊脂10片装"
+            },
+            {
+              "asin": "873387031365",
+              "brand": "天猫国际自营萌宝社",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "睦清",
+                "滋润",
+                "防皲裂",
+                "植物配方",
+                "非羊脂"
+              ],
+              "price": "379.0",
+              "rank": 7,
+              "title": "【自营】睦清舒缓乳贴乳头膏套装孕产包滋润防皲裂植物修护非羊脂"
+            },
+            {
+              "asin": "896500755629",
+              "brand": "天猫国际自营全球超级店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "睦清",
+                "3盒装",
+                "防皲裂",
+                "植物成分",
+                "修护"
+              ],
+              "price": "2730.0 to 6545.0",
+              "rank": 8,
+              "title": "【自营】睦清舒缓乳贴3盒装防皲裂乳头植物修护干裂乳头膏非羊脂"
+            },
+            {
+              "asin": "17134221244",
+              "brand": "睦清旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "植物成分",
+                "防皲裂",
+                "修护",
+                "哺乳前无需擦拭"
+              ],
+              "price": "458.0 to 1600.0",
+              "rank": 9,
+              "title": "睦清舒缓乳贴-吸奶器搭档-乳头膏防皲裂植物修护防干裂皴裂乳头霜"
+            },
+            {
+              "asin": "18781575019",
+              "brand": "睦清旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "防干裂",
+                "植物成分",
+                "不含羊脂",
+                "舒缓不适",
+                " 哺乳前无需擦拭"
+              ],
+              "price": "438.0 to 1600.0",
+              "rank": 10,
+              "title": "睦清舒缓乳贴乳膏乳盾搭档防皲裂乳头植物修护防干裂乳头膏非羊脂"
+            },
+            {
+              "asin": "22535408545",
+              "brand": "睦清旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "植物成分",
+                "滋润",
+                "防干裂",
+                "不含羊脂成分",
+                "宝宝入口安全"
+              ],
+              "price": "539.0 to 1000.0",
+              "rank": 11,
+              "title": "睦清植物修护膏搭档乳房护理乳贴滋润防干裂非羊脂赠孕妇喂养指南"
+            },
+            {
+              "asin": "919001349564",
+              "brand": "迪福伦家庭健康",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房护理工具",
+              "key_attributes": [
+                "羊毛脂",
+                "舒缓贴",
+                "产后",
+                "乳头红肿",
+                "哺乳疼痛",
+                "防皲裂"
+              ],
+              "price": "15.0 to 118.0",
+              "rank": 12,
+              "title": "羊毛脂凝胶乳头舒缓贴产后乳头红肿哺乳疼痛护理乳贴防皲裂保护贴"
+            },
+            {
+              "asin": "575104805791",
+              "brand": "cabocreme海外旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "美国",
+                "cabocreme",
+                "疏通乳腺",
+                "天然植物精华",
+                "舒缓",
+                "促进下奶"
+              ],
+              "price": "578.0",
+              "rank": 13,
+              "title": "cabocreme美国卷心舒缓乳涨奶奶结疏通硬块通乳腺开奶下奶 30mlX2"
+            },
+            {
+              "asin": "818083301420",
+              "brand": "兔小宝母婴用品店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "key_attributes": [
+                "兔小宝",
+                "产后",
+                "防皲裂",
+                "消除红肿",
+                "缓解疼痛"
+              ],
+              "price": "39.0 to 349.0",
+              "rank": 14,
+              "title": "兔小宝水凝胶乳头舒缓贴产后乳头红肿皲裂哺乳疼痛护理乳头防皲裂"
+            },
+            {
+              "asin": "823406617357",
+              "brand": "飞利浦新安怡旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房护理工具",
+              "key_attributes": [
+                "产后",
+                "乳头皲裂",
+                "哺乳疼痛",
+                "护理"
+              ],
+              "price": "308.0",
+              "rank": 15,
+              "title": "飞利浦新安怡孕妇产后舒缓羊脂膏乳头皲裂哺乳疼痛护理羊毛脂膏贴"
+            },
+            {
+              "asin": "884283544624",
+              "brand": "Mag的小店",
+              "category": "美容护肤/美体/精油›面膜（新）›涂抹面膜",
+              "key_attributes": [
+                "鼻头",
+                "毛孔紧致",
+                "舒缓",
+                "清洁",
+                "祛黑头",
+                "粉刺"
+              ],
+              "price": "59.0 to 79.0",
+              "rank": 16,
+              "title": "鼻头大扫除！柏翠丝毛孔紧致舒缓冰膜/黑头导出液 清洁祛黑头粉刺"
+            },
+            {
+              "asin": "852726350657",
+              "brand": "NTD旗舰店",
+              "category": "孕妇装/孕产妇用品/营养›孕产妇护肤/洗护/祛纹›面部护理用品",
+              "key_attributes": [
+                "氨基酸",
+                "麒麟竭",
+                "熬夜",
+                "舒缓",
+                "补水",
+                "保湿",
+                "便携",
+                "清洁",
+                "涂抹"
+              ],
+              "price": "129.0",
+              "rank": 17,
+              "title": "NTD氨基酸麒麟竭熬夜面膜舒缓补水保湿便携清洁涂抹免洗31"
+            },
+            {
+              "asin": "883727616907",
+              "brand": "Matsuya海外旗舰店",
+              "category": "OTC药品/国际医药›国际医药›国际非处方药›国际风湿骨伤药品",
+              "key_attributes": [
+                "精油贴布",
+                "腰背疼痛"
+              ],
+              "price": "94.0 to 116.0",
+              "rank": 18,
+              "title": "龙牌金牌金门一条根精油贴布温热型8片舒缓手足肩颈关节腰背疼痛"
+            },
+            {
+              "asin": "775023020213",
+              "brand": "殷殷母婴",
+              "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房护理工具",
+              "key_attributes": [
+                "保护",
+                "喂奶疼痛",
+                "哺乳期",
+                "薄款",
+                "亲肤"
+              ],
+              "price": "5.0 to 25.0",
+              "rank": 19,
+              "title": "贝亲乳头保护罩蝶翼型乳盾奶头乳贴喂奶疼痛哺乳期保护器薄款亲肤"
+            },
+            {
+              "asin": "855838479728",
+              "brand": "interboo美妆店",
+              "category": "美容护肤/美体/精油›面膜（新）›涂抹面膜",
+              "key_attributes": [
+                "补水",
+                "保湿",
+                "提亮",
+                "修护",
+                "舒缓"
+              ],
+              "price": "42.0 to 105.0",
+              "rank": 20,
+              "title": "米蓓尔焕颜修护蓝绷带3.0三代涂抹面膜130g补水保湿提亮修护舒缓"
+            }
+          ],
+          "query": "舒缓乳贴 16片",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"舒缓乳贴 16片\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:56c0da41514a991101697ec938b72d859a9abad5f305ab3ecd2dcd2fa469fa74"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:56c0da41514a991101697ec938b72d859a9abad5f305ab3ecd2dcd2fa469fa74"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:56c0da41514a991101697ec938b72d859a9abad5f305ab3ecd2dcd2fa469fa74"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "搜索\"舒缓乳贴 16片\"返回150条结果，候选包括睦清舒缓乳贴16片装(362元)、兔小宝舒缓乳贴、睦清3盒装等。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "714442072254"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-154",
+        "instruction": "Instruction: [SEP] 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 乳白色 [SEP] 军绿色 [SEP] 【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂 [SEP] 价格: 362.0 [SEP] 店铺: 天猫国际自营全球超级店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"乳白色\", \"军绿色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "乳白色",
+            "军绿色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "乳白色",
+              "军绿色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "714442072254",
+            "brand": "天猫国际自营全球超级店",
+            "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+            "key_attributes": [
+              "睦清",
+              "舒缓",
+              "防干裂",
+              "修护",
+              "植物成分",
+              "不含羊脂"
+            ],
+            "price": "362.0",
+            "title": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 362
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"714442072254\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:714442072254",
+            "constraint:714442072254:category:pass",
+            "constraint:714442072254:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:714442072254",
+            "constraint:714442072254:category:pass",
+            "constraint:714442072254:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:714442072254",
+            "constraint:714442072254:category:pass",
+            "constraint:714442072254:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-154",
+        "instruction": "Instruction: [SEP] 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "乳白色",
+              "军绿色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "714442072254",
+            "brand": "天猫国际自营全球超级店",
+            "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+            "key_attributes": [
+              "睦清",
+              "舒缓",
+              "防干裂",
+              "修护",
+              "植物成分",
+              "不含羊脂"
+            ],
+            "price": "362.0",
+            "title": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 362,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:714442072254:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:714442072254:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:714442072254:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "打开睦清舒缓乳贴16片装详情页：单价362元，标题确认每盒16片，3盒合计1086元；有乳白/军绿两色，Features页无额外信息。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "已确认【自营】睦清舒缓乳贴16片装单价362元，买3盒合计1086元（比1000元预算多86元），您是否接受这个总价？若可以，颜色分类要\"乳白色\"还是\"军绿色\"？"
+      },
+      "raw": {
+        "session": "154",
+        "question": "已确认【自营】睦清舒缓乳贴16片装单价362元，买3盒合计1086元（比1000元预算多86元），您是否接受这个总价？若可以，颜色分类要\"乳白色\"还是\"军绿色\"？",
+        "reply": "1086元可以接受，颜色要乳白色。确认下单吧。"
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "用户明确接受3盒合计1086元，选择乳白色，并要求确认下单。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-154",
+        "instruction": "Instruction: [SEP] 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 乳白色 [SEP] 军绿色 [SEP] 【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂 [SEP] 价格: 362.0 [SEP] 店铺: 天猫国际自营全球超级店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"乳白色\", \"军绿色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "乳白色",
+            "军绿色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "乳白色",
+              "军绿色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "714442072254",
+            "brand": "天猫国际自营全球超级店",
+            "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+            "key_attributes": [
+              "睦清",
+              "舒缓",
+              "防干裂",
+              "修护",
+              "植物成分",
+              "不含羊脂"
+            ],
+            "price": "362.0",
+            "title": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 362
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "乳白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-154",
+        "instruction": "Instruction: [SEP] 想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 乳白色 [SEP] 军绿色 [SEP] 【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂 [SEP] 价格: 362.0 [SEP] 店铺: 天猫国际自营全球超级店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"乳白色\", \"军绿色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "乳白色",
+            "军绿色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "乳白色",
+              "军绿色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "714442072254",
+            "brand": "天猫国际自营全球超级店",
+            "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+            "key_attributes": [
+              "睦清",
+              "舒缓",
+              "防干裂",
+              "修护",
+              "植物成分",
+              "不含羊脂"
+            ],
+            "price": "362.0",
+            "title": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "乳白色"
+          },
+          "selected_price": 362
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"乳白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:714442072254:color:乳白色"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:714442072254:color:乳白色"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "option:714442072254:color:乳白色"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 7,
+        "goal": {
+          "asin": "22535408545",
+          "attributes": [
+            "植物成分",
+            "滋润",
+            "防干裂",
+            "不含羊脂成分",
+            "宝宝入口安全"
+          ],
+          "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "植物成分",
+            "滋润",
+            "防干裂",
+            "不含羊脂成分",
+            "宝宝入口安全"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "【省心囤货】舒缓乳贴16片*3盒"
+          ],
+          "instruction_full": "劳驾挑选一款是纯植物配方的舒缓乳贴，不含羊脂成分，宝宝吃进去也不会有什么问题，适合孕妈妈们使用，涂抹后可以预防乳头裂开，并保持柔润不紧绷，要3盒装的，售价在1000元左右的。",
+          "instruction_simple": "想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。",
+          "instruction_text": "想买三盒每盒16片的舒缓乳贴，要总价在1000元左右的。",
+          "name": "睦清植物修护膏搭档乳房护理乳贴滋润防干裂非羊脂赠孕妇喂养指南",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": null,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "【省心囤货】舒缓乳贴16片*3盒"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.3,
+              "复购率": 0.67,
+              "平均客单价": 195.6,
+              "支付方式偏好": "微信支付",
+              "是否促销敏感": false,
+              "近30天消费金额": 3520.5,
+              "近90天订单数": 18
+            },
+            "人口属性": {
+              "会员等级": "铂金会员",
+              "年龄段": "30-34, ",
+              "性别": "女",
+              "消费等级": "高"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Earth Mama"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Burt’s Bees Baby"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Lansinoh"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "Lululemon"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "Dyson"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 2000,
+                  "最小值": 200
+                },
+                "功能": [
+                  "孕妇安全",
+                  "防敏",
+                  "保湿",
+                  "可降解"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  "有机棉",
+                  "竹纤维"
+                ],
+                "颜色": [
+                  "莫兰迪色",
+                  "素白"
+                ],
+                "风格": [
+                  "极简",
+                  "北欧",
+                  "自然"
+                ]
+              },
+              "类目偏好": {
+                "数码电器": "低",
+                "有机食品": "高",
+                "母婴用品": "高",
+                "美妆护肤": "中",
+                "运动户外": "中"
+              }
+            },
+            "地区信息": {
+              "区县": "南山区",
+              "城市": "深圳市",
+              "时区": "Asia/Shanghai",
+              "省份": "广东省"
+            },
+            "最后更新时间": "2024-06-23T11:46:00Z",
+            "注册时间": "2020-11-18T08:27:14Z",
+            "注册渠道": "App",
+            "用户ID": "U84276329, ",
+            "用户标签": [
+              "二胎孕妈",
+              "植物配方忠实粉",
+              "高客单高复购",
+              "非促销驱动型",
+              "夜猫子浏览习惯",
+              "有机生活倡导者"
+            ],
+            "行为特征": {
+              "常用设备": "iOS手机",
+              "日均浏览时长": 2800,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "不含羊脂成分纯植物配方的舒缓乳贴",
+                "宝宝入口成分安全的舒缓乳贴",
+                "具有修护、滋润、防干裂功能的舒缓乳贴",
+                "护理乳房、缓解疼痛的舒缓乳贴"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                10,
+                14,
+                23
+              ],
+              "近7天访问次数": 9
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-7-154",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 714442072254 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"\\u4e73\\u767d\\u8272\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] -0.16249999999999998 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "714442072254",
+          "attributes": [
+            "睦清",
+            "舒缓",
+            "防干裂",
+            "修护",
+            "植物成分",
+            "不含羊脂"
+          ],
+          "category": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+          "instruction_text": "我想要一款纯植物配方的军绿色睦清乳贴，不含羊脂成分，涂抹后能够有效的抑制乳头裂开，缓解不适感，对乳头有养护功能，接受售价在360元上下。",
+          "name": "【自营】睦清舒缓乳贴16片皲裂修复乳头植物修护干裂乳头膏非羊脂",
+          "options": {
+            "颜色分类": "乳白色"
+          },
+          "price": 362,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": -0.16249999999999998,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 0.4,
+            "key_options": 0,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": false,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 2,
+                  "required_count": 5,
+                  "results": [
+                    {
+                      "actual": [
+                        "睦清",
+                        "舒缓",
+                        "防干裂",
+                        "修护",
+                        "植物成分",
+                        "不含羊脂"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "植物成分"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "植物成分"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "睦清",
+                        "舒缓",
+                        "防干裂",
+                        "修护",
+                        "植物成分",
+                        "不含羊脂"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "滋润"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "滋润"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "睦清",
+                        "舒缓",
+                        "防干裂",
+                        "修护",
+                        "植物成分",
+                        "不含羊脂"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "防干裂"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "防干裂"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "睦清",
+                        "舒缓",
+                        "防干裂",
+                        "修护",
+                        "植物成分",
+                        "不含羊脂"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "不含羊脂成分"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "不含羊脂成分"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "睦清",
+                        "舒缓",
+                        "防干裂",
+                        "修护",
+                        "植物成分",
+                        "不含羊脂"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "宝宝入口安全"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "宝宝入口安全"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 0.4,
+                  "verifiable_count": 5
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 0,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "乳白色"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [],
+                        "missing_axes": [],
+                        "unavailable_values": [
+                          {
+                            "axis": "color",
+                            "value": "【省心囤货】舒缓乳贴16片*3盒"
+                          }
+                        ],
+                        "wrong_values": []
+                      },
+                      "passed": false,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "【省心囤货】舒缓乳贴16片*3盒"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "fail",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 0,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 0.25,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {},
+              "method": "constant_option_price",
+              "price": 362,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 362,
+              "comparator": "budget_not_declared_v1",
+              "evidence": {
+                "evidence": {},
+                "method": "constant_option_price",
+                "price": 362,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": null,
+              "source_field": "instruction",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "孕妇装/孕产妇用品/营养",
+                      "乳房护理(新)",
+                      "乳房乳霜/羊脂膏"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "孕妇装/孕产妇用品/营养›乳房护理（新）›乳房乳霜/羊脂膏"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": false,
+          "reward": -0.16249999999999998,
+          "reward_type": "partial_alternative_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": -0.16249999999999998,
+          "termination_reason": "partial_alternative_purchase",
+          "weighted_score": 0.25
+        },
+        "reward_valid": true,
+        "termination_reason": "partial_alternative_purchase"
+      }
+    }
+  ],
+  "terminal_protocol": "terminal-protocol-v2",
+  "requirement_events": []
+}

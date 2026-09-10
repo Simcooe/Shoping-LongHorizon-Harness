@@ -1,0 +1,3004 @@
+{
+  "task": "有没有一款炼乳是5罐价格不超过100元的？\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.24, \"复购率\": 0.78, \"平均客单价\": 57.5, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": false, \"近30天消费金额\": 862.5, \"近90天订单数\": 15}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"25-34, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"HERBEL黑白\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"LAVAZZA拉瓦萨\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"安佳Anchor\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"凯膳怡\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"NIKE\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 200, \"最小值\": 20}, \"功能\": [\"易拉环开口\", \"多用途配料\", \"全脂香甜\", \"常温保存\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"食品级金属\"], \"颜色\": [\"奶油白\", \"焦糖色\", \"莫兰迪粉\"], \"风格\": [\"英式\", \"港式\"]}, \"类目偏好\": {\"3C数码\": \"无\", \"厨房小电\": \"中\", \"咖啡冲调\": \"高\", \"户外运动\": \"无\", \"服饰鞋包\": \"低\", \"母婴用品\": \"中\", \"烘焙原料\": \"高\", \"美妆护肤\": \"低\"}}, \"地区信息\": {\"区县\": \"姑苏区\", \"城市\": \"苏州市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"江苏省\"}, \"最后更新时间\": \"2024-06-13T09:45:00Z\", \"注册时间\": \"2019-08-17T14:25:33Z\", \"注册渠道\": \"App\", \"用户ID\": \"U9C7A23F5, \", \"用户标签\": [\"家庭烘焙达人\", \"咖啡轻玩家\", \"高复购用户\", \"非促销敏感型\", \"品质优先\", \"内容分享博主\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 2100, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"全脂加糖炼乳\", \"可奶茶、烘焙、司康蛋挞制作时使用的炼乳\", \"可蛋糕、吐司面包、咖啡制作时使用的炼乳\", \"商用家用两用型炼乳\", \"拉环开罐方式的397g罐装炼乳\"], \"最近14天收藏商品\": [], \"活跃时间段\": [10, 11, 21, 22], \"近7天访问次数\": 12}}",
+  "step_count": 17,
+  "reset": {
+    "env_idx": 4,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "【拉环易开罐】黑白炼乳397g*5罐"
+    ],
+    "idx": 1190,
+    "instruction": "Instruction: 有没有一款炼乳是5罐价格不超过100元的？",
+    "instruction_simple": "有没有一款炼乳是5罐价格不超过100元的？",
+    "message": "Task 1190 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.24,
+        "复购率": 0.78,
+        "平均客单价": 57.5,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": false,
+        "近30天消费金额": 862.5,
+        "近90天订单数": 15
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "25-34, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "HERBEL黑白"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "LAVAZZA拉瓦萨"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "安佳Anchor"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "凯膳怡"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "NIKE"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 200,
+            "最小值": 20
+          },
+          "功能": [
+            "易拉环开口",
+            "多用途配料",
+            "全脂香甜",
+            "常温保存"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "食品级金属"
+          ],
+          "颜色": [
+            "奶油白",
+            "焦糖色",
+            "莫兰迪粉"
+          ],
+          "风格": [
+            "英式",
+            "港式"
+          ]
+        },
+        "类目偏好": {
+          "3C数码": "无",
+          "厨房小电": "中",
+          "咖啡冲调": "高",
+          "户外运动": "无",
+          "服饰鞋包": "低",
+          "母婴用品": "中",
+          "烘焙原料": "高",
+          "美妆护肤": "低"
+        }
+      },
+      "地区信息": {
+        "区县": "姑苏区",
+        "城市": "苏州市",
+        "时区": "Asia/Shanghai",
+        "省份": "江苏省"
+      },
+      "最后更新时间": "2024-06-13T09:45:00Z",
+      "注册时间": "2019-08-17T14:25:33Z",
+      "注册渠道": "App",
+      "用户ID": "U9C7A23F5, ",
+      "用户标签": [
+        "家庭烘焙达人",
+        "咖啡轻玩家",
+        "高复购用户",
+        "非促销敏感型",
+        "品质优先",
+        "内容分享博主"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 2100,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "全脂加糖炼乳",
+          "可奶茶、烘焙、司康蛋挞制作时使用的炼乳",
+          "可蛋糕、吐司面包、咖啡制作时使用的炼乳",
+          "商用家用两用型炼乳",
+          "拉环开罐方式的397g罐装炼乳"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          10,
+          11,
+          21,
+          22
+        ],
+        "近7天访问次数": 12
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "炼乳 397g 罐装"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 炼乳 397g 罐装 | Normalized query: 炼乳 397g 罐装 [SEP] Next > [SEP] 791567446815 [SEP] 香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装 [SEP] 15.0 to 68.0 [SEP] 696820233134 [SEP] 雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙 [SEP] 11.0 [SEP] 809688259924 [SEP] 雀巢炼乳鹰唛炼奶商用罐装炼乳奶茶店专用小包装家用350g*24罐 [SEP] 325.0 [SEP] 738145460936 [SEP] 越南进口寿星翁炼乳罐装寿星公调制炼奶咖啡奶茶甜点牛油果汁原料 [SEP] 12.0 to 40.0 [SEP] 845176270742 [SEP] 熊猫牌熊猫炼乳炼奶350g涂抹面包吐司奶茶咖啡伴侣刨冰蛋糕批发 [SEP] 23.0 to 117.0 [SEP] 814258151113 [SEP] 雀巢炼乳鹰唛炼奶350g罐装商用家用烘焙奶茶店专用蛋挞奶油甜练乳 [SEP] 16.0 to 598.0 [SEP] 632796812519 [SEP] 熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用 [SEP] 47.0 to 48.0 [SEP] 575388232339 [SEP] 熊猫牌甜炼乳350g罐装 商用小包装黄金小馒头 奶茶店专用烘焙家用 [SEP] 33.0 to 123.0 [SEP] 932605415005 [SEP] PANDA熊猫炼乳350g商用罐装面包烘焙店专用奶油小馒头蛋挞水果捞 [SEP] 14.0 to 542.0 [SEP] 635830624028 [SEP] 雀巢炼乳鹰唛炼奶350g家用罐装面包咖啡冰淇淋奶茶甜品店商用 [SEP] 49.0 to 299.0 [SEP] 938725714410 [SEP] 雀巢鹰唛炼奶350g*6罐装家用炼乳烘焙蛋挞甜品奶茶店专用炼奶原料 [SEP] 58.0 to 140.0 [SEP] 943607942008 [SEP] 熊猫植脂淡奶植脂淡奶罐装奶茶咖啡伴侣烘焙原料 [SEP] 8.0 to 28.0 [SEP] 934571432156 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 84.0 to 533.0 [SEP] 712192194660 [SEP] 黑白淡奶400g荷兰进口全脂淡奶炼乳蛋糕港式奶茶店烘焙甜品原材料 [SEP] 25.0 to 140.0 [SEP] 657087536327 [SEP] 雀巢鹰唛脱脂原味草莓香浓巧克力炼奶炼乳早餐甜点烘焙原料185g [SEP] 8.0 to 35.0 [SEP] 915071217220 [SEP] 现货 香港版黑白全脂淡奶 独立12小杯便携装茶餐厅港式奶茶搭档 [SEP] 28.0 to 187.0 [SEP] 910015603462 [SEP] 香港版黑白淡奶便携装全脂淡奶港式丝袜奶茶咖啡奶球伴侣奶精球 [SEP] 15.0 to 58.0 [SEP] 882985285408 [SEP] 香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶 [SEP] 13.0 to 69.0 [SEP] 937944534687 [SEP] 茉莉六堡茶2017年广西梧州正宗黑茶叶花茶罐装送礼盒定制logo团购 [SEP] 436.0 to 816.0 [SEP] 938756374306 [SEP] 圣顺岩桂花乌龙茶125g罐装调味茶金桂茶叶浓香耐泡茶汤透亮 [SEP] 40.0 to 47.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"791567446815\", \"696820233134\", \"809688259924\", \"738145460936\", \"845176270742\", \"814258151113\", \"632796812519\", \"575388232339\", \"932605415005\", \"635830624028\", \"938725714410\", \"943607942008\", \"934571432156\", \"712192194660\", \"657087536327\", \"915071217220\", \"910015603462\", \"882985285408\", \"937944534687\", \"938756374306\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "791567446815",
+            "696820233134",
+            "809688259924",
+            "738145460936",
+            "845176270742",
+            "814258151113",
+            "632796812519",
+            "575388232339",
+            "932605415005",
+            "635830624028",
+            "938725714410",
+            "943607942008",
+            "934571432156",
+            "712192194660",
+            "657087536327",
+            "915071217220",
+            "910015603462",
+            "882985285408",
+            "937944534687",
+            "938756374306"
+          ],
+          "normalized_query": "炼乳 397g 罐装",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "791567446815",
+              "brand": "味美佳港货零食店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "小包装",
+                "全脂",
+                "易拉罐装"
+              ],
+              "price": "15.0 to 68.0",
+              "rank": 1,
+              "title": "香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装"
+            },
+            {
+              "asin": "696820233134",
+              "brand": "橙子烘培",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "罐装",
+                "家用",
+                "商用",
+                "奶茶店",
+                "专用",
+                "蛋挞液",
+                "配料",
+                "甜品"
+              ],
+              "price": "11.0",
+              "rank": 2,
+              "title": "雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙"
+            },
+            {
+              "asin": "809688259924",
+              "brand": "益言饮品原料批发",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "罐装",
+                "奶茶店专用",
+                "小包装",
+                "家用"
+              ],
+              "price": "325.0",
+              "rank": 3,
+              "title": "雀巢炼乳鹰唛炼奶商用罐装炼乳奶茶店专用小包装家用350g*24罐"
+            },
+            {
+              "asin": "738145460936",
+              "brand": "越来香食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "越南进口",
+                "调制",
+                "咖啡",
+                "奶茶",
+                "甜点",
+                "牛油果汁",
+                "原料"
+              ],
+              "price": "12.0 to 40.0",
+              "rank": 4,
+              "title": "越南进口寿星翁炼乳罐装寿星公调制炼奶咖啡奶茶甜点牛油果汁原料"
+            },
+            {
+              "asin": "845176270742",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "350g",
+                "涂抹",
+                "面包",
+                "吐司",
+                "奶茶",
+                "咖啡伴侣",
+                "刨冰",
+                "蛋糕",
+                "批发",
+                "丝滑"
+              ],
+              "price": "23.0 to 117.0",
+              "rank": 5,
+              "title": "熊猫牌熊猫炼乳炼奶350g涂抹面包吐司奶茶咖啡伴侣刨冰蛋糕批发"
+            },
+            {
+              "asin": "814258151113",
+              "brand": "DU可茶饮特供处",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "家用",
+                "奶茶店专用",
+                "蛋挞",
+                "奶油",
+                "甜"
+              ],
+              "price": "16.0 to 598.0",
+              "rank": 6,
+              "title": "雀巢炼乳鹰唛炼奶350g罐装商用家用烘焙奶茶店专用蛋挞奶油甜练乳"
+            },
+            {
+              "asin": "632796812519",
+              "brand": "美宜拍",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "加糖",
+                "蛋挞",
+                "奶茶",
+                "家用"
+              ],
+              "price": "47.0 to 48.0",
+              "rank": 7,
+              "title": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用"
+            },
+            {
+              "asin": "575388232339",
+              "brand": "航宇食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "小包装",
+                "黄金小馒头",
+                "奶茶店专用",
+                "家用"
+              ],
+              "price": "33.0 to 123.0",
+              "rank": 8,
+              "title": "熊猫牌甜炼乳350g罐装 商用小包装黄金小馒头 奶茶店专用烘焙家用"
+            },
+            {
+              "asin": "932605415005",
+              "brand": "壹零茶盟奶茶原料批发",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "面包",
+                "烘焙店",
+                "奶油小馒头",
+                "蛋挞",
+                "水果捞"
+              ],
+              "price": "14.0 to 542.0",
+              "rank": 9,
+              "title": "PANDA熊猫炼乳350g商用罐装面包烘焙店专用奶油小馒头蛋挞水果捞"
+            },
+            {
+              "asin": "635830624028",
+              "brand": "蓝芒食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "家用",
+                "面包",
+                "咖啡",
+                "冰淇淋",
+                "奶茶",
+                "甜品店",
+                "商用"
+              ],
+              "price": "49.0 to 299.0",
+              "rank": 10,
+              "title": "雀巢炼乳鹰唛炼奶350g家用罐装面包咖啡冰淇淋奶茶甜品店商用"
+            },
+            {
+              "asin": "938725714410",
+              "brand": "宝哥餐饮原料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "家用",
+                "蛋挞",
+                "甜品",
+                "奶茶店专用",
+                "原料"
+              ],
+              "price": "58.0 to 140.0",
+              "rank": 11,
+              "title": "雀巢鹰唛炼奶350g*6罐装家用炼乳烘焙蛋挞甜品奶茶店专用炼奶原料"
+            },
+            {
+              "asin": "943607942008",
+              "brand": "阿思的零食铺子",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "奶茶咖啡伴侣?"
+              ],
+              "price": "8.0 to 28.0",
+              "rank": 12,
+              "title": "熊猫植脂淡奶植脂淡奶罐装奶茶咖啡伴侣烘焙原料"
+            },
+            {
+              "asin": "934571432156",
+              "brand": "语森忆旭凡莉专卖店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "全脂",
+                "加糖",
+                "奶茶",
+                "司康",
+                "蛋挞",
+                "蛋糕",
+                "吐司",
+                "面包",
+                "咖啡",
+                "商用"
+              ],
+              "price": "84.0 to 533.0",
+              "rank": 13,
+              "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+            },
+            {
+              "asin": "712192194660",
+              "brand": "苏博茶饮咖啡原料特卖店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "荷兰进口",
+                "全脂",
+                "蛋糕",
+                "港式奶茶店",
+                "淡奶"
+              ],
+              "price": "25.0 to 140.0",
+              "rank": 14,
+              "title": "黑白淡奶400g荷兰进口全脂淡奶炼乳蛋糕港式奶茶店烘焙甜品原材料"
+            },
+            {
+              "asin": "657087536327",
+              "brand": "吃汉食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "脱脂",
+                "香浓",
+                "早餐",
+                "甜点"
+              ],
+              "price": "8.0 to 35.0",
+              "rank": 15,
+              "title": "雀巢鹰唛脱脂原味草莓香浓巧克力炼奶炼乳早餐甜点烘焙原料185g"
+            },
+            {
+              "asin": "915071217220",
+              "brand": "甄丰收旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "现货",
+                "香港版",
+                "黑白",
+                "全脂",
+                "便携装",
+                "茶餐厅港式奶茶搭档"
+              ],
+              "price": "28.0 to 187.0",
+              "rank": 16,
+              "title": "现货 香港版黑白全脂淡奶 独立12小杯便携装茶餐厅港式奶茶搭档"
+            },
+            {
+              "asin": "910015603462",
+              "brand": "Wa Wa Shop",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "香港版",
+                "全脂",
+                "丝袜奶茶",
+                "咖啡奶球",
+                "奶精球"
+              ],
+              "price": "15.0 to 58.0",
+              "rank": 17,
+              "title": "香港版黑白淡奶便携装全脂淡奶港式丝袜奶茶咖啡奶球伴侣奶精球"
+            },
+            {
+              "asin": "882985285408",
+              "brand": "全球爱购零食店铺",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "香港版",
+                "全脂",
+                "黑白淡奶",
+                "咖啡奶球"
+              ],
+              "price": "13.0 to 69.0",
+              "rank": 18,
+              "title": "香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶"
+            },
+            {
+              "asin": "937944534687",
+              "brand": "茗品润旗舰店",
+              "category": "茶›代用/花草/水果/再加工茶›再加工茶/配方茶/调味茶",
+              "key_attributes": [
+                "茉莉六堡茶",
+                "2017年",
+                "广西梧州",
+                "罐装",
+                "送礼"
+              ],
+              "price": "436.0 to 816.0",
+              "rank": 19,
+              "title": "茉莉六堡茶2017年广西梧州正宗黑茶叶花茶罐装送礼盒定制logo团购"
+            },
+            {
+              "asin": "938756374306",
+              "brand": "甄食汇百货商城",
+              "category": "茶›代用/花草/水果/再加工茶›再加工茶/配方茶/调味茶",
+              "key_attributes": [
+                "桂花乌龙茶",
+                "125g罐装",
+                "浓香"
+              ],
+              "price": "40.0 to 47.0",
+              "rank": 20,
+              "title": "圣顺岩桂花乌龙茶125g罐装调味茶金桂茶叶浓香耐泡茶汤透亮"
+            }
+          ],
+          "query": "炼乳 397g 罐装",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"炼乳 397g 罐装\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:f9134f72b2a20feb5fff13a0318550a1678692d08a436eb2470ab732dcba902e"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:f9134f72b2a20feb5fff13a0318550a1678692d08a436eb2470ab732dcba902e"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:f9134f72b2a20feb5fff13a0318550a1678692d08a436eb2470ab732dcba902e"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "632796812519"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 5罐x350克（小金奖） [SEP] 5罐x350克（蓝标） [SEP] 5罐x350克（黑标） [SEP] 熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用 [SEP] 价格: 47.0 to 48.0 [SEP] 店铺: 美宜拍 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"5罐x350克（小金奖）\", \"5罐x350克（蓝标）\", \"5罐x350克（黑标）\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "5罐x350克（小金奖）",
+            "5罐x350克（蓝标）",
+            "5罐x350克（黑标）"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "5罐x350克（小金奖）",
+              "5罐x350克（蓝标）",
+              "5罐x350克（黑标）"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "632796812519",
+            "brand": "美宜拍",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "加糖",
+              "蛋挞",
+              "奶茶",
+              "家用"
+            ],
+            "price": "47.0 to 48.0",
+            "title": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"632796812519\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:632796812519",
+            "constraint:632796812519:category:pass",
+            "constraint:632796812519:budget:unverifiable"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:632796812519",
+            "constraint:632796812519:category:pass",
+            "constraint:632796812519:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:632796812519",
+            "constraint:632796812519:category:pass",
+            "constraint:632796812519:budget:unverifiable"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "5罐x350克（小金奖）",
+              "5罐x350克（蓝标）",
+              "5罐x350克（黑标）"
+            ]
+          },
+          "content": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "632796812519",
+            "brand": "美宜拍",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "加糖",
+              "蛋挞",
+              "奶茶",
+              "家用"
+            ],
+            "price": "47.0 to 48.0",
+            "title": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:632796812519:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:632796812519:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:632796812519:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "5罐x350克（小金奖）",
+              "5罐x350克（蓝标）",
+              "5罐x350克（黑标）"
+            ]
+          },
+          "content": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "632796812519",
+            "brand": "美宜拍",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "加糖",
+              "蛋挞",
+              "奶茶",
+              "家用"
+            ],
+            "price": "47.0 to 48.0",
+            "title": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:632796812519:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:632796812519:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:632796812519:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "炼乳 5罐装 加糖"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 炼乳 5罐装 加糖 | Normalized query: 炼乳 5罐装 加糖 [SEP] Next > [SEP] 632796812519 [SEP] 熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用 [SEP] 47.0 to 48.0 [SEP] 925895372189 [SEP] 熊猫炼乳350g炼乳炼奶烘焙奶茶咖啡甜品面包蛋糕原料调制加糖炼乳 [SEP] 29.0 to 70.0 [SEP] 563404214673 [SEP] 熊猫加糖炼乳5kg*4罐蛋挞液奶茶咖啡甜点炼奶烘培原料商用装整箱 [SEP] 412.0 [SEP] 714079356018 [SEP] 风行牌加糖炼乳450g/瓶家用蛋挞烘培炼乳浓缩牛奶/奶精新日期 [SEP] 16.0 to 45.0 [SEP] 934571432156 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 84.0 to 533.0 [SEP] 705958379697 [SEP] 雀巢鹰唛炼奶185g克支装加糖炼乳原味草莓巧克力原味烘焙原料 [SEP] 9.0 to 33.0 [SEP] 942532397062 [SEP] 白俄罗斯原装进口加糖加菊苣炼奶380g咖啡替代品三合一烘焙抹面包 [SEP] 29.0 [SEP] 814258151113 [SEP] 雀巢炼乳鹰唛炼奶350g罐装商用家用烘焙奶茶店专用蛋挞奶油甜练乳 [SEP] 16.0 to 598.0 [SEP] 696820233134 [SEP] 雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙 [SEP] 11.0 [SEP] 809688259924 [SEP] 雀巢炼乳鹰唛炼奶商用罐装炼乳奶茶店专用小包装家用350g*24罐 [SEP] 325.0 [SEP] 575388232339 [SEP] 熊猫牌甜炼乳350g罐装 商用小包装黄金小馒头 奶茶店专用烘焙家用 [SEP] 33.0 to 123.0 [SEP] 738145460936 [SEP] 越南进口寿星翁炼乳罐装寿星公调制炼奶咖啡奶茶甜点牛油果汁原料 [SEP] 12.0 to 40.0 [SEP] 845176270742 [SEP] 熊猫牌熊猫炼乳炼奶350g涂抹面包吐司奶茶咖啡伴侣刨冰蛋糕批发 [SEP] 23.0 to 117.0 [SEP] 635830624028 [SEP] 雀巢炼乳鹰唛炼奶350g家用罐装面包咖啡冰淇淋奶茶甜品店商用 [SEP] 49.0 to 299.0 [SEP] 938725714410 [SEP] 雀巢鹰唛炼奶350g*6罐装家用炼乳烘焙蛋挞甜品奶茶店专用炼奶原料 [SEP] 58.0 to 140.0 [SEP] 932605415005 [SEP] PANDA熊猫炼乳350g商用罐装面包烘焙店专用奶油小馒头蛋挞水果捞 [SEP] 14.0 to 542.0 [SEP] 943607942008 [SEP] 熊猫植脂淡奶植脂淡奶罐装奶茶咖啡伴侣烘焙原料 [SEP] 8.0 to 28.0 [SEP] 791567446815 [SEP] 香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装 [SEP] 15.0 to 68.0 [SEP] 617058975568 [SEP] 雀巢炼乳鹰唛炼奶家用烘焙蛋挞奶茶店专用商用练奶馒头咖啡用练乳 [SEP] 49.0 to 680.0 [SEP] 657087536327 [SEP] 雀巢鹰唛脱脂原味草莓香浓巧克力炼奶炼乳早餐甜点烘焙原料185g [SEP] 8.0 to 35.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"632796812519\", \"925895372189\", \"563404214673\", \"714079356018\", \"934571432156\", \"705958379697\", \"942532397062\", \"814258151113\", \"696820233134\", \"809688259924\", \"575388232339\", \"738145460936\", \"845176270742\", \"635830624028\", \"938725714410\", \"932605415005\", \"943607942008\", \"791567446815\", \"617058975568\", \"657087536327\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "632796812519",
+            "925895372189",
+            "563404214673",
+            "714079356018",
+            "934571432156",
+            "705958379697",
+            "942532397062",
+            "814258151113",
+            "696820233134",
+            "809688259924",
+            "575388232339",
+            "738145460936",
+            "845176270742",
+            "635830624028",
+            "938725714410",
+            "932605415005",
+            "943607942008",
+            "791567446815",
+            "617058975568",
+            "657087536327"
+          ],
+          "normalized_query": "炼乳 5罐装 加糖",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "632796812519",
+              "brand": "美宜拍",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "加糖",
+                "蛋挞",
+                "奶茶",
+                "家用"
+              ],
+              "price": "47.0 to 48.0",
+              "rank": 1,
+              "title": "熊猫牌加糖炼乳350克*5罐装甜炼乳烘焙制作蛋挞奶茶原料家用"
+            },
+            {
+              "asin": "925895372189",
+              "brand": "优焙粮仓",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "烘焙",
+                "奶茶",
+                "咖啡",
+                "甜品",
+                "面包蛋糕",
+                "加糖"
+              ],
+              "price": "29.0 to 70.0",
+              "rank": 2,
+              "title": "熊猫炼乳350g炼乳炼奶烘焙奶茶咖啡甜品面包蛋糕原料调制加糖炼乳"
+            },
+            {
+              "asin": "563404214673",
+              "brand": "四川其利",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "蛋挞液",
+                "奶茶",
+                "咖啡",
+                "甜点",
+                "商用",
+                "整箱",
+                "烘焙"
+              ],
+              "price": "412.0",
+              "rank": 3,
+              "title": "熊猫加糖炼乳5kg*4罐蛋挞液奶茶咖啡甜点炼奶烘培原料商用装整箱"
+            },
+            {
+              "asin": "714079356018",
+              "brand": "智鸿精选食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "加糖",
+                "家用",
+                "蛋挞",
+                "浓缩",
+                "牛奶",
+                "新日期"
+              ],
+              "price": "16.0 to 45.0",
+              "rank": 4,
+              "title": "风行牌加糖炼乳450g/瓶家用蛋挞烘培炼乳浓缩牛奶/奶精新日期"
+            },
+            {
+              "asin": "934571432156",
+              "brand": "语森忆旭凡莉专卖店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "全脂",
+                "加糖",
+                "奶茶",
+                "司康",
+                "蛋挞",
+                "蛋糕",
+                "吐司",
+                "面包",
+                "咖啡",
+                "商用"
+              ],
+              "price": "84.0 to 533.0",
+              "rank": 5,
+              "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+            },
+            {
+              "asin": "705958379697",
+              "brand": "浦西烘焙",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "加糖",
+                "草莓",
+                "巧克力",
+                "原味"
+              ],
+              "price": "9.0 to 33.0",
+              "rank": 6,
+              "title": "雀巢鹰唛炼奶185g克支装加糖炼乳原味草莓巧克力原味烘焙原料"
+            },
+            {
+              "asin": "942532397062",
+              "brand": "谢瓦食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "咖啡替代品",
+                "烘焙",
+                "抹面包",
+                "三合一",
+                "直接冲饮"
+              ],
+              "price": "29.0",
+              "rank": 7,
+              "title": "白俄罗斯原装进口加糖加菊苣炼奶380g咖啡替代品三合一烘焙抹面包"
+            },
+            {
+              "asin": "814258151113",
+              "brand": "DU可茶饮特供处",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "家用",
+                "奶茶店专用",
+                "蛋挞",
+                "奶油",
+                "甜"
+              ],
+              "price": "16.0 to 598.0",
+              "rank": 8,
+              "title": "雀巢炼乳鹰唛炼奶350g罐装商用家用烘焙奶茶店专用蛋挞奶油甜练乳"
+            },
+            {
+              "asin": "696820233134",
+              "brand": "橙子烘培",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "罐装",
+                "家用",
+                "商用",
+                "奶茶店",
+                "专用",
+                "蛋挞液",
+                "配料",
+                "甜品"
+              ],
+              "price": "11.0",
+              "rank": 9,
+              "title": "雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙"
+            },
+            {
+              "asin": "809688259924",
+              "brand": "益言饮品原料批发",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "罐装",
+                "奶茶店专用",
+                "小包装",
+                "家用"
+              ],
+              "price": "325.0",
+              "rank": 10,
+              "title": "雀巢炼乳鹰唛炼奶商用罐装炼乳奶茶店专用小包装家用350g*24罐"
+            },
+            {
+              "asin": "575388232339",
+              "brand": "航宇食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "小包装",
+                "黄金小馒头",
+                "奶茶店专用",
+                "家用"
+              ],
+              "price": "33.0 to 123.0",
+              "rank": 11,
+              "title": "熊猫牌甜炼乳350g罐装 商用小包装黄金小馒头 奶茶店专用烘焙家用"
+            },
+            {
+              "asin": "738145460936",
+              "brand": "越来香食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "越南进口",
+                "调制",
+                "咖啡",
+                "奶茶",
+                "甜点",
+                "牛油果汁",
+                "原料"
+              ],
+              "price": "12.0 to 40.0",
+              "rank": 12,
+              "title": "越南进口寿星翁炼乳罐装寿星公调制炼奶咖啡奶茶甜点牛油果汁原料"
+            },
+            {
+              "asin": "845176270742",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "350g",
+                "涂抹",
+                "面包",
+                "吐司",
+                "奶茶",
+                "咖啡伴侣",
+                "刨冰",
+                "蛋糕",
+                "批发",
+                "丝滑"
+              ],
+              "price": "23.0 to 117.0",
+              "rank": 13,
+              "title": "熊猫牌熊猫炼乳炼奶350g涂抹面包吐司奶茶咖啡伴侣刨冰蛋糕批发"
+            },
+            {
+              "asin": "635830624028",
+              "brand": "蓝芒食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "家用",
+                "面包",
+                "咖啡",
+                "冰淇淋",
+                "奶茶",
+                "甜品店",
+                "商用"
+              ],
+              "price": "49.0 to 299.0",
+              "rank": 14,
+              "title": "雀巢炼乳鹰唛炼奶350g家用罐装面包咖啡冰淇淋奶茶甜品店商用"
+            },
+            {
+              "asin": "938725714410",
+              "brand": "宝哥餐饮原料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "家用",
+                "蛋挞",
+                "甜品",
+                "奶茶店专用",
+                "原料"
+              ],
+              "price": "58.0 to 140.0",
+              "rank": 15,
+              "title": "雀巢鹰唛炼奶350g*6罐装家用炼乳烘焙蛋挞甜品奶茶店专用炼奶原料"
+            },
+            {
+              "asin": "932605415005",
+              "brand": "壹零茶盟奶茶原料批发",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "商用",
+                "面包",
+                "烘焙店",
+                "奶油小馒头",
+                "蛋挞",
+                "水果捞"
+              ],
+              "price": "14.0 to 542.0",
+              "rank": 16,
+              "title": "PANDA熊猫炼乳350g商用罐装面包烘焙店专用奶油小馒头蛋挞水果捞"
+            },
+            {
+              "asin": "943607942008",
+              "brand": "阿思的零食铺子",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "奶茶咖啡伴侣?"
+              ],
+              "price": "8.0 to 28.0",
+              "rank": 17,
+              "title": "熊猫植脂淡奶植脂淡奶罐装奶茶咖啡伴侣烘焙原料"
+            },
+            {
+              "asin": "791567446815",
+              "brand": "味美佳港货零食店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "小包装",
+                "全脂",
+                "易拉罐装"
+              ],
+              "price": "15.0 to 68.0",
+              "rank": 18,
+              "title": "香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装"
+            },
+            {
+              "asin": "617058975568",
+              "brand": "茶舞啡扬食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "热销",
+                "送烘焙甜品配方",
+                "家用"
+              ],
+              "price": "49.0 to 680.0",
+              "rank": 19,
+              "title": "雀巢炼乳鹰唛炼奶家用烘焙蛋挞奶茶店专用商用练奶馒头咖啡用练乳"
+            },
+            {
+              "asin": "657087536327",
+              "brand": "吃汉食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "脱脂",
+                "香浓",
+                "早餐",
+                "甜点"
+              ],
+              "price": "8.0 to 35.0",
+              "rank": 20,
+              "title": "雀巢鹰唛脱脂原味草莓香浓巧克力炼奶炼乳早餐甜点烘焙原料185g"
+            }
+          ],
+          "query": "炼乳 5罐装 加糖",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"炼乳 5罐装 加糖\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:da95d28f7fa0882b4be251e435908fa2329f5a82a819b3d7c9d524f42bf79a41"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:da95d28f7fa0882b4be251e435908fa2329f5a82a819b3d7c9d524f42bf79a41"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 6,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "result_set:da95d28f7fa0882b4be251e435908fa2329f5a82a819b3d7c9d524f42bf79a41"
+          ],
+          "seen_asin_count": 26,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "696820233134"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 规格描述 [SEP] 雀巢炼乳鹰唛炼奶350g [SEP] 雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙 [SEP] 价格: 11.0 [SEP] 店铺: 橙子烘培 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"雀巢炼乳鹰唛炼奶350g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "雀巢炼乳鹰唛炼奶350g"
+          ],
+          "available_options": {
+            "规格描述": [
+              "雀巢炼乳鹰唛炼奶350g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "696820233134",
+            "brand": "橙子烘培",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "罐装",
+              "家用",
+              "商用",
+              "奶茶店",
+              "专用",
+              "蛋挞液",
+              "配料",
+              "甜品"
+            ],
+            "price": "11.0",
+            "title": "雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 11
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"696820233134\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:696820233134",
+            "constraint:696820233134:category:pass",
+            "constraint:696820233134:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:696820233134",
+            "constraint:696820233134:category:pass",
+            "constraint:696820233134:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "product:696820233134",
+            "constraint:696820233134:category:pass",
+            "constraint:696820233134:budget:pass"
+          ],
+          "seen_asin_count": 26,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "搜索到多款炼乳：熊猫牌加糖炼乳350克*5罐装整组仅¥47-48（约¥9.5/罐），雀巢鹰唛炼奶350g罐装¥11/罐（5罐≈¥55），均满足5罐≤100元；另有黑白全脂加糖炼乳、寿星翁、风行等候选。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "已找到满足\"5罐总价≤100元\"的炼乳，请确认您想选哪款（可下单）：A. 熊猫牌加糖炼乳350克*5罐装整组（约¥47-48，有\"小金奖/蓝标/黑标\"三种可选，请注明颜色）；B. 雀巢鹰唛炼奶350g罐装（¥11/罐，买5罐约¥55）；C. 都不满意，希望优先找您偏好的安佳Anchor或其他品牌。"
+      },
+      "raw": {
+        "session": "1190",
+        "question": "已找到满足\"5罐总价≤100元\"的炼乳，请确认您想选哪款（可下单）：A. 熊猫牌加糖炼乳350克*5罐装整组（约¥47-48，有\"小金奖/蓝标/黑标\"三种可选，请注明颜色）；B. 雀巢鹰唛炼奶350g罐装（¥11/罐，买5罐约¥55）；C. 都不满意，希望优先找您偏好的安佳Anchor或其他品牌。",
+        "reply": "这几款规格都不太对呀，我想要的是397g一罐、带拉环易开的，最好是我常买的黑白那个牌子。麻烦帮我按这个找找看～"
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "用户否定了熊猫牌/雀巢候选，明确要求：397g/罐、带拉环易开、偏好常买的\"黑白\"品牌，需按此重新搜索。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "黑白 炼乳 397g 拉环"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 黑白 炼乳 397g 拉环 | Normalized query: 黑白 炼乳 397g 拉环 [SEP] Next > [SEP] 934571432156 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 84.0 to 533.0 [SEP] 791567446815 [SEP] 香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装 [SEP] 15.0 to 68.0 [SEP] 712192194660 [SEP] 黑白淡奶400g荷兰进口全脂淡奶炼乳蛋糕港式奶茶店烘焙甜品原材料 [SEP] 25.0 to 140.0 [SEP] 928521840436 [SEP] 黑白淡奶整箱奶茶店专用商用炼乳港式奶茶荷兰进口全脂奶批发小罐 [SEP] 215.0 to 422.0 [SEP] 890411839478 [SEP] 熊猫牌炼乳炼奶酱5kg/2.5kg罐甜品炼奶烘焙咖啡奶茶伴侣面包馒头 [SEP] 58.0 to 97.0 [SEP] 918547257303 [SEP] 黑白全脂淡奶400g*6罐 炼乳蛋挞烘焙原料港式丝袜奶茶店荷兰进口 [SEP] 32.0 to 447.0 [SEP] 617591472352 [SEP] 荷兰进口黑白淡奶400g*48罐 商用港式丝袜奶茶原料冲调饮品淡牛奶 [SEP] 218.0 to 430.0 [SEP] 581832779288 [SEP] 荷兰进口黑白淡奶400g*6罐全脂炼乳港式丝袜奶茶咖啡烘焙甜品原料 [SEP] 2.0 to 68.0 [SEP] 765342249321 [SEP] 荷兰进口原装黑白淡奶400g 港式丝袜奶茶咖啡店专用蛋挞液淡炼乳 [SEP] 9.0 to 58.0 [SEP] 915071217220 [SEP] 现货 香港版黑白全脂淡奶 独立12小杯便携装茶餐厅港式奶茶搭档 [SEP] 28.0 to 187.0 [SEP] 882985285408 [SEP] 香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶 [SEP] 13.0 to 69.0 [SEP] 910015603462 [SEP] 香港版黑白淡奶便携装全脂淡奶港式丝袜奶茶咖啡奶球伴侣奶精球 [SEP] 15.0 to 58.0 [SEP] 822262200513 [SEP] 香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶 [SEP] 33.0 to 199.0 [SEP] 678000453568 [SEP] 雀巢三花全脂淡奶410g*4罐 全脂淡炼乳港式咖啡奶茶甜品原料 包邮 [SEP] 32.0 to 52.0 [SEP] 676482315993 [SEP] 雀巢炼乳350g*48罐蛋挞液奶茶练奶淡奶烘焙原料 [SEP] 1440.0 [SEP] 563404214673 [SEP] 熊猫加糖炼乳5kg*4罐蛋挞液奶茶咖啡甜点炼奶烘培原料商用装整箱 [SEP] 412.0 [SEP] 615021745598 [SEP] 烘焙原料 雀巢鹰麦炼乳 鹰唛炼奶 葡式蛋挞液 甜点奶茶350克原装 [SEP] 15.0 [SEP] 696820233134 [SEP] 雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙 [SEP] 11.0 [SEP] 709275799292 [SEP] 百强炼乳1kg 甜炼奶面包蛋挞小馒头家用奶茶烘焙咖啡专用炼乳 [SEP] 21.0 [SEP] 631444362876 [SEP] 雀巢鹰唛炼奶炼乳草莓味185g 蛋挞面包咖啡淡奶调制烘焙烘焙原料 [SEP] 14.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"934571432156\", \"791567446815\", \"712192194660\", \"928521840436\", \"890411839478\", \"918547257303\", \"617591472352\", \"581832779288\", \"765342249321\", \"915071217220\", \"882985285408\", \"910015603462\", \"822262200513\", \"678000453568\", \"676482315993\", \"563404214673\", \"615021745598\", \"696820233134\", \"709275799292\", \"631444362876\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "934571432156",
+            "791567446815",
+            "712192194660",
+            "928521840436",
+            "890411839478",
+            "918547257303",
+            "617591472352",
+            "581832779288",
+            "765342249321",
+            "915071217220",
+            "882985285408",
+            "910015603462",
+            "822262200513",
+            "678000453568",
+            "676482315993",
+            "563404214673",
+            "615021745598",
+            "696820233134",
+            "709275799292",
+            "631444362876"
+          ],
+          "normalized_query": "黑白 炼乳 397g 拉环",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "934571432156",
+              "brand": "语森忆旭凡莉专卖店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "全脂",
+                "加糖",
+                "奶茶",
+                "司康",
+                "蛋挞",
+                "蛋糕",
+                "吐司",
+                "面包",
+                "咖啡",
+                "商用"
+              ],
+              "price": "84.0 to 533.0",
+              "rank": 1,
+              "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+            },
+            {
+              "asin": "791567446815",
+              "brand": "味美佳港货零食店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "小包装",
+                "全脂",
+                "易拉罐装"
+              ],
+              "price": "15.0 to 68.0",
+              "rank": 2,
+              "title": "香港BLACK&amp;WHITE黑白淡奶小包装 全脂淡奶易拉罐装纸盒装12粒装"
+            },
+            {
+              "asin": "712192194660",
+              "brand": "苏博茶饮咖啡原料特卖店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "荷兰进口",
+                "全脂",
+                "蛋糕",
+                "港式奶茶店",
+                "淡奶"
+              ],
+              "price": "25.0 to 140.0",
+              "rank": 3,
+              "title": "黑白淡奶400g荷兰进口全脂淡奶炼乳蛋糕港式奶茶店烘焙甜品原材料"
+            },
+            {
+              "asin": "928521840436",
+              "brand": "猛虎班烘焙原料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "整箱",
+                "奶茶店专用",
+                "商用",
+                "港式奶茶",
+                "荷兰进口",
+                "全脂奶",
+                "批发",
+                "小罐"
+              ],
+              "price": "215.0 to 422.0",
+              "rank": 4,
+              "title": "黑白淡奶整箱奶茶店专用商用炼乳港式奶茶荷兰进口全脂奶批发小罐"
+            },
+            {
+              "asin": "890411839478",
+              "brand": "巴蜀川宝食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "炼奶酱",
+                "甜品",
+                "烘焙",
+                "咖啡",
+                "奶茶伴侣",
+                "面包",
+                "馒头"
+              ],
+              "price": "58.0 to 97.0",
+              "rank": 5,
+              "title": "熊猫牌炼乳炼奶酱5kg/2.5kg罐甜品炼奶烘焙咖啡奶茶伴侣面包馒头"
+            },
+            {
+              "asin": "918547257303",
+              "brand": "星杰西餐烘焙商行",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "全脂淡奶?",
+                "蛋挞",
+                "港式丝袜奶茶?",
+                "??荷兰进口"
+              ],
+              "price": "32.0 to 447.0",
+              "rank": 6,
+              "title": "黑白全脂淡奶400g*6罐 炼乳蛋挞烘焙原料港式丝袜奶茶店荷兰进口"
+            },
+            {
+              "asin": "617591472352",
+              "brand": "广汇优品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "荷兰进口",
+                "商用",
+                "港式",
+                "丝袜奶茶",
+                "冲调饮品"
+              ],
+              "price": "218.0 to 430.0",
+              "rank": 7,
+              "title": "荷兰进口黑白淡奶400g*48罐 商用港式丝袜奶茶原料冲调饮品淡牛奶"
+            },
+            {
+              "asin": "581832779288",
+              "brand": "航宇食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "荷兰原装",
+                "进口",
+                "全脂",
+                "咖啡伴侣",
+                "奶茶伴侣",
+                "用于甜品制作"
+              ],
+              "price": "2.0 to 68.0",
+              "rank": 8,
+              "title": "荷兰进口黑白淡奶400g*6罐全脂炼乳港式丝袜奶茶咖啡烘焙甜品原料"
+            },
+            {
+              "asin": "765342249321",
+              "brand": "喜昱奶茶烘焙原料批发",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "荷兰",
+                "进口",
+                "原装",
+                "港式",
+                "丝袜奶茶",
+                "咖啡店",
+                "专用",
+                "蛋挞液"
+              ],
+              "price": "9.0 to 58.0",
+              "rank": 9,
+              "title": "荷兰进口原装黑白淡奶400g 港式丝袜奶茶咖啡店专用蛋挞液淡炼乳"
+            },
+            {
+              "asin": "915071217220",
+              "brand": "甄丰收旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "现货",
+                "香港版",
+                "黑白",
+                "全脂",
+                "便携装",
+                "茶餐厅港式奶茶搭档"
+              ],
+              "price": "28.0 to 187.0",
+              "rank": 10,
+              "title": "现货 香港版黑白全脂淡奶 独立12小杯便携装茶餐厅港式奶茶搭档"
+            },
+            {
+              "asin": "882985285408",
+              "brand": "全球爱购零食店铺",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "香港版",
+                "全脂",
+                "黑白淡奶",
+                "咖啡奶球"
+              ],
+              "price": "13.0 to 69.0",
+              "rank": 11,
+              "title": "香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶"
+            },
+            {
+              "asin": "910015603462",
+              "brand": "Wa Wa Shop",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "香港版",
+                "全脂",
+                "丝袜奶茶",
+                "咖啡奶球",
+                "奶精球"
+              ],
+              "price": "15.0 to 58.0",
+              "rank": 12,
+              "title": "香港版黑白淡奶便携装全脂淡奶港式丝袜奶茶咖啡奶球伴侣奶精球"
+            },
+            {
+              "asin": "822262200513",
+              "brand": "宵裕维旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "香港版",
+                "全脂淡奶",
+                "咖啡奶球",
+                "便携装"
+              ],
+              "price": "33.0 to 199.0",
+              "rank": 13,
+              "title": "香港版黑白全脂淡奶12杯156克 咖啡奶球 小包装便携装黑白奶"
+            },
+            {
+              "asin": "678000453568",
+              "brand": "食通天饮食",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "淡炼乳",
+                "港式",
+                "咖啡",
+                "奶茶",
+                "甜品",
+                "原料",
+                "包邮"
+              ],
+              "price": "32.0 to 52.0",
+              "rank": 14,
+              "title": "雀巢三花全脂淡奶410g*4罐 全脂淡炼乳港式咖啡奶茶甜品原料 包邮"
+            },
+            {
+              "asin": "676482315993",
+              "brand": "开心奶茶工坊",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "蛋挞液",
+                "奶茶",
+                "炼奶",
+                "淡奶"
+              ],
+              "price": "1440.0",
+              "rank": 15,
+              "title": "雀巢炼乳350g*48罐蛋挞液奶茶练奶淡奶烘焙原料"
+            },
+            {
+              "asin": "563404214673",
+              "brand": "四川其利",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "蛋挞液",
+                "奶茶",
+                "咖啡",
+                "甜点",
+                "商用",
+                "整箱",
+                "烘焙"
+              ],
+              "price": "412.0",
+              "rank": 16,
+              "title": "熊猫加糖炼乳5kg*4罐蛋挞液奶茶咖啡甜点炼奶烘培原料商用装整箱"
+            },
+            {
+              "asin": "615021745598",
+              "brand": "八哥烘焙派对用品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "炼奶",
+                "葡式",
+                "蛋挞液",
+                "甜点",
+                "奶茶"
+              ],
+              "price": "15.0",
+              "rank": 17,
+              "title": "烘焙原料 雀巢鹰麦炼乳 鹰唛炼奶 葡式蛋挞液 甜点奶茶350克原装"
+            },
+            {
+              "asin": "696820233134",
+              "brand": "橙子烘培",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "罐装",
+                "家用",
+                "商用",
+                "奶茶店",
+                "专用",
+                "蛋挞液",
+                "配料",
+                "甜品"
+              ],
+              "price": "11.0",
+              "rank": 18,
+              "title": "雀巢炼乳鹰唛炼奶350g罐装家用商用奶茶店专用蛋挞液配料甜品烘焙"
+            },
+            {
+              "asin": "709275799292",
+              "brand": "烘焙麦点师",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "面包",
+                "蛋挞",
+                "小馒头",
+                "家用",
+                "奶茶",
+                "咖啡",
+                "专用"
+              ],
+              "price": "21.0",
+              "rank": 19,
+              "title": "百强炼乳1kg 甜炼奶面包蛋挞小馒头家用奶茶烘焙咖啡专用炼乳"
+            },
+            {
+              "asin": "631444362876",
+              "brand": "易美食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "key_attributes": [
+                "蛋挞",
+                "面包",
+                "咖啡",
+                "调制",
+                "原料"
+              ],
+              "price": "14.0",
+              "rank": 20,
+              "title": "雀巢鹰唛炼奶炼乳草莓味185g 蛋挞面包咖啡淡奶调制烘焙烘焙原料"
+            }
+          ],
+          "query": "黑白 炼乳 397g 拉环",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"黑白 炼乳 397g 拉环\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:db48afe8deeafeac2bb47397a27ae297f4d2600ceb55c4c41762e638991be9a0"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "result_set:db48afe8deeafeac2bb47397a27ae297f4d2600ceb55c4c41762e638991be9a0"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 12,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "result_set:db48afe8deeafeac2bb47397a27ae297f4d2600ceb55c4c41762e638991be9a0"
+          ],
+          "seen_asin_count": 38,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "934571432156"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*6罐 [SEP] 【拉环易开罐】黑白炼乳397g*6罐 [SEP] 【半箱商用划算】黑白炼乳397g*24罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*24罐 [SEP] 【拉环易开罐】黑白炼乳397g*5罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*5罐 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 价格: 84.0 to 533.0 [SEP] 店铺: 语森忆旭凡莉专卖店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*6罐\", \"【拉环易开罐】黑白炼乳397g*6罐\", \"【半箱商用划算】黑白炼乳397g*24罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*24罐\", \"【拉环易开罐】黑白炼乳397g*5罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*5罐\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+            "【拉环易开罐】黑白炼乳397g*6罐",
+            "【半箱商用划算】黑白炼乳397g*24罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+            "【拉环易开罐】黑白炼乳397g*5罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+              "【拉环易开罐】黑白炼乳397g*6罐",
+              "【半箱商用划算】黑白炼乳397g*24罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+              "【拉环易开罐】黑白炼乳397g*5罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "934571432156",
+            "brand": "语森忆旭凡莉专卖店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "全脂",
+              "加糖",
+              "奶茶",
+              "司康",
+              "蛋挞",
+              "蛋糕",
+              "吐司",
+              "面包",
+              "咖啡",
+              "商用"
+            ],
+            "price": "84.0 to 533.0",
+            "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"934571432156\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:934571432156",
+            "constraint:934571432156:category:pass",
+            "constraint:934571432156:budget:pass"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "product:934571432156",
+            "constraint:934571432156:category:pass",
+            "constraint:934571432156:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 0,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 0,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "product:934571432156",
+            "constraint:934571432156:category:pass",
+            "constraint:934571432156:budget:pass"
+          ],
+          "seen_asin_count": 38,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "【拉环易开罐】黑白炼乳397g*5罐"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*6罐 [SEP] 【拉环易开罐】黑白炼乳397g*6罐 [SEP] 【半箱商用划算】黑白炼乳397g*24罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*24罐 [SEP] 【拉环易开罐】黑白炼乳397g*5罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*5罐 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 价格: 84.0 [SEP] 店铺: 语森忆旭凡莉专卖店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*6罐\", \"【拉环易开罐】黑白炼乳397g*6罐\", \"【半箱商用划算】黑白炼乳397g*24罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*24罐\", \"【拉环易开罐】黑白炼乳397g*5罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*5罐\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+            "【拉环易开罐】黑白炼乳397g*6罐",
+            "【半箱商用划算】黑白炼乳397g*24罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+            "【拉环易开罐】黑白炼乳397g*5罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+              "【拉环易开罐】黑白炼乳397g*6罐",
+              "【半箱商用划算】黑白炼乳397g*24罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+              "【拉环易开罐】黑白炼乳397g*5罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "934571432156",
+            "brand": "语森忆旭凡莉专卖店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "全脂",
+              "加糖",
+              "奶茶",
+              "司康",
+              "蛋挞",
+              "蛋糕",
+              "吐司",
+              "面包",
+              "咖啡",
+              "商用"
+            ],
+            "price": "84.0 to 533.0",
+            "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "【拉环易开罐】黑白炼乳397g*5罐"
+          },
+          "selected_price": 84
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"【拉环易开罐】黑白炼乳397g*5罐\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*5罐"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*5罐"
+          ],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 1,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*5罐"
+          ],
+          "seen_asin_count": 38,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "【拉环易开罐】黑白炼乳397g*6罐"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*6罐 [SEP] 【拉环易开罐】黑白炼乳397g*6罐 [SEP] 【半箱商用划算】黑白炼乳397g*24罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*24罐 [SEP] 【拉环易开罐】黑白炼乳397g*5罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*5罐 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 价格: 124.0 [SEP] 店铺: 语森忆旭凡莉专卖店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*6罐\", \"【拉环易开罐】黑白炼乳397g*6罐\", \"【半箱商用划算】黑白炼乳397g*24罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*24罐\", \"【拉环易开罐】黑白炼乳397g*5罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*5罐\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+            "【拉环易开罐】黑白炼乳397g*6罐",
+            "【半箱商用划算】黑白炼乳397g*24罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+            "【拉环易开罐】黑白炼乳397g*5罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+              "【拉环易开罐】黑白炼乳397g*6罐",
+              "【半箱商用划算】黑白炼乳397g*24罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+              "【拉环易开罐】黑白炼乳397g*5罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "934571432156",
+            "brand": "语森忆旭凡莉专卖店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "全脂",
+              "加糖",
+              "奶茶",
+              "司康",
+              "蛋挞",
+              "蛋糕",
+              "吐司",
+              "面包",
+              "咖啡",
+              "商用"
+            ],
+            "price": "84.0 to 533.0",
+            "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "【拉环易开罐】黑白炼乳397g*6罐"
+          },
+          "selected_price": 124
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"【拉环易开罐】黑白炼乳397g*6罐\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*6罐"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*6罐"
+          ],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 2,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 2,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "option:934571432156:color:【拉环易开罐】黑白炼乳397g*6罐"
+          ],
+          "seen_asin_count": 38,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "找到完全匹配商品：黑白全脂加糖炼乳（ID 934571432156）的\"【拉环易开罐】黑白炼乳397g*5罐\"规格，价格¥84（≤100元，合¥16.8/罐）；同链接6罐为¥124，验证为规格对应价格。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "【拉环易开罐】黑白炼乳397g*5罐"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 4,
+        "goal": {},
+        "idx": "slot-4-1190",
+        "instruction": "Instruction: [SEP] 有没有一款炼乳是5罐价格不超过100元的？ [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*6罐 [SEP] 【拉环易开罐】黑白炼乳397g*6罐 [SEP] 【半箱商用划算】黑白炼乳397g*24罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*24罐 [SEP] 【拉环易开罐】黑白炼乳397g*5罐 [SEP] 【经典爆款加送三合一开罐器】黑白淡奶400g*5罐 [SEP] 黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱 [SEP] 价格: 84.0 [SEP] 店铺: 语森忆旭凡莉专卖店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*6罐\", \"【拉环易开罐】黑白炼乳397g*6罐\", \"【半箱商用划算】黑白炼乳397g*24罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*24罐\", \"【拉环易开罐】黑白炼乳397g*5罐\", \"【经典爆款加送三合一开罐器】黑白淡奶400g*5罐\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+            "【拉环易开罐】黑白炼乳397g*6罐",
+            "【半箱商用划算】黑白炼乳397g*24罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+            "【拉环易开罐】黑白炼乳397g*5罐",
+            "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*6罐",
+              "【拉环易开罐】黑白炼乳397g*6罐",
+              "【半箱商用划算】黑白炼乳397g*24罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*24罐",
+              "【拉环易开罐】黑白炼乳397g*5罐",
+              "【经典爆款加送三合一开罐器】黑白淡奶400g*5罐"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "934571432156",
+            "brand": "语森忆旭凡莉专卖店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+            "key_attributes": [
+              "全脂",
+              "加糖",
+              "奶茶",
+              "司康",
+              "蛋挞",
+              "蛋糕",
+              "吐司",
+              "面包",
+              "咖啡",
+              "商用"
+            ],
+            "price": "84.0 to 533.0",
+            "title": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "【拉环易开罐】黑白炼乳397g*5罐"
+          },
+          "selected_price": 84
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"【拉环易开罐】黑白炼乳397g*5罐\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 6,
+            "option": 2,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 3,
+          "runtime_evidence_counts": {
+            "constraint": 6,
+            "option": 2,
+            "product": 3,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 38,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 16,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 4,
+        "goal": {
+          "asin": "934571432156",
+          "attributes": [
+            "全脂",
+            "加糖",
+            "奶茶",
+            "司康",
+            "蛋挞",
+            "蛋糕",
+            "吐司",
+            "面包",
+            "咖啡",
+            "商用",
+            "家用"
+          ],
+          "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "全脂",
+            "加糖",
+            "奶茶",
+            "司康",
+            "蛋挞",
+            "蛋糕",
+            "吐司",
+            "面包",
+            "咖啡",
+            "商用",
+            "家用"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "【拉环易开罐】黑白炼乳397g*5罐"
+          ],
+          "instruction_full": "有没有一款卖甜品和在家都能用的炼乳，不用减脂，要香甜可口，制作奶茶、司康、蛋挞，蛋糕，吐司，面包，咖啡时都能用，手拉环式方便打开，每罐不到一斤，数量不超过5罐，价格不超过100元。",
+          "instruction_simple": "有没有一款炼乳是5罐价格不超过100元的？",
+          "instruction_text": "有没有一款炼乳是5罐价格不超过100元的？",
+          "name": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": 100,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "【拉环易开罐】黑白炼乳397g*5罐"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.24,
+              "复购率": 0.78,
+              "平均客单价": 57.5,
+              "支付方式偏好": "微信支付",
+              "是否促销敏感": false,
+              "近30天消费金额": 862.5,
+              "近90天订单数": 15
+            },
+            "人口属性": {
+              "会员等级": "黄金会员",
+              "年龄段": "25-34, ",
+              "性别": "女",
+              "消费等级": "中"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "HERBEL黑白"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "LAVAZZA拉瓦萨"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "安佳Anchor"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "凯膳怡"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "NIKE"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 200,
+                  "最小值": 20
+                },
+                "功能": [
+                  "易拉环开口",
+                  "多用途配料",
+                  "全脂香甜",
+                  "常温保存"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  "食品级金属"
+                ],
+                "颜色": [
+                  "奶油白",
+                  "焦糖色",
+                  "莫兰迪粉"
+                ],
+                "风格": [
+                  "英式",
+                  "港式"
+                ]
+              },
+              "类目偏好": {
+                "3C数码": "无",
+                "厨房小电": "中",
+                "咖啡冲调": "高",
+                "户外运动": "无",
+                "服饰鞋包": "低",
+                "母婴用品": "中",
+                "烘焙原料": "高",
+                "美妆护肤": "低"
+              }
+            },
+            "地区信息": {
+              "区县": "姑苏区",
+              "城市": "苏州市",
+              "时区": "Asia/Shanghai",
+              "省份": "江苏省"
+            },
+            "最后更新时间": "2024-06-13T09:45:00Z",
+            "注册时间": "2019-08-17T14:25:33Z",
+            "注册渠道": "App",
+            "用户ID": "U9C7A23F5, ",
+            "用户标签": [
+              "家庭烘焙达人",
+              "咖啡轻玩家",
+              "高复购用户",
+              "非促销敏感型",
+              "品质优先",
+              "内容分享博主"
+            ],
+            "行为特征": {
+              "常用设备": "iOS手机",
+              "日均浏览时长": 2100,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "全脂加糖炼乳",
+                "可奶茶、烘焙、司康蛋挞制作时使用的炼乳",
+                "可蛋糕、吐司面包、咖啡制作时使用的炼乳",
+                "商用家用两用型炼乳",
+                "拉环开罐方式的397g罐装炼乳"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                10,
+                11,
+                21,
+                22
+              ],
+              "近7天访问次数": 12
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-4-1190",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 934571432156 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"\\u3010\\u62c9\\u73af\\u6613\\u5f00\\u7f50\\u3011\\u9ed1\\u767d\\u70bc\\u4e73397g*5\\u7f50\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] 1.0 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "934571432156",
+          "attributes": [
+            "全脂",
+            "加糖",
+            "奶茶",
+            "司康",
+            "蛋挞",
+            "蛋糕",
+            "吐司",
+            "面包",
+            "咖啡",
+            "商用",
+            "家用"
+          ],
+          "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+          "instruction_text": "有没有一款卖甜品和在家都能用的炼乳，不用减脂，要香甜可口，制作奶茶、司康、蛋挞，蛋糕，吐司，面包，咖啡时都能用，手拉环式方便打开，每罐不到一斤，数量不超过5罐，价格不超过100元。",
+          "name": "黑白全脂加糖炼乳奶茶烘焙司康蛋挞蛋糕吐司面包咖啡商用家用整箱",
+          "options": {
+            "颜色分类": "【拉环易开罐】黑白炼乳397g*5罐"
+          },
+          "price": 84,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": 1,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 1,
+            "key_options": 1,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": true,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 11,
+                  "required_count": 11,
+                  "results": [
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "全脂"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "全脂"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "加糖"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "加糖"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "奶茶"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "奶茶"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "司康"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "司康"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "蛋挞"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "蛋挞"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "蛋糕"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "蛋糕"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "吐司"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "吐司"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "面包"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "面包"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "咖啡"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "咖啡"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "商用"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "商用"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "全脂",
+                        "加糖",
+                        "奶茶",
+                        "司康",
+                        "蛋挞",
+                        "蛋糕",
+                        "吐司",
+                        "面包",
+                        "咖啡",
+                        "商用",
+                        "家用"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "家用"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "家用"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 11
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 1,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "【拉环易开罐】黑白炼乳397g*5罐"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [
+                          {
+                            "axis": "color",
+                            "source_axis": "颜色分类",
+                            "value": "【拉环易开罐】黑白炼乳397g*5罐"
+                          }
+                        ],
+                        "missing_axes": [],
+                        "unavailable_values": [],
+                        "wrong_values": []
+                      },
+                      "passed": true,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "【拉环易开罐】黑白炼乳397g*5罐"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 1,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {
+                "effective_price_axis": "color"
+              },
+              "method": "unique_effective_price_axis",
+              "price": 84,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 84,
+              "comparator": "variant_price_budget_v1",
+              "evidence": {
+                "evidence": {
+                  "effective_price_axis": "color"
+                },
+                "method": "unique_effective_price_axis",
+                "price": 84,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": 100,
+              "source_field": "variant_price",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "粮油调味/速食/干货/烘焙",
+                      "烘焙原料/辅料/食品添加剂",
+                      "烘培原料",
+                      "奶精炼乳"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›奶精炼乳"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": true,
+          "reward": 1,
+          "reward_type": "gold_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": true,
+          "terminal_utility": 1,
+          "termination_reason": "gold_purchase",
+          "weighted_score": 1
+        },
+        "reward_valid": true,
+        "termination_reason": "gold_purchase"
+      }
+    }
+  ],
+  "terminal_protocol": "terminal-protocol-v2",
+  "requirement_events": []
+}

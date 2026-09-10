@@ -1,0 +1,61 @@
+{
+  "schema": "shopping-judge-output-v3",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "task_count": 200,
+  "decision": {
+    "observed": 186,
+    "unresolved": 14,
+    "requirements_resolved": 76,
+    "kinds": {
+      "environment_terminal": 91,
+      "finish": 3,
+      "purchase": 92,
+      "unresolved": 14
+    }
+  },
+  "verdict_distribution": {
+    "explicit": {
+      "not_applicable": 1,
+      "satisfied": 461,
+      "unknown": 198,
+      "violated": 0
+    },
+    "taskfact_active": {
+      "not_applicable": 0,
+      "satisfied": 185,
+      "unknown": 95,
+      "violated": 1
+    },
+    "taskfact_latent": {
+      "count": 503,
+      "evidence_supported": 318,
+      "evidence_contradicted": 1,
+      "evidence_unknown": 184
+    },
+    "taskfact_inactive": {
+      "count": 0,
+      "rejected": 0,
+      "revoked": 0
+    },
+    "taskfact_unknown": {
+      "count": 0
+    }
+  },
+  "effective_status_distribution": {
+    "active": 909,
+    "latent": 503,
+    "modified": 31,
+    "rejected": 1
+  },
+  "dimension_score_means": {
+    "clarification_strategy": 1.565,
+    "information_retention": 1.955,
+    "search_strategy": 1.61,
+    "candidate_utilization": 1.555,
+    "evidence_verification": 1.295,
+    "decision_quality": 1.395,
+    "termination_efficiency": 1.1
+  },
+  "generated_at": "2026-09-10T12:27:25.251238+00:00"
+}

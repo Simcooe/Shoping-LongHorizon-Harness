@@ -1,0 +1,2604 @@
+{
+  "task": "找一款红色洗牙机，预算在600以内。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.42, \"复购率\": 0.58, \"平均客单价\": 183.33, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": true, \"近30天消费金额\": 2200.0, \"近90天订单数\": 12}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"30-34, \", \"性别\": \"男\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"Philips\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"坂恒\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Oclean\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"Hario\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"Adidas\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 600, \"最小值\": 100}, \"功能\": [\"超声波清洁\", \"抗菌\", \"高频振动\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"不锈钢\", \"医用硅胶\", \"ABS\"], \"颜色\": [\"红色\", \"白色\", \"黑色\"], \"风格\": [\"科技感\", \"医用\", \"简约\", \"亮色系\"]}, \"类目偏好\": {\"个护健康\": \"高\", \"咖啡器具\": \"高\", \"宠物用品\": \"无\", \"家居生活\": \"中\", \"数码周边\": \"中\", \"服饰鞋包\": \"低\", \"运动户外\": \"中\"}}, \"地区信息\": {\"区县\": \"南山区\", \"城市\": \"深圳市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"广东省\"}, \"最后更新时间\": \"2024-06-28T10:15:00Z\", \"注册时间\": \"2019-02-14T08:23:17Z\", \"注册渠道\": \"App\", \"用户ID\": \"U0983B7C4, \", \"用户标签\": [\"咖啡重度爱好者\", \"口腔护理精细化\", \"品质敏感中端用户\", \"外观党\", \"促销关注用户\", \"效率控\"], \"行为特征\": {\"常用设备\": \"安卓手机\", \"日均浏览时长\": 540, \"最近14天关注店铺\": [\"坂恒制药旗舰店\"], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"清理牙结石的电动洗牙机\", \"医用超声波洗牙机\"], \"最近14天收藏商品\": [], \"活跃时间段\": [7, 12, 22], \"近7天访问次数\": 18}}",
+  "step_count": 15,
+  "reset": {
+    "env_idx": 5,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "红色"
+    ],
+    "idx": 1215,
+    "instruction": "Instruction: 找一款红色洗牙机，预算在600以内。",
+    "instruction_simple": "找一款红色洗牙机，预算在600以内。",
+    "message": "Task 1215 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.42,
+        "复购率": 0.58,
+        "平均客单价": 183.33,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": true,
+        "近30天消费金额": 2200.0,
+        "近90天订单数": 12
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "30-34, ",
+        "性别": "男",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "Philips"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "坂恒"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Oclean"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "Hario"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "Adidas"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 600,
+            "最小值": 100
+          },
+          "功能": [
+            "超声波清洁",
+            "抗菌",
+            "高频振动"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "不锈钢",
+            "医用硅胶",
+            "ABS"
+          ],
+          "颜色": [
+            "红色",
+            "白色",
+            "黑色"
+          ],
+          "风格": [
+            "科技感",
+            "医用",
+            "简约",
+            "亮色系"
+          ]
+        },
+        "类目偏好": {
+          "个护健康": "高",
+          "咖啡器具": "高",
+          "宠物用品": "无",
+          "家居生活": "中",
+          "数码周边": "中",
+          "服饰鞋包": "低",
+          "运动户外": "中"
+        }
+      },
+      "地区信息": {
+        "区县": "南山区",
+        "城市": "深圳市",
+        "时区": "Asia/Shanghai",
+        "省份": "广东省"
+      },
+      "最后更新时间": "2024-06-28T10:15:00Z",
+      "注册时间": "2019-02-14T08:23:17Z",
+      "注册渠道": "App",
+      "用户ID": "U0983B7C4, ",
+      "用户标签": [
+        "咖啡重度爱好者",
+        "口腔护理精细化",
+        "品质敏感中端用户",
+        "外观党",
+        "促销关注用户",
+        "效率控"
+      ],
+      "行为特征": {
+        "常用设备": "安卓手机",
+        "日均浏览时长": 540,
+        "最近14天关注店铺": [
+          "坂恒制药旗舰店"
+        ],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "清理牙结石的电动洗牙机",
+          "医用超声波洗牙机"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          7,
+          12,
+          22
+        ],
+        "近7天访问次数": 18
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "红色 洗牙机"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 红色 洗牙机 | Normalized query: 红色 洗牙机 [SEP] Next > [SEP] 853752094439 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 764932920022 [SEP] ImcAy家用电动冲牙器便携式水牙线正畸专用口腔清洁牙齿洗牙神器 [SEP] 59.0 to 177.0 [SEP] 627189028281 [SEP] 牙科 洁牙机工作尖超声波EMS赛特力DTE通用洁牙机刀头根管针 [SEP] 13.0 to 30.0 [SEP] 891140106551 [SEP] 康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪 [SEP] 339.0 [SEP] 926686488790 [SEP] 德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器 [SEP] 53.0 to 104.0 [SEP] 825398276328 [SEP] 德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器 [SEP] 62.0 to 121.0 [SEP] 853663371197 [SEP] 德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器 [SEP] 31.0 to 60.0 [SEP] 939204696419 [SEP] 德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器 [SEP] 62.0 to 178.0 [SEP] 936418588435 [SEP] 德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器 [SEP] 59.0 to 169.0 [SEP] 860965673003 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 95.0 to 152.0 [SEP] 853621875450 [SEP] 洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 805605914486 [SEP] 超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器 [SEP] 398.0 to 1188.0 [SEP] 777757005648 [SEP] 适用Waterpik洁碧冲牙器洗牙器水牙线配件标准喷头正畸喷头JT-100 [SEP] 19.0 to 50.0 [SEP] 932181132576 [SEP] 智齿窝冲洗器手动洗牙冲牙器口腔清理清洗牙洞牙科弯头注射器具 [SEP] 3.0 to 1560.0 [SEP] 926946854058 [SEP] 智齿窝冲洗器家用手动洗牙器口腔冲洗器口腔牙缝清洁清洗智齿清理 [SEP] 20.0 [SEP] 774044775271 [SEP] 九安电动洗鼻器喷头替换碧乐士乐普乐仪初医生159洗鼻头水柱喷雾 [SEP] 20.0 [SEP] 921274882964 [SEP] 超声波洁牙器黑牙黄牙洗牙器牙齿清洁仪祛烟渍茶渍牙结石洗牙器 [SEP] 138.0 to 158.0 [SEP] 752383265266 [SEP] 医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器 [SEP] 188.0 to 258.0 [SEP] 753816866475 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 188.0 to 258.0 [SEP] 933261888510 [SEP] 可视超声波洁牙器家用洗牙器去除牙结石牙垢神器医用洁牙机齿喷水 [SEP] 416.0 to 1676.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"853752094439\", \"764932920022\", \"627189028281\", \"891140106551\", \"926686488790\", \"825398276328\", \"853663371197\", \"939204696419\", \"936418588435\", \"860965673003\", \"853621875450\", \"805605914486\", \"777757005648\", \"932181132576\", \"926946854058\", \"774044775271\", \"921274882964\", \"752383265266\", \"753816866475\", \"933261888510\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "853752094439",
+            "764932920022",
+            "627189028281",
+            "891140106551",
+            "926686488790",
+            "825398276328",
+            "853663371197",
+            "939204696419",
+            "936418588435",
+            "860965673003",
+            "853621875450",
+            "805605914486",
+            "777757005648",
+            "932181132576",
+            "926946854058",
+            "774044775271",
+            "921274882964",
+            "752383265266",
+            "753816866475",
+            "933261888510"
+          ],
+          "normalized_query": "红色 洗牙机",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "853752094439",
+              "brand": "坂恒制药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 1,
+              "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "764932920022",
+              "brand": "天猫超市",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "ImcAy",
+                "电动",
+                "正畸专用",
+                "家用"
+              ],
+              "price": "59.0 to 177.0",
+              "rank": 2,
+              "title": "ImcAy家用电动冲牙器便携式水牙线正畸专用口腔清洁牙齿洗牙神器"
+            },
+            {
+              "asin": "627189028281",
+              "brand": "光明医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "工作尖",
+                "通用款",
+                "刀头"
+              ],
+              "price": "13.0 to 30.0",
+              "rank": 3,
+              "title": "牙科 洁牙机工作尖超声波EMS赛特力DTE通用洁牙机刀头根管针"
+            },
+            {
+              "asin": "891140106551",
+              "brand": "康佳支点专卖店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "除牙石"
+              ],
+              "price": "339.0",
+              "rank": 4,
+              "title": "康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪"
+            },
+            {
+              "asin": "926686488790",
+              "brand": "RAPTCAN居家日用旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "电动",
+                "可充电",
+                "便携式"
+              ],
+              "price": "53.0 to 104.0",
+              "rank": 5,
+              "title": "德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器"
+            },
+            {
+              "asin": "825398276328",
+              "brand": "都旺医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "电动",
+                "可充电",
+                "便携式"
+              ],
+              "price": "62.0 to 121.0",
+              "rank": 6,
+              "title": "德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器"
+            },
+            {
+              "asin": "853663371197",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "电动",
+                "充电式",
+                "便携式"
+              ],
+              "price": "31.0 to 60.0",
+              "rank": 7,
+              "title": "德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器"
+            },
+            {
+              "asin": "939204696419",
+              "brand": "威图家居旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "电动",
+                "可充电",
+                "便携式"
+              ],
+              "price": "62.0 to 178.0",
+              "rank": 8,
+              "title": "德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器"
+            },
+            {
+              "asin": "936418588435",
+              "brand": "元乐医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "电动",
+                "家用",
+                "可充电"
+              ],
+              "price": "59.0 to 169.0",
+              "rank": 9,
+              "title": "德国进口洗牙器电动冲牙器家用充电水牙线便携式清洗器牙齿清洁器"
+            },
+            {
+              "asin": "860965673003",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波"
+              ],
+              "price": "95.0 to 152.0",
+              "rank": 10,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "853621875450",
+              "brand": "COMBICH旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级别",
+                "超声波",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 11,
+              "title": "洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "805605914486",
+              "brand": "卡里芬特医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "可视化",
+                "家用",
+                "喷水"
+              ],
+              "price": "398.0 to 1188.0",
+              "rank": 12,
+              "title": "超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器"
+            },
+            {
+              "asin": "777757005648",
+              "brand": "艾必珂医药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "适用洁碧冲牙器",
+                "配件",
+                "正畸人群适用"
+              ],
+              "price": "19.0 to 50.0",
+              "rank": 13,
+              "title": "适用Waterpik洁碧冲牙器洗牙器水牙线配件标准喷头正畸喷头JT-100"
+            },
+            {
+              "asin": "932181132576",
+              "brand": "花不香医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "手动",
+                "弯头",
+                "清洗牙洞"
+              ],
+              "price": "3.0 to 1560.0",
+              "rank": 14,
+              "title": "智齿窝冲洗器手动洗牙冲牙器口腔清理清洗牙洞牙科弯头注射器具"
+            },
+            {
+              "asin": "926946854058",
+              "brand": "威图家居旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "家用",
+                "手动",
+                "智齿清理"
+              ],
+              "price": "20.0",
+              "rank": 15,
+              "title": "智齿窝冲洗器家用手动洗牙器口腔冲洗器口腔牙缝清洁清洗智齿清理"
+            },
+            {
+              "asin": "774044775271",
+              "brand": "艾必珂医药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "替换喷头",
+                "喷雾款"
+              ],
+              "price": "20.0",
+              "rank": 16,
+              "title": "九安电动洗鼻器喷头替换碧乐士乐普乐仪初医生159洗鼻头水柱喷雾"
+            },
+            {
+              "asin": "921274882964",
+              "brand": "马天尼旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "祛烟渍茶渍"
+              ],
+              "price": "138.0 to 158.0",
+              "rank": 17,
+              "title": "超声波洁牙器黑牙黄牙洗牙器牙齿清洁仪祛烟渍茶渍牙结石洗牙器"
+            },
+            {
+              "asin": "752383265266",
+              "brand": "马天尼旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "电动",
+                "烟渍",
+                "牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 18,
+              "title": "医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器"
+            },
+            {
+              "asin": "753816866475",
+              "brand": "lm个人护理旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 19,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "933261888510",
+              "brand": "芈曦堂医疗器械旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "可视化",
+                "超声波",
+                "家用"
+              ],
+              "price": "416.0 to 1676.0",
+              "rank": 20,
+              "title": "可视超声波洁牙器家用洗牙器去除牙结石牙垢神器医用洁牙机齿喷水"
+            }
+          ],
+          "query": "红色 洗牙机",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"红色 洗牙机\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:bff7a1ee2444e4413b3f7cff741d54d0a4e17a830e3bc0726c7defb36a11f217"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:bff7a1ee2444e4413b3f7cff741d54d0a4e17a830e3bc0726c7defb36a11f217"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:bff7a1ee2444e4413b3f7cff741d54d0a4e17a830e3bc0726c7defb36a11f217"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "853752094439"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 深紫色 [SEP] 红色 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 价格: 399.0 to 599.0 [SEP] 店铺: 坂恒制药旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"深紫色\", \"红色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "深紫色",
+            "红色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"853752094439\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:853752094439",
+            "constraint:853752094439:category:pass",
+            "constraint:853752094439:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:853752094439",
+            "constraint:853752094439:category:pass",
+            "constraint:853752094439:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:853752094439",
+            "constraint:853752094439:category:pass",
+            "constraint:853752094439:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "红色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 深紫色 [SEP] 红色 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 价格: 599.0 [SEP] 店铺: 坂恒制药旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"深紫色\", \"红色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "深紫色",
+            "红色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "红色"
+          },
+          "selected_price": 599
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"红色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:853752094439:color:红色"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:853752094439:color:红色"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:853752094439:color:红色"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "红色"
+          },
+          "selected_price": 599,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:853752094439:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:853752094439:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:853752094439:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "坂恒 医用超声波电动洗牙机"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 坂恒 医用超声波电动洗牙机 | Normalized query: 坂恒 医用超声波电动洗牙机 [SEP] Next > [SEP] 853752094439 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 860965673003 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 95.0 to 152.0 [SEP] 753816866475 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 188.0 to 258.0 [SEP] 752383265266 [SEP] 医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器 [SEP] 188.0 to 258.0 [SEP] 760601915558 [SEP] 洁牙器超声波电动洗牙器牙结石去除器家用洁牙机可视牙科非医用 [SEP] 368.0 to 568.0 [SEP] 853621875450 [SEP] 洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 618951941516 [SEP] 医用超声波洗牙机去除牙结石洁牙机齿污垢神器牙科家用电动洁牙器 [SEP] 199.0 to 1399.0 [SEP] 918486332202 [SEP] 医用超声波洁牙器去除牙结石牙垢洗牙冲牙器牙齿污垢清洁口腔神器 [SEP] 537.0 [SEP] 929351302338 [SEP] 德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用 [SEP] 71.0 to 79.0 [SEP] 923267890887 [SEP] 德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用 [SEP] 63.0 to 69.0 [SEP] 911278870585 [SEP] 德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用 [SEP] 63.0 to 69.0 [SEP] 886023878423 [SEP] 德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用 [SEP] 63.0 to 69.0 [SEP] 850369571625 [SEP] 超声波洁牙器家用洁牙仪医用去除牙结石清洁牙污垢神器电动便携带 [SEP] 199.0 [SEP] 855285199088 [SEP] 超声波洁牙器家用洁牙仪医用去除牙结石清洁牙污垢神器电动针头 [SEP] 12.0 to 19.0 [SEP] 942546123114 [SEP] 洁牙器超声波医院电动洗牙器去除牙结石家用洁牙机齿污垢神器牙科 [SEP] 73.0 to 80.0 [SEP] 854705120393 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 19.0 to 39.0 [SEP] 905389871535 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 42.0 to 72.0 [SEP] 872212355838 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 38.0 to 66.0 [SEP] 858343173113 [SEP] 维润牙科专用洁牙机超声波洁牙器治疗仪宠物医用口腔医用家用牙齿 [SEP] 275.0 to 1050.0 [SEP] 805605914486 [SEP] 超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器 [SEP] 398.0 to 1188.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"853752094439\", \"860965673003\", \"753816866475\", \"752383265266\", \"760601915558\", \"853621875450\", \"618951941516\", \"918486332202\", \"929351302338\", \"923267890887\", \"911278870585\", \"886023878423\", \"850369571625\", \"855285199088\", \"942546123114\", \"854705120393\", \"905389871535\", \"872212355838\", \"858343173113\", \"805605914486\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "853752094439",
+            "860965673003",
+            "753816866475",
+            "752383265266",
+            "760601915558",
+            "853621875450",
+            "618951941516",
+            "918486332202",
+            "929351302338",
+            "923267890887",
+            "911278870585",
+            "886023878423",
+            "850369571625",
+            "855285199088",
+            "942546123114",
+            "854705120393",
+            "905389871535",
+            "872212355838",
+            "858343173113",
+            "805605914486"
+          ],
+          "normalized_query": "坂恒 医用超声波电动洗牙机",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "853752094439",
+              "brand": "坂恒制药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 1,
+              "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "860965673003",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波"
+              ],
+              "price": "95.0 to 152.0",
+              "rank": 2,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "753816866475",
+              "brand": "lm个人护理旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 3,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "752383265266",
+              "brand": "马天尼旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "电动",
+                "烟渍",
+                "牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 4,
+              "title": "医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器"
+            },
+            {
+              "asin": "760601915558",
+              "brand": "圣舒薇旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "电动",
+                "家用",
+                "可视化"
+              ],
+              "price": "368.0 to 568.0",
+              "rank": 5,
+              "title": "洁牙器超声波电动洗牙器牙结石去除器家用洁牙机可视牙科非医用"
+            },
+            {
+              "asin": "853621875450",
+              "brand": "COMBICH旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级别",
+                "超声波",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 6,
+              "title": "洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "618951941516",
+              "brand": "卡里芬特医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用",
+                "家用",
+                "超声波"
+              ],
+              "price": "199.0 to 1399.0",
+              "rank": 7,
+              "title": "医用超声波洗牙机去除牙结石洁牙机齿污垢神器牙科家用电动洁牙器"
+            },
+            {
+              "asin": "918486332202",
+              "brand": "沃朗森旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波",
+                "去除牙结石"
+              ],
+              "price": "537.0",
+              "rank": 8,
+              "title": "医用超声波洁牙器去除牙结石牙垢洗牙冲牙器牙齿污垢清洁口腔神器"
+            },
+            {
+              "asin": "929351302338",
+              "brand": "聆懿旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "超声波",
+                "电动",
+                "二合一",
+                "牙石专用"
+              ],
+              "price": "71.0 to 79.0",
+              "rank": 9,
+              "title": "德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用"
+            },
+            {
+              "asin": "923267890887",
+              "brand": "家乐购医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "超声波",
+                "电动",
+                "二合一",
+                "牙石专用"
+              ],
+              "price": "63.0 to 69.0",
+              "rank": 10,
+              "title": "德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用"
+            },
+            {
+              "asin": "911278870585",
+              "brand": "威图家居旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "超声波",
+                "电动",
+                "二合一",
+                "牙石专用"
+              ],
+              "price": "63.0 to 69.0",
+              "rank": 11,
+              "title": "德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用"
+            },
+            {
+              "asin": "886023878423",
+              "brand": "元乐医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "德国进口",
+                "超声波",
+                "二合一",
+                "牙石专用"
+              ],
+              "price": "63.0 to 69.0",
+              "rank": 12,
+              "title": "德国进口超声波电动牙刷冲牙器二合一洗牙器牙结石去除器牙石专用"
+            },
+            {
+              "asin": "850369571625",
+              "brand": "CarterCare旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "电动",
+                "便携式"
+              ],
+              "price": "199.0",
+              "rank": 13,
+              "title": "超声波洁牙器家用洁牙仪医用去除牙结石清洁牙污垢神器电动便携带"
+            },
+            {
+              "asin": "855285199088",
+              "brand": "CarterCare旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "电动针头",
+                "清洁牙污垢"
+              ],
+              "price": "12.0 to 19.0",
+              "rank": 14,
+              "title": "超声波洁牙器家用洁牙仪医用去除牙结石清洁牙污垢神器电动针头"
+            },
+            {
+              "asin": "942546123114",
+              "brand": "博伊医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "电动",
+                "家用",
+                "去除牙结石"
+              ],
+              "price": "73.0 to 80.0",
+              "rank": 15,
+              "title": "洁牙器超声波医院电动洗牙器去除牙结石家用洁牙机齿污垢神器牙科"
+            },
+            {
+              "asin": "854705120393",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "电动",
+                "超声波",
+                "家用"
+              ],
+              "price": "19.0 to 39.0",
+              "rank": 16,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "905389871535",
+              "brand": "聆懿旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "去除牙石",
+                "超声波",
+                "医用级",
+                "家用",
+                "电动"
+              ],
+              "price": "42.0 to 72.0",
+              "rank": 17,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "872212355838",
+              "brand": "都旺医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级别",
+                "家用",
+                "超声波",
+                "电动"
+              ],
+              "price": "38.0 to 66.0",
+              "rank": 18,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "858343173113",
+              "brand": "雅企旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "家用",
+                "超声波"
+              ],
+              "price": "275.0 to 1050.0",
+              "rank": 19,
+              "title": "维润牙科专用洁牙机超声波洁牙器治疗仪宠物医用口腔医用家用牙齿"
+            },
+            {
+              "asin": "805605914486",
+              "brand": "卡里芬特医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "可视化",
+                "家用",
+                "喷水"
+              ],
+              "price": "398.0 to 1188.0",
+              "rank": 20,
+              "title": "超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器"
+            }
+          ],
+          "query": "坂恒 医用超声波电动洗牙机",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"坂恒 医用超声波电动洗牙机\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:97a91b97a0d502f4c55b3b63a98cac04f2a0e81d3be97e7e924e813c8ee59ce4"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:97a91b97a0d502f4c55b3b63a98cac04f2a0e81d3be97e7e924e813c8ee59ce4"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 14,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "result_set:97a91b97a0d502f4c55b3b63a98cac04f2a0e81d3be97e7e924e813c8ee59ce4"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "853752094439"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 深紫色 [SEP] 红色 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 价格: 399.0 to 599.0 [SEP] 店铺: 坂恒制药旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"深紫色\", \"红色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "深紫色",
+            "红色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"853752094439\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 34,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "content": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:853752094439:description"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:853752094439:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:853752094439:description"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "红色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "content": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"红色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:853752094439:红色"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:853752094439:红色"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:853752094439:红色"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "&lt; prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "content": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"&lt; prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:853752094439:&lt; prev"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:853752094439:&lt; prev"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "runtime_progress_added": [
+            "subpage:853752094439:&lt; prev"
+          ],
+          "seen_asin_count": 34,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 34,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "坂恒 医用超声波洗牙机 红色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 坂恒 医用超声波洗牙机 红色 | Normalized query: 坂恒 医用超声波洗牙机 红色 [SEP] Next > [SEP] 853752094439 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 618951941516 [SEP] 医用超声波洗牙机去除牙结石洁牙机齿污垢神器牙科家用电动洁牙器 [SEP] 199.0 to 1399.0 [SEP] 918486332202 [SEP] 医用超声波洁牙器去除牙结石牙垢洗牙冲牙器牙齿污垢清洁口腔神器 [SEP] 537.0 [SEP] 920488894783 [SEP] 超声波洗牙器去除牙结石神器家用清洁牙齿机洁牙仪去冲牙石牙垢洗 [SEP] 499.0 [SEP] 752383265266 [SEP] 医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器 [SEP] 188.0 to 258.0 [SEP] 805605914486 [SEP] 超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器 [SEP] 398.0 to 1188.0 [SEP] 854705120393 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 19.0 to 39.0 [SEP] 905389871535 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 42.0 to 72.0 [SEP] 872212355838 [SEP] 洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动 [SEP] 38.0 to 66.0 [SEP] 891140106551 [SEP] 康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪 [SEP] 339.0 [SEP] 860965673003 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 95.0 to 152.0 [SEP] 853621875450 [SEP] 洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 399.0 to 599.0 [SEP] 902984611384 [SEP] 超声波洗牙器去除牙结石神器家用清洁牙齿机洁牙仪去冲牙石牙垢洗 [SEP] 389.0 [SEP] 753816866475 [SEP] 医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 188.0 to 258.0 [SEP] 894477910487 [SEP] 超声波洗牙器冲牙结石去除神器牙齿清洁仪家用洁牙仪除牙垢 [SEP] 64.0 to 82.0 [SEP] 941993048012 [SEP] 超声波洗牙器冲牙结石去除神器牙齿清洁仪家用洁牙仪除牙垢 [SEP] 64.0 to 82.0 [SEP] 858343173113 [SEP] 维润牙科专用洁牙机超声波洁牙器治疗仪宠物医用口腔医用家用牙齿 [SEP] 275.0 to 1050.0 [SEP] 749561047640 [SEP] 迈瑞特家用洗牙机 宠物超声波洗牙 去除牙结石清除牙渍牙垢工具包 [SEP] 480.0 to 650.0 [SEP] 673899525770 [SEP] 康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪 [SEP] 339.0 [SEP] 898454718440 [SEP] 康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪 [SEP] 339.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"853752094439\", \"618951941516\", \"918486332202\", \"920488894783\", \"752383265266\", \"805605914486\", \"854705120393\", \"905389871535\", \"872212355838\", \"891140106551\", \"860965673003\", \"853621875450\", \"902984611384\", \"753816866475\", \"894477910487\", \"941993048012\", \"858343173113\", \"749561047640\", \"673899525770\", \"898454718440\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "853752094439",
+            "618951941516",
+            "918486332202",
+            "920488894783",
+            "752383265266",
+            "805605914486",
+            "854705120393",
+            "905389871535",
+            "872212355838",
+            "891140106551",
+            "860965673003",
+            "853621875450",
+            "902984611384",
+            "753816866475",
+            "894477910487",
+            "941993048012",
+            "858343173113",
+            "749561047640",
+            "673899525770",
+            "898454718440"
+          ],
+          "normalized_query": "坂恒 医用超声波洗牙机 红色",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "853752094439",
+              "brand": "坂恒制药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 1,
+              "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "618951941516",
+              "brand": "卡里芬特医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用",
+                "家用",
+                "超声波"
+              ],
+              "price": "199.0 to 1399.0",
+              "rank": 2,
+              "title": "医用超声波洗牙机去除牙结石洁牙机齿污垢神器牙科家用电动洁牙器"
+            },
+            {
+              "asin": "918486332202",
+              "brand": "沃朗森旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波",
+                "去除牙结石"
+              ],
+              "price": "537.0",
+              "rank": 3,
+              "title": "医用超声波洁牙器去除牙结石牙垢洗牙冲牙器牙齿污垢清洁口腔神器"
+            },
+            {
+              "asin": "920488894783",
+              "brand": "阿里健康大药房",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "去除牙结石"
+              ],
+              "price": "499.0",
+              "rank": 4,
+              "title": "超声波洗牙器去除牙结石神器家用清洁牙齿机洁牙仪去冲牙石牙垢洗"
+            },
+            {
+              "asin": "752383265266",
+              "brand": "马天尼旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "电动",
+                "烟渍",
+                "牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 5,
+              "title": "医用超声波洁牙器电动洗牙机家用牙结石去除器除牙石牙垢烟渍神器"
+            },
+            {
+              "asin": "805605914486",
+              "brand": "卡里芬特医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "可视化",
+                "家用",
+                "喷水"
+              ],
+              "price": "398.0 to 1188.0",
+              "rank": 6,
+              "title": "超声波洁牙器家用可视洗牙器牙垢神器医用洁牙机喷水洁牙仪冲牙器"
+            },
+            {
+              "asin": "854705120393",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "电动",
+                "超声波",
+                "家用"
+              ],
+              "price": "19.0 to 39.0",
+              "rank": 7,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "905389871535",
+              "brand": "聆懿旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "去除牙石",
+                "超声波",
+                "医用级",
+                "家用",
+                "电动"
+              ],
+              "price": "42.0 to 72.0",
+              "rank": 8,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "872212355838",
+              "brand": "都旺医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级别",
+                "家用",
+                "超声波",
+                "电动"
+              ],
+              "price": "38.0 to 66.0",
+              "rank": 9,
+              "title": "洁牙器去除牙石牙垢医用洗牙器超声波洗牙齿污垢去牙渍黄家用电动"
+            },
+            {
+              "asin": "891140106551",
+              "brand": "康佳支点专卖店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "除牙石"
+              ],
+              "price": "339.0",
+              "rank": 10,
+              "title": "康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪"
+            },
+            {
+              "asin": "860965673003",
+              "brand": "图逸医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波"
+              ],
+              "price": "95.0 to 152.0",
+              "rank": 11,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "853621875450",
+              "brand": "COMBICH旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级别",
+                "超声波",
+                "去除牙结石"
+              ],
+              "price": "399.0 to 599.0",
+              "rank": 12,
+              "title": "洁牙器超声波医用电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "902984611384",
+              "brand": "婥娇医药旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "去牙石"
+              ],
+              "price": "389.0",
+              "rank": 13,
+              "title": "超声波洗牙器去除牙结石神器家用清洁牙齿机洁牙仪去冲牙石牙垢洗"
+            },
+            {
+              "asin": "753816866475",
+              "brand": "lm个人护理旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "医用级",
+                "超声波",
+                "电动",
+                "去除牙结石"
+              ],
+              "price": "188.0 to 258.0",
+              "rank": 14,
+              "title": "医用洁牙器超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+            },
+            {
+              "asin": "894477910487",
+              "brand": "钱通医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "除牙垢"
+              ],
+              "price": "64.0 to 82.0",
+              "rank": 15,
+              "title": "超声波洗牙器冲牙结石去除神器牙齿清洁仪家用洁牙仪除牙垢"
+            },
+            {
+              "asin": "941993048012",
+              "brand": "元乐医疗器械专营店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "家用",
+                "牙结石去除"
+              ],
+              "price": "64.0 to 82.0",
+              "rank": 16,
+              "title": "超声波洗牙器冲牙结石去除神器牙齿清洁仪家用洁牙仪除牙垢"
+            },
+            {
+              "asin": "858343173113",
+              "brand": "雅企旗舰店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "家用",
+                "超声波"
+              ],
+              "price": "275.0 to 1050.0",
+              "rank": 17,
+              "title": "维润牙科专用洁牙机超声波洁牙器治疗仪宠物医用口腔医用家用牙齿"
+            },
+            {
+              "asin": "749561047640",
+              "brand": "辉腾口腔护理",
+              "category": "美容美体仪器›口腔电子/智能产品›电子美牙产品",
+              "key_attributes": [
+                "家用",
+                "洗牙机",
+                "宠物",
+                "超声波",
+                "去除牙结石",
+                "清除牙渍牙垢",
+                "工具包"
+              ],
+              "price": "480.0 to 650.0",
+              "rank": 18,
+              "title": "迈瑞特家用洗牙机 宠物超声波洗牙 去除牙结石清除牙渍牙垢工具包"
+            },
+            {
+              "asin": "673899525770",
+              "brand": "康佳商之鼎专卖店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "除牙结石"
+              ],
+              "price": "339.0",
+              "rank": 19,
+              "title": "康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪"
+            },
+            {
+              "asin": "898454718440",
+              "brand": "康佳秦唐明专卖店",
+              "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "key_attributes": [
+                "超声波",
+                "清洁牙齿",
+                "多年牙结石",
+                "轻松"
+              ],
+              "price": "339.0",
+              "rank": 20,
+              "title": "康佳超声波洗牙器冲牙洁牙去除除牙石结石神器清洁牙齿污垢牙石仪"
+            }
+          ],
+          "query": "坂恒 医用超声波洗牙机 红色",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"坂恒 医用超声波洗牙机 红色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:c88b75edf9fa320fb29c8a4e5e13e45fb1d5e19b6cda81f9125bbe26d450622a"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "result_set:c88b75edf9fa320fb29c8a4e5e13e45fb1d5e19b6cda81f9125bbe26d450622a"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "new_asin_count": 7,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "runtime_progress_added": [
+            "result_set:c88b75edf9fa320fb29c8a4e5e13e45fb1d5e19b6cda81f9125bbe26d450622a"
+          ],
+          "seen_asin_count": 41,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "853752094439"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 深紫色 [SEP] 红色 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 价格: 399.0 to 599.0 [SEP] 店铺: 坂恒制药旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"深紫色\", \"红色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "深紫色",
+            "红色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"853752094439\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 41,
+          "step_count": 13,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "红色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-1215",
+        "instruction": "Instruction: [SEP] 找一款红色洗牙机，预算在600以内。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 深紫色 [SEP] 红色 [SEP] 洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器 [SEP] 价格: 599.0 [SEP] 店铺: 坂恒制药旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"深紫色\", \"红色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "深紫色",
+            "红色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "深紫色",
+              "红色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "853752094439",
+            "brand": "坂恒制药旗舰店",
+            "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+            "key_attributes": [
+              "医用",
+              "超声波",
+              "电动",
+              "去除牙结石"
+            ],
+            "price": "399.0 to 599.0",
+            "title": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "红色"
+          },
+          "selected_price": 599
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"红色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 4
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 41,
+          "step_count": 14,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 5,
+        "goal": {
+          "asin": "853752094439",
+          "attributes": [
+            "医用",
+            "超声波",
+            "电动",
+            "去除牙结石"
+          ],
+          "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "医用",
+            "超声波",
+            "电动",
+            "去除牙结石"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "红色"
+          ],
+          "instruction_full": "帮忙在坂恒制药旗舰店中找一款适合清理牙结石的电动洗牙工具，是靠高频振动去垢的，类似牙科诊所用的小仪器。预算在600以内，想要一款外观比较亮眼的红色款。",
+          "instruction_simple": "找一款红色洗牙机，预算在600以内。",
+          "instruction_text": "找一款红色洗牙机，预算在600以内。",
+          "name": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": 600,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "红色"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.42,
+              "复购率": 0.58,
+              "平均客单价": 183.33,
+              "支付方式偏好": "微信支付",
+              "是否促销敏感": true,
+              "近30天消费金额": 2200,
+              "近90天订单数": 12
+            },
+            "人口属性": {
+              "会员等级": "黄金会员",
+              "年龄段": "30-34, ",
+              "性别": "男",
+              "消费等级": "中"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Philips"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "坂恒"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Oclean"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "Hario"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "Adidas"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 600,
+                  "最小值": 100
+                },
+                "功能": [
+                  "超声波清洁",
+                  "抗菌",
+                  "高频振动"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  "不锈钢",
+                  "医用硅胶",
+                  "ABS"
+                ],
+                "颜色": [
+                  "红色",
+                  "白色",
+                  "黑色"
+                ],
+                "风格": [
+                  "科技感",
+                  "医用",
+                  "简约",
+                  "亮色系"
+                ]
+              },
+              "类目偏好": {
+                "个护健康": "高",
+                "咖啡器具": "高",
+                "宠物用品": "无",
+                "家居生活": "中",
+                "数码周边": "中",
+                "服饰鞋包": "低",
+                "运动户外": "中"
+              }
+            },
+            "地区信息": {
+              "区县": "南山区",
+              "城市": "深圳市",
+              "时区": "Asia/Shanghai",
+              "省份": "广东省"
+            },
+            "最后更新时间": "2024-06-28T10:15:00Z",
+            "注册时间": "2019-02-14T08:23:17Z",
+            "注册渠道": "App",
+            "用户ID": "U0983B7C4, ",
+            "用户标签": [
+              "咖啡重度爱好者",
+              "口腔护理精细化",
+              "品质敏感中端用户",
+              "外观党",
+              "促销关注用户",
+              "效率控"
+            ],
+            "行为特征": {
+              "常用设备": "安卓手机",
+              "日均浏览时长": 540,
+              "最近14天关注店铺": [
+                "坂恒制药旗舰店"
+              ],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "清理牙结石的电动洗牙机",
+                "医用超声波洗牙机"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                7,
+                12,
+                22
+              ],
+              "近7天访问次数": 18
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-5-1215",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 853752094439 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"\\u7ea2\\u8272\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] 1.0 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "853752094439",
+          "attributes": [
+            "医用",
+            "超声波",
+            "电动",
+            "去除牙结石"
+          ],
+          "category": "医疗器械›冲牙器／洗牙器／洁牙机",
+          "instruction_text": "帮忙在坂恒制药旗舰店中找一款适合清理牙结石的电动洗牙工具，是靠高频振动去垢的，类似牙科诊所用的小仪器。预算在600以内，想要一款外观比较亮眼的红色款。",
+          "name": "洁牙器医用超声波电动洗牙机牙结石去除器去除牙结石牙齿污垢神器",
+          "options": {
+            "颜色分类": "红色"
+          },
+          "price": 599,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": 1,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 1,
+            "key_options": 1,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": true,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 4,
+                  "required_count": 4,
+                  "results": [
+                    {
+                      "actual": [
+                        "医用",
+                        "超声波",
+                        "电动",
+                        "去除牙结石"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "医用"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "医用"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "医用",
+                        "超声波",
+                        "电动",
+                        "去除牙结石"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "超声波"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "超声波"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "医用",
+                        "超声波",
+                        "电动",
+                        "去除牙结石"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "电动"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "电动"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "医用",
+                        "超声波",
+                        "电动",
+                        "去除牙结石"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "去除牙结石"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "去除牙结石"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 4
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 1,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "红色"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [
+                          {
+                            "axis": "color",
+                            "source_axis": "颜色分类",
+                            "value": "红色"
+                          }
+                        ],
+                        "missing_axes": [],
+                        "unavailable_values": [],
+                        "wrong_values": []
+                      },
+                      "passed": true,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "红色"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 1,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {
+                "effective_price_axis": "color"
+              },
+              "method": "unique_effective_price_axis",
+              "price": 599,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 599,
+              "comparator": "variant_price_budget_v1",
+              "evidence": {
+                "evidence": {
+                  "effective_price_axis": "color"
+                },
+                "method": "unique_effective_price_axis",
+                "price": 599,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": 600,
+              "source_field": "variant_price",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "医疗器械›冲牙器／洗牙器／洁牙机",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "医疗器械",
+                      "冲牙器/洗牙器/洁牙机"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "医疗器械›冲牙器／洗牙器／洁牙机"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": true,
+          "reward": 1,
+          "reward_type": "gold_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": true,
+          "terminal_utility": 1,
+          "termination_reason": "gold_purchase",
+          "weighted_score": 1
+        },
+        "reward_valid": true,
+        "termination_reason": "gold_purchase"
+      }
+    }
+  ]
+}
