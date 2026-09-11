@@ -1,0 +1,61 @@
+# mea-v4-paper — 论文对齐 profile（阶段1：结构化 Task State / Contract / Audit Reducer）。
+#
+# 阶段1 只落地纯数据结构、校验器与 reducer（src/mea-v4/），不接真实模型，
+# 不改变 mea-v3 runtime。本 profile 目前复用 mea-v3 的 cordis 工具面与 system-prompt
+# 骨架，后续阶段（2-6）会逐步引入 AgentAdapter、read-only Auditor、audited purchase、
+# 硬预算与 ask route。
+#
+# 基底 = dsh-base + dsh-headless。工具面 = shop-tools（search/click/finish/ask_shopper）。
+# 后续阶段在此 profile 上继续叠加，不修改 h0/mea-v3。
+
+- id: tool-bash
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+- id: tool-jobs
+  disabled: true
+
+- id: tool-skill
+  disabled: true
+- id: skill-filesystem
+  disabled: true
+
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+
+- id: tool-workflow
+  disabled: true
+- id: tool-web
+  disabled: true
+
+- id: tool-todo
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: tool-ralph
+  disabled: true
+- id: tool-str-replace-editor
+  disabled: true
+
+# 覆盖系统提示词：有边界的购物执行者（与 mea-v3 相同；后续阶段收紧为
+# fresh-context executor 契约时再改写）。
+- id: system-prompt
+  config:
+    persona: >-
+      You are a shopping agent executing a bounded multi-round task. Each round
+      is announced in your context with a goal and suggested tools. Work toward
+      the current round's goal using the available shopping tools. When the
+      current round's goal is satisfied (or cannot be advanced), report the
+      round result; then continue the next round if one is supplied. Do NOT
+      declare a purchase successful on your own authority — completion is
+      established only by audited environment state.
