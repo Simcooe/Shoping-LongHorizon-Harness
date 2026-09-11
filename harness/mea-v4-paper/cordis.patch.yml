@@ -1,9 +1,9 @@
-# mea-v4-paper — 论文对齐 profile（阶段1：结构化 Task State / Contract / Audit Reducer）。
+# mea-v4-paper — 论文对齐 profile（阶段1-4接口已实现，阶段5闭环未接通）。
 #
-# 阶段1 只落地纯数据结构、校验器与 reducer（src/mea-v4/），不接真实模型，
-# 不改变 mea-v3 runtime。本 profile 目前复用 mea-v3 的 cordis 工具面与 system-prompt
-# 骨架，后续阶段（2-6）会逐步引入 AgentAdapter、read-only Auditor、audited purchase、
-# 硬预算与 ask route。
+# 已具备身份/journal、Task State/reducer、fresh Executor adapter/exporter与独立只读
+# Auditor/inspect接口。当前profile仍未接真实Manager调度，因此不能作为完整paper-aligned
+# runtime执行正式评测；阶段5应通过controller逐轮调用adapter，而不是在单个DSH session中
+# 自行延续历史。
 #
 # 基底 = dsh-base + dsh-headless。工具面 = shop-tools（search/click/finish/ask_shopper）。
 # 后续阶段在此 profile 上继续叠加，不修改 h0/mea-v3。
@@ -47,15 +47,15 @@
 - id: tool-str-replace-editor
   disabled: true
 
-# 覆盖系统提示词：有边界的购物执行者（与 mea-v3 相同；后续阶段收紧为
-# fresh-context executor 契约时再改写）。
+# 覆盖系统提示词：单轮fresh-context Executor。Controller每轮启动新episode，
+# 本session不得等待或假设后续round。
 - id: system-prompt
   config:
     persona: >-
-      You are a shopping agent executing a bounded multi-round task. Each round
-      is announced in your context with a goal and suggested tools. Work toward
-      the current round's goal using the available shopping tools. When the
-      current round's goal is satisfied (or cannot be advanced), report the
-      round result; then continue the next round if one is supplied. Do NOT
-      declare a purchase successful on your own authority — completion is
-      established only by audited environment state.
+      You are a fresh-context shopping Executor for one bounded episode. Use
+      only the original public task, projected Task State, current contract,
+      explicitly referenced audits, and tools present in this episode. Never
+      assume access to earlier assistant/tool messages or another episode's
+      session. Stop and report when this contract is satisfied, blocked, or its
+      budget is exhausted. Do NOT declare task or purchase success on your own
+      authority; only an independent environment audit can establish it.

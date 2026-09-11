@@ -7,6 +7,11 @@
 本阶段提供新runtime的基础组件和fixture；不改变mea-v3购物策略。
 建议实现于 `src/mea-v4/`，具体文件划分服从已有DSH接口。
 
+当前接线约定：`mea-v4-paper`/`mea-v4-paper-gated` 由 runner 为每次调用生成随机
+attempt_id，并显式传入 `SHOPPER_SESSION_SCHEME=explicit-v1` 与
+`SHOPPER_SESSION_KEY=<run/task#attempt-id>`。显式会话初始化失败即终止该attempt；工具侧遇到
+unknown_session返回恢复错误，不得懒初始化。旧profile继续使用原task/env级回退行为。
+
 ## 会话身份
 
 区分task_id、run_id、attempt_id、round_id、episode_id、environment_session/lease、
@@ -35,6 +40,20 @@ shopper_session。DSH每轮新episode，ShopSimulator和Shopper在同一attempt�
 原始执行轨迹、角色请求/响应和审计日志按episode持久保存；跨轮模型输入使用受控投影。
 费用/token不可用时为null，不能用工具次数估算成实际费用。
 
+阶段1当前冻结接口为 `longhorizon-task-journal-v2`。Journal负责生成event_id并分配
+连续sequence；调用方不能回退或复用sequence。所有事件必须携带task/run/attempt身份，
+Executor/Auditor事件还必须携带round/episode身份。环境done只允许出现在
+`role=executor, source=environment, event_type=tool_result`，并与raw_result.done一致。
+同一call_id的结果还必须与调用的task/run/attempt/round/episode完全一致。
+
+attempt持久化接口为`longhorizon-attempt-v1`和`longhorizon-checkpoint-v1`，由
+`src/mea-v4/attempt.js`提供原子写入、校验和完整attempt跳过判断。paper profile的runner只按
+manifest完整性判断resume；在阶段4尚未产生独立审计前，真实环境修改保持
+`unaudited_changes=true`，因此不会被误判为可跳过的完整attempt。
+
+逻辑输入指纹与运行身份分开：前者覆盖任务、profile/config、schema、环境版本、角色模型与
+预算；后者保存run/attempt/environment/shopper身份，恢复时两部分分别核验。
+
 ## 运行状态与恢复前置契约
 
 运行完成、环境终局、用户任务成功分别记录。角色错误、导出失败、空session不能因为进程
@@ -44,7 +63,8 @@ shopper_session。DSH每轮新episode，ShopSimulator和Shopper在同一attempt�
 resume只跳过完整、输入指纹匹配且协议验证通过的attempt。
 检查checkpoint和journal是否存在未完成的调用、尚未审计的环境修改。
 若当前环境/lease身份无法核实，返回recovery_required；不得仅凭旧env_idx继续。
-本阶段只定义恢复状态与测试输入，阶段5实现实际环境协调。
+本阶段只定义恢复状态与测试输入，阶段5实现实际环境协调。身份验证采用显式三态
+verified/unknown/mismatch；没有诊断不等于已验证，默认必须是unknown。
 
 中断时停止调度、终止并等待该attempt的子进程退出、保存已收到的事件，再按lease所有权
 释放资源。历史失败attempt不覆盖，后续重试记录新attempt与替换原因。

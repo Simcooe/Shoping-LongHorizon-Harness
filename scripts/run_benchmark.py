@@ -28,6 +28,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -36,6 +37,7 @@ import sys
 import threading
 import time
 import urllib.request
+import uuid
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -49,6 +51,7 @@ from eval.purchase_verifier import (  # noqa: E402
     verify_price,
     verify_quantity,
 )
+from scripts.mea_v4_process import run_child, stop_all_children  # noqa: E402
 
 # --------------------------------------------------------------------------- #
 # profile -> 运行时控制能力（E0/E1 不变量）
@@ -170,11 +173,12 @@ def reset_task(base_url: str, task_id: int, timeout: int = 120) -> dict:
     )
 
 
-def release_slot(base_url: str, env_idx: int, timeout: int = 60) -> None:
+def release_slot(base_url: str, env_idx: int, timeout: int = 60,
+                 lease_id: str | None = None) -> None:
     try:
         http_post(
             f"{base_url.rstrip('/')}/api/shop_agent",
-            {"action": "release_one", "env_idx": env_idx},
+            {"action": "release_one", "env_idx": env_idx, "lease_id": lease_id},
             timeout=timeout,
         )
     except Exception:
@@ -182,19 +186,78 @@ def release_slot(base_url: str, env_idx: int, timeout: int = 60) -> None:
         pass
 
 
-def shopper_start(shopper_url: str, task_id: int, run_id: str | None = None,
-                  timeout: int = 30) -> None:
-    # 会话身份 = run/task（与 shop-tools 一致，避免跨 run 串话）。
-    session = f"{run_id}/{task_id}" if run_id else str(task_id)
+def shopper_session_key(run_id: str, task_id: int, attempt_id: str) -> str:
+    """mea-v4 attempt 级 Shopper 会话键；同 attempt 稳定、重试必须不同。"""
+    return f"{run_id}/{task_id}#attempt-{attempt_id}"
+
+
+def shopper_start(shopper_url: str, task_id: int, session: str,
+                  timeout: int = 30, *, required: bool = False) -> None:
     try:
-        http_post(
+        response = http_post(
             f"{shopper_url.rstrip('/')}/start",
-            {"session": session, "idx": task_id, "run_id": run_id},
+            {"session": session, "idx": task_id},
             timeout=timeout,
         )
+        if not response.get("ok", True):
+            raise RuntimeError(response.get("error") or "shopper start failed")
     except Exception:
-        # 预热失败不 fatal；shop-tools 的 ask_shopper 首次提问会懒初始化
+        if required:
+            raise
+        # Legacy profiles keep the previous lazy-initialization fallback.
         pass
+
+
+def _atomic_write_json(path: Path, value: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + f".tmp-{os.getpid()}-{threading.get_ident()}")
+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
+def _paper_input_fingerprint(task_id: int, task_text: str, profile: str,
+                             controls: dict, base_env: dict) -> str:
+    logical = {
+        "task_id": str(task_id),
+        "query": task_text,
+        "profile": profile,
+        "runtime_controls": controls,
+        "journal_schema": "longhorizon-task-journal-v2",
+        "state_schema": "longhorizon-task-state-v3",
+        "environment_version": base_env.get("SHOPSIM_ENV_VERSION", "unknown"),
+        "model": base_env.get("DSH_MODEL"),
+    }
+    encoded = json.dumps(logical, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _paper_attempt_manifest_path(run_dir: Path, task_id: int, attempt_id: str) -> Path:
+    return run_dir / "tasks" / str(task_id) / "attempts" / attempt_id / "manifest.json"
+
+
+def _paper_resume_hit(run_dir: Path, task_id: int, profile: str) -> bool:
+    attempts = run_dir / "tasks" / str(task_id) / "attempts"
+    if not attempts.is_dir():
+        return False
+    for manifest_path in attempts.glob("*/manifest.json"):
+        try:
+            item = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if (
+                item.get("schema") == "longhorizon-attempt-v1"
+                and item.get("profile") == profile
+                and item.get("attempt_complete") is True
+                and item.get("runtime_status") == "completed"
+                and item.get("protocol_valid") is True
+                and item.get("export_ok") is True
+                and item.get("session_ok") is True
+                and item.get("unaudited_changes") is False
+                and (manifest_path.parent / "journal.jsonl").is_file()
+                and (run_dir / "traces" / f"{task_id}.raw_trace.json").is_file()
+            ):
+                return True
+        except Exception:
+            continue
+    return False
 
 
 # --------------------------------------------------------------------------- #
@@ -346,6 +409,8 @@ def run_one_task(
         "task_id": task_id,
         "status": "failed",
         "session": None,
+        "attempt_id": None,
+        "shopper_session": None,
         "env_idx": None,
         "error": None,
         "step_count": None,
@@ -375,6 +440,8 @@ def run_one_task(
             result["error"] = f"reset 无 env_idx: {reset_result.get('error', reset_json)}"
             return result
         result["env_idx"] = env_idx
+        result["environment_session"] = reset_result.get("environment_session")
+        result["environment_lease"] = reset_result.get("lease_id")
         # 保存 reset 原始返回（export_trace.py 需要）
         (run_dir / "reset" / f"{task_id}.json").write_text(
             json.dumps(reset_json, ensure_ascii=False, indent=2),
@@ -382,10 +449,67 @@ def run_one_task(
         )
 
         task_text = build_task_text(reset_result)
+        paper_profile = profile in {"mea-v4-paper", "mea-v4-paper-gated"}
+        attempt_id = uuid.uuid4().hex
+        result["attempt_id"] = attempt_id
+        explicit_shopper_session = shopper_session_key(
+            run_dir.name, task_id, attempt_id
+        ) if paper_profile else None
+        result["shopper_session"] = explicit_shopper_session
+        attempt_manifest_path = None
+        attempt_manifest = None
+        if paper_profile:
+            attempt_manifest_path = _paper_attempt_manifest_path(
+                run_dir, task_id, attempt_id
+            )
+            attempt_manifest = {
+                "schema": "longhorizon-attempt-v1",
+                "profile": profile,
+                "task_id": str(task_id),
+                "run_id": run_dir.name,
+                "attempt_id": attempt_id,
+                "input_fingerprint": _paper_input_fingerprint(
+                    task_id, task_text, profile, controls, base_env
+                ),
+                "identity": {
+                    "environment_session": reset_result.get("environment_session")
+                    or f"env-idx-{env_idx}",
+                    "environment_lease": reset_result.get("lease_id"),
+                    "shopper_session": explicit_shopper_session,
+                },
+                "artifacts": {
+                    "journal": "journal.jsonl",
+                    "checkpoint": "checkpoint.json",
+                    "episodes": "episodes",
+                },
+                "runtime_status": "initialized",
+                "protocol_valid": False,
+                "export_ok": False,
+                "session_ok": False,
+                "attempt_complete": False,
+                "unaudited_changes": True,
+                "created_at": time.time(),
+                "updated_at": time.time(),
+                "error": None,
+                "replaced_attempt_id": None,
+            }
+            _atomic_write_json(attempt_manifest_path, attempt_manifest)
+            (attempt_manifest_path.parent / "journal.jsonl").touch()
 
-        # 2. 预热 shopper 会话（run/task 会话身份）
+        # 2. 预热 shopper 会话。mea-v4 使用 attempt 级显式身份且初始化失败即失败；
+        # legacy profile 保持原来的 task 级懒初始化行为。
         if shopper_url:
-            shopper_start(shopper_url, task_id, run_id=run_dir.name)
+            shopper_start(
+                shopper_url,
+                task_id,
+                explicit_shopper_session if paper_profile else str(task_id),
+                required=paper_profile,
+            )
+
+        if attempt_manifest is not None:
+            attempt_manifest["runtime_status"] = "running"
+            attempt_manifest["updated_at"] = time.time()
+            _atomic_write_json(attempt_manifest_path, attempt_manifest)
 
         # 3. 跑 dsh（独立 DSH_HOME）；同一 env/shopper 会话多轮控制（B3）。
         env = dict(base_env)
@@ -395,49 +519,109 @@ def run_one_task(
             "SHOPSIM_TASK_IDX": str(task_id),
             # run 前缀进入 shopper 会话身份与事件溯源（不改变 Agent 策略）
             "SHOPSIM_RUN_ID": run_dir.name,
+            "SHOPSIM_ATTEMPT_ID": attempt_id if paper_profile else "",
             "SHOPSIM_BASE_URL": shopsim_base_url,
             "SHOPPER_BASE_URL": shopper_url or "",
+            "SHOPPER_SESSION_SCHEME": "explicit-v1" if paper_profile else "legacy",
+            "SHOPPER_SESSION_KEY": explicit_shopper_session or "",
         })
         known_sessions: set[str] = set()
-        # 单次执行：一个任务只跑一个 dsh 进程。模型需要用户信息时应通过
-        # ask_shopper 工具（同步返回、回复进同一上下文），不靠 runner 重跑。
-        with log_file.open("a", encoding="utf-8") as logf:
-            proc = subprocess.run(
-                ["pnpm", "dsh", "--profile", profile, task_text],
-                cwd=str(dsh_checkout),
-                env=env,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-            )
-            logf.write(proc.stdout.decode("utf-8", "replace"))
-        result["turn_count"] = 1
         final_text = ""
-        # 保存 MEA 实验产物（state/rounds/evidence/manager），不改 h0/h1 行为。
-        _save_mea_artifacts(tmp_home, run_dir, task_id)
-        session_file = _find_new_session(tmp_home, known_sessions)
-        if session_file is not None:
-            known_sessions.add(session_file.name)
-            export_proc = _export_session(
-                session_file / "session.jsonl.zstd", run_dir / "traces",
-                task_id, run_dir / "reset" / f"{task_id}.json",
-            )
-            if export_proc.returncode == 0:
-                model_trace = json.loads(
-                    (run_dir / "traces" / f"{task_id}.model_trace.json").read_text(encoding="utf-8")
+        if paper_profile:
+            controller_config = {
+                "profile": profile,
+                "run_id": run_dir.name,
+                "attempt_id": attempt_id,
+                "attempt_dir": str(attempt_manifest_path.parent),
+                "traces_dir": str(run_dir / "traces"),
+                "dsh_checkout": str(dsh_checkout),
+                "profiles_dir": str(shared_home / "profiles"),
+                "shopsim_base_url": shopsim_base_url,
+                "shopper_base_url": shopper_url or "",
+                "task": {"id": str(task_id), "original_goal": task_text,
+                         "persona": (json.dumps(reset_result.get("user_persona"), ensure_ascii=False)
+                                     if isinstance(reset_result.get("user_persona"), dict)
+                                     else reset_result.get("user_persona"))},
+                "environment_handle": {
+                    "env_idx": env_idx,
+                    "environment_session": reset_result.get("environment_session"),
+                    "environment_lease": reset_result.get("lease_id"),
+                    "shopper_session": explicit_shopper_session,
+                    "tool_schemas": [
+                        {"name": "search", "parameters": {"type": "object", "properties": {"keywords": {"type": "string"}}, "required": ["keywords"]}},
+                        {"name": "click", "parameters": {"type": "object", "properties": {"value": {"type": "string"}}, "required": ["value"]}},
+                        {"name": "finish", "parameters": {"type": "object", "properties": {"reason": {"type": "string"}}, "required": ["reason"]}},
+                    ] + ([{"name": "ask_shopper", "parameters": {"type": "object", "properties": {"question": {"type": "string"}}, "required": ["question"]}}] if shopper_url else []),
+                    "env": {"SHOPSIM_BASE_URL": shopsim_base_url,
+                            "SHOPPER_BASE_URL": shopper_url or ""},
+                },
+                "models": {
+                    "manager": base_env.get("MEA_MANAGER_MODEL") or base_env.get("DSH_MODEL") or "deepseek-v4-flash",
+                    "auditor": base_env.get("MEA_AUDITOR_MODEL") or base_env.get("DSH_MODEL") or "deepseek-v4-flash",
+                },
+                "budget": {
+                    "max_rounds": int(base_env.get("MEA_MAX_ROUNDS", "10")),
+                    "max_ask": int(base_env.get("MEA_MAX_ASK", "3")),
+                    "max_manager_calls": int(base_env.get("MEA_MAX_MANAGER_CALLS", "30")),
+                    "max_tool_calls": int(base_env.get("SHOP_MAX_STEPS", "35")),
+                    "timeout_ms": int(base_env.get("MEA_TASK_TIMEOUT_MS", "1800000")),
+                    "manager_timeout_ms": int(base_env.get("MEA_MANAGER_TIMEOUT_MS", "300000")),
+                    "auditor_timeout_ms": int(base_env.get("MEA_AUDITOR_TIMEOUT_MS", "300000")),
+                    "shopper_timeout_ms": int(base_env.get("MEA_SHOPPER_TIMEOUT_MS", "60000")),
+                },
+            }
+            config_path = attempt_manifest_path.parent / "controller-config.json"
+            _atomic_write_json(config_path, controller_config)
+            with log_file.open("a", encoding="utf-8") as logf:
+                proc = run_child(
+                    ["node", str(REPO_ROOT / "scripts" / "run_mea_v4_controller.mjs"), str(config_path)],
+                    cwd=REPO_ROOT, env=env,
                 )
-                raw_trace = json.loads(
-                    (run_dir / "traces" / f"{task_id}.raw_trace.json").read_text(encoding="utf-8")
+                logf.write(proc.stdout.decode("utf-8", "replace"))
+            controller_report_path = attempt_manifest_path.parent / "controller-report.json"
+            controller_report = json.loads(controller_report_path.read_text(encoding="utf-8")) if controller_report_path.exists() else {}
+            result["turn_count"] = controller_report.get("rounds")
+            result["step_count"] = controller_report.get("total_tool_calls")
+            result["environment_done"] = controller_report.get("environment_done", False)
+            result["completion_claim_valid"] = controller_report.get("harness_outcome") == "audited_success"
+            result["harness_outcome"] = controller_report.get("harness_outcome")
+            result["controller_runtime_status"] = controller_report.get("runtime_status")
+            result["status"] = "done" if controller_report.get("runtime_status") == "completed" else "failed"
+            result["error"] = None if result["status"] == "done" else "mea-v4 controller failed"
+        else:
+            # Legacy profiles keep their single DSH session behavior.
+            with log_file.open("a", encoding="utf-8") as logf:
+                proc = run_child(
+                    ["pnpm", "dsh", "--profile", profile, task_text],
+                    cwd=dsh_checkout,
+                    env=env,
                 )
-                # 从 stdout 提取最终 assistant 文本（headless 打印最后 assistant 文本）。
-                out_text = proc.stdout.decode("utf-8", "replace").strip().splitlines()
-                # headless 把 reasoning 流到 stderr、最终文本打到 stdout；取最后非空行。
-                final_text = next((line for line in reversed(out_text) if line.strip()), "")
-                # 诊断性分类（只记录、不重跑）：模型以何种方式结束本轮。
-                decision = classify_turn(model_trace, raw_trace, final_text)
-                result["terminal_decision"] = decision["decision"]
+                logf.write(proc.stdout.decode("utf-8", "replace"))
+            result["turn_count"] = 1
+            _save_mea_artifacts(tmp_home, run_dir, task_id)
+            session_file = _find_new_session(tmp_home, known_sessions)
+            if session_file is not None:
+                known_sessions.add(session_file.name)
+                export_proc = _export_session(
+                    session_file / "session.jsonl.zstd", run_dir / "traces",
+                    task_id, run_dir / "reset" / f"{task_id}.json",
+                )
+                if export_proc.returncode == 0:
+                    model_trace = json.loads(
+                        (run_dir / "traces" / f"{task_id}.model_trace.json").read_text(encoding="utf-8")
+                    )
+                    raw_trace = json.loads(
+                        (run_dir / "traces" / f"{task_id}.raw_trace.json").read_text(encoding="utf-8")
+                    )
+                    out_text = proc.stdout.decode("utf-8", "replace").strip().splitlines()
+                    final_text = next((line for line in reversed(out_text) if line.strip()), "")
+                    decision = classify_turn(model_trace, raw_trace, final_text)
+                    result["terminal_decision"] = decision["decision"]
 
         # 释放 slot
-        release_slot(shopsim_base_url, env_idx)
+        release_slot(
+            shopsim_base_url, env_idx, lease_id=reset_result.get("lease_id")
+        )
 
         # 收尾判断：读取最终 raw_trace（terminal 从 raw steps 按 v2 口径计算）。
         try:
@@ -493,13 +677,65 @@ def run_one_task(
         except Exception:
             pass
 
-        result["status"] = "done"
-        result["error"] = None
+        if not paper_profile:
+            result["status"] = "done"
+            result["error"] = None
+        if attempt_manifest is not None:
+            session_ok = (run_dir / "traces" / f"{task_id}.model_trace.json").is_file()
+            export_ok = session_ok and (run_dir / "traces" / f"{task_id}.raw_trace.json").is_file()
+            controller_report = locals().get("controller_report", {})
+            audited = len(controller_report.get("audits") or []) > 0
+            unresolved_mutation = bool(controller_report.get("environment_done")) and not audited
+            controller_completed = controller_report.get("runtime_status") == "completed"
+            attempt_manifest.update({
+                "runtime_status": "completed" if controller_completed and export_ok else "failed",
+                "protocol_valid": bool(controller_completed and export_ok),
+                "export_ok": bool(export_ok),
+                "session_ok": bool(session_ok),
+                "attempt_complete": True,
+                "unaudited_changes": unresolved_mutation,
+                "updated_at": time.time(),
+                "error": None if controller_completed and export_ok else result.get("error") or "controller/export failed",
+            })
+            _atomic_write_json(attempt_manifest_path, attempt_manifest)
+            result["status"] = "done" if controller_completed and export_ok else "failed"
+            if result["status"] == "done":
+                result["error"] = None
+        return result
+    except KeyboardInterrupt:
+        result["status"] = "interrupted"
+        result["error"] = "KeyboardInterrupt"
+        if 'attempt_manifest' in locals() and attempt_manifest is not None:
+            attempt_manifest.update({
+                "runtime_status": "interrupted",
+                "attempt_complete": True,
+                "protocol_valid": False,
+                "updated_at": time.time(),
+                "error": "KeyboardInterrupt",
+            })
+            _atomic_write_json(attempt_manifest_path, attempt_manifest)
+        if env_idx is not None:
+            release_slot(
+                shopsim_base_url, env_idx,
+                lease_id=(reset_result.get("lease_id") if 'reset_result' in locals() else None),
+            )
         return result
     except Exception as e:  # noqa: BLE001
         result["error"] = f"{type(e).__name__}: {e}"[:300]
+        if 'attempt_manifest' in locals() and attempt_manifest is not None:
+            attempt_manifest.update({
+                "runtime_status": "failed",
+                "attempt_complete": True,
+                "protocol_valid": False,
+                "updated_at": time.time(),
+                "error": result["error"],
+            })
+            _atomic_write_json(attempt_manifest_path, attempt_manifest)
         if env_idx is not None:
-            release_slot(shopsim_base_url, env_idx)
+            release_slot(
+                shopsim_base_url, env_idx,
+                lease_id=(reset_result.get("lease_id") if 'reset_result' in locals() else None),
+            )
         return result
     finally:
         import shutil
@@ -606,12 +842,18 @@ def run_benchmark(args):
     for sub in ("sessions", "traces", "reset", "logs"):
         (run_dir / sub).mkdir(parents=True, exist_ok=True)
 
-    # resume 时跳过已有 raw_trace 的 task
+    # resume：paper profile只跳过完整manifest命中；legacy保留raw_trace兼容行为。
     skipped = []
     if resume:
         pending = []
+        paper_profile = args.profile in {"mea-v4-paper", "mea-v4-paper-gated"}
         for t in task_ids:
-            if (run_dir / "traces" / f"{t}.raw_trace.json").exists():
+            complete = (
+                _paper_resume_hit(run_dir, t, args.profile)
+                if paper_profile
+                else (run_dir / "traces" / f"{t}.raw_trace.json").exists()
+            )
+            if complete:
                 skipped.append(t)
             else:
                 pending.append(t)
@@ -633,7 +875,7 @@ def run_benchmark(args):
     # 子进程环境：os.environ + .env（.env 覆盖），带 DEEPSEEK_API_KEY 等完整凭据
     base_env = merge_env(dotenv)
     shopsim_base_url = (
-        dotenv.get("SHOPSIM_BASE_URL") or os.environ.get("SHOPSIM_BASE_URL") or DEFAULT_SHOPSIM_BASE_URL
+        os.environ.get("SHOPSIM_BASE_URL") or dotenv.get("SHOPSIM_BASE_URL") or DEFAULT_SHOPSIM_BASE_URL
     )
     base_env["SHOPSIM_BASE_URL"] = shopsim_base_url
     dsh_checkout = Path(
@@ -682,8 +924,14 @@ def run_benchmark(args):
 
     with ThreadPoolExecutor(max_workers=slots) as pool:
         futures = [pool.submit(worker, t) for t in task_ids]
-        for _ in as_completed(futures):
-            pass  # 结果已由 worker 内部收集并打印进度
+        try:
+            for _ in as_completed(futures):
+                pass  # 结果已由 worker 内部收集并打印进度
+        except KeyboardInterrupt:
+            stop_all_children()
+            for future in futures:
+                future.cancel()
+            raise
 
     # 汇总 manifest
     records.sort(key=lambda r: r["task_id"])

@@ -12,7 +12,19 @@ class SlotLeasePoolTest(unittest.TestCase):
         self.assertTrue(pool.release(slot))
         self.assertEqual(pool.acquire(), 0)
 
-    def test_stale_duplicate_release_is_visible(self):
+    def test_lease_token_rejects_stale_owner(self):
+        pool = SlotLeasePool(1)
+        slot = pool.acquire()
+        lease = pool.lease_for(slot)
+        self.assertTrue(pool.verify(slot, lease))
+        self.assertFalse(pool.release(slot, "wrong"))
+        self.assertTrue(pool.verify(slot, lease))
+        self.assertTrue(pool.release(slot, lease))
+        slot2 = pool.acquire()
+        lease2 = pool.lease_for(slot2)
+        self.assertNotEqual(lease, lease2)
+        self.assertFalse(pool.verify(slot2, lease))
+
         pool = SlotLeasePool(1)
         slot = pool.acquire()
         self.assertTrue(pool.release(slot))

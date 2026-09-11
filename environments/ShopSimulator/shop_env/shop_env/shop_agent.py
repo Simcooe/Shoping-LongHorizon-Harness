@@ -167,6 +167,15 @@ def _handle_interact_action(
         reward_detail = status["reward_detail"]
         purchase = status['purchase']
         goal = status['goal']
+        session = env.server.user_sessions.get(env.session)
+        termination_reason = status.get("termination_reason", "environment_done")
+        if isinstance(session, dict):
+            if isinstance(purchase, dict) and purchase.get("asin") and termination_reason not in (
+                "agent_finish", "no_suitable_product", "abandoned"
+            ):
+                session["terminal_receipt"] = dict(purchase)
+            else:
+                session.pop("terminal_receipt", None)
     else:
         reward_detail = {}
         purchase = {}
@@ -197,6 +206,29 @@ def _handle_interact_action(
     return return_info
 
 
+def public_readonly(env: Any, env_idx: int) -> Dict[str, Any]:
+    """Return only public inspection data; never calls reset/step/render."""
+    session_id = getattr(env, 'session', None)
+    if session_id is None or session_id not in env.server.user_sessions:
+        raise ValueError('unknown environment session')
+    session = env.server.user_sessions[session_id]
+    observation = env.structured_observation()
+    result = {
+        'inspection_version': 'shopping-inspection-v1',
+        'read_only': True,
+        'env_idx': env_idx,
+        'session': str(session_id),
+        'observation_state': observation,
+        'source': 'environment.public_readonly',
+    }
+    # Receipt is emitted only for an actual purchase termination returned by
+    # the environment.  It is never reconstructed from the current product.
+    terminal = session.get('terminal_receipt')
+    if isinstance(terminal, dict) and terminal.get('asin'):
+        result['receipt'] = dict(terminal)
+    return result
+
+
 def shop_agent(
     env: Any,
     env_idx: int,
@@ -220,6 +252,8 @@ def shop_agent(
     Raises:
         ValueError: When action is not "reset" or "interact"
     """
+    if action == "public_readonly":
+        return public_readonly(env, env_idx)
     if action == "reset":
         if idx is None:
             raise ValueError("reset action requires idx parameter")

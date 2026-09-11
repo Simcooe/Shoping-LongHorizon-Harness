@@ -61,7 +61,48 @@ function resolveConfig(config) {
   const rawTaskIdx = config?.taskIdx ?? process.env.SHOPSIM_TASK_IDX
   const taskIdx =
     rawTaskIdx === undefined || rawTaskIdx === null || rawTaskIdx === '' ? undefined : String(rawTaskIdx)
-  return { baseUrl, envIdx, timeoutMs, shopperUrl: shopperUrl || undefined, taskIdx }
+  const rawShopperSession = config?.shopperSession ?? process.env.SHOPPER_SESSION_KEY
+  const shopperSession = rawShopperSession === undefined || rawShopperSession === null
+    || String(rawShopperSession).trim() === ''
+    ? undefined : String(rawShopperSession).trim()
+  const shopperSessionScheme = config?.shopperSessionScheme
+    ?? process.env.SHOPPER_SESSION_SCHEME
+    ?? (shopperSession ? 'explicit-v1' : 'legacy')
+  if (shopperSessionScheme === 'explicit-v1' && !shopperSession) {
+    throw new Error('shop-tools: explicit Shopper session requires SHOPPER_SESSION_KEY')
+  }
+  const rawAllowedTools = config?.allowedTools ?? process.env.MEA_ALLOWED_TOOLS
+  const allowedTools = rawAllowedTools
+    ? new Set(Array.isArray(rawAllowedTools) ? rawAllowedTools : String(rawAllowedTools).split(','))
+    : null
+  const maxToolCalls = Number(config?.maxToolCalls ?? process.env.MEA_MAX_TOOL_CALLS ?? 0)
+  let toolRules = config?.toolRules ?? process.env.MEA_TOOL_RULES ?? []
+  if (typeof toolRules === 'string' && toolRules) {
+    try { toolRules = JSON.parse(toolRules) } catch { throw new Error('shop-tools: invalid MEA_TOOL_RULES JSON') }
+  }
+  return {
+    baseUrl, envIdx, timeoutMs, shopperUrl: shopperUrl || undefined, taskIdx,
+    shopperSession, shopperSessionScheme, allowedTools,
+    maxToolCalls: Number.isFinite(maxToolCalls) && maxToolCalls > 0 ? Math.floor(maxToolCalls) : null,
+    toolRules: Array.isArray(toolRules) ? toolRules : [], toolCallCount: 0,
+  }
+}
+
+function enforceRuntimeBoundary(cfg, name, args) {
+  if (cfg.allowedTools && !cfg.allowedTools.has(name)) {
+    throw new Error(`shop-tools: tool "${name}" is not allowed by the active contract`)
+  }
+  cfg.toolCallCount += 1
+  if (cfg.maxToolCalls && cfg.toolCallCount > cfg.maxToolCalls) {
+    throw new Error('shop-tools: tool budget exhausted')
+  }
+  for (const rule of cfg.toolRules.filter(item => item?.tool === name)) {
+    if (rule.allow === false) throw new Error(`shop-tools: tool "${name}" denied by contract`)
+    const values = Object.values(args ?? {}).map(value => String(value))
+    if ((rule.deny_values ?? []).some(value => values.includes(String(value)))) {
+      throw new Error(`shop-tools: tool argument denied by contract (${name})`)
+    }
+  }
 }
 
 /** Convert one tool call into the environment action string, or null if unknown. */
@@ -123,6 +164,7 @@ function shopTool(cfg, name, description, parameters, actionOf) {
     description,
     parameters,
     async execute(args, exec) {
+      enforceRuntimeBoundary(cfg, name, args)
       const action = actionOf(args)
       if (action === null) throw new Error(`shop-tools: unknown tool ${name}`)
       const result = await interact(cfg, action, exec.signal)
@@ -151,11 +193,12 @@ function shopTool(cfg, name, description, parameters, actionOf) {
 
 /**
  * ask_shopper：向模拟用户提问（Multi-Turn 场景）。
- * 会话键 = 任务 idx；首次提问时懒初始化（/start 读隐藏事实）。
+ * 新 profile 显式传 attempt 级会话键；旧 profile 保留 task/env 的懒初始化行为。
  * 模型可见内容只有用户回复文本；问答全文进 presentationMeta 供评测。
  */
 async function shopperAsk(cfg, question, signal) {
-  const session = cfg.taskIdx ?? `env-${cfg.envIdx}`
+  const explicit = cfg.shopperSessionScheme === 'explicit-v1'
+  const session = explicit ? cfg.shopperSession : (cfg.taskIdx ?? `env-${cfg.envIdx}`)
   const post = async (path, body) => {
     const response = await fetch(`${cfg.shopperUrl}${path}`, {
       method: 'POST',
@@ -167,6 +210,9 @@ async function shopperAsk(cfg, question, signal) {
     return { ok: response.ok, ...payload }
   }
   let res = await post('/ask', { session, question })
+  if (!res.ok && res.error === 'unknown_session' && explicit) {
+    throw new Error('ask_shopper: 显式会话丢失，必须进入 recovery_required')
+  }
   if (!res.ok && res.error === 'unknown_session') {
     const started = await post('/start', { session, idx: cfg.taskIdx ?? cfg.envIdx })
     if (!started.ok) {
@@ -225,7 +271,7 @@ export function apply(ctx, config) {
   ]
 
   for (const tool of tools) {
-    ctx.tools.register(tool)
+    if (!cfg.allowedTools || cfg.allowedTools.has(tool.name)) ctx.tools.register(tool)
   }
 
   // Multi-Turn 场景：仅在配置了 Shopper Simulator 时注册 ask_shopper。
@@ -243,6 +289,7 @@ export function apply(ctx, config) {
         additionalProperties: false,
       },
       async execute(args, exec) {
+        enforceRuntimeBoundary(cfg, 'ask_shopper', args)
         const { session, reply } = await shopperAsk(cfg, String(args.question ?? ''), exec.signal)
         return {
           text: `用户回复：${reply}`,

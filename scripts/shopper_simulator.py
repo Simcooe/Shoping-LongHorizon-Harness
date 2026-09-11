@@ -15,6 +15,7 @@
 import json
 import os
 import sys
+import threading
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -30,6 +31,7 @@ MAX_TURNS = 40
 
 # 会话表：session -> {"facts": ..., "history": [...]}
 SESSIONS = {}
+SESSIONS_LOCK = threading.RLock()
 
 
 def load_dotenv(path=DEFAULT_ENV):
@@ -104,14 +106,20 @@ def chat(messages):
 
 
 def do_ask(session, question):
-    s = SESSIONS.get(session)
-    if s is None:
-        return None
-    s["history"].append({"role": "user", "content": question})
-    if len(s["history"]) > MAX_TURNS * 2:
-        s["history"] = s["history"][-MAX_TURNS * 2:]
-    reply = chat([{"role": "system", "content": s["system"]}] + s["history"])
-    s["history"].append({"role": "assistant", "content": reply})
+    with SESSIONS_LOCK:
+        s = SESSIONS.get(session)
+        if s is None:
+            return None
+        s["history"].append({"role": "user", "content": question})
+        if len(s["history"]) > MAX_TURNS * 2:
+            s["history"] = s["history"][-MAX_TURNS * 2:]
+        messages = [{"role": "system", "content": s["system"]}] + list(s["history"])
+    reply = chat(messages)
+    with SESSIONS_LOCK:
+        current = SESSIONS.get(session)
+        if current is None or current is not s:
+            return None
+        current["history"].append({"role": "assistant", "content": reply})
     return reply
 
 
@@ -141,14 +149,32 @@ class Handler(BaseHTTPRequestHandler):
         session = str(data.get("session", ""))
         if self.path == "/start":
             idx = data.get("idx")
+            if not session:
+                return self._send(400, {"error": "empty_session"})
             facts_path = FACTS_DIR / f"{idx}.json"
             if not facts_path.is_file():
                 return self._send(404, {"error": "no_facts", "detail": str(facts_path)})
-            facts = json.loads(facts_path.read_text(encoding="utf-8"))
-            SESSIONS[session] = {"facts": facts, "system": build_system_prompt(facts), "history": []}
-            return self._send(200, {"ok": True, "session": session})
+            with SESSIONS_LOCK:
+                existing = SESSIONS.get(session)
+                if existing is not None:
+                    if str(existing.get("idx")) != str(idx):
+                        return self._send(409, {"error": "session_identity_conflict"})
+                    return self._send(200, {
+                        "ok": True, "session": session, "existing": True,
+                        "turns": len(existing["history"]) // 2,
+                    })
+                facts = json.loads(facts_path.read_text(encoding="utf-8"))
+                SESSIONS[session] = {
+                    "idx": idx,
+                    "facts": facts,
+                    "system": build_system_prompt(facts),
+                    "history": [],
+                }
+            return self._send(200, {"ok": True, "session": session, "existing": False})
         if self.path == "/ask":
-            if session not in SESSIONS:
+            with SESSIONS_LOCK:
+                known = session in SESSIONS
+            if not known:
                 return self._send(404, {"error": "unknown_session"})
             question = str(data.get("question", "")).strip()
             if not question:
@@ -159,7 +185,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(502, {"error": "llm_failed", "detail": str(e)[:300]})
             return self._send(200, {"reply": reply})
         if self.path == "/end":
-            SESSIONS.pop(session, None)
+            with SESSIONS_LOCK:
+                SESSIONS.pop(session, None)
             return self._send(200, {"ok": True})
         self._send(404, {"error": "not_found"})
 

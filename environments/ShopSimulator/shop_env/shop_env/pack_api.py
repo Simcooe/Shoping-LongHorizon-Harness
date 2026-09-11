@@ -64,6 +64,8 @@ def api_some_function() -> Response:
     env_idx = data.get('env_idx', None)
     response = data.get('response', None)
     idx = data.get('idx', None)
+    lease_id = data.get('lease_id') or data.get('lease')
+    environment_session = data.get('environment_session') or data.get('session')
     try:
         # Release all environments
         if action == 'release_all':
@@ -74,7 +76,7 @@ def api_some_function() -> Response:
         # Release one environment
         if action == 'release_one':
             if env_idx is not None and isinstance(env_idx, int):
-                was_leased = slot_pool.release(env_idx)
+                was_leased = slot_pool.release(env_idx, lease_id)
                 if was_leased:
                     logger.info(f"[Release] Environment {env_idx} has been released")
                     return jsonify({'result': {"message": f"Environment {env_idx} has been released"}})
@@ -84,6 +86,17 @@ def api_some_function() -> Response:
             else:
                 logger.error("[Error] No valid environment index provided")
                 return jsonify({'result': {"error": "No valid environment index provided"}})
+
+        if action == 'public_readonly':
+            if env_idx is None or not isinstance(env_idx, int):
+                return jsonify({'result': {'error': 'public_readonly requires env_idx'}}), 400
+            if not lease_id or not slot_pool.verify(env_idx, lease_id):
+                return jsonify({'result': {'error': 'invalid environment lease'}}), 409
+            actual_session = str(getattr(envs[env_idx], 'session', ''))
+            if not environment_session or str(environment_session) != actual_session:
+                return jsonify({'result': {'error': 'environment session mismatch'}}), 409
+            result = shop_agent(envs[env_idx], env_idx, action, idx, response)
+            return jsonify({'result': result})
 
         # If env_idx is not provided, assign an available env_idx
         if env_idx is None:
@@ -102,6 +115,9 @@ def api_some_function() -> Response:
 
         # Call shop_agent function
         result = shop_agent(envs[env_idx], env_idx, action, idx, response)
+        if action == 'reset':
+            result['lease_id'] = slot_pool.lease_for(env_idx)
+            result['environment_session'] = str(getattr(envs[env_idx], 'session', ''))
 
         # The caller owns the lease until release_one.  Auto-releasing here
         # races with the caller's finally-release: another worker can lease

@@ -1,0 +1,41 @@
+{
+  "schema": "longhorizon-mea-experiment-matrix-v1",
+  "benchmark_policy": {
+    "development": "Final-200 is development/regression only",
+    "holdout": "not selected or run by this stage",
+    "rubric": "reuse frozen rubric; no silent metric changes"
+  },
+  "fixed": {
+    "executor_model": "DSH_MODEL",
+    "manager_model": "MEA_MANAGER_MODEL",
+    "auditor_model": "MEA_AUDITOR_MODEL",
+    "reasoning_effort": "environment-defined",
+    "environment_api": "shopping-inspection-v1",
+    "terminal_protocol": "terminal-protocol-v2",
+    "concurrency": 1,
+    "environment_max_steps": 35
+  },
+  "configurations": [
+    {"id": "mea-v3-matched", "profile": "mea-v3", "max_rounds": 10, "purchase_gate": false},
+    {"id": "mea-v4-paper", "profile": "mea-v4-paper", "max_rounds": 10, "purchase_gate": false},
+    {"id": "mea-v4-paper-budget-ablation", "profile": "mea-v4-paper", "max_rounds": 25, "purchase_gate": false},
+    {"id": "mea-v4-paper-gated", "profile": "mea-v4-paper-gated", "max_rounds": 10, "purchase_gate": true}
+  ],
+  "budgets": {
+    "controller_timeout_ms": 1800000,
+    "manager_timeout_ms": 300000,
+    "auditor_timeout_ms": 300000,
+    "shopper_timeout_ms": 60000,
+    "max_manager_calls": 30,
+    "max_ask": 3,
+    "max_tool_calls": 35,
+    "retry_attempts": 1,
+    "retry_backoff_ms": 10
+  },
+  "reporting": {
+    "missing_usage": null,
+    "missing_cost": null,
+    "retain_raw_attempts": true,
+    "retry_is_not_denominator_exclusion": true
+  }
+}

@@ -20,8 +20,20 @@ requirements、artifacts、facts记录至少包含：
 - 对已修改/撤销需求的明确有效性标记；保留旧版本，而不是删除历史。
 
 Audit Report包含id、contract_id、status、integrity、逐条finding、evidence、
-remaining_gaps及建议更新。逐条finding能定位它核验了哪个record/criterion。
+remaining_gaps及建议更新。逐条finding能定位它核验了哪个record/criterion。Audit证据必须
+携带runtime observation引用 `{event_id, snapshot_id, environment_session}`；阶段2可通过
+`src/mea-v4/observation.js`的只读registry fixture校验，阶段4再接真实inspect注册器。
 Audit只提出更新，Manager选择如何纳入状态，reducer验证并应用；不能让Manager凭空改写事实。
+
+真实Shopper问答保存于`state.shopper_replies`，与从回复派生需求分开。原始question/reply和
+journal event引用不可被需求归纳覆盖。Auditor可通过finding为新fact/artifact建立dependencies，
+后续需求修改或scope失效会递归使依赖记录失效。
+
+阶段2当前冻结schema版本为Task State/Contract/Audit v3。证据引用使用
+`{audit_id, evidence_id}`，不能使用裸`ev-1`。针对requirement的finding还必须绑定
+`requirement_version`；用户修改需求后，旧版本finding不得完成新版本需求。Manager的state
+update只能使用 `{audit_id, finding_id, record_id}`选择已提交finding；status、content、scope
+和证据均从finding取得。Audit入库本身不修改record。
 
 ## 局部核验与失效
 
@@ -34,7 +46,11 @@ Audit只提出更新，Manager选择如何纳入状态，reducer验证并应用�
   就一律拒绝，但须解析引用并检查范围、有效性及依赖。
 - 商品A的价格事实继续属于A；换到B后不得作为B的价格或最终需求满足证据。
 - 更换规格或需求版本后，重新检查依赖它的完成判断，必要时回到pending/untrusted。
-- 已审计的历史事实可以保留，是否适用于当前决定另行判断。
+- 对requirement区分生命周期与证据有效性：`lifecycle=active|revoked`。商品/规格变化只让
+  active需求回到untrusted/pending，仍阻止done；只有真实shopper明确撤销才设为revoked并
+  从当前完成判断排除。fact/artifact失效不等于需求撤销。
+- violation生成显式open integrity issue；后续clean audit必须按issue id明确解决，历史
+  Audit保留但已解决问题不再永久阻止done。
 
 ## Contract与Manager契约
 
@@ -50,6 +66,8 @@ execute带contract，ask带一个具体question，其他分支不携带执行con
 
 任务done要求当前有效要求满足，完成证据仍有效，最终审计complete且clean，
 无未处理integrity violation。准备好候选与实际购买完成分别建模，不能提前宣告成功。
+blocked requirement会使任务进入blocked，不能从done检查中排除。需求内容/版本只能由真实
+shopper reply入口新增、修改或撤销；修改后依赖旧版本的record自动失效。
 
 ## 验收与交接
 
