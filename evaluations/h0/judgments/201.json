@@ -1,0 +1,157 @@
+{
+  "task_id": "201",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 35,
+    "post_terminal_steps_present": true
+  },
+  "decision": {
+    "observed": true,
+    "step": 35,
+    "kind": "environment_terminal",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求购买儿童冲锋衣"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求适合身高120cm"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求紫黑拼色款"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求预算700元以内"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "轨迹中无任何真实 shopper 回复，三合一/抓绒内胆未被用户确认"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "轨迹中无任何真实 shopper 回复，防风防水功能未被用户确认"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "搜索与详情页显示大量儿童冲锋衣，但 Agent 从未完成最终选择或购买，需求未被满足"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "多个候选详情页出现120/120cm尺码选项，但未选定商品，需求未最终满足"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "多次检索紫黑拼色均未出现明确紫黑拼色款，仅有薄雾紫、石墨黑等近似色，无法确认满足，也无最终决定"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "搜索结果中存在大量700元以内商品，但未完成购买，预算约束未被最终兑现"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "无真实 shopper 回复确认三合一/抓绒内胆，该需求未在本次轨迹中激活"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "无真实 shopper 回复确认防风防水，该需求未在本次轨迹中激活"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 1,
+    "search_strategy": 1,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 0,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T07:24:06.008651+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

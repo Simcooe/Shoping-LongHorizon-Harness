@@ -1,0 +1,186 @@
+{
+  "task_id": "265",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 10,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 10,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求适合 PSV 主机，任务开始即有效"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求硬质包，任务开始即有效"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求包邮，任务开始即有效"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格在 20 元左右，任务开始即有效"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复确认怪物猎人图案需求，保持 latent"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无真实 shopper 回复确认 22 元价格上限，保持 latent"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品标题与颜色分类显示为 psv1000|2000 通用硬包，适配 PSV 主机"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品标题与颜色分类明确标注为硬包/EVA 硬包，满足硬质包要求"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品标题以『包邮』开头，满足包邮要求"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品价格为 17.0 元，符合 20 元左右的软性预算"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "无用户回复激活该需求，且页面未见怪物猎人图案信息，不作为用户需求"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "未被用户激活，仅作为页面事实：所选商品价格 17.0 元不超过 22 元上限"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 1,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 2,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T05:31:38.371960+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)"
+  }
+}

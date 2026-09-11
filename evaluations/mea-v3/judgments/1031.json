@@ -1,0 +1,239 @@
+{
+  "task_id": "1031",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": false,
+    "terminal_step": null,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": false,
+    "step": null,
+    "kind": "unresolved",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求商品为粉底液，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求瓷白色，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "modified",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        },
+        {
+          "source": "model_trace",
+          "step": 42,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "初始为『20元左右』，用户 step 42 明确改为『22以内』，以最新回复为准"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 要求推荐一款（1件）商品"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "用户从未提及或确认『粉霜』子类目，无真实 shopper 回复激活，保持 latent"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 19,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户 step 19 明确说『主要是想买2ml的试试』，激活小样需求"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 19,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户 step 19 明确要求『妆感自然的那种』，激活自然妆效需求"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 19,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户 step 19 明确要 2ml 规格，激活净含量 2ml 需求"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 42,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户 step 42 明确要求『22以内』，激活价格上限 22 元需求"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "轨迹中打开的候选均为粉底液（如 obas芮本诗粉底液小样），但最终推荐/购买未完成，需求是否满足无法判定"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "页面显示 00瓷白色（适合中性一白/粉一白/冷白皮）选项，但最终商品未确定，需求未落地"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "modified",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "最后候选 2ml+00瓷白色为 ¥23 超预算并被用户明确拒绝，轨迹终止，未确认 ≤22 的最终商品"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未完成一款商品的最终选择与下单，无法判断是否满足『推荐一款』"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户未激活粉霜子类目需求，页面亦无该类目分类证据"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "用户激活小样需求，候选确为『粉底液小样』，但最终决定未完成"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户要求自然妆效，但 Description/Features 页均为空，仅商品标题不足以证明功效"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [],
+      "reasoning": "页面显示净含量 2ml 选项（对应价 ¥23），但最终商品与结算未完成"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户要求 ≤22，唯一确认的 2ml+00瓷白色为 ¥23 且被拒，未见已确认满足 ≤22 的商品"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 2,
+    "search_strategy": 1,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 1,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:21:17.043739+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

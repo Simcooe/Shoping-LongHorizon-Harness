@@ -1,0 +1,296 @@
+{
+  "task_id": "1225",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 8,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 8,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求手链。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求天然随型宝石。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格2000元左右。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户在 step6 回复确认足金爆闪珠，激活黄金元素需求。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户在 step6 明确确认天然随型碧玺材质。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户在 step6 确认足金爆闪珠，激活闪亮珠子需求。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户在 step6 确认净14（约14cm）款式。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户确认2000块预算，激活价格上限需求。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品详情页标题为手链，品类满足。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品标题含天然随型碧玺，用户亦确认天然随型碧玺。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选择净14款式后价格显示2000.0元，符合2000元左右。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "标题及用户确认含足金爆闪珠，含黄金元素。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品为天然随型碧玺，材质为碧玺。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "标题与用户回复均提及足金爆闪珠，具备闪亮珠效果。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 6,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "选择净14款式且用户确认净14，符合约14cm手围。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选款式价格2000元，未超过2200元上限。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:24:50.891451+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

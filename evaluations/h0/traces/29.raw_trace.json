@@ -1,0 +1,2986 @@
+{
+  "task": "我需要一些白色的单层板材，预算在80元左右。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.17, \"复购率\": 0.42, \"平均客单价\": 468.5, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 12650, \"近90天订单数\": 27}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"35-44, \", \"性别\": \"男\", \"消费等级\": \"高\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"坚美铝材\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"多乐士\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"La Marzocco\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 500, \"最小值\": 50}, \"功能\": [\"防腐蚀\", \"可定制\", \"节能隔热\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"铝合金\", \"不锈钢\", \"实木贴皮\"], \"颜色\": [\"白色\", \"浅灰\", \"木纹\"], \"风格\": [\"极简\", \"现代工业\", \"北欧\"]}, \"类目偏好\": {\"厨房电器\": \"中\", \"咖啡用品\": \"高\", \"家装建材\": \"高\", \"工业建材\": \"中\", \"摄影摄像\": \"低\", \"服饰鞋包\": \"低\", \"美妆护肤\": \"无\"}}, \"地区信息\": {\"区县\": \"姑苏区\", \"城市\": \"苏州市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"江苏省\"}, \"最后更新时间\": \"2024-04-27T08:22:00Z\", \"注册时间\": \"2019-11-23T12:45:00Z\", \"注册渠道\": \"App\", \"用户ID\": \"U94731562, \", \"用户标签\": [\"装修设计主理人\", \"高客单长期规划\", \"非促销敏感\", \"家装建材深耕\", \"咖啡文化爱好者\", \"高端咖啡设备关注\", \"摄影爱好者\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 2100, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"支持定制的铝合金单板\", \"镂空雕花弧形木纹单板\", \"氟碳烤漆防腐单板\"], \"最近14天收藏商品\": [], \"活跃时间段\": [9, 10, 14, 21], \"近7天访问次数\": 18}}",
+  "step_count": 16,
+  "reset": {
+    "env_idx": 7,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "白色"
+    ],
+    "idx": 29,
+    "instruction": "Instruction: 我需要一些白色的单层板材，预算在80元左右。",
+    "instruction_simple": "我需要一些白色的单层板材，预算在80元左右。",
+    "message": "Task 29 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.17,
+        "复购率": 0.42,
+        "平均客单价": 468.5,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 12650,
+        "近90天订单数": 27
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "35-44, ",
+        "性别": "男",
+        "消费等级": "高"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "坚美铝材"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "多乐士"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "La Marzocco"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 500,
+            "最小值": 50
+          },
+          "功能": [
+            "防腐蚀",
+            "可定制",
+            "节能隔热"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "铝合金",
+            "不锈钢",
+            "实木贴皮"
+          ],
+          "颜色": [
+            "白色",
+            "浅灰",
+            "木纹"
+          ],
+          "风格": [
+            "极简",
+            "现代工业",
+            "北欧"
+          ]
+        },
+        "类目偏好": {
+          "厨房电器": "中",
+          "咖啡用品": "高",
+          "家装建材": "高",
+          "工业建材": "中",
+          "摄影摄像": "低",
+          "服饰鞋包": "低",
+          "美妆护肤": "无"
+        }
+      },
+      "地区信息": {
+        "区县": "姑苏区",
+        "城市": "苏州市",
+        "时区": "Asia/Shanghai",
+        "省份": "江苏省"
+      },
+      "最后更新时间": "2024-04-27T08:22:00Z",
+      "注册时间": "2019-11-23T12:45:00Z",
+      "注册渠道": "App",
+      "用户ID": "U94731562, ",
+      "用户标签": [
+        "装修设计主理人",
+        "高客单长期规划",
+        "非促销敏感",
+        "家装建材深耕",
+        "咖啡文化爱好者",
+        "高端咖啡设备关注",
+        "摄影爱好者"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 2100,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "支持定制的铝合金单板",
+          "镂空雕花弧形木纹单板",
+          "氟碳烤漆防腐单板"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          9,
+          10,
+          14,
+          21
+        ],
+        "近7天访问次数": 18
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "白色单板"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 白色单板 | Normalized query: 白色单板 [SEP] Next > [SEP] 615346518723 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 58.0 [SEP] 722729848675 [SEP] 铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制 [SEP] 78.0 [SEP] 822569345685 [SEP] 冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂 [SEP] 18.0 [SEP] 703425226409 [SEP] 木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙 [SEP] 46.0 to 93.0 [SEP] 928506273979 [SEP] 铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板 [SEP] 35.0 [SEP] 800696913051 [SEP] 冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制 [SEP] 88.0 [SEP] 777146557228 [SEP] 冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制 [SEP] 38.0 [SEP] 722982039299 [SEP] 铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制 [SEP] 58.0 [SEP] 687742297612 [SEP] 氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板 [SEP] 10.0 to 110.0 [SEP] 757680612242 [SEP] 铝单板穿孔镂空雕花冲孔装饰幕墙铝合金空调罩保护防护外机罩厂家 [SEP] 48.0 to 488.0 [SEP] 671670948508 [SEP] 2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头 [SEP] 6.0 to 60.0 [SEP] 626093031026 [SEP] 铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板 [SEP] 100.0 to 178.0 [SEP] 840887811241 [SEP] 冲孔铝单板镂空雕花包柱弧形铝板透光包柱子木纹装饰柱子定制厂家 [SEP] 20.0 [SEP] 933539665427 [SEP] 铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板 [SEP] 38.0 to 199.0 [SEP] 661778549526 [SEP] 厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花 [SEP] 5.0 [SEP] 729897506164 [SEP] 铝合金三维板A级防火复合铝板瓦楞板波纹铝芯航空板氟碳漆铝单板 [SEP] 46.0 to 471.0 [SEP] 654083313466 [SEP] 铝单板外机空调罩冲孔雕花镂空中国风格栅百叶方通铝板外机罩定制 [SEP] 35.0 [SEP] 672963489376 [SEP] 造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家 [SEP] 38.0 [SEP] 923691808047 [SEP] 冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制 [SEP] 10.0 [SEP] 748671351921 [SEP] 阳极氧化铝单板苹果专卖店幕墙香槟色氧化拉丝铝板商场蜂窝氧化板 [SEP] 16.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"615346518723\", \"722729848675\", \"822569345685\", \"703425226409\", \"928506273979\", \"800696913051\", \"777146557228\", \"722982039299\", \"687742297612\", \"757680612242\", \"671670948508\", \"626093031026\", \"840887811241\", \"933539665427\", \"661778549526\", \"729897506164\", \"654083313466\", \"672963489376\", \"923691808047\", \"748671351921\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "615346518723",
+            "722729848675",
+            "822569345685",
+            "703425226409",
+            "928506273979",
+            "800696913051",
+            "777146557228",
+            "722982039299",
+            "687742297612",
+            "757680612242",
+            "671670948508",
+            "626093031026",
+            "840887811241",
+            "933539665427",
+            "661778549526",
+            "729897506164",
+            "654083313466",
+            "672963489376",
+            "923691808047",
+            "748671351921"
+          ],
+          "normalized_query": "白色单板",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "615346518723",
+              "brand": "环铝建材直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳烤漆",
+                "单板",
+                "冲孔",
+                "幕墙",
+                "加工",
+                "定制",
+                "外墙",
+                "2mm",
+                "厂家",
+                "门头"
+              ],
+              "price": "58.0",
+              "rank": 1,
+              "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+            },
+            {
+              "asin": "722729848675",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "幕墙",
+                "雕花",
+                "氟碳烤漆",
+                "定制",
+                "单板"
+              ],
+              "price": "78.0",
+              "rank": 2,
+              "title": "铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制"
+            },
+            {
+              "asin": "822569345685",
+              "brand": "广东天麒铝业建材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "单板",
+                "前台背景墙",
+                "雕花",
+                "镂空",
+                "山水画",
+                "造型",
+                "外墙",
+                "天花吊顶",
+                "定制"
+              ],
+              "price": "18.0",
+              "rank": 3,
+              "title": "冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂"
+            },
+            {
+              "asin": "703425226409",
+              "brand": "佳顿铝单板加工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "木纹",
+                "护墙装饰",
+                "2mm",
+                "仿大理石纹",
+                "热转印",
+                "做旧",
+                "进口",
+                "铁锈",
+                "幕墙"
+              ],
+              "price": "46.0 to 93.0",
+              "rank": 4,
+              "title": "木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙"
+            },
+            {
+              "asin": "928506273979",
+              "brand": "铝鑫者建材铝板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "冲孔",
+                "公司",
+                "背景墙",
+                "前台",
+                "展厅",
+                "形象墙",
+                "透光"
+              ],
+              "price": "35.0",
+              "rank": 5,
+              "title": "铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板"
+            },
+            {
+              "asin": "800696913051",
+              "brand": "品诚铝业铝材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔单板",
+                "前台形象墙",
+                "雕花",
+                "镂空",
+                "定制"
+              ],
+              "price": "88.0",
+              "rank": 6,
+              "title": "冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制"
+            },
+            {
+              "asin": "777146557228",
+              "brand": "A铝途建材",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "幕墙",
+                "门头",
+                "外墙",
+                "墙板",
+                "木纹",
+                "氟碳",
+                "墙面装饰",
+                "定制"
+              ],
+              "price": "38.0",
+              "rank": 7,
+              "title": "冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制"
+            },
+            {
+              "asin": "722982039299",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "门头",
+                "雨棚",
+                "连廊",
+                "雕花",
+                "木纹",
+                "氟碳漆",
+                "酒店",
+                "订制",
+                "商场"
+              ],
+              "price": "58.0",
+              "rank": 8,
+              "title": "铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制"
+            },
+            {
+              "asin": "687742297612",
+              "brand": "无锡铝单板定制厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳漆",
+                "单板",
+                "定制",
+                "门头",
+                "雕花",
+                "幕墙",
+                "弧形",
+                "冲孔",
+                "外墙",
+                "吊顶"
+              ],
+              "price": "10.0 to 110.0",
+              "rank": 9,
+              "title": "氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板"
+            },
+            {
+              "asin": "757680612242",
+              "brand": "安乐居通风设备",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "穿孔",
+                "镂空",
+                "雕花",
+                "装饰",
+                "外机罩",
+                "厂家",
+                "单板"
+              ],
+              "price": "48.0 to 488.0",
+              "rank": 10,
+              "title": "铝单板穿孔镂空雕花冲孔装饰幕墙铝合金空调罩保护防护外机罩厂家"
+            },
+            {
+              "asin": "671670948508",
+              "brand": "铝单板铝型材天花幕墙直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "2mm",
+                "阳极氧化",
+                "幕墙",
+                "背景墙",
+                "反光镜面",
+                "冲孔",
+                "镂空",
+                "拉丝",
+                "亮面",
+                "门头"
+              ],
+              "price": "6.0 to 60.0",
+              "rank": 11,
+              "title": "2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头"
+            },
+            {
+              "asin": "626093031026",
+              "brand": "铝乐幕墙铝单板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "厂家",
+                "氟碳",
+                "幕墙",
+                "木纹",
+                "门头"
+              ],
+              "price": "100.0 to 178.0",
+              "rank": 12,
+              "title": "铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板"
+            },
+            {
+              "asin": "840887811241",
+              "brand": "环界铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "镂空",
+                "雕花",
+                "包柱",
+                "弧形",
+                "透光",
+                "木纹",
+                "装饰",
+                "定制",
+                "厂家"
+              ],
+              "price": "20.0",
+              "rank": 13,
+              "title": "冲孔铝单板镂空雕花包柱弧形铝板透光包柱子木纹装饰柱子定制厂家"
+            },
+            {
+              "asin": "933539665427",
+              "brand": "广东建材装饰材料工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "幕墙",
+                "冲孔",
+                "雕花",
+                "镂空板",
+                "氟碳",
+                "包柱",
+                "门头"
+              ],
+              "price": "38.0 to 199.0",
+              "rank": 14,
+              "title": "铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板"
+            },
+            {
+              "asin": "661778549526",
+              "brand": "佛山市铝单板源头定制工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "厂家定制",
+                "冲孔",
+                "镂空",
+                "装饰",
+                "外墙",
+                "氟碳",
+                "门头",
+                "天花板"
+              ],
+              "price": "5.0",
+              "rank": 15,
+              "title": "厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花"
+            },
+            {
+              "asin": "729897506164",
+              "brand": "宏莱铝业YY",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "三维板",
+                "A级防火",
+                "复合",
+                "瓦楞板",
+                "波纹铝芯",
+                "航空板",
+                "氟碳漆"
+              ],
+              "price": "46.0 to 471.0",
+              "rank": 16,
+              "title": "铝合金三维板A级防火复合铝板瓦楞板波纹铝芯航空板氟碳漆铝单板"
+            },
+            {
+              "asin": "654083313466",
+              "brand": "建信铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "外机",
+                "空调罩",
+                "冲孔",
+                "雕花",
+                "镂空",
+                "中国风",
+                "格栅",
+                "百叶",
+                "定制"
+              ],
+              "price": "35.0",
+              "rank": 17,
+              "title": "铝单板外机空调罩冲孔雕花镂空中国风格栅百叶方通铝板外机罩定制"
+            },
+            {
+              "asin": "672963489376",
+              "brand": "启虹建材厂家店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "冲孔",
+                "木纹",
+                "氟碳",
+                "定制",
+                "厂家"
+              ],
+              "price": "38.0",
+              "rank": 18,
+              "title": "造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家"
+            },
+            {
+              "asin": "923691808047",
+              "brand": "佛山铝单板专业定制厂家直销",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "外墙",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "门头",
+                "天花",
+                "厂家"
+              ],
+              "price": "10.0",
+              "rank": 19,
+              "title": "冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制"
+            },
+            {
+              "asin": "748671351921",
+              "brand": "今辉建材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "苹果专卖店",
+                "幕墙",
+                "氧化拉丝",
+                "商场",
+                "蜂窝板"
+              ],
+              "price": "16.0",
+              "rank": 20,
+              "title": "阳极氧化铝单板苹果专卖店幕墙香槟色氧化拉丝铝板商场蜂窝氧化板"
+            }
+          ],
+          "query": "白色单板",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"白色单板\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:8813e40266e9675c2c9428faefc3a23822f726f62e54767b93ee8052ada1df4a"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:8813e40266e9675c2c9428faefc3a23822f726f62e54767b93ee8052ada1df4a"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:8813e40266e9675c2c9428faefc3a23822f726f62e54767b93ee8052ada1df4a"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "615346518723"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 价格: 58.0 [SEP] 店铺: 环铝建材直销店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"615346518723\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:615346518723",
+            "constraint:615346518723:category:pass",
+            "constraint:615346518723:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:615346518723",
+            "constraint:615346518723:category:pass",
+            "constraint:615346518723:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:615346518723",
+            "constraint:615346518723:category:pass",
+            "constraint:615346518723:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 价格: 58.0 [SEP] 店铺: 环铝建材直销店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:615346518723:color:白色"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:615346518723:color:白色"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:615346518723:color:白色"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "content": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 58,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:615346518723:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:615346518723:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:615346518723:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "&lt; prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "content": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 58,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"&lt; prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:615346518723:&lt; prev"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:615346518723:&lt; prev"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:615346518723:&lt; prev"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "白色铝单板"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 白色铝单板 | Normalized query: 白色铝单板 [SEP] Next > [SEP] 615346518723 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 58.0 [SEP] 703425226409 [SEP] 木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙 [SEP] 46.0 to 93.0 [SEP] 687742297612 [SEP] 氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板 [SEP] 10.0 to 110.0 [SEP] 671670948508 [SEP] 2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头 [SEP] 6.0 to 60.0 [SEP] 722729848675 [SEP] 铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制 [SEP] 78.0 [SEP] 822569345685 [SEP] 冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂 [SEP] 18.0 [SEP] 626093031026 [SEP] 铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板 [SEP] 100.0 to 178.0 [SEP] 777146557228 [SEP] 冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制 [SEP] 38.0 [SEP] 928506273979 [SEP] 铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板 [SEP] 35.0 [SEP] 923691808047 [SEP] 冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制 [SEP] 10.0 [SEP] 800696913051 [SEP] 冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制 [SEP] 88.0 [SEP] 722982039299 [SEP] 铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制 [SEP] 58.0 [SEP] 661778549526 [SEP] 厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花 [SEP] 5.0 [SEP] 654083313466 [SEP] 铝单板外机空调罩冲孔雕花镂空中国风格栅百叶方通铝板外机罩定制 [SEP] 35.0 [SEP] 672963489376 [SEP] 造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家 [SEP] 38.0 [SEP] 840887811241 [SEP] 冲孔铝单板镂空雕花包柱弧形铝板透光包柱子木纹装饰柱子定制厂家 [SEP] 20.0 [SEP] 748671351921 [SEP] 阳极氧化铝单板苹果专卖店幕墙香槟色氧化拉丝铝板商场蜂窝氧化板 [SEP] 16.0 [SEP] 933539665427 [SEP] 铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板 [SEP] 38.0 to 199.0 [SEP] 627029961999 [SEP] 古铜拉丝氧化铝单板阳极氧化幕墙装饰吊顶背景墙定制蜂窝氧化铝板 [SEP] 19.0 [SEP] 937117671643 [SEP] 定制冲孔铝单板发光门头广告招牌雕花镂空铝板店面招牌外墙装饰 [SEP] 12.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"615346518723\", \"703425226409\", \"687742297612\", \"671670948508\", \"722729848675\", \"822569345685\", \"626093031026\", \"777146557228\", \"928506273979\", \"923691808047\", \"800696913051\", \"722982039299\", \"661778549526\", \"654083313466\", \"672963489376\", \"840887811241\", \"748671351921\", \"933539665427\", \"627029961999\", \"937117671643\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "615346518723",
+            "703425226409",
+            "687742297612",
+            "671670948508",
+            "722729848675",
+            "822569345685",
+            "626093031026",
+            "777146557228",
+            "928506273979",
+            "923691808047",
+            "800696913051",
+            "722982039299",
+            "661778549526",
+            "654083313466",
+            "672963489376",
+            "840887811241",
+            "748671351921",
+            "933539665427",
+            "627029961999",
+            "937117671643"
+          ],
+          "normalized_query": "白色铝单板",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "615346518723",
+              "brand": "环铝建材直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳烤漆",
+                "单板",
+                "冲孔",
+                "幕墙",
+                "加工",
+                "定制",
+                "外墙",
+                "2mm",
+                "厂家",
+                "门头"
+              ],
+              "price": "58.0",
+              "rank": 1,
+              "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+            },
+            {
+              "asin": "703425226409",
+              "brand": "佳顿铝单板加工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "木纹",
+                "护墙装饰",
+                "2mm",
+                "仿大理石纹",
+                "热转印",
+                "做旧",
+                "进口",
+                "铁锈",
+                "幕墙"
+              ],
+              "price": "46.0 to 93.0",
+              "rank": 2,
+              "title": "木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙"
+            },
+            {
+              "asin": "687742297612",
+              "brand": "无锡铝单板定制厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳漆",
+                "单板",
+                "定制",
+                "门头",
+                "雕花",
+                "幕墙",
+                "弧形",
+                "冲孔",
+                "外墙",
+                "吊顶"
+              ],
+              "price": "10.0 to 110.0",
+              "rank": 3,
+              "title": "氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板"
+            },
+            {
+              "asin": "671670948508",
+              "brand": "铝单板铝型材天花幕墙直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "2mm",
+                "阳极氧化",
+                "幕墙",
+                "背景墙",
+                "反光镜面",
+                "冲孔",
+                "镂空",
+                "拉丝",
+                "亮面",
+                "门头"
+              ],
+              "price": "6.0 to 60.0",
+              "rank": 4,
+              "title": "2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头"
+            },
+            {
+              "asin": "722729848675",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "幕墙",
+                "雕花",
+                "氟碳烤漆",
+                "定制",
+                "单板"
+              ],
+              "price": "78.0",
+              "rank": 5,
+              "title": "铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制"
+            },
+            {
+              "asin": "822569345685",
+              "brand": "广东天麒铝业建材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "单板",
+                "前台背景墙",
+                "雕花",
+                "镂空",
+                "山水画",
+                "造型",
+                "外墙",
+                "天花吊顶",
+                "定制"
+              ],
+              "price": "18.0",
+              "rank": 6,
+              "title": "冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂"
+            },
+            {
+              "asin": "626093031026",
+              "brand": "铝乐幕墙铝单板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "厂家",
+                "氟碳",
+                "幕墙",
+                "木纹",
+                "门头"
+              ],
+              "price": "100.0 to 178.0",
+              "rank": 7,
+              "title": "铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板"
+            },
+            {
+              "asin": "777146557228",
+              "brand": "A铝途建材",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "幕墙",
+                "门头",
+                "外墙",
+                "墙板",
+                "木纹",
+                "氟碳",
+                "墙面装饰",
+                "定制"
+              ],
+              "price": "38.0",
+              "rank": 8,
+              "title": "冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制"
+            },
+            {
+              "asin": "928506273979",
+              "brand": "铝鑫者建材铝板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "冲孔",
+                "公司",
+                "背景墙",
+                "前台",
+                "展厅",
+                "形象墙",
+                "透光"
+              ],
+              "price": "35.0",
+              "rank": 9,
+              "title": "铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板"
+            },
+            {
+              "asin": "923691808047",
+              "brand": "佛山铝单板专业定制厂家直销",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "外墙",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "门头",
+                "天花",
+                "厂家"
+              ],
+              "price": "10.0",
+              "rank": 10,
+              "title": "冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制"
+            },
+            {
+              "asin": "800696913051",
+              "brand": "品诚铝业铝材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔单板",
+                "前台形象墙",
+                "雕花",
+                "镂空",
+                "定制"
+              ],
+              "price": "88.0",
+              "rank": 11,
+              "title": "冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制"
+            },
+            {
+              "asin": "722982039299",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "门头",
+                "雨棚",
+                "连廊",
+                "雕花",
+                "木纹",
+                "氟碳漆",
+                "酒店",
+                "订制",
+                "商场"
+              ],
+              "price": "58.0",
+              "rank": 12,
+              "title": "铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制"
+            },
+            {
+              "asin": "661778549526",
+              "brand": "佛山市铝单板源头定制工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "厂家定制",
+                "冲孔",
+                "镂空",
+                "装饰",
+                "外墙",
+                "氟碳",
+                "门头",
+                "天花板"
+              ],
+              "price": "5.0",
+              "rank": 13,
+              "title": "厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花"
+            },
+            {
+              "asin": "654083313466",
+              "brand": "建信铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "外机",
+                "空调罩",
+                "冲孔",
+                "雕花",
+                "镂空",
+                "中国风",
+                "格栅",
+                "百叶",
+                "定制"
+              ],
+              "price": "35.0",
+              "rank": 14,
+              "title": "铝单板外机空调罩冲孔雕花镂空中国风格栅百叶方通铝板外机罩定制"
+            },
+            {
+              "asin": "672963489376",
+              "brand": "启虹建材厂家店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "冲孔",
+                "木纹",
+                "氟碳",
+                "定制",
+                "厂家"
+              ],
+              "price": "38.0",
+              "rank": 15,
+              "title": "造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家"
+            },
+            {
+              "asin": "840887811241",
+              "brand": "环界铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "镂空",
+                "雕花",
+                "包柱",
+                "弧形",
+                "透光",
+                "木纹",
+                "装饰",
+                "定制",
+                "厂家"
+              ],
+              "price": "20.0",
+              "rank": 16,
+              "title": "冲孔铝单板镂空雕花包柱弧形铝板透光包柱子木纹装饰柱子定制厂家"
+            },
+            {
+              "asin": "748671351921",
+              "brand": "今辉建材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "苹果专卖店",
+                "幕墙",
+                "氧化拉丝",
+                "商场",
+                "蜂窝板"
+              ],
+              "price": "16.0",
+              "rank": 17,
+              "title": "阳极氧化铝单板苹果专卖店幕墙香槟色氧化拉丝铝板商场蜂窝氧化板"
+            },
+            {
+              "asin": "933539665427",
+              "brand": "广东建材装饰材料工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "幕墙",
+                "冲孔",
+                "雕花",
+                "镂空板",
+                "氟碳",
+                "包柱",
+                "门头"
+              ],
+              "price": "38.0 to 199.0",
+              "rank": 18,
+              "title": "铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板"
+            },
+            {
+              "asin": "627029961999",
+              "brand": "今辉建材铝材料厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "古铜",
+                "拉丝氧化",
+                "单板",
+                "阳极氧化",
+                "幕墙",
+                "装饰",
+                "吊顶",
+                "定制",
+                "蜂窝",
+                "背景墙"
+              ],
+              "price": "19.0",
+              "rank": 19,
+              "title": "古铜拉丝氧化铝单板阳极氧化幕墙装饰吊顶背景墙定制蜂窝氧化铝板"
+            },
+            {
+              "asin": "937117671643",
+              "brand": "佛山铝材装饰源头厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "单板",
+                "发光",
+                "广告",
+                "招牌",
+                "雕花",
+                "镂空",
+                "外墙",
+                "装饰"
+              ],
+              "price": "12.0",
+              "rank": 20,
+              "title": "定制冲孔铝单板发光门头广告招牌雕花镂空铝板店面招牌外墙装饰"
+            }
+          ],
+          "query": "白色铝单板",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"白色铝单板\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 2,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 22,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "615346518723"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 价格: 58.0 [SEP] 店铺: 环铝建材直销店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"615346518723\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 22,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:615346518723:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:615346518723:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:615346518723:features"
+          ],
+          "seen_asin_count": 22,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "&lt; prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"&lt; prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 22,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 22,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "请问您需要的是白色铝合金单板（铝单板）吗？大概需要购买几张（这款单价58元/张）？"
+      },
+      "raw": {
+        "session": "29",
+        "question": "请问您需要的是白色铝合金单板（铝单板）吗？大概需要购买几张（这款单价58元/张）？",
+        "reply": "是的，我需要白色铝合金单板。先问问这款是氟碳烤漆的吗？我要用在建筑外墙门脸上，得防腐蚀才行。"
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "氟碳烤漆铝单板 白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 氟碳烤漆铝单板 白色 | Normalized query: 氟碳烤漆铝单板 白色 [SEP] Next > [SEP] 615346518723 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 58.0 [SEP] 722729848675 [SEP] 铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制 [SEP] 78.0 [SEP] 687742297612 [SEP] 氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板 [SEP] 10.0 to 110.0 [SEP] 729897506164 [SEP] 铝合金三维板A级防火复合铝板瓦楞板波纹铝芯航空板氟碳漆铝单板 [SEP] 46.0 to 471.0 [SEP] 777146557228 [SEP] 冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制 [SEP] 38.0 [SEP] 626093031026 [SEP] 铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板 [SEP] 100.0 to 178.0 [SEP] 722982039299 [SEP] 铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制 [SEP] 58.0 [SEP] 672963489376 [SEP] 造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家 [SEP] 38.0 [SEP] 933539665427 [SEP] 铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板 [SEP] 38.0 to 199.0 [SEP] 828973770082 [SEP] 铝单板定制氟碳幕墙门头吊顶雨棚冲孔镂空雕花双曲木纹铝板厂家 [SEP] 50.0 [SEP] 661778549526 [SEP] 厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花 [SEP] 5.0 [SEP] 926193488027 [SEP] 冲孔铝单板幕墙门头穿孔铝板雕花全铝墙板木纹氟碳外墙装饰板定制 [SEP] 10.0 to 30.0 [SEP] 728641569562 [SEP] 冲孔铝单板门头铝幕墙吊顶廊架镂空门头雕花双曲氟碳穿孔木纹铝板 [SEP] 20.0 [SEP] 923691808047 [SEP] 冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制 [SEP] 10.0 [SEP] 703425226409 [SEP] 木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙 [SEP] 46.0 to 93.0 [SEP] 671670948508 [SEP] 2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头 [SEP] 6.0 to 60.0 [SEP] 822569345685 [SEP] 冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂 [SEP] 18.0 [SEP] 928506273979 [SEP] 铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板 [SEP] 35.0 [SEP] 646055417519 [SEP] 冲孔铝单板幕墙铝板加工定制镂空雕花外墙装饰冲孔门头造型厂家 [SEP] 150.0 [SEP] 800696913051 [SEP] 冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制 [SEP] 88.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"615346518723\", \"722729848675\", \"687742297612\", \"729897506164\", \"777146557228\", \"626093031026\", \"722982039299\", \"672963489376\", \"933539665427\", \"828973770082\", \"661778549526\", \"926193488027\", \"728641569562\", \"923691808047\", \"703425226409\", \"671670948508\", \"822569345685\", \"928506273979\", \"646055417519\", \"800696913051\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "615346518723",
+            "722729848675",
+            "687742297612",
+            "729897506164",
+            "777146557228",
+            "626093031026",
+            "722982039299",
+            "672963489376",
+            "933539665427",
+            "828973770082",
+            "661778549526",
+            "926193488027",
+            "728641569562",
+            "923691808047",
+            "703425226409",
+            "671670948508",
+            "822569345685",
+            "928506273979",
+            "646055417519",
+            "800696913051"
+          ],
+          "normalized_query": "氟碳烤漆铝单板 白色",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "615346518723",
+              "brand": "环铝建材直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳烤漆",
+                "单板",
+                "冲孔",
+                "幕墙",
+                "加工",
+                "定制",
+                "外墙",
+                "2mm",
+                "厂家",
+                "门头"
+              ],
+              "price": "58.0",
+              "rank": 1,
+              "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+            },
+            {
+              "asin": "722729848675",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "幕墙",
+                "雕花",
+                "氟碳烤漆",
+                "定制",
+                "单板"
+              ],
+              "price": "78.0",
+              "rank": 2,
+              "title": "铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制"
+            },
+            {
+              "asin": "687742297612",
+              "brand": "无锡铝单板定制厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "氟碳漆",
+                "单板",
+                "定制",
+                "门头",
+                "雕花",
+                "幕墙",
+                "弧形",
+                "冲孔",
+                "外墙",
+                "吊顶"
+              ],
+              "price": "10.0 to 110.0",
+              "rank": 3,
+              "title": "氟碳漆铝单板定制门头雕花幕墙弧形铝板冲孔外墙吊顶空调罩铝单板"
+            },
+            {
+              "asin": "729897506164",
+              "brand": "宏莱铝业YY",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "三维板",
+                "A级防火",
+                "复合",
+                "瓦楞板",
+                "波纹铝芯",
+                "航空板",
+                "氟碳漆"
+              ],
+              "price": "46.0 to 471.0",
+              "rank": 4,
+              "title": "铝合金三维板A级防火复合铝板瓦楞板波纹铝芯航空板氟碳漆铝单板"
+            },
+            {
+              "asin": "777146557228",
+              "brand": "A铝途建材",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "幕墙",
+                "门头",
+                "外墙",
+                "墙板",
+                "木纹",
+                "氟碳",
+                "墙面装饰",
+                "定制"
+              ],
+              "price": "38.0",
+              "rank": 5,
+              "title": "冲孔铝单板幕墙门头外墙全铝墙板木纹氟碳穿孔铝板墙面装饰板定制"
+            },
+            {
+              "asin": "626093031026",
+              "brand": "铝乐幕墙铝单板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "厂家",
+                "氟碳",
+                "幕墙",
+                "木纹",
+                "门头"
+              ],
+              "price": "100.0 to 178.0",
+              "rank": 6,
+              "title": "铝单板厂家氟碳铝单板幕墙冲孔雕花铝板木纹铝单板门头外墙铝单板"
+            },
+            {
+              "asin": "722982039299",
+              "brand": "乐家建材铝板厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "门头",
+                "雨棚",
+                "连廊",
+                "雕花",
+                "木纹",
+                "氟碳漆",
+                "酒店",
+                "订制",
+                "商场"
+              ],
+              "price": "58.0",
+              "rank": 7,
+              "title": "铝单板门头雨棚雕花木纹氟碳漆造型雨棚连廊吊顶酒店商场招牌订制"
+            },
+            {
+              "asin": "672963489376",
+              "brand": "启虹建材厂家店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "冲孔",
+                "木纹",
+                "氟碳",
+                "定制",
+                "厂家"
+              ],
+              "price": "38.0",
+              "rank": 8,
+              "title": "造型雕花镂空加工冲孔木纹空心雨棚角铝单板定制订制氟碳幕墙厂家"
+            },
+            {
+              "asin": "933539665427",
+              "brand": "广东建材装饰材料工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "幕墙",
+                "冲孔",
+                "雕花",
+                "镂空板",
+                "氟碳",
+                "包柱",
+                "门头"
+              ],
+              "price": "38.0 to 199.0",
+              "rank": 9,
+              "title": "铝单板定制幕墙吊顶冲孔雕花镂空板氟碳铝合金铝型材包柱门头铝板"
+            },
+            {
+              "asin": "828973770082",
+              "brand": "佛山利利铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "双曲",
+                "木纹",
+                "氟碳",
+                "幕墙",
+                "门头",
+                "雨棚",
+                "冲孔",
+                "镂空",
+                "雕花"
+              ],
+              "price": "50.0",
+              "rank": 10,
+              "title": "铝单板定制氟碳幕墙门头吊顶雨棚冲孔镂空雕花双曲木纹铝板厂家"
+            },
+            {
+              "asin": "661778549526",
+              "brand": "佛山市铝单板源头定制工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "厂家定制",
+                "冲孔",
+                "镂空",
+                "装饰",
+                "外墙",
+                "氟碳",
+                "门头",
+                "天花板"
+              ],
+              "price": "5.0",
+              "rank": 11,
+              "title": "厂家定制冲孔铝单板幕墙穿孔镂空外墙铝板门头氟碳铝单板幕墙天花"
+            },
+            {
+              "asin": "926193488027",
+              "brand": "鑫纪元工程供应链",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "门头",
+                "雕花",
+                "氟碳",
+                "幕墙",
+                "定制",
+                "装饰"
+              ],
+              "price": "10.0 to 30.0",
+              "rank": 12,
+              "title": "冲孔铝单板幕墙门头穿孔铝板雕花全铝墙板木纹氟碳外墙装饰板定制"
+            },
+            {
+              "asin": "728641569562",
+              "brand": "吉铝铝业",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "幕墙",
+                "吊顶",
+                "廊架",
+                "镂空",
+                "门头",
+                "雕花",
+                "双曲",
+                "氟碳"
+              ],
+              "price": "20.0",
+              "rank": 13,
+              "title": "冲孔铝单板门头铝幕墙吊顶廊架镂空门头雕花双曲氟碳穿孔木纹铝板"
+            },
+            {
+              "asin": "923691808047",
+              "brand": "佛山铝单板专业定制厂家直销",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "定制",
+                "外墙",
+                "幕墙",
+                "雨棚",
+                "雕花",
+                "镂空",
+                "门头",
+                "天花",
+                "厂家"
+              ],
+              "price": "10.0",
+              "rank": 14,
+              "title": "冲孔铝单板定制外墙铝单板幕墙雨棚雕花镂空冲孔门头天花厂家定制"
+            },
+            {
+              "asin": "703425226409",
+              "brand": "佳顿铝单板加工厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "木纹",
+                "护墙装饰",
+                "2mm",
+                "仿大理石纹",
+                "热转印",
+                "做旧",
+                "进口",
+                "铁锈",
+                "幕墙"
+              ],
+              "price": "46.0 to 93.0",
+              "rank": 15,
+              "title": "木纹铝单板室内护墙装饰2mm仿大理石纹热转印做旧进口铁锈铝幕墙"
+            },
+            {
+              "asin": "671670948508",
+              "brand": "铝单板铝型材天花幕墙直销店",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "2mm",
+                "阳极氧化",
+                "幕墙",
+                "背景墙",
+                "反光镜面",
+                "冲孔",
+                "镂空",
+                "拉丝",
+                "亮面",
+                "门头"
+              ],
+              "price": "6.0 to 60.0",
+              "rank": 16,
+              "title": "2mm阳极氧化铝板幕墙背景墙反光镜面冲孔镂空拉丝亮面铝单板门头"
+            },
+            {
+              "asin": "822569345685",
+              "brand": "广东天麒铝业建材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "单板",
+                "前台背景墙",
+                "雕花",
+                "镂空",
+                "山水画",
+                "造型",
+                "外墙",
+                "天花吊顶",
+                "定制"
+              ],
+              "price": "18.0",
+              "rank": 17,
+              "title": "冲孔铝单板前台背景墙雕花镂空山水画造型外墙天花吊顶铝板定制厂"
+            },
+            {
+              "asin": "928506273979",
+              "brand": "铝鑫者建材铝板",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "单板",
+                "冲孔",
+                "公司",
+                "背景墙",
+                "前台",
+                "展厅",
+                "形象墙",
+                "透光"
+              ],
+              "price": "35.0",
+              "rank": 18,
+              "title": "铝单板冲孔公司背景墙前台展厅形象墙造型穿孔透光镂空铝板"
+            },
+            {
+              "asin": "646055417519",
+              "brand": "广东佛山瑞彻斯铝建材厂",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔",
+                "单板",
+                "幕墙",
+                "定制",
+                "镂空",
+                "雕花",
+                "外墙装饰",
+                "门头"
+              ],
+              "price": "150.0",
+              "rank": 19,
+              "title": "冲孔铝单板幕墙铝板加工定制镂空雕花外墙装饰冲孔门头造型厂家"
+            },
+            {
+              "asin": "800696913051",
+              "brand": "品诚铝业铝材厂家",
+              "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "key_attributes": [
+                "冲孔单板",
+                "前台形象墙",
+                "雕花",
+                "镂空",
+                "定制"
+              ],
+              "price": "88.0",
+              "rank": 20,
+              "title": "冲孔铝单板前台形象墙展厅背景墙门头穿孔板吊顶雕花镂空铝板定制"
+            }
+          ],
+          "query": "氟碳烤漆铝单板 白色",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"氟碳烤漆铝单板 白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:4f15e05712c7eff28120b954c1d9490aeedd03ed0c912c36d8a0747292b54e8a"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:4f15e05712c7eff28120b954c1d9490aeedd03ed0c912c36d8a0747292b54e8a"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 4,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "result_set:4f15e05712c7eff28120b954c1d9490aeedd03ed0c912c36d8a0747292b54e8a"
+          ],
+          "seen_asin_count": 26,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "615346518723"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 价格: 58.0 [SEP] 店铺: 环铝建材直销店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"615346518723\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 26,
+          "step_count": 13,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "白色"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-29",
+        "instruction": "Instruction: [SEP] 我需要一些白色的单层板材，预算在80元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 白色 [SEP] 氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头 [SEP] 价格: 58.0 [SEP] 店铺: 环铝建材直销店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"白色\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "白色"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "白色"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "615346518723",
+            "brand": "环铝建材直销店",
+            "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+            "key_attributes": [
+              "氟碳烤漆",
+              "单板",
+              "冲孔",
+              "幕墙",
+              "加工",
+              "定制",
+              "外墙",
+              "2mm",
+              "厂家",
+              "门头"
+            ],
+            "price": "58.0",
+            "title": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "白色"
+          },
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"白色\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 26,
+          "step_count": 14,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 16,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 7,
+        "goal": {
+          "asin": "722729848675",
+          "attributes": [
+            "幕墙",
+            "雕花",
+            "氟碳烤漆",
+            "定制",
+            "单板"
+          ],
+          "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "幕墙",
+            "雕花",
+            "氟碳烤漆",
+            "定制",
+            "单板"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "白色"
+          ],
+          "instruction_full": "需要一些以铝合金为原料制成的单层板材，用来作建筑外墙围护和门脸，要雕刻了花纹，表面有耐腐的涂料，要能定做，颜色要白色的，预算在80元左右。",
+          "instruction_simple": "我需要一些白色的单层板材，预算在80元左右。",
+          "instruction_text": "我需要一些白色的单层板材，预算在80元左右。",
+          "name": "铝单板幕墙镂空雕花冲孔门头弧形木纹方通装饰氟碳烤漆外墙定制",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": 88,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "白色"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.17,
+              "复购率": 0.42,
+              "平均客单价": 468.5,
+              "支付方式偏好": "支付宝",
+              "是否促销敏感": false,
+              "近30天消费金额": 12650,
+              "近90天订单数": 27
+            },
+            "人口属性": {
+              "会员等级": "黄金会员",
+              "年龄段": "35-44, ",
+              "性别": "男",
+              "消费等级": "高"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "坚美铝材"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "多乐士"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "La Marzocco"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 500,
+                  "最小值": 50
+                },
+                "功能": [
+                  "防腐蚀",
+                  "可定制",
+                  "节能隔热"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  "铝合金",
+                  "不锈钢",
+                  "实木贴皮"
+                ],
+                "颜色": [
+                  "白色",
+                  "浅灰",
+                  "木纹"
+                ],
+                "风格": [
+                  "极简",
+                  "现代工业",
+                  "北欧"
+                ]
+              },
+              "类目偏好": {
+                "厨房电器": "中",
+                "咖啡用品": "高",
+                "家装建材": "高",
+                "工业建材": "中",
+                "摄影摄像": "低",
+                "服饰鞋包": "低",
+                "美妆护肤": "无"
+              }
+            },
+            "地区信息": {
+              "区县": "姑苏区",
+              "城市": "苏州市",
+              "时区": "Asia/Shanghai",
+              "省份": "江苏省"
+            },
+            "最后更新时间": "2024-04-27T08:22:00Z",
+            "注册时间": "2019-11-23T12:45:00Z",
+            "注册渠道": "App",
+            "用户ID": "U94731562, ",
+            "用户标签": [
+              "装修设计主理人",
+              "高客单长期规划",
+              "非促销敏感",
+              "家装建材深耕",
+              "咖啡文化爱好者",
+              "高端咖啡设备关注",
+              "摄影爱好者"
+            ],
+            "行为特征": {
+              "常用设备": "iOS手机",
+              "日均浏览时长": 2100,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "支持定制的铝合金单板",
+                "镂空雕花弧形木纹单板",
+                "氟碳烤漆防腐单板"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                9,
+                10,
+                14,
+                21
+              ],
+              "近7天访问次数": 18
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-7-29",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 615346518723 [SEP] options [SEP] {\"\\u989c\\u8272\\u5206\\u7c7b\": \"\\u767d\\u8272\"} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] 0.18124999999999997 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "615346518723",
+          "attributes": [
+            "氟碳烤漆",
+            "单板",
+            "冲孔",
+            "幕墙",
+            "加工",
+            "定制",
+            "外墙",
+            "2mm",
+            "厂家",
+            "门头"
+          ],
+          "category": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+          "instruction_text": "我想找一款由源头工厂专门加工制作的单层铝制板，表面要用氟树脂为主要成分的超耐久烘烤型涂料，还能进行打孔加工，可以用于外墙、门头和幕墙，厚度约为2毫米，颜色为白色，价格在60元左右。",
+          "name": "氟碳烤漆铝单板冲孔幕墙加工定制外墙2mm厂家白色铝板穿孔门头",
+          "options": {
+            "颜色分类": "白色"
+          },
+          "price": 58,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": 0.18124999999999997,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 0.8,
+            "key_options": 1,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": false,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 4,
+                  "required_count": 5,
+                  "results": [
+                    {
+                      "actual": [
+                        "氟碳烤漆",
+                        "单板",
+                        "冲孔",
+                        "幕墙",
+                        "加工",
+                        "定制",
+                        "外墙",
+                        "2mm",
+                        "厂家",
+                        "门头"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "幕墙"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "幕墙"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "氟碳烤漆",
+                        "单板",
+                        "冲孔",
+                        "幕墙",
+                        "加工",
+                        "定制",
+                        "外墙",
+                        "2mm",
+                        "厂家",
+                        "门头"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "雕花"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "雕花"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "氟碳烤漆",
+                        "单板",
+                        "冲孔",
+                        "幕墙",
+                        "加工",
+                        "定制",
+                        "外墙",
+                        "2mm",
+                        "厂家",
+                        "门头"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "氟碳烤漆"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "氟碳烤漆"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "氟碳烤漆",
+                        "单板",
+                        "冲孔",
+                        "幕墙",
+                        "加工",
+                        "定制",
+                        "外墙",
+                        "2mm",
+                        "厂家",
+                        "门头"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "定制"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "定制"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "氟碳烤漆",
+                        "单板",
+                        "冲孔",
+                        "幕墙",
+                        "加工",
+                        "定制",
+                        "外墙",
+                        "2mm",
+                        "厂家",
+                        "门头"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "attribute",
+                            "value": "单板"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "单板"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 0.8,
+                  "verifiable_count": 5
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 1,
+                  "required_count": 1,
+                  "results": [
+                    {
+                      "actual": {
+                        "颜色分类": "白色"
+                      },
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [
+                          {
+                            "axis": "color",
+                            "source_axis": "颜色分类",
+                            "value": "白色"
+                          }
+                        ],
+                        "missing_axes": [],
+                        "unavailable_values": [],
+                        "wrong_values": []
+                      },
+                      "passed": true,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "白色"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "pass",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 1,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 1,
+              "match_score": 0.8749999999999999,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {},
+              "method": "constant_option_price",
+              "price": 58,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 1,
+          "hard_gates": {
+            "budget": {
+              "actual": 58,
+              "comparator": "variant_price_budget_v1",
+              "evidence": {
+                "evidence": {},
+                "method": "constant_option_price",
+                "price": 58,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": 88,
+              "source_field": "variant_price",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "金属材料及制品",
+                      "铝材",
+                      "铝板/铝扣板/铝吊顶/铝方通"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "金属材料及制品›铝材›铝板/铝扣板/铝吊顶/铝方通"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": false,
+          "reward": 0.18124999999999997,
+          "reward_type": "partial_alternative_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": 0.18124999999999997,
+          "termination_reason": "partial_alternative_purchase",
+          "weighted_score": 0.8749999999999999
+        },
+        "reward_valid": true,
+        "termination_reason": "partial_alternative_purchase"
+      }
+    }
+  ]
+}

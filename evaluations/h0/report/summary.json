@@ -1,0 +1,403 @@
+{
+  "schema": "shopping-harness-report-v3",
+  "report_version": "report-v3",
+  "profile": "h0",
+  "task_count": 200,
+  "generated_at": "2026-09-10T08:25:10.949283+00:00",
+  "provenance": {
+    "deterministic_evaluator": "deterministic-evaluator-v3",
+    "judge_version": "trajectory-judge-v3",
+    "judge_model": "deepseek-v4-flash",
+    "rubric_version": "shopping-rubric-v2",
+    "terminal_protocol": "terminal-protocol-v2"
+  },
+  "panel1_environment": {
+    "environment_terminal": {
+      "count": 176,
+      "denominator": 200,
+      "rate": 0.88
+    },
+    "environment_task_success": {
+      "count": 60,
+      "denominator": 200,
+      "rate": 0.3
+    },
+    "gold_success": {
+      "count": 59,
+      "denominator": 200,
+      "rate": 0.295
+    },
+    "purchase_occurred": {
+      "count": 109,
+      "denominator": 200,
+      "rate": 0.545
+    },
+    "outcome_classes": {
+      "max_steps": 17,
+      "no_terminal_observed": 24,
+      "partial_alternative_purchase": 39,
+      "repeat_loop": 50,
+      "reward_unverifiable": 9,
+      "success_gold": 59,
+      "success_valid_alternative": 1,
+      "wrong_purchase": 1
+    },
+    "definition": "环境原生结果；environment_task_success 接受 gold 与 valid alternative，不等于公开用户需求语义满足。"
+  },
+  "panel2_user_requirements": {
+    "decision": {
+      "observed": {
+        "count": 198,
+        "denominator": 200,
+        "rate": 0.99
+      },
+      "requirements_resolved": {
+        "count": 114,
+        "denominator": 200,
+        "rate": 0.57
+      },
+      "kinds": {
+        "environment_terminal": 66,
+        "purchase": 132,
+        "unresolved": 2
+      }
+    },
+    "explicit": {
+      "count": 660,
+      "verdicts": {
+        "satisfied": 519,
+        "violated": 2,
+        "unknown": 138,
+        "not_applicable": 1
+      },
+      "evidence": {
+        "supported": 589,
+        "contradicted": 2,
+        "unknown": 69
+      },
+      "satisfaction": {
+        "satisfied": 519,
+        "violated": 2,
+        "unknown": 138,
+        "not_applicable": 1,
+        "evaluated_denominator": 659,
+        "satisfaction_rate": 0.7876,
+        "definition": "satisfied / (satisfied + violated + unknown)"
+      }
+    },
+    "taskfact_effective": {
+      "count": 189,
+      "verdicts": {
+        "satisfied": 150,
+        "violated": 0,
+        "unknown": 39,
+        "not_applicable": 0
+      },
+      "evidence": {
+        "supported": 166,
+        "contradicted": 0,
+        "unknown": 23
+      },
+      "satisfaction": {
+        "satisfied": 150,
+        "violated": 0,
+        "unknown": 39,
+        "not_applicable": 0,
+        "evaluated_denominator": 189,
+        "satisfaction_rate": 0.7937,
+        "definition": "satisfied / (satisfied + violated + unknown)"
+      },
+      "definition": "effective_status 为 active 或 modified"
+    },
+    "taskfact_latent": {
+      "count": 594,
+      "verdicts": {
+        "satisfied": 0,
+        "violated": 0,
+        "unknown": 0,
+        "not_applicable": 594
+      },
+      "evidence": {
+        "supported": 409,
+        "contradicted": 7,
+        "unknown": 178
+      },
+      "definition": "未被本次真实 shopper 回复激活，不进入用户满足率"
+    },
+    "taskfact_inactive": {
+      "count": 1,
+      "verdicts": {
+        "satisfied": 0,
+        "violated": 0,
+        "unknown": 0,
+        "not_applicable": 1
+      },
+      "evidence": {
+        "supported": 0,
+        "contradicted": 0,
+        "unknown": 1
+      },
+      "definition": "effective_status 为 rejected 或 revoked"
+    },
+    "effective_status_distribution": {
+      "active": 839,
+      "latent": 594,
+      "modified": 9,
+      "rejected": 1,
+      "revoked": 1
+    }
+  },
+  "panel3_process_quality": {
+    "dimensions": {
+      "clarification_strategy": {
+        "mean": 1.405,
+        "distribution": {
+          "0": 8,
+          "1": 103,
+          "2": 89
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "information_retention": {
+        "mean": 1.75,
+        "distribution": {
+          "0": 1,
+          "1": 48,
+          "2": 151
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "search_strategy": {
+        "mean": 1.36,
+        "distribution": {
+          "0": 2,
+          "1": 124,
+          "2": 74
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "candidate_utilization": {
+        "mean": 1.29,
+        "distribution": {
+          "0": 2,
+          "1": 138,
+          "2": 60
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "evidence_verification": {
+        "mean": 1.105,
+        "distribution": {
+          "0": 6,
+          "1": 167,
+          "2": 27
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "decision_quality": {
+        "mean": 1.43,
+        "distribution": {
+          "0": 35,
+          "1": 44,
+          "2": 121
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      },
+      "termination_efficiency": {
+        "mean": 1.025,
+        "distribution": {
+          "0": 22,
+          "1": 151,
+          "2": 27
+        },
+        "task_count": 200,
+        "scale": "0=明显问题或未完成, 1=部分完成, 2=整体合理"
+      }
+    },
+    "aggregate_score": null,
+    "note": "七维独立报告，不加权为单一总分。"
+  },
+  "panel4_deterministic_behavior": {
+    "anomalies": {
+      "inferred_adjacent_repeat": {
+        "denominator": 200,
+        "occurrence_count": 11,
+        "task_count": 9,
+        "task_rate": 0.045
+      },
+      "inferred_invalid_buy": {
+        "denominator": 200,
+        "occurrence_count": 44,
+        "task_count": 43,
+        "task_rate": 0.215
+      },
+      "inferred_invalid_click": {
+        "denominator": 200,
+        "occurrence_count": 16,
+        "task_count": 13,
+        "task_rate": 0.065
+      },
+      "inferred_invalid_click_all": {
+        "denominator": 200,
+        "occurrence_count": 331,
+        "task_count": 149,
+        "task_rate": 0.745
+      },
+      "inferred_invalid_navigation": {
+        "denominator": 200,
+        "occurrence_count": 218,
+        "task_count": 125,
+        "task_rate": 0.625
+      },
+      "inferred_invalid_option": {
+        "denominator": 200,
+        "occurrence_count": 53,
+        "task_count": 41,
+        "task_rate": 0.205
+      },
+      "invalid_click_unverifiable": {
+        "denominator": 200,
+        "occurrence_count": 0,
+        "task_count": 0,
+        "task_rate": 0.0
+      },
+      "no_progress": {
+        "denominator": 200,
+        "occurrence_count": 48,
+        "task_count": 48,
+        "task_rate": 0.24
+      },
+      "post_terminal_control_call": {
+        "denominator": 200,
+        "occurrence_count": 0,
+        "task_count": 0,
+        "task_rate": 0.0
+      },
+      "post_terminal_shopping_action": {
+        "denominator": 200,
+        "occurrence_count": 179,
+        "task_count": 34,
+        "task_rate": 0.17
+      },
+      "post_terminal_terminal_response": {
+        "denominator": 200,
+        "occurrence_count": 75,
+        "task_count": 33,
+        "task_rate": 0.165
+      },
+      "repeated_action": {
+        "denominator": 200,
+        "occurrence_count": 2,
+        "task_count": 2,
+        "task_rate": 0.01
+      }
+    },
+    "tool_usage": {
+      "definition": {
+        "control_tools": [
+          "mea_round_report"
+        ],
+        "environment_action_tools": [
+          "click",
+          "finish",
+          "search"
+        ],
+        "shopping_tools": [
+          "ask_shopper",
+          "click",
+          "finish",
+          "search"
+        ]
+      },
+      "full_trajectory": {
+        "eligible_count": 200,
+        "environment_action_calls": {
+          "evaluated_count": 200,
+          "mean": 17.795,
+          "median": 15.0,
+          "p95": 36,
+          "p95_method": "nearest-rank"
+        },
+        "evaluated_count": 200,
+        "shopping_tool_calls": {
+          "evaluated_count": 200,
+          "mean": 18.465,
+          "median": 16.0,
+          "p95": 38,
+          "p95_method": "nearest-rank"
+        },
+        "tool_occurrence_totals": {
+          "ask_shopper": 134,
+          "click": 2651,
+          "finish": 16,
+          "search": 892
+        },
+        "total_tool_calls": {
+          "evaluated_count": 200,
+          "mean": 18.465,
+          "median": 16.0,
+          "p95": 38,
+          "p95_method": "nearest-rank"
+        },
+        "unknown_count": 0
+      },
+      "through_terminal": {
+        "eligible_count": 200,
+        "environment_action_calls": {
+          "evaluated_count": 200,
+          "mean": 17.005,
+          "median": 15.0,
+          "p95": 35,
+          "p95_method": "nearest-rank"
+        },
+        "evaluated_count": 200,
+        "shopping_tool_calls": {
+          "evaluated_count": 200,
+          "mean": 17.57,
+          "median": 15.0,
+          "p95": 36,
+          "p95_method": "nearest-rank"
+        },
+        "tool_occurrence_totals": {
+          "ask_shopper": 113,
+          "click": 2584,
+          "search": 817
+        },
+        "total_tool_calls": {
+          "evaluated_count": 200,
+          "mean": 17.57,
+          "median": 15.0,
+          "p95": 36,
+          "p95_method": "nearest-rank"
+        },
+        "unknown_count": 0
+      }
+    },
+    "input_integrity": {
+      "actual_readable_task_count": 200,
+      "core_integrity_passed_task_count": 200,
+      "extra_model_trace_ids": [],
+      "extra_raw_trace_ids": [],
+      "integrity_passed_task_count": 200,
+      "manifest_declared_task_count": 200,
+      "manifest_duplicate_task_ids": [],
+      "manifest_errors": [],
+      "manifest_goal_count": 200,
+      "manifest_unique_task_count": 200,
+      "missing_model_trace_ids": [],
+      "missing_raw_trace_ids": []
+    }
+  },
+  "notes": [
+    "四个面板相互独立，不生成加权总分。",
+    "latent TaskFacts 只报告页面证据，不计为用户需求 satisfied/violated。",
+    "缺失证据计 unknown，不计 violated。",
+    "确定性 inferred_* 行为是基于公开状态重放的推断，不等于环境真值。"
+  ]
+}

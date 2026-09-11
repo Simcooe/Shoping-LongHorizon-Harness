@@ -1,0 +1,143 @@
+{
+  "task_id": "425",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 8,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 8,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求低糖红豆沙，全程有效"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求商家制作广式中秋月饼适用"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格 140-150 元，全程有效"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "5kg金装规格是 TaskFacts 候选，用户在本次轨迹中从未提出或确认该规格要求"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选规格为『金装低糖红豆沙5kg』，商品标题亦含低糖红豆沙，页面证据明确满足低糖红豆沙要求"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "规格名标注『（广式月饼适用）』，商品标题含『商用…中秋烘焙…月饼馅料』，页面证据支持商用广式月饼适用"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选中规格后详情页显示单价 148.0 元，落在 140-150 元区间内"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面确实存在『金装低糖红豆沙5kg』规格，但用户从未要求或确认该 TaskFacts 规格，故不作为有效需求"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 2,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:09:29.779830+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

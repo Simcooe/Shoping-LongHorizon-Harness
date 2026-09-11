@@ -1,0 +1,156 @@
+{
+  "task_id": "333",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 7,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 7,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求散装的花毛峰茉莉花茶，从任务开始有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求预算两百出头，从任务开始有效。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户回复称『散装浓香花毛峰正合适』，确认了浓香型口味需求。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户回复明确要求按『2斤赠小泡茶（无筒无杯）』规格下单，激活了该规格需求。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品标题为『四川成都淳臻飘雪茉莉花茶2025新茶叶花毛峰浓香型散装非特级碧谭』，明含花毛峰、茉莉花茶、散装。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选中『2斤赠小泡茶（无筒无杯）』规格后页面显示价格 214.0 元，属于两百出头预算。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品页口味属性显示『散装浓香型』，标题亦含浓香型，满足用户确认的浓香型需求。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品页存在并被选中『2斤赠小泡茶（无筒无杯）』规格，对应价格 214.0 元，与用户确认的规格一致。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 2,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:08:54.820997+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

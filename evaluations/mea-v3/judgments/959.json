@@ -1,0 +1,209 @@
+{
+  "task_id": "959",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": false,
+    "terminal_step": null,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": false,
+    "step": null,
+    "kind": "unresolved",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求推拉门，自任务开始即有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求适合厨房和客厅，自任务开始即有效。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确预算500元左右，用户回复再次确认此预算。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "用户从未在回复中确认目标商品需属于厨房门类目，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "极窄/单轨结构未获任何真实 shopper 回复确认，仅出现在画像与搜索词中，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "吊轨四扇联动结构未获用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "550元价格上限未由用户明确确认（用户仅模糊表示略超可接受），保持 latent。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 1,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "搜索页确有多款推拉门商品，但轨迹未做最终选择即阻塞结束，用户需求未完成核验。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 1,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "多款商品标题含厨房/客厅适用，但未在任何详情页确认具体使用场景，且无最终决定。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 30,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面显示多个规格价格在420-480元等500元档内，但计价单位（整樘/每平方米）无法确认，无法判定最终是否满足预算。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 1,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面存在厨房门类目商品，但用户未有效要求该事实。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "搜索页存在极窄/单轨商品，但用户未有效要求该事实。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 1,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "搜索页存在吊轨联动商品，但用户未有效要求该事实。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面有550元以内商品，但该上限未被用户有效确认。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 2,
+    "decision_quality": 1,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:18:50.196512+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

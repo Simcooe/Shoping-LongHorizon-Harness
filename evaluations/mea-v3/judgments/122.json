@@ -1,0 +1,223 @@
+{
+  "task_id": "122",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 8,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 8,
+    "kind": "purchase",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求自动闭门器，从任务开始有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求800g拉力规格。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求适合懒人使用，从任务开始有效。"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格不超过25元。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，本次轨迹中用户从未回复确认“新款”，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，用户无任何回复确认轻量推拉门适配，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，用户未回复确认静音，保持 latent。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，用户未回复确认回弹缓慢，保持 latent。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，用户未回复确认免打孔简易安装，保持 latent。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品 778323010447 详情页为自动关门闭门器，类别符合用户有效要求。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "详情页存在并选中了“800g拉力”规格变体（整套装第三代黑色【1个】800g拉力）。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "“适合懒人使用”为模糊要求，Features 页面为空、Description 未展开，无 model-visible 证据直接确认该卖点。"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 4,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选中 800g拉力 变体后详情页价格显示 22.0 元，未超过 25 元预算。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户从未确认“新款”，不作为本次用户需求；页面也无明确新款证据。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户从未确认轻量推拉门适配，且无详情证据可判断。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户从未确认静音，详情规格页未打开，仅有标题不足以证明。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户从未确认回弹缓慢，无 model-visible 规格证据。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "用户从未确认免打孔简易安装，详情未展开，证据不足。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 2,
+    "search_strategy": 1,
+    "candidate_utilization": 1,
+    "evidence_verification": 1,
+    "decision_quality": 1,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:02:16.963210+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "task_id": "118",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 36,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 36,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求羽毛球鞋"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求预算不超过 550 元"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求白蓝配色"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 29,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户回复明确表示更想要减震"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 29,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户回复明确表示更想要耐磨"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "用户回复未提及正品要求，轨迹中未被确认"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "用户回复未提及男女同款要求，轨迹中未被确认"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 29,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户明确选择宽楦款并称朋友推荐的宽楦款"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 29,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "用户明确表示 40 码有货就选它"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 33,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品页标题明确为尤尼克斯羽毛球鞋"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选中白蓝（宽楦）后页面价格显示 528.0 元，未超过 550 元"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面颜色分类含「shb510wcr 白蓝（宽楦）」且点击后价格更新为该配色价格"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品页标题包含「减震」，用户在该候选下确认要减震"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品页标题包含「耐磨」，用户在该候选下确认要耐磨"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "用户未有效要求正品；页面标题含「正品」，仅作事实记录"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "用户未有效要求男女同款；页面标题含男女款信息，仅作事实记录"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 34,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面颜色选项即「白蓝（宽楦）」，用户明确选择宽楦款"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 35,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面鞋码列表中 40 为可选选项，用户要求 40 码有货即买"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 1,
+    "decision_quality": 2,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:02:03.904997+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

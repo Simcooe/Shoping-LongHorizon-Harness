@@ -1,0 +1,209 @@
+{
+  "task_id": "291",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 13,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 13,
+    "kind": "environment_terminal",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求适合女童演出穿的玛丽珍小皮鞋，自任务开始有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求颜色为黑色。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格不超过50元。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，用户从未告知/确认春秋季需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "软底需求未被用户在任何 shopper 回复中确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "单鞋款式需求未被用户确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "26码尺码需求从未被用户告知/确认，保持 latent。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "候选 890015474890 详情页标题为『女童公主鞋儿童小皮鞋2025新款春秋季软底鞋子软底玛丽珍演出单鞋』，模型可见证据明确为女童玛丽珍演出小皮鞋。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "详情页颜色分类含『黑色』与『黑色【升级版】』，黑色选项在页面可见，满足黑色要求。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "选择黑色变体后页面价格显示为 49.0，≤50元，满足价格上限。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "用户从未有效要求春秋季，属 latent 不作有效需求；但页面标题含『春秋季』，事实层面可支持。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "软底需求 latent；页面标题含『软底』，事实层面可支持。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "单鞋需求 latent；页面标题含『单鞋』，事实层面可支持。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 11,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "26码需求 latent；页面尺码选项含『26码』，事实层面可支持，但用户从未要求该尺码。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 0,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 2,
+    "decision_quality": 2,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:07:30.685758+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

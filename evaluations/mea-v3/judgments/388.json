@@ -1,0 +1,225 @@
+{
+  "task_id": "388",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 7,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 7,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求新娘佩戴的圆形红盖头（红色），从任务开始即有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格在70左右。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，全程无 shopper 用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，无真实用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，无真实用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，无真实用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，无真实用户回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "TaskFacts 候选，无真实用户回复确认，保持 latent。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "step 5 在商品 900245719570 上选中【吾家有喜】圆款●红盖头，页面显示为红色圆形新娘头纱（秀禾蒙头纱），满足圆形红盖头要求。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选圆款变体价格明确为 73.0 元，符合“70左右”（且不超过77上限）的价格要求。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品标题含“2025新款”，页面有支持证据；但用户从未确认此偏好，故不作为有效需求。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "标题含“中式…婚礼…秀禾蒙头纱婚庆用品”，页面有支持证据；用户未确认，非有效需求。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "variant 名称含“【吾家有喜】…刺绣工艺”，页面有支持证据；用户未确认，非有效需求。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "variant 名称含“锦缎材质…顺滑亲肤有光泽”，页面有支持证据；用户未确认，非有效需求。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 3,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "标题含“中式高级…高档”，页面有支持证据；用户未确认，非有效需求。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 5,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选变体价格 73.0 元 ≤ 77 元上限，页面有支持证据；用户未确认此隐性上限，非有效需求。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 1,
+    "evidence_verification": 2,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:09:15.806528+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

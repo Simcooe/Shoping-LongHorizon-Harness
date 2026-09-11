@@ -1,0 +1,1537 @@
+{
+  "task": "求推荐一款瓷白色的粉底液，价格在20元左右。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.28, \"复购率\": 0.63, \"平均客单价\": 192.97, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": false, \"近30天消费金额\": 3280.5, \"近90天订单数\": 17}, \"人口属性\": {\"会员等级\": \"铂金会员\", \"年龄段\": \"25-34, \", \"性别\": \"女\", \"消费等级\": \"高\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"NARS\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"Shu Uemura\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"SK-II\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Pat McGrath Labs\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"Arc'teryx\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"Dyson\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 1000, \"最小值\": 10}, \"功能\": [\"保湿\", \"遮瑕\", \"抗氧化\", \"长效持妆\", \"防晒\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\", \"], \"颜色\": [\"雾面奶油白\", \"冷调象牙\"], \"风格\": [\"极简\", \"日系通勤\"]}, \"类目偏好\": {\"家居生活\": \"中\", \"数码电子\": \"低\", \"服饰鞋包\": \"中\", \"美妆护肤\": \"高\", \"运动户外\": \"中\", \"食品生鲜\": \"低\"}}, \"地区信息\": {\"区县\": \"武侯区\", \"城市\": \"成都市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"四川省\"}, \"最后更新时间\": \"2024-06-17T09:45:00Z\", \"注册时间\": \"2020-11-03T14:22:31Z\", \"注册渠道\": \"App\", \"用户ID\": \"U94857263, \", \"用户标签\": [\"冷白皮肤色\", \"高价值会员\", \"底妆控\", \"小样收藏爱好者\", \"城市滑雪族\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 5400, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"适合中性一白/粉一白/冷白皮的粉底液\", \"2ml自然妆感的小样粉底液\", \"持久遮瑕保湿粉底液\"], \"最近14天收藏商品\": [], \"活跃时间段\": [8, 12, 22], \"近7天访问次数\": 18}}",
+  "step_count": 8,
+  "reset": {
+    "env_idx": 1,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "00瓷白色适合中性一白/粉一白/冷白皮",
+      "2ml"
+    ],
+    "idx": 1031,
+    "instruction": "Instruction: 求推荐一款瓷白色的粉底液，价格在20元左右。",
+    "instruction_simple": "求推荐一款瓷白色的粉底液，价格在20元左右。",
+    "message": "Task 1031 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.28,
+        "复购率": 0.63,
+        "平均客单价": 192.97,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": false,
+        "近30天消费金额": 3280.5,
+        "近90天订单数": 17
+      },
+      "人口属性": {
+        "会员等级": "铂金会员",
+        "年龄段": "25-34, ",
+        "性别": "女",
+        "消费等级": "高"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "NARS"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "Shu Uemura"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "SK-II"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Pat McGrath Labs"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "Arc'teryx"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "Dyson"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 1000,
+            "最小值": 10
+          },
+          "功能": [
+            "保湿",
+            "遮瑕",
+            "抗氧化",
+            "长效持妆",
+            "防晒"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            ", "
+          ],
+          "颜色": [
+            "雾面奶油白",
+            "冷调象牙"
+          ],
+          "风格": [
+            "极简",
+            "日系通勤"
+          ]
+        },
+        "类目偏好": {
+          "家居生活": "中",
+          "数码电子": "低",
+          "服饰鞋包": "中",
+          "美妆护肤": "高",
+          "运动户外": "中",
+          "食品生鲜": "低"
+        }
+      },
+      "地区信息": {
+        "区县": "武侯区",
+        "城市": "成都市",
+        "时区": "Asia/Shanghai",
+        "省份": "四川省"
+      },
+      "最后更新时间": "2024-06-17T09:45:00Z",
+      "注册时间": "2020-11-03T14:22:31Z",
+      "注册渠道": "App",
+      "用户ID": "U94857263, ",
+      "用户标签": [
+        "冷白皮肤色",
+        "高价值会员",
+        "底妆控",
+        "小样收藏爱好者",
+        "城市滑雪族"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 5400,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "适合中性一白/粉一白/冷白皮的粉底液",
+          "2ml自然妆感的小样粉底液",
+          "持久遮瑕保湿粉底液"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          8,
+          12,
+          22
+        ],
+        "近7天访问次数": 18
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "瓷白色 粉底液"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 瓷白色 粉底液 | Normalized query: 瓷白色 粉底液 [SEP] Next > [SEP] 901541964503 [SEP] 【 烈儿宝贝直播间】IORE粉底液中样轻透服帖持妆自然官方旗舰店 [SEP] 29.0 [SEP] 926274880584 [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl [SEP] 22.0 [SEP] 749034986013 [SEP] Oribas芮本诗奶糯持妆粉底液清透自然遮瑕保湿底妆粉霜OB/Obas [SEP] 89.0 [SEP] 931801823730 [SEP] 夏日限定~恋火PL海岛系列 蹭不掉气垫粉底mini控油持久不脱妆服帖 [SEP] 59.0 to 99.0 [SEP] 690275767173 [SEP] PL看不见粉霜粉底液女持久不脱妆遮瑕保湿控油混干油皮亲妈蹭掉的 [SEP] 159.0 [SEP] 761448195182 [SEP] obas芮本诗粉底液小样自然遮瑕Oribas粉底液持妆底妆粉霜OB奶糯 [SEP] 23.0 to 39.0 [SEP] 817240245256 [SEP] 玛丽黛佳第二代900目粉霜遮瑕持久裸感粉底液滋润20克正装全新 [SEP] 198.0 [SEP] 751695246920 [SEP] obas芮本诗粉底液自然遮瑕保湿Oribas粉底小样持妆底妆粉霜OB奶糯 [SEP] 23.0 to 39.0 [SEP] 680662616150 [SEP] 油皮秋冬奶油肌！PL绒绒限定款蹭不掉粉底液3.0滋润持妆不易脱 [SEP] 142.0 [SEP] 848976869284 [SEP] 24H巨扒脸！淂意超贴瓶粉底液油皮遮瑕服帖吸油不暗沉0距离作弊妆 [SEP] 13.0 to 289.0 [SEP] 765834893129 [SEP] 【无暇套装】雪露紫臻美精华粉底液遮瑕膏黑松露养肤持久定妆补妆 [SEP] 980.0 to 1380.0 [SEP] 795203682059 [SEP] red earth红地球超新星矿物精华柔雾持妆气垫粉底液养肤持久亮彩 [SEP] 138.0 [SEP] 939972710282 [SEP] 粉霜界传奇| 芦丹氏粉霜粉底液小样养肤遮瑕滋润持久试色免费试用 [SEP] 70.0 to 888.0 [SEP] 675775743312 [SEP] 【新品】玛丽黛佳第2代900目遮瑕持久气垫粉霜粉底液不易卡粉正品 [SEP] 199.0 [SEP] 667215221316 [SEP] 国柜直发 新版兰蔻菁纯精华粉底液/粉霜35ml定妆散粉粉饼控油遮瑕 [SEP] 589.0 to 795.0 [SEP] 747118212775 [SEP] 珀莱雅气垫cc霜遮瑕补水保湿持久不脱妆bb霜粉底液隔离不卡粉正品 [SEP] 71.0 [SEP] 750368485585 [SEP] 美宝莲fitme pro粉底液持久不脱妆遮瑕保湿BB混油皮干皮官方正品 [SEP] 89.0 to 139.0 [SEP] 844448115389 [SEP] pl看不见粉底液小样粉霜恋火蹭不掉3.0持妆干皮奶油线上免费试用 [SEP] 16.0 to 55.0 [SEP] 815096100197 [SEP] LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641 [SEP] 49.0 [SEP] 674750867431 [SEP] 【达人专享】玛丽黛佳第2代900目自然肌理裸感粉霜粉底液持久持妆 [SEP] 249.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"901541964503\", \"926274880584\", \"749034986013\", \"931801823730\", \"690275767173\", \"761448195182\", \"817240245256\", \"751695246920\", \"680662616150\", \"848976869284\", \"765834893129\", \"795203682059\", \"939972710282\", \"675775743312\", \"667215221316\", \"747118212775\", \"750368485585\", \"844448115389\", \"815096100197\", \"674750867431\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "901541964503",
+            "926274880584",
+            "749034986013",
+            "931801823730",
+            "690275767173",
+            "761448195182",
+            "817240245256",
+            "751695246920",
+            "680662616150",
+            "848976869284",
+            "765834893129",
+            "795203682059",
+            "939972710282",
+            "675775743312",
+            "667215221316",
+            "747118212775",
+            "750368485585",
+            "844448115389",
+            "815096100197",
+            "674750867431"
+          ],
+          "normalized_query": "瓷白色 粉底液",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "901541964503",
+              "brand": "IORE瑷亦旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "中样"
+              ],
+              "price": "29.0",
+              "rank": 1,
+              "title": "【 烈儿宝贝直播间】IORE粉底液中样轻透服帖持妆自然官方旗舰店"
+            },
+            {
+              "asin": "926274880584",
+              "brand": "杜本那十里名媛旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "干皮",
+                "混油皮",
+                "粉底液"
+              ],
+              "price": "22.0",
+              "rank": 2,
+              "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+            },
+            {
+              "asin": "749034986013",
+              "brand": "Oribas芮本诗旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底液",
+                "清透",
+                "保湿",
+                "遮瑕"
+              ],
+              "price": "89.0",
+              "rank": 3,
+              "title": "Oribas芮本诗奶糯持妆粉底液清透自然遮瑕保湿底妆粉霜OB/Obas"
+            },
+            {
+              "asin": "931801823730",
+              "brand": "萌崽小卖部",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "控油",
+                "持久",
+                "不脱妆",
+                "服帖"
+              ],
+              "price": "59.0 to 99.0",
+              "rank": 4,
+              "title": "夏日限定~恋火PL海岛系列 蹭不掉气垫粉底mini控油持久不脱妆服帖"
+            },
+            {
+              "asin": "690275767173",
+              "brand": "龙凤胎妈妈美妆",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "混皮",
+                "干皮",
+                "油皮",
+                "粉底液",
+                "持久不脱妆",
+                "遮瑕",
+                "保湿",
+                "控油"
+              ],
+              "price": "159.0",
+              "rank": 5,
+              "title": "PL看不见粉霜粉底液女持久不脱妆遮瑕保湿控油混干油皮亲妈蹭掉的"
+            },
+            {
+              "asin": "761448195182",
+              "brand": "G美海外国际品牌店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底小样",
+                "遮瑕",
+                "持妆"
+              ],
+              "price": "23.0 to 39.0",
+              "rank": 6,
+              "title": "obas芮本诗粉底液小样自然遮瑕Oribas粉底液持妆底妆粉霜OB奶糯"
+            },
+            {
+              "asin": "817240245256",
+              "brand": "越来悦好亿家店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "持久裸感",
+                "滋润",
+                "粉底液"
+              ],
+              "price": "198.0",
+              "rank": 7,
+              "title": "玛丽黛佳第二代900目粉霜遮瑕持久裸感粉底液滋润20克正装全新"
+            },
+            {
+              "asin": "751695246920",
+              "brand": "G美试色小屋",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底小样",
+                "自然",
+                "保湿",
+                "遮瑕",
+                "持妆"
+              ],
+              "price": "23.0 to 39.0",
+              "rank": 8,
+              "title": "obas芮本诗粉底液自然遮瑕保湿Oribas粉底小样持妆底妆粉霜OB奶糯"
+            },
+            {
+              "asin": "680662616150",
+              "brand": "亲达QINDA",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "秋冬",
+                "奶油肌",
+                "油皮",
+                "不拔干",
+                "不易脱"
+              ],
+              "price": "142.0",
+              "rank": 9,
+              "title": "油皮秋冬奶油肌！PL绒绒限定款蹭不掉粉底液3.0滋润持妆不易脱"
+            },
+            {
+              "asin": "848976869284",
+              "brand": "崔老师成分护肤",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "油皮",
+                "吸油",
+                "服帖"
+              ],
+              "price": "13.0 to 289.0",
+              "rank": 10,
+              "title": "24H巨扒脸！淂意超贴瓶粉底液油皮遮瑕服帖吸油不暗沉0距离作弊妆"
+            },
+            {
+              "asin": "765834893129",
+              "brand": "lavillosa雪露紫旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "黑松露",
+                "养肤",
+                "持久定妆",
+                "补妆"
+              ],
+              "price": "980.0 to 1380.0",
+              "rank": 11,
+              "title": "【无暇套装】雪露紫臻美精华粉底液遮瑕膏黑松露养肤持久定妆补妆"
+            },
+            {
+              "asin": "795203682059",
+              "brand": "gold金甲虫化妆品店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "柔光",
+                "持久",
+                "养肤"
+              ],
+              "price": "138.0",
+              "rank": 12,
+              "title": "red earth红地球超新星矿物精华柔雾持妆气垫粉底液养肤持久亮彩"
+            },
+            {
+              "asin": "939972710282",
+              "brand": "岛民猴子的日常",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "遮瑕",
+                "妆效持久"
+              ],
+              "price": "70.0 to 888.0",
+              "rank": 13,
+              "title": "粉霜界传奇| 芦丹氏粉霜粉底液小样养肤遮瑕滋润持久试色免费试用"
+            },
+            {
+              "asin": "675775743312",
+              "brand": "玛丽戴圭品牌店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底液",
+                "遮瑕",
+                "持久",
+                "不易卡粉",
+                "正品"
+              ],
+              "price": "199.0",
+              "rank": 14,
+              "title": "【新品】玛丽黛佳第2代900目遮瑕持久气垫粉霜粉底液不易卡粉正品"
+            },
+            {
+              "asin": "667215221316",
+              "brand": "魔女宅急便 全球站",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "控油",
+                "遮瑕",
+                "国内专柜直发"
+              ],
+              "price": "589.0 to 795.0",
+              "rank": 15,
+              "title": "国柜直发 新版兰蔻菁纯精华粉底液/粉霜35ml定妆散粉粉饼控油遮瑕"
+            },
+            {
+              "asin": "747118212775",
+              "brand": "小可爱护肤美妆",
+              "category": "彩妆/香水/美妆工具›面部彩妆›气垫",
+              "key_attributes": [
+                "遮瑕",
+                "持久",
+                "补水",
+                "保湿",
+                "bb霜",
+                "隔离",
+                "不卡粉",
+                "正品"
+              ],
+              "price": "71.0",
+              "rank": 16,
+              "title": "珀莱雅气垫cc霜遮瑕补水保湿持久不脱妆bb霜粉底液隔离不卡粉正品"
+            },
+            {
+              "asin": "750368485585",
+              "brand": "美宝莲博尼达专卖店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "持久",
+                "遮瑕",
+                "保湿",
+                "不脱妆",
+                "混油皮",
+                "干皮"
+              ],
+              "price": "89.0 to 139.0",
+              "rank": 17,
+              "title": "美宝莲fitme pro粉底液持久不脱妆遮瑕保湿BB混油皮干皮官方正品"
+            },
+            {
+              "asin": "844448115389",
+              "brand": "关你西红柿! 我要买!",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "粉底液小样"
+              ],
+              "price": "16.0 to 55.0",
+              "rank": 18,
+              "title": "pl看不见粉底液小样粉霜恋火蹭不掉3.0持妆干皮奶油线上免费试用"
+            },
+            {
+              "asin": "815096100197",
+              "brand": "肥木美妆生活馆",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉底液/膏",
+              "key_attributes": [
+                "均匀肤色"
+              ],
+              "price": "49.0",
+              "rank": 19,
+              "title": "LA GIRL洛杉矶女孩粉底调和液lagirl调色液纯白色粉底液中和641"
+            },
+            {
+              "asin": "674750867431",
+              "brand": "玛丽黛佳旗舰店",
+              "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "key_attributes": [
+                "玛丽黛佳",
+                "粉底液",
+                "持久持妆"
+              ],
+              "price": "249.0",
+              "rank": 20,
+              "title": "【达人专享】玛丽黛佳第2代900目自然肌理裸感粉霜粉底液持久持妆"
+            }
+          ],
+          "query": "瓷白色 粉底液",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"瓷白色 粉底液\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:e05d22abd6860eaecb6ac7f30eeb9c7e2d9aa9b737285521dd76c7577ee3e001"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:e05d22abd6860eaecb6ac7f30eeb9c7e2d9aa9b737285521dd76c7577ee3e001"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:e05d22abd6860eaecb6ac7f30eeb9c7e2d9aa9b737285521dd76c7577ee3e001"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "926274880584"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【蹭不掉粉底液3.0】自然色+粉扑*1 [SEP] 【蹭不掉粉底液3.0】瓷白色+粉扑*1 [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl [SEP] 价格: 22.0 [SEP] 店铺: 杜本那十里名媛旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【蹭不掉粉底液3.0】自然色+粉扑*1\", \"【蹭不掉粉底液3.0】瓷白色+粉扑*1\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【蹭不掉粉底液3.0】自然色+粉扑*1",
+            "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"926274880584\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:926274880584",
+            "constraint:926274880584:category:pass",
+            "constraint:926274880584:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:926274880584",
+            "constraint:926274880584:category:pass",
+            "constraint:926274880584:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:926274880584",
+            "constraint:926274880584:category:pass",
+            "constraint:926274880584:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "761448195182"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【蹭不掉粉底液3.0】自然色+粉扑*1 [SEP] 【蹭不掉粉底液3.0】瓷白色+粉扑*1 [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl [SEP] 价格: 22.0 [SEP] 店铺: 杜本那十里名媛旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【蹭不掉粉底液3.0】自然色+粉扑*1\", \"【蹭不掉粉底液3.0】瓷白色+粉扑*1\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【蹭不掉粉底液3.0】自然色+粉扑*1",
+            "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"761448195182\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:761448195182"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:761448195182"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:761448195182"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "content": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:926274880584:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:926274880584:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:926274880584:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "content": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:926274880584:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:926274880584:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:926274880584:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "content": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"【蹭不掉粉底液3.0】瓷白色+粉扑*1\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:926274880584:【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:926274880584:【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:926274880584:【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 1,
+        "goal": {},
+        "idx": "slot-1-1031",
+        "instruction": "Instruction: [SEP] 求推荐一款瓷白色的粉底液，价格在20元左右。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【蹭不掉粉底液3.0】自然色+粉扑*1 [SEP] 【蹭不掉粉底液3.0】瓷白色+粉扑*1 [SEP] 蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl [SEP] 价格: 22.0 [SEP] 店铺: 杜本那十里名媛旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【蹭不掉粉底液3.0】自然色+粉扑*1\", \"【蹭不掉粉底液3.0】瓷白色+粉扑*1\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【蹭不掉粉底液3.0】自然色+粉扑*1",
+            "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【蹭不掉粉底液3.0】自然色+粉扑*1",
+              "【蹭不掉粉底液3.0】瓷白色+粉扑*1"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "926274880584",
+            "brand": "杜本那十里名媛旗舰店",
+            "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+            "key_attributes": [
+              "干皮",
+              "混油皮",
+              "粉底液"
+            ],
+            "price": "22.0",
+            "title": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 22
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 1,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 1,
+        "goal": {
+          "asin": "751695246920",
+          "attributes": [
+            "粉底小样",
+            "自然",
+            "保湿",
+            "遮瑕",
+            "持妆"
+          ],
+          "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+          "expected_brand": [],
+          "expected_core_functions": [
+            "粉底小样",
+            "自然",
+            "保湿",
+            "遮瑕",
+            "持妆"
+          ],
+          "expected_model": [],
+          "feature_sources": {
+            "brand": "instruction_explicit_alias",
+            "category": "task.target_product.category",
+            "core_functions": "instruction.attributes",
+            "model": "instruction_target_token_intersection",
+            "options": "instruction.instruction_options"
+          },
+          "goal_options": [
+            "00瓷白色适合中性一白/粉一白/冷白皮",
+            "2ml"
+          ],
+          "instruction_full": "给我找一款适合冷白皮的粉底小样！要求上脸自然，能够遮瑕保湿，妆效持久的，我想买个2ml试试看，价格在20左右。",
+          "instruction_simple": "求推荐一款瓷白色的粉底液，价格在20元左右。",
+          "instruction_text": "求推荐一款瓷白色的粉底液，价格在20元左右。",
+          "name": "obas芮本诗粉底液自然遮瑕保湿Oribas粉底小样持妆底妆粉霜OB奶糯",
+          "option_axis_version": "option-axis-v1",
+          "price_upper": 22,
+          "query": "",
+          "reason_key": null,
+          "required_options_by_key": {
+            "color": {
+              "source": "instruction.instruction_options",
+              "source_axis": "颜色分类",
+              "value": "00瓷白色适合中性一白/粉一白/冷白皮"
+            },
+            "net_content": {
+              "source": "instruction.instruction_options",
+              "source_axis": "净含量",
+              "value": "2ml"
+            }
+          },
+          "reward_feature_version": "shopping-reward-features-v1",
+          "unresolved_option_requirements": [],
+          "user_persona": {
+            "交易特征": {
+              "优惠券使用率": 0.28,
+              "复购率": 0.63,
+              "平均客单价": 192.97,
+              "支付方式偏好": "微信支付",
+              "是否促销敏感": false,
+              "近30天消费金额": 3280.5,
+              "近90天订单数": 17
+            },
+            "人口属性": {
+              "会员等级": "铂金会员",
+              "年龄段": "25-34, ",
+              "性别": "女",
+              "消费等级": "高"
+            },
+            "兴趣偏好": {
+              "品牌偏好": [
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "NARS"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "Shu Uemura"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "SK-II"
+                },
+                {
+                  "偏好程度": "高",
+                  "品牌名称": "Pat McGrath Labs"
+                },
+                {
+                  "偏好程度": "中",
+                  "品牌名称": "Arc'teryx"
+                },
+                {
+                  "偏好程度": "低",
+                  "品牌名称": "Dyson"
+                }
+              ],
+              "商品属性偏好": {
+                "价格区间": {
+                  "最大值": 1000,
+                  "最小值": 10
+                },
+                "功能": [
+                  "保湿",
+                  "遮瑕",
+                  "抗氧化",
+                  "长效持妆",
+                  "防晒"
+                ],
+                "尺码偏好": {
+                  "上衣": ", ",
+                  "内衣": ", ",
+                  "裙装": ", ",
+                  "裤子": ", ",
+                  "鞋码": ", "
+                },
+                "材质": [
+                  ", "
+                ],
+                "颜色": [
+                  "雾面奶油白",
+                  "冷调象牙"
+                ],
+                "风格": [
+                  "极简",
+                  "日系通勤"
+                ]
+              },
+              "类目偏好": {
+                "家居生活": "中",
+                "数码电子": "低",
+                "服饰鞋包": "中",
+                "美妆护肤": "高",
+                "运动户外": "中",
+                "食品生鲜": "低"
+              }
+            },
+            "地区信息": {
+              "区县": "武侯区",
+              "城市": "成都市",
+              "时区": "Asia/Shanghai",
+              "省份": "四川省"
+            },
+            "最后更新时间": "2024-06-17T09:45:00Z",
+            "注册时间": "2020-11-03T14:22:31Z",
+            "注册渠道": "App",
+            "用户ID": "U94857263, ",
+            "用户标签": [
+              "冷白皮肤色",
+              "高价值会员",
+              "底妆控",
+              "小样收藏爱好者",
+              "城市滑雪族"
+            ],
+            "行为特征": {
+              "常用设备": "iOS手机",
+              "日均浏览时长": 5400,
+              "最近14天关注店铺": [],
+              "最近14天加购商品": [],
+              "最近14天搜索关键词": [
+                "适合中性一白/粉一白/冷白皮的粉底液",
+                "2ml自然妆感的小样粉底液",
+                "持久遮瑕保湿粉底液"
+              ],
+              "最近14天收藏商品": [],
+              "活跃时间段": [
+                8,
+                12,
+                22
+              ],
+              "近7天访问次数": 18
+            }
+          },
+          "weight": 1
+        },
+        "idx": "slot-1-1031",
+        "instruction": "Thank you for shopping with us! [SEP] Your code: [SEP] None [SEP] (Paste it in your MTurk interface.) [SEP] Purchased [SEP] asin [SEP] 926274880584 [SEP] options [SEP] {} [SEP] attrs [SEP] None [SEP] category [SEP] None [SEP] query [SEP] None [SEP] product category [SEP] None [SEP] Target [SEP] asin [SEP] options [SEP] attrs [SEP] price upper [SEP] instuction text [SEP] category [SEP] product category [SEP] query [SEP] Goal [SEP] None [SEP] Reward [SEP] Your score (min 0.0, max 1.0) [SEP] -0.23124999999999998 [SEP] Reward Details [SEP] None\n\n搜索功能是否可用: False\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "terminal",
+          "search_available": false
+        },
+        "over": true,
+        "purchase": {
+          "asin": "926274880584",
+          "attributes": [
+            "干皮",
+            "混油皮",
+            "粉底液"
+          ],
+          "category": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+          "instruction_text": "有没有干皮和混油皮通用的粉底液啊？我喜欢自然色，要求配有粉扑，价格不要超过25块。",
+          "name": "蹭不掉粉底液3.0干皮混油皮持久不脱妆遮瑕养肤bb霜女官方旗舰pl",
+          "options": {},
+          "price": 22,
+          "product_category": "",
+          "query": ""
+        },
+        "reward": -0.23124999999999998,
+        "reward_detail": {
+          "dimension_scores": {
+            "brand": 0,
+            "core_functions": 0.2,
+            "key_options": 0,
+            "model": 0
+          },
+          "evidence": {
+            "comparator_version": "shopping-comparators-v1",
+            "expected_reward_feature_version": "shopping-reward-features-v1",
+            "preference_scoring": {
+              "active_weight": 0.4,
+              "all_satisfied": false,
+              "dimensions": {
+                "brand": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                },
+                "core_functions": {
+                  "active": true,
+                  "coverage": 1,
+                  "passed_count": 1,
+                  "required_count": 5,
+                  "results": [
+                    {
+                      "actual": [
+                        "干皮",
+                        "混油皮",
+                        "粉底液"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "粉底小样"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "粉底小样"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "干皮",
+                        "混油皮",
+                        "粉底液"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "自然"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "自然"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "干皮",
+                        "混油皮",
+                        "粉底液"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "保湿"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "保湿"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "干皮",
+                        "混油皮",
+                        "粉底液"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [
+                          {
+                            "source": "text_fallback",
+                            "value": "遮瑕"
+                          }
+                        ],
+                        "missing": [],
+                        "negated": []
+                      },
+                      "passed": true,
+                      "required": [
+                        "遮瑕"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "pass",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": [
+                        "干皮",
+                        "混油皮",
+                        "粉底液"
+                      ],
+                      "comparator": "structured_attribute_with_polarity_fallback",
+                      "evidence": {
+                        "matched": [],
+                        "missing": [
+                          "持妆"
+                        ],
+                        "negated": []
+                      },
+                      "passed": false,
+                      "required": [
+                        "持妆"
+                      ],
+                      "source_field": "attribute|description",
+                      "status": "fail",
+                      "verifiable": true
+                    }
+                  ],
+                  "score": 0.2,
+                  "verifiable_count": 5
+                },
+                "key_options": {
+                  "active": true,
+                  "coverage": 0.5,
+                  "passed_count": 0,
+                  "required_count": 2,
+                  "results": [
+                    {
+                      "actual": {},
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [],
+                        "missing_axes": [],
+                        "unavailable_values": [
+                          {
+                            "axis": "color",
+                            "value": "00瓷白色适合中性一白/粉一白/冷白皮"
+                          }
+                        ],
+                        "wrong_values": []
+                      },
+                      "passed": false,
+                      "required": {
+                        "color": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "颜色分类",
+                          "value": "00瓷白色适合中性一白/粉一白/冷白皮"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "fail",
+                      "verifiable": true
+                    },
+                    {
+                      "actual": {},
+                      "comparator": "option_key_value_v1",
+                      "evidence": {
+                        "axis_version": "option-axis-v1",
+                        "matched": [],
+                        "missing_axes": [
+                          "net_content"
+                        ],
+                        "unavailable_values": [],
+                        "wrong_values": []
+                      },
+                      "passed": false,
+                      "required": {
+                        "net_content": {
+                          "source": "instruction.instruction_options",
+                          "source_axis": "净含量",
+                          "value": "2ml"
+                        }
+                      },
+                      "source_field": "customization_options",
+                      "status": "unverifiable",
+                      "verifiable": false
+                    }
+                  ],
+                  "score": 0,
+                  "verifiable_count": 1
+                },
+                "model": {
+                  "active": false,
+                  "coverage": 0,
+                  "passed_count": 0,
+                  "required_count": 0,
+                  "results": [],
+                  "score": 0,
+                  "verifiable_count": 0
+                }
+              },
+              "evidence_coverage": 0.8125,
+              "match_score": 0.125,
+              "weights": {
+                "brand": 0.35,
+                "core_functions": 0.25,
+                "key_options": 0.15,
+                "model": 0.25
+              }
+            },
+            "price_resolution": {
+              "evidence": {},
+              "method": "constant_option_price",
+              "price": 22,
+              "status": "pass",
+              "version": "variant-price-v1"
+            },
+            "reward_feature_version": "shopping-reward-features-v1",
+            "variant_price_version": "variant-price-v1"
+          },
+          "evidence_coverage": 0.8125,
+          "hard_gates": {
+            "budget": {
+              "actual": 22,
+              "comparator": "variant_price_budget_v1",
+              "evidence": {
+                "evidence": {},
+                "method": "constant_option_price",
+                "price": 22,
+                "status": "pass",
+                "version": "variant-price-v1"
+              },
+              "passed": true,
+              "required": 22,
+              "source_field": "variant_price",
+              "status": "pass",
+              "verifiable": true
+            },
+            "category": {
+              "actual": "彩妆/香水/美妆工具›面部彩妆›粉霜",
+              "comparator": "category_leaf_ancestor_chain",
+              "evidence": {
+                "comparisons": [
+                  {
+                    "ancestor_match": true,
+                    "leaf_match": true,
+                    "required": [
+                      "彩妆/香水/美妆工具",
+                      "面部彩妆",
+                      "粉霜"
+                    ]
+                  }
+                ]
+              },
+              "passed": true,
+              "required": [
+                "彩妆/香水/美妆工具›面部彩妆›粉霜"
+              ],
+              "source_field": "category",
+              "status": "pass",
+              "verifiable": true
+            }
+          },
+          "purchase_success": false,
+          "reward": -0.23124999999999998,
+          "reward_type": "partial_alternative_purchase",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": -0.23124999999999998,
+          "termination_reason": "partial_alternative_purchase",
+          "weighted_score": 0.125
+        },
+        "reward_valid": true,
+        "termination_reason": "partial_alternative_purchase"
+      }
+    }
+  ]
+}

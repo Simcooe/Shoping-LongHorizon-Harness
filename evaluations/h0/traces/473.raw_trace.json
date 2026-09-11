@@ -1,0 +1,1666 @@
+{
+  "task": "麻烦搜索一款价格不超过70元的羊奶粉。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.32, \"复购率\": 0.62, \"平均客单价\": 130.62, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": false, \"近30天消费金额\": 2350.33, \"近90天订单数\": 18}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"35-44, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"西淳\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"贝特恩\"}, {\"偏好程度\": \"无\", \"品牌名称\": \"佳贝艾特\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"汤臣倍健\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"妙可蓝多\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 300, \"最小值\": 50}, \"功能\": [\"高钙\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\", \"], \"颜色\": [\"绿色\", \"白色\"], \"风格\": [\"天然\", \"简约\"]}, \"类目偏好\": {\"功能保健品\": \"高\", \"图书音像\": \"中\", \"宠物用品\": \"无\", \"家居生活\": \"中\", \"户外运动\": \"高\", \"数码家电\": \"中\", \"服饰鞋包\": \"低\", \"母婴童用品\": \"无\", \"生鲜食品\": \"中\", \"美妆护肤\": \"中\"}}, \"地区信息\": {\"区县\": \"西湖区\", \"城市\": \"杭州市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"浙江省\"}, \"最后更新时间\": \"2024-05-06T09:15:00Z\", \"注册时间\": \"2019-08-23T14:45:12Z\", \"注册渠道\": \"App\", \"用户ID\": \"U94827361, \", \"用户标签\": [\"照顾父母健康型\", \"功能食品成分党\", \"高复购率\", \"健康生活方式倡导者\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 2400, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"适合中老年人的无蔗糖羊奶粉\", \"独立小包设计羊奶粉\", \"富硒高钙羊奶粉\", \"整包400g的羊奶粉\"], \"最近14天收藏商品\": [], \"活跃时间段\": [7, 12, 22], \"近7天访问次数\": 12}}",
+  "step_count": 12,
+  "reset": {
+    "env_idx": 7,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "中老年富硒高钙羊奶粉400g"
+    ],
+    "idx": 473,
+    "instruction": "Instruction: 麻烦搜索一款价格不超过70元的羊奶粉。",
+    "instruction_simple": "麻烦搜索一款价格不超过70元的羊奶粉。",
+    "message": "Task 473 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.32,
+        "复购率": 0.62,
+        "平均客单价": 130.62,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": false,
+        "近30天消费金额": 2350.33,
+        "近90天订单数": 18
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "35-44, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "西淳"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "贝特恩"
+          },
+          {
+            "偏好程度": "无",
+            "品牌名称": "佳贝艾特"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "汤臣倍健"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "妙可蓝多"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 300,
+            "最小值": 50
+          },
+          "功能": [
+            "高钙"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            ", "
+          ],
+          "颜色": [
+            "绿色",
+            "白色"
+          ],
+          "风格": [
+            "天然",
+            "简约"
+          ]
+        },
+        "类目偏好": {
+          "功能保健品": "高",
+          "图书音像": "中",
+          "宠物用品": "无",
+          "家居生活": "中",
+          "户外运动": "高",
+          "数码家电": "中",
+          "服饰鞋包": "低",
+          "母婴童用品": "无",
+          "生鲜食品": "中",
+          "美妆护肤": "中"
+        }
+      },
+      "地区信息": {
+        "区县": "西湖区",
+        "城市": "杭州市",
+        "时区": "Asia/Shanghai",
+        "省份": "浙江省"
+      },
+      "最后更新时间": "2024-05-06T09:15:00Z",
+      "注册时间": "2019-08-23T14:45:12Z",
+      "注册渠道": "App",
+      "用户ID": "U94827361, ",
+      "用户标签": [
+        "照顾父母健康型",
+        "功能食品成分党",
+        "高复购率",
+        "健康生活方式倡导者"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 2400,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "适合中老年人的无蔗糖羊奶粉",
+          "独立小包设计羊奶粉",
+          "富硒高钙羊奶粉",
+          "整包400g的羊奶粉"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          7,
+          12,
+          22
+        ],
+        "近7天访问次数": 12
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "羊奶粉"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 羊奶粉 | Normalized query: 羊奶粉 [SEP] Next > [SEP] 913956848000 [SEP] 卡倍多羊奶粉卡倍多鱼油欧米伽-3新品羊奶粉 [SEP] 120.0 [SEP] 750926104737 [SEP] 陇源牧羊 益生菌富硒高钙400g盒装中老年营养羊奶粉 [SEP] 298.0 [SEP] 926972206921 [SEP] 臻牧无蔗糖高钙中老年羊奶粉 [SEP] 99.0 to 188.0 [SEP] 610084876706 [SEP] 蒙恩纯羊奶粉600克罐装高钙奶粉成人儿童学生中老年人营养奶粉 [SEP] 204.0 [SEP] 720533627008 [SEP] 惠宜生羊奶粉中老年高钙富硒3岁以上学生配方羊乳粉优利士旗舰 [SEP] 78.0 to 389.0 [SEP] 894434916234 [SEP] 临期【3袋】瑞一宝4D关节羊奶粉旅行装中老年高钙奶粉25g/袋 [SEP] 19.0 [SEP] 828549041275 [SEP] 【送礼佳选】卡洛塔妮羊奶粉送长辈送父母送领导礼盒新西兰进口 [SEP] 799.0 [SEP] 906028956377 [SEP] 蒙牛朵拉小羊高蛋白益生菌羊奶粉200g新西兰进口全脂0蔗糖低GI [SEP] 180.0 to 360.0 [SEP] 793822885107 [SEP] 小羊乖乖纯羊奶粉中老年全脂高钙无添加 独立小包装 产自陕西富平 [SEP] 199.0 to 299.0 [SEP] 671383326399 [SEP] 小羊乖乖纯羊奶粉生羊乳山羊奶无蔗糖老年人学生儿童成人高钙奶粉 [SEP] 199.0 to 599.0 [SEP] 657667936565 [SEP] 【美羚官方店】美羚羊奶粉成人奶粉女士羊奶粉无蔗糖羊奶粉400g [SEP] 129.0 [SEP] 934054859084 [SEP] 圣唐乳业咩小袋富硒高钙羊乳粉+5G肽羊奶粉+羊奶片（组合套装一） [SEP] 599.0 [SEP] 860250504443 [SEP] 盛健100%纯羊奶粉中老年儿童成人全家营养奶粉高钙内蒙黄金奶源带 [SEP] 99.0 [SEP] 823885791605 [SEP] 新西兰进口Taupo Pure特贝优特纯山羊奶粉成人中老年正品官方旗舰 [SEP] 162.0 to 301.0 [SEP] 914289488378 [SEP] 凯美多益生元配方调制羊奶粉25g*16袋独立包装羊奶粉 [SEP] 517.0 [SEP] 850475656816 [SEP] 宜品1956中老年人纯羊奶粉成人高钙营养羊奶粉大罐700g*2罐礼盒装 [SEP] 300.0 [SEP] 833307344634 [SEP] 【美羚旗舰店】美羚羊奶粉成人全脂纯羊奶粉礼盒装800g*2罐 [SEP] 352.0 [SEP] 933093051667 [SEP] 尤爱倍特免疫球蛋白富硒羊奶粉成人中老年人高钙高蛋白正品 [SEP] 300.0 to 600.0 [SEP] 895344105773 [SEP] 宝塔牌配方羊奶粉 2送1 优生活成人羊奶粉320g 优利士中老年奶粉 [SEP] 308.0 [SEP] 653564777336 [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养 [SEP] 58.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"913956848000\", \"750926104737\", \"926972206921\", \"610084876706\", \"720533627008\", \"894434916234\", \"828549041275\", \"906028956377\", \"793822885107\", \"671383326399\", \"657667936565\", \"934054859084\", \"860250504443\", \"823885791605\", \"914289488378\", \"850475656816\", \"833307344634\", \"933093051667\", \"895344105773\", \"653564777336\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "913956848000",
+            "750926104737",
+            "926972206921",
+            "610084876706",
+            "720533627008",
+            "894434916234",
+            "828549041275",
+            "906028956377",
+            "793822885107",
+            "671383326399",
+            "657667936565",
+            "934054859084",
+            "860250504443",
+            "823885791605",
+            "914289488378",
+            "850475656816",
+            "833307344634",
+            "933093051667",
+            "895344105773",
+            "653564777336"
+          ],
+          "normalized_query": "羊奶粉",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "913956848000",
+              "brand": "健康之家8888",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "新品"
+              ],
+              "price": "120.0",
+              "rank": 1,
+              "title": "卡倍多羊奶粉卡倍多鱼油欧米伽-3新品羊奶粉"
+            },
+            {
+              "asin": "750926104737",
+              "brand": "陇源牧羊企业店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "益生菌",
+                "富硒",
+                "高钙",
+                "400g"
+              ],
+              "price": "298.0",
+              "rank": 2,
+              "title": "陇源牧羊 益生菌富硒高钙400g盒装中老年营养羊奶粉"
+            },
+            {
+              "asin": "926972206921",
+              "brand": "捷诚母婴",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "无蔗糖",
+                "高钙"
+              ],
+              "price": "99.0 to 188.0",
+              "rank": 3,
+              "title": "臻牧无蔗糖高钙中老年羊奶粉"
+            },
+            {
+              "asin": "610084876706",
+              "brand": "蒙恩旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "内蒙古",
+                "高钙",
+                "营养",
+                "无添加",
+                "不含蔗糖"
+              ],
+              "price": "204.0",
+              "rank": 4,
+              "title": "蒙恩纯羊奶粉600克罐装高钙奶粉成人儿童学生中老年人营养奶粉"
+            },
+            {
+              "asin": "720533627008",
+              "brand": "尚宜家环球购",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "羊奶粉",
+                "中老年",
+                "高钙",
+                "富硒",
+                "3岁以上",
+                "羊乳粉"
+              ],
+              "price": "78.0 to 389.0",
+              "rank": 5,
+              "title": "惠宜生羊奶粉中老年高钙富硒3岁以上学生配方羊乳粉优利士旗舰"
+            },
+            {
+              "asin": "894434916234",
+              "brand": "Ripple瑞一宝海外旗舰",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "旅行装",
+                "高钙"
+              ],
+              "price": "19.0",
+              "rank": 6,
+              "title": "临期【3袋】瑞一宝4D关节羊奶粉旅行装中老年高钙奶粉25g/袋"
+            },
+            {
+              "asin": "828549041275",
+              "brand": "karihome卡洛塔妮母婴旗舰",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "送礼",
+                "父母",
+                "新西兰",
+                "进口",
+                "小分子",
+                "好吸收"
+              ],
+              "price": "799.0",
+              "rank": 7,
+              "title": "【送礼佳选】卡洛塔妮羊奶粉送长辈送父母送领导礼盒新西兰进口"
+            },
+            {
+              "asin": "906028956377",
+              "brand": "蒙牛奶粉旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "高蛋白",
+                "益生菌",
+                "新西兰",
+                "全脂",
+                "0蔗糖",
+                "低GI"
+              ],
+              "price": "180.0 to 360.0",
+              "rank": 8,
+              "title": "蒙牛朵拉小羊高蛋白益生菌羊奶粉200g新西兰进口全脂0蔗糖低GI"
+            },
+            {
+              "asin": "793822885107",
+              "brand": "小羊乖乖旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "陕西",
+                "富平",
+                "全脂",
+                "高钙",
+                "无添加",
+                "独立小包装"
+              ],
+              "price": "199.0 to 299.0",
+              "rank": 9,
+              "title": "小羊乖乖纯羊奶粉中老年全脂高钙无添加 独立小包装 产自陕西富平"
+            },
+            {
+              "asin": "671383326399",
+              "brand": "小羊乖乖旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "原生高钙、蛋白质",
+                "无蔗糖",
+                "儿童",
+                "生羊乳",
+                "山羊奶"
+              ],
+              "price": "199.0 to 599.0",
+              "rank": 10,
+              "title": "小羊乖乖纯羊奶粉生羊乳山羊奶无蔗糖老年人学生儿童成人高钙奶粉"
+            },
+            {
+              "asin": "657667936565",
+              "brand": "美羚世通物联专卖店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "官方",
+                "品质保证",
+                "日期新鲜"
+              ],
+              "price": "129.0",
+              "rank": 11,
+              "title": "【美羚官方店】美羚羊奶粉成人奶粉女士羊奶粉无蔗糖羊奶粉400g"
+            },
+            {
+              "asin": "934054859084",
+              "brand": "圣唐乳业旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "组合套装"
+              ],
+              "price": "599.0",
+              "rank": 12,
+              "title": "圣唐乳业咩小袋富硒高钙羊乳粉+5G肽羊奶粉+羊奶片（组合套装一）"
+            },
+            {
+              "asin": "860250504443",
+              "brand": "盛健乳品旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "100%",
+                "全家",
+                "营养",
+                "高钙"
+              ],
+              "price": "99.0",
+              "rank": 13,
+              "title": "盛健100%纯羊奶粉中老年儿童成人全家营养奶粉高钙内蒙黄金奶源带"
+            },
+            {
+              "asin": "823885791605",
+              "brand": "Taupopure特贝优海外旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "新西兰进口",
+                "精品",
+                "品质保证"
+              ],
+              "price": "162.0 to 301.0",
+              "rank": 14,
+              "title": "新西兰进口Taupo Pure特贝优特纯山羊奶粉成人中老年正品官方旗舰"
+            },
+            {
+              "asin": "914289488378",
+              "brand": "脆演义旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "25g",
+                "16袋",
+                "独立包装"
+              ],
+              "price": "517.0",
+              "rank": 15,
+              "title": "凯美多益生元配方调制羊奶粉25g*16袋独立包装羊奶粉"
+            },
+            {
+              "asin": "850475656816",
+              "brand": "布林母婴店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "高钙",
+                "营养",
+                "700g",
+                "礼盒装"
+              ],
+              "price": "300.0",
+              "rank": 16,
+              "title": "宜品1956中老年人纯羊奶粉成人高钙营养羊奶粉大罐700g*2罐礼盒装"
+            },
+            {
+              "asin": "833307344634",
+              "brand": "美羚旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "礼盒装"
+              ],
+              "price": "352.0",
+              "rank": 17,
+              "title": "【美羚旗舰店】美羚羊奶粉成人全脂纯羊奶粉礼盒装800g*2罐"
+            },
+            {
+              "asin": "933093051667",
+              "brand": "尤爱倍特旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "高钙",
+                "高蛋白",
+                "正品"
+              ],
+              "price": "300.0 to 600.0",
+              "rank": 18,
+              "title": "尤爱倍特免疫球蛋白富硒羊奶粉成人中老年人高钙高蛋白正品"
+            },
+            {
+              "asin": "895344105773",
+              "brand": "有缘人好物分享",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "320g",
+                "配方",
+                "生活"
+              ],
+              "price": "308.0",
+              "rank": 19,
+              "title": "宝塔牌配方羊奶粉 2送1 优生活成人羊奶粉320g 优利士中老年奶粉"
+            },
+            {
+              "asin": "653564777336",
+              "brand": "陕西羊奶粉产地直供店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "全家",
+                "无蔗糖"
+              ],
+              "price": "58.0",
+              "rank": 20,
+              "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+            }
+          ],
+          "query": "羊奶粉",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"羊奶粉\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:832a8df7e89245731f3e675e1472b9e107c1a79e38c054d12764ec745fda33a2"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:832a8df7e89245731f3e675e1472b9e107c1a79e38c054d12764ec745fda33a2"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:832a8df7e89245731f3e675e1472b9e107c1a79e38c054d12764ec745fda33a2"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "653564777336"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 口味 [SEP] 全脂纯400克×1袋  满2袋送羊奶皂1 [SEP] 女士无蔗糖400克×1袋  满2袋送羊奶皂1 [SEP] 中老年无蔗糖400克×1袋  满2袋送羊奶皂1 [SEP] 学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1 [SEP] 儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1 [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养 [SEP] 价格: 58.0 [SEP] 店铺: 陕西羊奶粉产地直供店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"全脂纯400克×1袋  满2袋送羊奶皂1\", \"女士无蔗糖400克×1袋  满2袋送羊奶皂1\", \"中老年无蔗糖400克×1袋  满2袋送羊奶皂1\", \"学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1\", \"儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "全脂纯400克×1袋  满2袋送羊奶皂1",
+            "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+            "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+            "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+            "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+          ],
+          "available_options": {
+            "口味": [
+              "全脂纯400克×1袋  满2袋送羊奶皂1",
+              "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+              "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "653564777336",
+            "brand": "陕西羊奶粉产地直供店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "全家",
+              "无蔗糖"
+            ],
+            "price": "58.0",
+            "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"653564777336\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:653564777336",
+            "constraint:653564777336:category:pass",
+            "constraint:653564777336:budget:pass"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:653564777336",
+            "constraint:653564777336:category:pass",
+            "constraint:653564777336:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:653564777336",
+            "constraint:653564777336:category:pass",
+            "constraint:653564777336:budget:pass"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "这款美羚羊奶粉有多个口味版本（全脂纯、女士无蔗糖、中老年无蔗糖、学生、儿童），请问您需要哪一个？"
+      },
+      "raw": {
+        "session": "473",
+        "question": "这款美羚羊奶粉有多个口味版本（全脂纯、女士无蔗糖、中老年无蔗糖、学生、儿童），请问您需要哪一个？",
+        "reply": "我要中老年无蔗糖那个，最好是独立小包装的，整包400克的。"
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "中老年无蔗糖400克×1袋  满2袋送羊奶皂1"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 口味 [SEP] 全脂纯400克×1袋  满2袋送羊奶皂1 [SEP] 女士无蔗糖400克×1袋  满2袋送羊奶皂1 [SEP] 中老年无蔗糖400克×1袋  满2袋送羊奶皂1 [SEP] 学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1 [SEP] 儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1 [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养 [SEP] 价格: 58.0 [SEP] 店铺: 陕西羊奶粉产地直供店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"全脂纯400克×1袋  满2袋送羊奶皂1\", \"女士无蔗糖400克×1袋  满2袋送羊奶皂1\", \"中老年无蔗糖400克×1袋  满2袋送羊奶皂1\", \"学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1\", \"儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "全脂纯400克×1袋  满2袋送羊奶皂1",
+            "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+            "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+            "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+            "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+          ],
+          "available_options": {
+            "口味": [
+              "全脂纯400克×1袋  满2袋送羊奶皂1",
+              "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+              "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "653564777336",
+            "brand": "陕西羊奶粉产地直供店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "全家",
+              "无蔗糖"
+            ],
+            "price": "58.0",
+            "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年无蔗糖400克×1袋  满2袋送羊奶皂1"
+          },
+          "selected_price": 58
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"中老年无蔗糖400克×1袋  满2袋送羊奶皂1\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:653564777336:flavor:中老年无蔗糖400克×1袋满2袋送羊奶皂1"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:653564777336:flavor:中老年无蔗糖400克×1袋满2袋送羊奶皂1"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "option:653564777336:flavor:中老年无蔗糖400克×1袋满2袋送羊奶皂1"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "口味": [
+              "全脂纯400克×1袋  满2袋送羊奶皂1",
+              "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+              "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+            ]
+          },
+          "content": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "653564777336",
+            "brand": "陕西羊奶粉产地直供店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "全家",
+              "无蔗糖"
+            ],
+            "price": "58.0",
+            "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年无蔗糖400克×1袋  满2袋送羊奶皂1"
+          },
+          "selected_price": 58,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:653564777336:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:653564777336:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:653564777336:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "口味": [
+              "全脂纯400克×1袋  满2袋送羊奶皂1",
+              "女士无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "中老年无蔗糖400克×1袋  满2袋送羊奶皂1",
+              "学生羊奶粉（8-18岁）400克×1袋   满2袋送羊奶皂1",
+              "儿童羊奶粉（3-7岁）400克×1袋  满2袋送羊奶皂1"
+            ]
+          },
+          "content": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "653564777336",
+            "brand": "陕西羊奶粉产地直供店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "全家",
+              "无蔗糖"
+            ],
+            "price": "58.0",
+            "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年无蔗糖400克×1袋  满2袋送羊奶皂1"
+          },
+          "selected_price": 58,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:653564777336:features"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:653564777336:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:653564777336:features"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "中老年无蔗糖羊奶粉独立小包400g"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 中老年无蔗糖羊奶粉独立小包400g | Normalized query: 中老年无蔗糖羊奶粉独立小包400g [SEP] Next > [SEP] 644159746800 [SEP] 【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包 [SEP] 69.0 to 353.0 [SEP] 853814195983 [SEP] 美羚羊奶粉中老年无蔗糖羊奶粉成人全脂纯羊奶粉400g*2袋富平羊奶 [SEP] 138.0 to 148.0 [SEP] 605742932861 [SEP] 美羚羊奶粉成人无蔗糖羊奶粉中老年纯羊奶粉儿童女士美玲官方店 [SEP] 139.0 [SEP] 766015795794 [SEP] 银桥秦俑益舒中老年无蔗糖羊奶粉300g [SEP] 43.0 to 249.0 [SEP] 657667936565 [SEP] 【美羚官方店】美羚羊奶粉成人奶粉女士羊奶粉无蔗糖羊奶粉400g [SEP] 129.0 [SEP] 682892666569 [SEP] 圣唐乳业 秦羊友道无蔗糖羊乳粉（高盖款）400g（两罐一组） [SEP] 566.0 [SEP] 653564777336 [SEP] 美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养 [SEP] 58.0 [SEP] 936060484434 [SEP] 纯田然纯羊奶粉独立包装配料干净内蒙古直发不添加蔗糖羊全脂乳粉 [SEP] 88.0 [SEP] 654151849892 [SEP] 拍下发3盒】御羚全脂纯羊奶粉中老年无蔗糖儿童学生成人羊奶粉 [SEP] 199.0 [SEP] 772696226681 [SEP] 纯羊奶粉400g全脂高钙儿童学生女士中老年人无蔗糖正品官方旗舰店 [SEP] 118.0 [SEP] 688582052262 [SEP] 臻牧脱脂高蛋白高钙羊奶粉成人女士中老年官方旗舰店无蔗糖纯400g [SEP] 1392.0 to 1999.0 [SEP] 747997069509 [SEP] 千鸿牧场山河牌中老年羊奶粉袋装400g无蔗糖多种维生素营养全家装 [SEP] 29.0 [SEP] 680349032125 [SEP] 买3送1买4发6】草木羊全脂纯羊奶粉学生高钙中老年无蔗糖2斤每罐 [SEP] 239.0 to 378.0 [SEP] 782334208541 [SEP] 12盒装明珠骄子新疆有机纯羊奶粉中老年人高钙成人学生独立小包装 [SEP] 1920.0 to 3792.0 [SEP] 798775206103 [SEP] 臻牧乳养道绵羊羊奶粉750g/罐 中老年无蔗糖高钙益生菌成人羊奶粉 [SEP] 78.0 to 436.0 [SEP] 793822885107 [SEP] 小羊乖乖纯羊奶粉中老年全脂高钙无添加 独立小包装 产自陕西富平 [SEP] 199.0 to 299.0 [SEP] 833307344634 [SEP] 【美羚旗舰店】美羚羊奶粉成人全脂纯羊奶粉礼盒装800g*2罐 [SEP] 352.0 [SEP] 938722780399 [SEP] 【官方正品】新西兰脱膻奶源羊奶粉成人中老年无蔗糖益生菌营养粉 [SEP] 79.0 to 299.0 [SEP] 562656863913 [SEP] 新西兰进口纽羊纯山羊奶粉成人中老年羊奶粉高钙无蔗糖 老人羊奶 [SEP] 269.0 to 279.0 [SEP] 671383326399 [SEP] 小羊乖乖纯羊奶粉生羊乳山羊奶无蔗糖老年人学生儿童成人高钙奶粉 [SEP] 199.0 to 599.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"644159746800\", \"853814195983\", \"605742932861\", \"766015795794\", \"657667936565\", \"682892666569\", \"653564777336\", \"936060484434\", \"654151849892\", \"772696226681\", \"688582052262\", \"747997069509\", \"680349032125\", \"782334208541\", \"798775206103\", \"793822885107\", \"833307344634\", \"938722780399\", \"562656863913\", \"671383326399\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "644159746800",
+            "853814195983",
+            "605742932861",
+            "766015795794",
+            "657667936565",
+            "682892666569",
+            "653564777336",
+            "936060484434",
+            "654151849892",
+            "772696226681",
+            "688582052262",
+            "747997069509",
+            "680349032125",
+            "782334208541",
+            "798775206103",
+            "793822885107",
+            "833307344634",
+            "938722780399",
+            "562656863913",
+            "671383326399"
+          ],
+          "normalized_query": "中老年无蔗糖羊奶粉独立小包400g",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "644159746800",
+              "brand": "西淳旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "无蔗糖",
+                "独立小包",
+                "益生菌"
+              ],
+              "price": "69.0 to 353.0",
+              "rank": 1,
+              "title": "【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包"
+            },
+            {
+              "asin": "853814195983",
+              "brand": "美羚母婴",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "富平"
+              ],
+              "price": "138.0 to 148.0",
+              "rank": 2,
+              "title": "美羚羊奶粉中老年无蔗糖羊奶粉成人全脂纯羊奶粉400g*2袋富平羊奶"
+            },
+            {
+              "asin": "605742932861",
+              "brand": "美羚秦柿专卖店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "产地直发",
+                "厂家新货",
+                "天猫正品"
+              ],
+              "price": "139.0",
+              "rank": 3,
+              "title": "美羚羊奶粉成人无蔗糖羊奶粉中老年纯羊奶粉儿童女士美玲官方店"
+            },
+            {
+              "asin": "766015795794",
+              "brand": "心意诚食品店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "300g"
+              ],
+              "price": "43.0 to 249.0",
+              "rank": 4,
+              "title": "银桥秦俑益舒中老年无蔗糖羊奶粉300g"
+            },
+            {
+              "asin": "657667936565",
+              "brand": "美羚世通物联专卖店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "官方",
+                "品质保证",
+                "日期新鲜"
+              ],
+              "price": "129.0",
+              "rank": 5,
+              "title": "【美羚官方店】美羚羊奶粉成人奶粉女士羊奶粉无蔗糖羊奶粉400g"
+            },
+            {
+              "asin": "682892666569",
+              "brand": "圣唐乳业旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "高钙",
+                "两罐一组"
+              ],
+              "price": "566.0",
+              "rank": 6,
+              "title": "圣唐乳业 秦羊友道无蔗糖羊乳粉（高盖款）400g（两罐一组）"
+            },
+            {
+              "asin": "653564777336",
+              "brand": "陕西羊奶粉产地直供店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "全家",
+                "无蔗糖"
+              ],
+              "price": "58.0",
+              "rank": 7,
+              "title": "美羚全脂纯羊奶粉400g袋装成人中老年无蔗糖儿童学生成长全家营养"
+            },
+            {
+              "asin": "936060484434",
+              "brand": "牛哥乐内蒙特产集宁店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "独立包装",
+                "配料干净",
+                "内蒙古",
+                "直发",
+                "不添加蔗糖",
+                "全脂"
+              ],
+              "price": "88.0",
+              "rank": 8,
+              "title": "纯田然纯羊奶粉独立包装配料干净内蒙古直发不添加蔗糖羊全脂乳粉"
+            },
+            {
+              "asin": "654151849892",
+              "brand": "御羚旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "全脂",
+                "无蔗糖",
+                "儿童"
+              ],
+              "price": "199.0",
+              "rank": 9,
+              "title": "拍下发3盒】御羚全脂纯羊奶粉中老年无蔗糖儿童学生成人羊奶粉"
+            },
+            {
+              "asin": "772696226681",
+              "brand": "享牧鲜旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "全脂",
+                "高钙",
+                "女士",
+                "无蔗糖",
+                "正品",
+                "官方旗舰店"
+              ],
+              "price": "118.0",
+              "rank": 10,
+              "title": "纯羊奶粉400g全脂高钙儿童学生女士中老年人无蔗糖正品官方旗舰店"
+            },
+            {
+              "asin": "688582052262",
+              "brand": "臻牧恩露专卖店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "高钙",
+                "减少94%脂肪"
+              ],
+              "price": "1392.0 to 1999.0",
+              "rank": 11,
+              "title": "臻牧脱脂高蛋白高钙羊奶粉成人女士中老年官方旗舰店无蔗糖纯400g"
+            },
+            {
+              "asin": "747997069509",
+              "brand": "沈阳市和平区予物食品商行",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "无蔗糖",
+                "多种维生素",
+                "全家"
+              ],
+              "price": "29.0",
+              "rank": 12,
+              "title": "千鸿牧场山河牌中老年羊奶粉袋装400g无蔗糖多种维生素营养全家装"
+            },
+            {
+              "asin": "680349032125",
+              "brand": "草木羊旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "全脂",
+                "高钙",
+                "无蔗糖",
+                "2斤每罐"
+              ],
+              "price": "239.0 to 378.0",
+              "rank": 13,
+              "title": "买3送1买4发6】草木羊全脂纯羊奶粉学生高钙中老年无蔗糖2斤每罐"
+            },
+            {
+              "asin": "782334208541",
+              "brand": "明珠骄子旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "新疆",
+                "高钙",
+                "独立包装",
+                "无添加",
+                "生羊乳",
+                "有机"
+              ],
+              "price": "1920.0 to 3792.0",
+              "rank": 14,
+              "title": "12盒装明珠骄子新疆有机纯羊奶粉中老年人高钙成人学生独立小包装"
+            },
+            {
+              "asin": "798775206103",
+              "brand": "鸿荣翔严选",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "无蔗糖",
+                "高钙",
+                "益生菌"
+              ],
+              "price": "78.0 to 436.0",
+              "rank": 15,
+              "title": "臻牧乳养道绵羊羊奶粉750g/罐 中老年无蔗糖高钙益生菌成人羊奶粉"
+            },
+            {
+              "asin": "793822885107",
+              "brand": "小羊乖乖旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "陕西",
+                "富平",
+                "全脂",
+                "高钙",
+                "无添加",
+                "独立小包装"
+              ],
+              "price": "199.0 to 299.0",
+              "rank": 16,
+              "title": "小羊乖乖纯羊奶粉中老年全脂高钙无添加 独立小包装 产自陕西富平"
+            },
+            {
+              "asin": "833307344634",
+              "brand": "美羚旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "礼盒装"
+              ],
+              "price": "352.0",
+              "rank": 17,
+              "title": "【美羚旗舰店】美羚羊奶粉成人全脂纯羊奶粉礼盒装800g*2罐"
+            },
+            {
+              "asin": "938722780399",
+              "brand": "甄选奶源工厂直销店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "新西兰",
+                "益生菌"
+              ],
+              "price": "79.0 to 299.0",
+              "rank": 18,
+              "title": "【官方正品】新西兰脱膻奶源羊奶粉成人中老年无蔗糖益生菌营养粉"
+            },
+            {
+              "asin": "562656863913",
+              "brand": "noblecare纽羊旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "新西兰",
+                "进口",
+                "高钙",
+                "无蔗糖"
+              ],
+              "price": "269.0 to 279.0",
+              "rank": 19,
+              "title": "新西兰进口纽羊纯山羊奶粉成人中老年羊奶粉高钙无蔗糖 老人羊奶"
+            },
+            {
+              "asin": "671383326399",
+              "brand": "小羊乖乖旗舰店",
+              "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+              "key_attributes": [
+                "原生高钙、蛋白质",
+                "无蔗糖",
+                "儿童",
+                "生羊乳",
+                "山羊奶"
+              ],
+              "price": "199.0 to 599.0",
+              "rank": 20,
+              "title": "小羊乖乖纯羊奶粉生羊乳山羊奶无蔗糖老年人学生儿童成人高钙奶粉"
+            }
+          ],
+          "query": "中老年无蔗糖羊奶粉独立小包400g",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"中老年无蔗糖羊奶粉独立小包400g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:4217a2a755a3380d8f630180e7e754f39e2bcdf2fec5fd239695221a14ce510f"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:4217a2a755a3380d8f630180e7e754f39e2bcdf2fec5fd239695221a14ce510f"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 15,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "result_set:4217a2a755a3380d8f630180e7e754f39e2bcdf2fec5fd239695221a14ce510f"
+          ],
+          "seen_asin_count": 35,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "644159746800"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 口味 [SEP] 中老年富硒高钙羊奶粉400g [SEP] 中老年富硒高钙羊奶粉400gx5袋礼盒装 [SEP] 【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包 [SEP] 价格: 69.0 to 353.0 [SEP] 店铺: 西淳旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"中老年富硒高钙羊奶粉400g\", \"中老年富硒高钙羊奶粉400gx5袋礼盒装\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "中老年富硒高钙羊奶粉400g",
+            "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+          ],
+          "available_options": {
+            "口味": [
+              "中老年富硒高钙羊奶粉400g",
+              "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "644159746800",
+            "brand": "西淳旗舰店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "无蔗糖",
+              "独立小包",
+              "益生菌"
+            ],
+            "price": "69.0 to 353.0",
+            "title": "【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"644159746800\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:644159746800",
+            "constraint:644159746800:category:pass",
+            "constraint:644159746800:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:644159746800",
+            "constraint:644159746800:category:pass",
+            "constraint:644159746800:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "product:644159746800",
+            "constraint:644159746800:category:pass",
+            "constraint:644159746800:budget:pass"
+          ],
+          "seen_asin_count": 35,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "中老年富硒高钙羊奶粉400g"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] 口味 [SEP] 中老年富硒高钙羊奶粉400g [SEP] 中老年富硒高钙羊奶粉400gx5袋礼盒装 [SEP] 【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包 [SEP] 价格: 69.0 [SEP] 店铺: 西淳旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"中老年富硒高钙羊奶粉400g\", \"中老年富硒高钙羊奶粉400gx5袋礼盒装\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "中老年富硒高钙羊奶粉400g",
+            "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+          ],
+          "available_options": {
+            "口味": [
+              "中老年富硒高钙羊奶粉400g",
+              "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "644159746800",
+            "brand": "西淳旗舰店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "无蔗糖",
+              "独立小包",
+              "益生菌"
+            ],
+            "price": "69.0 to 353.0",
+            "title": "【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年富硒高钙羊奶粉400g"
+          },
+          "selected_price": 69
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"中老年富硒高钙羊奶粉400g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:644159746800:flavor:中老年富硒高钙羊奶粉400g"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:644159746800:flavor:中老年富硒高钙羊奶粉400g"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "option:644159746800:flavor:中老年富硒高钙羊奶粉400g"
+          ],
+          "seen_asin_count": 35,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "口味": [
+              "中老年富硒高钙羊奶粉400g",
+              "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "644159746800",
+            "brand": "西淳旗舰店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "无蔗糖",
+              "独立小包",
+              "益生菌"
+            ],
+            "price": "69.0 to 353.0",
+            "title": "【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年富硒高钙羊奶粉400g"
+          },
+          "selected_price": 69,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:644159746800:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:644159746800:features"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:644159746800:features"
+          ],
+          "seen_asin_count": 35,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 7,
+        "goal": {},
+        "idx": "slot-7-473",
+        "instruction": "Instruction: [SEP] 麻烦搜索一款价格不超过70元的羊奶粉。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "口味": [
+              "中老年富硒高钙羊奶粉400g",
+              "中老年富硒高钙羊奶粉400gx5袋礼盒装"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "644159746800",
+            "brand": "西淳旗舰店",
+            "category": "咖啡/麦片/冲饮›奶粉›学生/成人/中老年羊奶粉",
+            "key_attributes": [
+              "无蔗糖",
+              "独立小包",
+              "益生菌"
+            ],
+            "price": "69.0 to 353.0",
+            "title": "【西淳旗舰店】中老年无蔗糖富硒高钙羊奶粉陕西成人老人独立小包"
+          },
+          "search_available": false,
+          "selected_options": {
+            "口味": "中老年富硒高钙羊奶粉400g"
+          },
+          "selected_price": 69,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"buy now\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:644159746800:buy now"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:644159746800:buy now"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 4
+          },
+          "runtime_progress_added": [
+            "subpage:644159746800:buy now"
+          ],
+          "seen_asin_count": 35,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    }
+  ]
+}

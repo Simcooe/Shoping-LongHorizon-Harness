@@ -1,0 +1,243 @@
+{
+  "task_id": "667",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 6,
+    "post_terminal_steps_present": true
+  },
+  "decision": {
+    "observed": true,
+    "step": 6,
+    "kind": "environment_terminal",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求透明色，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求带吸盘，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求毛巾杆，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0004"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求 75cm，从任务开始有效"
+    },
+    {
+      "requirement_id": "r0005",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0005"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格不超过 50 元，从任务开始有效"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，该 TaskFacts 候选未被用户告知或确认"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，未被用户确认"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，未被用户确认"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，未被用户确认"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，未被用户确认"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，未被用户确认"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未打开任何商品详情，也没有下单或结束决策，无法判断透明色是否满足"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未核验任何候选商品详情，吸盘属性无 model-visible 证据"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未打开任何商品详情，毛巾杆类型未被核验"
+    },
+    {
+      "requirement_id": "r0004",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未核验任何商品规格，75cm 长度无证据"
+    },
+    {
+      "requirement_id": "r0005",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "未打开任何商品详情定价，且无购买决策，无法判断 50 元预算是否满足"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "unknown",
+      "evidence": [],
+      "reasoning": "TaskFacts 未被用户激活，本轨迹中不作为用户需求"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 1,
+    "search_strategy": 0,
+    "candidate_utilization": 0,
+    "evidence_verification": 0,
+    "decision_quality": 0,
+    "termination_efficiency": 0
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T07:26:33.278588+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

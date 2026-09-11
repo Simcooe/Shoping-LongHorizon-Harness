@@ -1,0 +1,330 @@
+{
+  "task_id": "252",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 12,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 12,
+    "kind": "purchase",
+    "requirements_resolved": true
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求「置物架」。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求「金色」，且用户在 step 10 再次确认金色符合。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求价格约 100 元，用户在 step 10 确认「价格也在我预算里」。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "类目（美妆家具/化妆品陈列货架）从未被用户提及或回复确认，保持 latent。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 10 用户在确认的问题中（一字隔板）回复「这款正合适」，确认一字型款式。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 10 用户明确回复「壁挂都符合」。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 10 用户明确回复「铁艺都符合」。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 10 用户对「适合美甲店展示收纳」的候选回复「这款正合适」，确认美甲展示用途。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 10 用户明确回复「100×8」符合。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "所选商品详情页标题为「一字隔板指甲油胶展示架子墙上壁挂式美甲店化妆品装饰铁艺置物架」，属置物架。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 8 选择「金色 长100深8cm」规格并显示价格 100.0，step 10 用户确认金色符合。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 8 所选规格价格显示 100.0，正好约 100 元，用户 step 10 确认在预算内。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "商品标题显示为「化妆品…置物架…展示架」，页面支持该类别事实，但用户从未有效要求该事实。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品为「一字隔板」款式，用户在 step 10 认可该候选。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品标题含「墙上壁挂式」，用户 step 10 明确确认壁挂符合。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品标题含「铁艺」，用户 step 10 明确确认铁艺符合。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "商品标题含「美甲店化妆品装饰」，用户 step 10 认可该候选适用于美甲展示。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 8,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 10,
+          "field": "observation",
+          "event": "shopper_reply"
+        }
+      ],
+      "reasoning": "step 8 选中「金色 长100深8cm」规格（长 100cm 深 8cm），用户 step 10 确认 100×8。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 2,
+    "information_retention": 2,
+    "search_strategy": 2,
+    "candidate_utilization": 2,
+    "evidence_verification": 2,
+    "decision_quality": 2,
+    "termination_efficiency": 2
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:06:19.022661+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

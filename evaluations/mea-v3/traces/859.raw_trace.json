@@ -1,0 +1,2877 @@
+{
+  "task": "推荐一款价格在10元左右的红豆沙馅料。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.18, \"复购率\": 0.46, \"平均客单价\": 61.82, \"支付方式偏好\": \"微信支付\", \"是否促销敏感\": false, \"近30天消费金额\": 865.4, \"近90天订单数\": 14}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"30-34, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"百钻\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"安佳\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"北鼎\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"Swisse\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 120, \"最小值\": 5}, \"功能\": [\"控糖\", \"易清洗\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"不锈钢\", \"棉麻\"], \"颜色\": [\"奶油白\", \"燕麦色\"], \"风格\": [\"日式清新\", \"简约\"]}, \"类目偏好\": {\"健康食品\": \"高\", \"厨房电器\": \"中\", \"母婴用品\": \"中\", \"烘焙原料\": \"高\", \"美妆护肤\": \"低\", \"运动户外\": \"低\"}}, \"地区信息\": {\"区县\": \"天河区\", \"城市\": \"广州市\", \"时区\": \"UTC+8, \", \"省份\": \"广东省\"}, \"最后更新时间\": \"2024-06-14T10:00:00Z\", \"注册时间\": \"2019-08-17T14:42:31Z\", \"注册渠道\": \"App\", \"用户ID\": \"U98456213, \", \"用户标签\": [\"家庭烘焙达人\", \"控糖饮食实践者\", \"健康食品高频购买\", \"中端消费力\", \"夜猫子活跃\", \"轻促销敏感\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 1860, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"低糖无添加红豆沙馅料\", \"莲蓉月饼馅料\", \"流心包子馅料\", \"1斤装烘焙馅料\"], \"最近14天收藏商品\": [], \"活跃时间段\": [21, 22, 23], \"近7天访问次数\": 24}}",
+  "step_count": 27,
+  "reset": {
+    "env_idx": 5,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "【1斤】低糖红豆沙500克  0添加/日期新鲜"
+    ],
+    "idx": 859,
+    "instruction": "Instruction: 推荐一款价格在10元左右的红豆沙馅料。",
+    "instruction_simple": "推荐一款价格在10元左右的红豆沙馅料。",
+    "message": "Task 859 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.18,
+        "复购率": 0.46,
+        "平均客单价": 61.82,
+        "支付方式偏好": "微信支付",
+        "是否促销敏感": false,
+        "近30天消费金额": 865.4,
+        "近90天订单数": 14
+      },
+      "人口属性": {
+        "会员等级": "黄金会员",
+        "年龄段": "30-34, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "百钻"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "安佳"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "北鼎"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "Swisse"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 120,
+            "最小值": 5
+          },
+          "功能": [
+            "控糖",
+            "易清洗"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "不锈钢",
+            "棉麻"
+          ],
+          "颜色": [
+            "奶油白",
+            "燕麦色"
+          ],
+          "风格": [
+            "日式清新",
+            "简约"
+          ]
+        },
+        "类目偏好": {
+          "健康食品": "高",
+          "厨房电器": "中",
+          "母婴用品": "中",
+          "烘焙原料": "高",
+          "美妆护肤": "低",
+          "运动户外": "低"
+        }
+      },
+      "地区信息": {
+        "区县": "天河区",
+        "城市": "广州市",
+        "时区": "UTC+8, ",
+        "省份": "广东省"
+      },
+      "最后更新时间": "2024-06-14T10:00:00Z",
+      "注册时间": "2019-08-17T14:42:31Z",
+      "注册渠道": "App",
+      "用户ID": "U98456213, ",
+      "用户标签": [
+        "家庭烘焙达人",
+        "控糖饮食实践者",
+        "健康食品高频购买",
+        "中端消费力",
+        "夜猫子活跃",
+        "轻促销敏感"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 1860,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "低糖无添加红豆沙馅料",
+          "莲蓉月饼馅料",
+          "流心包子馅料",
+          "1斤装烘焙馅料"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          21,
+          22,
+          23
+        ],
+        "近7天访问次数": 24
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "红豆沙馅料"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 红豆沙馅料 | Normalized query: 红豆沙馅料 [SEP] Next > [SEP] 933481442144 [SEP] 精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥 [SEP] 3.0 to 10.0 [SEP] 912092693355 [SEP] 红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅 [SEP] 29.0 to 45.0 [SEP] 645688854363 [SEP] 正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼 [SEP] 115.0 [SEP] 610977565590 [SEP] 王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙 [SEP] 7.0 [SEP] 595965071891 [SEP] 广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包 [SEP] 39.0 to 170.0 [SEP] 642201219878 [SEP] 广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用 [SEP] 42.0 to 128.0 [SEP] 805072691821 [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 7.0 to 74.0 [SEP] 827510222393 [SEP] 果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙 [SEP] 18.0 to 355.0 [SEP] 807803407239 [SEP] 中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅 [SEP] 28.0 to 264.0 [SEP] 884318648319 [SEP] 精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷 [SEP] 9.0 to 32.0 [SEP] 865804416588 [SEP] 展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙 [SEP] 14.0 to 149.0 [SEP] 912711817333 [SEP] 豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店 [SEP] 29.0 to 56.0 [SEP] 536699019810 [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 11.0 to 28.0 [SEP] 888705520819 [SEP] 广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料 [SEP] 50.0 [SEP] 725626879049 [SEP] 水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙 [SEP] 10.0 to 99.0 [SEP] 773167198293 [SEP] 王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣 [SEP] 4.0 to 18.0 [SEP] 803311266045 [SEP] 低糖红豆沙包子馅料做月饼蛋黄酥家用专烘焙纯正原材旗舰店0添加 [SEP] 8.0 to 159.0 [SEP] 918442053910 [SEP] 力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料 [SEP] 10.0 to 438.0 [SEP] 885061745036 [SEP] 老式夹沙肉馅甜烧白喜沙肉糯米饭五花肉扣肉馅料豆沙传统洗沙馅料 [SEP] 13.0 [SEP] 892166406305 [SEP] 久和红豆馅A56S颗粒馅面包糕点夹心豆沙包月饼烘焙馅料红豆馅20KG [SEP] 215.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"933481442144\", \"912092693355\", \"645688854363\", \"610977565590\", \"595965071891\", \"642201219878\", \"805072691821\", \"827510222393\", \"807803407239\", \"884318648319\", \"865804416588\", \"912711817333\", \"536699019810\", \"888705520819\", \"725626879049\", \"773167198293\", \"803311266045\", \"918442053910\", \"885061745036\", \"892166406305\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "933481442144",
+            "912092693355",
+            "645688854363",
+            "610977565590",
+            "595965071891",
+            "642201219878",
+            "805072691821",
+            "827510222393",
+            "807803407239",
+            "884318648319",
+            "865804416588",
+            "912711817333",
+            "536699019810",
+            "888705520819",
+            "725626879049",
+            "773167198293",
+            "803311266045",
+            "918442053910",
+            "885061745036",
+            "892166406305"
+          ],
+          "normalized_query": "红豆沙馅料",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "933481442144",
+              "brand": "叁穗食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "精品",
+                "月饼"
+              ],
+              "price": "3.0 to 10.0",
+              "rank": 1,
+              "title": "精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥"
+            },
+            {
+              "asin": "912092693355",
+              "brand": "旭方食品工厂店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "商用"
+              ],
+              "price": "29.0 to 45.0",
+              "rank": 2,
+              "title": "红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅"
+            },
+            {
+              "asin": "645688854363",
+              "brand": "广州协裕食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "14kg",
+                "箱",
+                "3袋",
+                "月饼"
+              ],
+              "price": "115.0",
+              "rank": 3,
+              "title": "正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼"
+            },
+            {
+              "asin": "610977565590",
+              "brand": "尚正鸿食品旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "即食",
+                "糕点"
+              ],
+              "price": "7.0",
+              "rank": 4,
+              "title": "王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙"
+            },
+            {
+              "asin": "595965071891",
+              "brand": "特色中国桂林馆",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "月饼"
+              ],
+              "price": "39.0 to 170.0",
+              "rank": 5,
+              "title": "广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包"
+            },
+            {
+              "asin": "642201219878",
+              "brand": "咂吧零食",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "商用",
+                "包子"
+              ],
+              "price": "42.0 to 128.0",
+              "rank": 6,
+              "title": "广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用"
+            },
+            {
+              "asin": "805072691821",
+              "brand": "尚之玖食品商行",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "青团",
+                "原材料",
+                "蛋黄酥",
+                "糕点",
+                "烘焙"
+              ],
+              "price": "7.0 to 74.0",
+              "rank": 7,
+              "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+            },
+            {
+              "asin": "827510222393",
+              "brand": "果布奇然烘焙旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "面包",
+                "家用",
+                "口感绵密",
+                "有嚼劲"
+              ],
+              "price": "18.0 to 355.0",
+              "rank": 8,
+              "title": "果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙"
+            },
+            {
+              "asin": "807803407239",
+              "brand": "牧谷烘焙",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "日式",
+                "豆包"
+              ],
+              "price": "28.0 to 264.0",
+              "rank": 9,
+              "title": "中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅"
+            },
+            {
+              "asin": "884318648319",
+              "brand": "鹿鹿农贸食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "无添加",
+                "粽子"
+              ],
+              "price": "9.0 to 32.0",
+              "rank": 10,
+              "title": "精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷"
+            },
+            {
+              "asin": "865804416588",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "馅料",
+                "月饼",
+                "包子",
+                "面包",
+                "蛋黄酥",
+                "汤圆",
+                "青团",
+                "家用",
+                "烘焙"
+              ],
+              "price": "14.0 to 149.0",
+              "rank": 11,
+              "title": "展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙"
+            },
+            {
+              "asin": "912711817333",
+              "brand": "柚仕旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "面包",
+                "商用",
+                "正宗",
+                "无添加"
+              ],
+              "price": "29.0 to 56.0",
+              "rank": 12,
+              "title": "豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店"
+            },
+            {
+              "asin": "536699019810",
+              "brand": "安琪酵母旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "粽子"
+              ],
+              "price": "11.0 to 28.0",
+              "rank": 13,
+              "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+            },
+            {
+              "asin": "888705520819",
+              "brand": "陈太厨房",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼"
+              ],
+              "price": "50.0",
+              "rank": 14,
+              "title": "广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料"
+            },
+            {
+              "asin": "725626879049",
+              "brand": "德邦健康食品有限公司",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙包",
+                "家用"
+              ],
+              "price": "10.0 to 99.0",
+              "rank": 15,
+              "title": "水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙"
+            },
+            {
+              "asin": "773167198293",
+              "brand": "简康调味料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "粽子",
+                "特价"
+              ],
+              "price": "4.0 to 18.0",
+              "rank": 16,
+              "title": "王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣"
+            },
+            {
+              "asin": "803311266045",
+              "brand": "For love 烘焙包装",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "烘焙专用",
+                " 0添加",
+                "家用"
+              ],
+              "price": "8.0 to 159.0",
+              "rank": 17,
+              "title": "低糖红豆沙包子馅料做月饼蛋黄酥家用专烘焙纯正原材旗舰店0添加"
+            },
+            {
+              "asin": "918442053910",
+              "brand": "百安记食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "裱花",
+                "刮刀花",
+                "粽子"
+              ],
+              "price": "10.0 to 438.0",
+              "rank": 18,
+              "title": "力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料"
+            },
+            {
+              "asin": "885061745036",
+              "brand": "渝姑娘的店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "甜烧白",
+                "传统"
+              ],
+              "price": "13.0",
+              "rank": 19,
+              "title": "老式夹沙肉馅甜烧白喜沙肉糯米饭五花肉扣肉馅料豆沙传统洗沙馅料"
+            },
+            {
+              "asin": "892166406305",
+              "brand": "物美价廉配料中心",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "红豆",
+                "颗粒",
+                "夹心",
+                "面包糕点"
+              ],
+              "price": "215.0",
+              "rank": 20,
+              "title": "久和红豆馅A56S颗粒馅面包糕点夹心豆沙包月饼烘焙馅料红豆馅20KG"
+            }
+          ],
+          "query": "红豆沙馅料",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"红豆沙馅料\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:ec7263c45f8f2bb267efae669ee3362bd28b32d864c0353e28c17f20b66b5eed"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:ec7263c45f8f2bb267efae669ee3362bd28b32d864c0353e28c17f20b66b5eed"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:ec7263c45f8f2bb267efae669ee3362bd28b32d864c0353e28c17f20b66b5eed"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "536699019810"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 to 28.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"536699019810\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:536699019810",
+            "constraint:536699019810:category:pass",
+            "constraint:536699019810:budget:unverifiable"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "product:536699019810",
+            "constraint:536699019810:category:pass",
+            "constraint:536699019810:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:536699019810",
+            "constraint:536699019810:category:pass",
+            "constraint:536699019810:budget:unverifiable"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Searched 红豆沙馅料 (150 results); found ~10元 candidates: 百钻红豆沙馅料 11.0起 (高偏好品牌), 王致和红豆沙馅500g 7.0, 精品红豆沙 9.0起; opened 百钻 page confirming价格 11.0-28.0。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "content": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:536699019810:description"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "subpage:536699019810:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:536699019810:description"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 to 28.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "【低糖#甄选红小豆】水洗红豆馅500g"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "【低糖#甄选红小豆】水洗红豆馅500g"
+          },
+          "selected_price": 11
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"【低糖#甄选红小豆】水洗红豆馅500g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:536699019810:color:【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "option:536699019810:color:【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "option:536699019810:color:【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 1,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 1,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 20,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "顺南 低糖红豆沙馅料"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 顺南 低糖红豆沙馅料 | Normalized query: 顺南 低糖红豆沙馅料 [SEP] Next > [SEP] 805072691821 [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 7.0 to 74.0 [SEP] 888705520819 [SEP] 广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料 [SEP] 50.0 [SEP] 785778019163 [SEP] 顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g [SEP] 25.0 to 89.0 [SEP] 553122569477 [SEP] 顺南低糖红豆沙白莲蓉黑芝麻紫薯冰皮绿凤梨月饼馅料烘焙商用5kg [SEP] 74.0 to 230.0 [SEP] 865804416588 [SEP] 展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙 [SEP] 14.0 to 149.0 [SEP] 803311266045 [SEP] 低糖红豆沙包子馅料做月饼蛋黄酥家用专烘焙纯正原材旗舰店0添加 [SEP] 8.0 to 159.0 [SEP] 725626879049 [SEP] 水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙 [SEP] 10.0 to 99.0 [SEP] 936821714062 [SEP] 台杰馅料低糖红豆沙莲蓉黑芝麻中秋烘焙商用低甜汤圆糕点月饼馅料 [SEP] 38.0 to 295.0 [SEP] 536699019810 [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 11.0 to 28.0 [SEP] 933481442144 [SEP] 精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥 [SEP] 3.0 to 10.0 [SEP] 918442053910 [SEP] 力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料 [SEP] 10.0 to 438.0 [SEP] 778336940172 [SEP] 金西湖绿豆沙低糖绿豆馅料绿豆冰糕烘焙糕点用绿豆沙馅料20kg [SEP] 298.0 [SEP] 827041670930 [SEP] 糖尿人专用零食品血糖高无糖精红豆沙月饼馅料孕妇糖友人代餐早餐 [SEP] 18.0 to 45.0 [SEP] 912092693355 [SEP] 红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅 [SEP] 29.0 to 45.0 [SEP] 645688854363 [SEP] 正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼 [SEP] 115.0 [SEP] 610977565590 [SEP] 王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙 [SEP] 7.0 [SEP] 595965071891 [SEP] 广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包 [SEP] 39.0 to 170.0 [SEP] 642201219878 [SEP] 广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用 [SEP] 42.0 to 128.0 [SEP] 827510222393 [SEP] 果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙 [SEP] 18.0 to 355.0 [SEP] 807803407239 [SEP] 中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅 [SEP] 28.0 to 264.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"805072691821\", \"888705520819\", \"785778019163\", \"553122569477\", \"865804416588\", \"803311266045\", \"725626879049\", \"936821714062\", \"536699019810\", \"933481442144\", \"918442053910\", \"778336940172\", \"827041670930\", \"912092693355\", \"645688854363\", \"610977565590\", \"595965071891\", \"642201219878\", \"827510222393\", \"807803407239\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "805072691821",
+            "888705520819",
+            "785778019163",
+            "553122569477",
+            "865804416588",
+            "803311266045",
+            "725626879049",
+            "936821714062",
+            "536699019810",
+            "933481442144",
+            "918442053910",
+            "778336940172",
+            "827041670930",
+            "912092693355",
+            "645688854363",
+            "610977565590",
+            "595965071891",
+            "642201219878",
+            "827510222393",
+            "807803407239"
+          ],
+          "normalized_query": "顺南 低糖红豆沙馅料",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "805072691821",
+              "brand": "尚之玖食品商行",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "青团",
+                "原材料",
+                "蛋黄酥",
+                "糕点",
+                "烘焙"
+              ],
+              "price": "7.0 to 74.0",
+              "rank": 1,
+              "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+            },
+            {
+              "asin": "888705520819",
+              "brand": "陈太厨房",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼"
+              ],
+              "price": "50.0",
+              "rank": 2,
+              "title": "广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料"
+            },
+            {
+              "asin": "785778019163",
+              "brand": "原麦食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "冰皮",
+                "家用"
+              ],
+              "price": "25.0 to 89.0",
+              "rank": 3,
+              "title": "顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g"
+            },
+            {
+              "asin": "553122569477",
+              "brand": "湘湘烘焙DIY",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "商用",
+                "月饼"
+              ],
+              "price": "74.0 to 230.0",
+              "rank": 4,
+              "title": "顺南低糖红豆沙白莲蓉黑芝麻紫薯冰皮绿凤梨月饼馅料烘焙商用5kg"
+            },
+            {
+              "asin": "865804416588",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "馅料",
+                "月饼",
+                "包子",
+                "面包",
+                "蛋黄酥",
+                "汤圆",
+                "青团",
+                "家用",
+                "烘焙"
+              ],
+              "price": "14.0 to 149.0",
+              "rank": 5,
+              "title": "展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙"
+            },
+            {
+              "asin": "803311266045",
+              "brand": "For love 烘焙包装",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "烘焙专用",
+                " 0添加",
+                "家用"
+              ],
+              "price": "8.0 to 159.0",
+              "rank": 6,
+              "title": "低糖红豆沙包子馅料做月饼蛋黄酥家用专烘焙纯正原材旗舰店0添加"
+            },
+            {
+              "asin": "725626879049",
+              "brand": "德邦健康食品有限公司",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙包",
+                "家用"
+              ],
+              "price": "10.0 to 99.0",
+              "rank": 7,
+              "title": "水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙"
+            },
+            {
+              "asin": "936821714062",
+              "brand": "台杰食品旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "商用",
+                "中秋"
+              ],
+              "price": "38.0 to 295.0",
+              "rank": 8,
+              "title": "台杰馅料低糖红豆沙莲蓉黑芝麻中秋烘焙商用低甜汤圆糕点月饼馅料"
+            },
+            {
+              "asin": "536699019810",
+              "brand": "安琪酵母旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "粽子"
+              ],
+              "price": "11.0 to 28.0",
+              "rank": 9,
+              "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+            },
+            {
+              "asin": "933481442144",
+              "brand": "叁穗食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "精品",
+                "月饼"
+              ],
+              "price": "3.0 to 10.0",
+              "rank": 10,
+              "title": "精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥"
+            },
+            {
+              "asin": "918442053910",
+              "brand": "百安记食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "裱花",
+                "刮刀花",
+                "粽子"
+              ],
+              "price": "10.0 to 438.0",
+              "rank": 11,
+              "title": "力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料"
+            },
+            {
+              "asin": "778336940172",
+              "brand": "小韩烘焙原料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "低糖",
+                "冰糕"
+              ],
+              "price": "298.0",
+              "rank": 12,
+              "title": "金西湖绿豆沙低糖绿豆馅料绿豆冰糕烘焙糕点用绿豆沙馅料20kg"
+            },
+            {
+              "asin": "827041670930",
+              "brand": "糖友低糖小店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "糖尿人",
+                "月饼",
+                "孕妇"
+              ],
+              "price": "18.0 to 45.0",
+              "rank": 13,
+              "title": "糖尿人专用零食品血糖高无糖精红豆沙月饼馅料孕妇糖友人代餐早餐"
+            },
+            {
+              "asin": "912092693355",
+              "brand": "旭方食品工厂店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "商用"
+              ],
+              "price": "29.0 to 45.0",
+              "rank": 14,
+              "title": "红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅"
+            },
+            {
+              "asin": "645688854363",
+              "brand": "广州协裕食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "14kg",
+                "箱",
+                "3袋",
+                "月饼"
+              ],
+              "price": "115.0",
+              "rank": 15,
+              "title": "正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼"
+            },
+            {
+              "asin": "610977565590",
+              "brand": "尚正鸿食品旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "即食",
+                "糕点"
+              ],
+              "price": "7.0",
+              "rank": 16,
+              "title": "王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙"
+            },
+            {
+              "asin": "595965071891",
+              "brand": "特色中国桂林馆",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "月饼"
+              ],
+              "price": "39.0 to 170.0",
+              "rank": 17,
+              "title": "广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包"
+            },
+            {
+              "asin": "642201219878",
+              "brand": "咂吧零食",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "商用",
+                "包子"
+              ],
+              "price": "42.0 to 128.0",
+              "rank": 18,
+              "title": "广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用"
+            },
+            {
+              "asin": "827510222393",
+              "brand": "果布奇然烘焙旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "面包",
+                "家用",
+                "口感绵密",
+                "有嚼劲"
+              ],
+              "price": "18.0 to 355.0",
+              "rank": 19,
+              "title": "果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙"
+            },
+            {
+              "asin": "807803407239",
+              "brand": "牧谷烘焙",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "日式",
+                "豆包"
+              ],
+              "price": "28.0 to 264.0",
+              "rank": 20,
+              "title": "中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅"
+            }
+          ],
+          "query": "顺南 低糖红豆沙馅料",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"顺南 低糖红豆沙馅料\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:7d3e89858dce51c4cb126b70fa5984ff74a59a8a03984339d8ab61bb786e6f62"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:7d3e89858dce51c4cb126b70fa5984ff74a59a8a03984339d8ab61bb786e6f62"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 5,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 1,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "result_set:7d3e89858dce51c4cb126b70fa5984ff74a59a8a03984339d8ab61bb786e6f62"
+          ],
+          "seen_asin_count": 25,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "805072691821"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 顺南 金装低糖红豆沙 500g*2 [SEP] 顺南 金装低糖红豆沙 500g*5 [SEP] 顺南 精选红豆馅料(水性）500g [SEP] 顺南 金装低糖红豆沙馅料500g [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 价格: 7.0 to 74.0 [SEP] 店铺: 尚之玖食品商行 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"顺南 金装低糖红豆沙 500g*2\", \"顺南 金装低糖红豆沙 500g*5\", \"顺南 精选红豆馅料(水性）500g\", \"顺南 金装低糖红豆沙馅料500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "顺南 金装低糖红豆沙 500g*2",
+            "顺南 金装低糖红豆沙 500g*5",
+            "顺南 精选红豆馅料(水性）500g",
+            "顺南 金装低糖红豆沙馅料500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顺南 金装低糖红豆沙 500g*2",
+              "顺南 金装低糖红豆沙 500g*5",
+              "顺南 精选红豆馅料(水性）500g",
+              "顺南 金装低糖红豆沙馅料500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "805072691821",
+            "brand": "尚之玖食品商行",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "月饼",
+              "青团",
+              "原材料",
+              "蛋黄酥",
+              "糕点",
+              "烘焙"
+            ],
+            "price": "7.0 to 74.0",
+            "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"805072691821\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:805072691821",
+            "constraint:805072691821:category:pass",
+            "constraint:805072691821:budget:unverifiable"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:805072691821",
+            "constraint:805072691821:category:pass",
+            "constraint:805072691821:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "product:805072691821",
+            "constraint:805072691821:category:pass",
+            "constraint:805072691821:budget:unverifiable"
+          ],
+          "seen_asin_count": 25,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "顺南 金装低糖红豆沙馅料500g"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 顺南 金装低糖红豆沙 500g*2 [SEP] 顺南 金装低糖红豆沙 500g*5 [SEP] 顺南 精选红豆馅料(水性）500g [SEP] 顺南 金装低糖红豆沙馅料500g [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 价格: 14.0 [SEP] 店铺: 尚之玖食品商行 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"顺南 金装低糖红豆沙 500g*2\", \"顺南 金装低糖红豆沙 500g*5\", \"顺南 精选红豆馅料(水性）500g\", \"顺南 金装低糖红豆沙馅料500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "顺南 金装低糖红豆沙 500g*2",
+            "顺南 金装低糖红豆沙 500g*5",
+            "顺南 精选红豆馅料(水性）500g",
+            "顺南 金装低糖红豆沙馅料500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "顺南 金装低糖红豆沙 500g*2",
+              "顺南 金装低糖红豆沙 500g*5",
+              "顺南 精选红豆馅料(水性）500g",
+              "顺南 金装低糖红豆沙馅料500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "805072691821",
+            "brand": "尚之玖食品商行",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "月饼",
+              "青团",
+              "原材料",
+              "蛋黄酥",
+              "糕点",
+              "烘焙"
+            ],
+            "price": "7.0 to 74.0",
+            "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+          },
+          "search_available": false,
+          "selected_options": {
+            "颜色分类": "顺南 金装低糖红豆沙馅料500g"
+          },
+          "selected_price": 14
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"顺南 金装低糖红豆沙馅料500g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:805072691821:color:顺南金装低糖红豆沙馅料500g"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:805072691821:color:顺南金装低糖红豆沙馅料500g"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "option:805072691821:color:顺南金装低糖红豆沙馅料500g"
+          ],
+          "seen_asin_count": 25,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Confirmed 百钻红豆沙馅料「低糖#甄选红小豆」水洗红豆馅500g = 11.0元 (安琪酵母旗舰店, ASIN 536699019810); 顺南金装低糖红豆沙馅料500g = 14.0元 (顺南店铺). 百钻更接近10元且符合品牌偏好。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 25,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "百钻 红豆沙馅料 500g"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 百钻 红豆沙馅料 500g | Normalized query: 百钻 红豆沙馅料 500g [SEP] Next > [SEP] 536699019810 [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 11.0 to 28.0 [SEP] 610977565590 [SEP] 王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙 [SEP] 7.0 [SEP] 805072691821 [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 7.0 to 74.0 [SEP] 807803407239 [SEP] 中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅 [SEP] 28.0 to 264.0 [SEP] 827510222393 [SEP] 果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙 [SEP] 18.0 to 355.0 [SEP] 912711817333 [SEP] 豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店 [SEP] 29.0 to 56.0 [SEP] 865804416588 [SEP] 展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙 [SEP] 14.0 to 149.0 [SEP] 933481442144 [SEP] 精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥 [SEP] 3.0 to 10.0 [SEP] 912092693355 [SEP] 红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅 [SEP] 29.0 to 45.0 [SEP] 645688854363 [SEP] 正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼 [SEP] 115.0 [SEP] 888705520819 [SEP] 广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料 [SEP] 50.0 [SEP] 595965071891 [SEP] 广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包 [SEP] 39.0 to 170.0 [SEP] 773167198293 [SEP] 王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣 [SEP] 4.0 to 18.0 [SEP] 642201219878 [SEP] 广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用 [SEP] 42.0 to 128.0 [SEP] 884318648319 [SEP] 精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷 [SEP] 9.0 to 32.0 [SEP] 785778019163 [SEP] 顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g [SEP] 25.0 to 89.0 [SEP] 725626879049 [SEP] 水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙 [SEP] 10.0 to 99.0 [SEP] 918442053910 [SEP] 力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料 [SEP] 10.0 to 438.0 [SEP] 935728573170 [SEP] 豆沙色馅料冬蓉冬翅馅月饼馅料豆沙馅 [SEP] 12.0 to 128.0 [SEP] 597596298767 [SEP] 展艺无蔗糖水洗红豆沙馅赤豆蛋黄酥豆沙面包月饼糕点家用烘焙原料 [SEP] 19.0 to 129.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"536699019810\", \"610977565590\", \"805072691821\", \"807803407239\", \"827510222393\", \"912711817333\", \"865804416588\", \"933481442144\", \"912092693355\", \"645688854363\", \"888705520819\", \"595965071891\", \"773167198293\", \"642201219878\", \"884318648319\", \"785778019163\", \"725626879049\", \"918442053910\", \"935728573170\", \"597596298767\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "536699019810",
+            "610977565590",
+            "805072691821",
+            "807803407239",
+            "827510222393",
+            "912711817333",
+            "865804416588",
+            "933481442144",
+            "912092693355",
+            "645688854363",
+            "888705520819",
+            "595965071891",
+            "773167198293",
+            "642201219878",
+            "884318648319",
+            "785778019163",
+            "725626879049",
+            "918442053910",
+            "935728573170",
+            "597596298767"
+          ],
+          "normalized_query": "百钻 红豆沙馅料 500g",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "536699019810",
+              "brand": "安琪酵母旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "粽子"
+              ],
+              "price": "11.0 to 28.0",
+              "rank": 1,
+              "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+            },
+            {
+              "asin": "610977565590",
+              "brand": "尚正鸿食品旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "即食",
+                "糕点"
+              ],
+              "price": "7.0",
+              "rank": 2,
+              "title": "王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙"
+            },
+            {
+              "asin": "805072691821",
+              "brand": "尚之玖食品商行",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "青团",
+                "原材料",
+                "蛋黄酥",
+                "糕点",
+                "烘焙"
+              ],
+              "price": "7.0 to 74.0",
+              "rank": 3,
+              "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+            },
+            {
+              "asin": "807803407239",
+              "brand": "牧谷烘焙",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "日式",
+                "豆包"
+              ],
+              "price": "28.0 to 264.0",
+              "rank": 4,
+              "title": "中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅"
+            },
+            {
+              "asin": "827510222393",
+              "brand": "果布奇然烘焙旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "面包",
+                "家用",
+                "口感绵密",
+                "有嚼劲"
+              ],
+              "price": "18.0 to 355.0",
+              "rank": 5,
+              "title": "果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙"
+            },
+            {
+              "asin": "912711817333",
+              "brand": "柚仕旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "面包",
+                "商用",
+                "正宗",
+                "无添加"
+              ],
+              "price": "29.0 to 56.0",
+              "rank": 6,
+              "title": "豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店"
+            },
+            {
+              "asin": "865804416588",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "馅料",
+                "月饼",
+                "包子",
+                "面包",
+                "蛋黄酥",
+                "汤圆",
+                "青团",
+                "家用",
+                "烘焙"
+              ],
+              "price": "14.0 to 149.0",
+              "rank": 7,
+              "title": "展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙"
+            },
+            {
+              "asin": "933481442144",
+              "brand": "叁穗食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "精品",
+                "月饼"
+              ],
+              "price": "3.0 to 10.0",
+              "rank": 8,
+              "title": "精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥"
+            },
+            {
+              "asin": "912092693355",
+              "brand": "旭方食品工厂店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "商用"
+              ],
+              "price": "29.0 to 45.0",
+              "rank": 9,
+              "title": "红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅"
+            },
+            {
+              "asin": "645688854363",
+              "brand": "广州协裕食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "14kg",
+                "箱",
+                "3袋",
+                "月饼"
+              ],
+              "price": "115.0",
+              "rank": 10,
+              "title": "正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼"
+            },
+            {
+              "asin": "888705520819",
+              "brand": "陈太厨房",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼"
+              ],
+              "price": "50.0",
+              "rank": 11,
+              "title": "广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料"
+            },
+            {
+              "asin": "595965071891",
+              "brand": "特色中国桂林馆",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "月饼"
+              ],
+              "price": "39.0 to 170.0",
+              "rank": 12,
+              "title": "广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包"
+            },
+            {
+              "asin": "773167198293",
+              "brand": "简康调味料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "粽子",
+                "特价"
+              ],
+              "price": "4.0 to 18.0",
+              "rank": 13,
+              "title": "王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣"
+            },
+            {
+              "asin": "642201219878",
+              "brand": "咂吧零食",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "商用",
+                "包子"
+              ],
+              "price": "42.0 to 128.0",
+              "rank": 14,
+              "title": "广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用"
+            },
+            {
+              "asin": "884318648319",
+              "brand": "鹿鹿农贸食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "无添加",
+                "粽子"
+              ],
+              "price": "9.0 to 32.0",
+              "rank": 15,
+              "title": "精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷"
+            },
+            {
+              "asin": "785778019163",
+              "brand": "原麦食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "冰皮",
+                "家用"
+              ],
+              "price": "25.0 to 89.0",
+              "rank": 16,
+              "title": "顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g"
+            },
+            {
+              "asin": "725626879049",
+              "brand": "德邦健康食品有限公司",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙包",
+                "家用"
+              ],
+              "price": "10.0 to 99.0",
+              "rank": 17,
+              "title": "水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙"
+            },
+            {
+              "asin": "918442053910",
+              "brand": "百安记食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "裱花",
+                "刮刀花",
+                "粽子"
+              ],
+              "price": "10.0 to 438.0",
+              "rank": 18,
+              "title": "力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料"
+            },
+            {
+              "asin": "935728573170",
+              "brand": "烘焙甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙色",
+                "月饼"
+              ],
+              "price": "12.0 to 128.0",
+              "rank": 19,
+              "title": "豆沙色馅料冬蓉冬翅馅月饼馅料豆沙馅"
+            },
+            {
+              "asin": "597596298767",
+              "brand": "天猫超市",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "家用",
+                "不腻"
+              ],
+              "price": "19.0 to 129.0",
+              "rank": 20,
+              "title": "展艺无蔗糖水洗红豆沙馅赤豆蛋黄酥豆沙面包月饼糕点家用烘焙原料"
+            }
+          ],
+          "query": "百钻 红豆沙馅料 500g",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"百钻 红豆沙馅料 500g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 2,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "536699019810"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 to 28.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"536699019810\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:536699019810:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:536699019810:features"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:536699019810:features"
+          ],
+          "seen_asin_count": 27,
+          "step_count": 13,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 16,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "为您找到最接近10元的一款：百钻红豆沙馅料（安琪酵母旗舰店）【低糖·甄选红小豆】水洗红豆馅 500g，价格11.0元；另有同页面【带皮#清甜不腻】红豆沙馅500g及王致和红豆沙馅500g（7.0元）可选。请问是否就选这款11.0元的百钻低糖水洗红豆馅500g？"
+      },
+      "raw": {
+        "session": "859",
+        "question": "为您找到最接近10元的一款：百钻红豆沙馅料（安琪酵母旗舰店）【低糖·甄选红小豆】水洗红豆馅 500g，价格11.0元；另有同页面【带皮#清甜不腻】红豆沙馅500g及王致和红豆沙馅500g（7.0元）可选。请问是否就选这款11.0元的百钻低糖水洗红豆馅500g？",
+        "reply": "这款是低糖的没错，但我想确认下它有没有添加剂？还有生产日期是不是最近的？我要做流心月饼用。"
+      }
+    },
+    {
+      "step": 17,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "已确认百钻低糖水洗红豆馅500g=11.0元（ASIN 536699019810，安琪酵母旗舰店）；Description/Features 页为空，未获取配料表。询问用户后，用户表示可用于流心月饼，但要求确认是否含添加剂及生产日期是否新鲜。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 18,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 to 28.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 14,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 19,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "reviews"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "content": [],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Reviews"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"reviews\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:536699019810:reviews"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:536699019810:reviews"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [
+            "subpage:536699019810:reviews"
+          ],
+          "seen_asin_count": 27,
+          "step_count": 15,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 20,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "在 ASIN 536699019810 页面依次尝试 Description、Features、Reviews 入口，均返回空白内容，商品页未提供配料表/添加剂与生产日期信息；无法从店铺页面证实「无添加」与新鲜度。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 21,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] 【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋 [SEP] 【带皮#清甜不腻】红豆沙馅500g [SEP] 【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋 [SEP] 【低糖#甄选红小豆】水洗红豆馅500g [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 价格: 11.0 to 28.0 [SEP] 店铺: 安琪酵母旗舰店 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋\", \"【带皮#清甜不腻】红豆沙馅500g\", \"【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋\", \"【低糖#甄选红小豆】水洗红豆馅500g\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+            "【带皮#清甜不腻】红豆沙馅500g",
+            "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+            "【低糖#甄选红小豆】水洗红豆馅500g"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 16,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 22,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] < Prev [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "颜色分类": [
+              "【做铜锣烧】带皮红豆馅+低筋面粉+泡打粉50g*5袋",
+              "【带皮#清甜不腻】红豆沙馅500g",
+              "【奶香红豆包】带皮红豆馅500g+中筋面粉500g+酵母+6g*8袋",
+              "【低糖#甄选红小豆】水洗红豆馅500g"
+            ]
+          },
+          "content": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "536699019810",
+            "brand": "安琪酵母旗舰店",
+            "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+            "key_attributes": [
+              "家用",
+              "粽子"
+            ],
+            "price": "11.0 to 28.0",
+            "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 17,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 23,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "实际点击 ASIN 536699019810 的 Description 入口，页面仅显示商品标题，无配料表/添加剂或生产日期信息；结合此前 Features/Reviews 均为空，可确认该商品页未提供配料与生产日期数据。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 24,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "说明一下：百钻该款（ASIN 536699019810）商品详情页的 Description/Features/Reviews 均为空白，店铺页面无法查到配料表、添加剂和生产日期信息，我无法向您证实它是否无添加、日期是否新鲜。请问您是想（A）仍接受这款11元的百钻低糖水洗红豆馅500g，（B）改选标称\"纯豆沙馅无添加\"的精品红豆沙馅料（9元起，更接近10元），还是（C）让我再找有明确配料表信息的无添加款？"
+      },
+      "raw": {
+        "session": "859",
+        "question": "说明一下：百钻该款（ASIN 536699019810）商品详情页的 Description/Features/Reviews 均为空白，店铺页面无法查到配料表、添加剂和生产日期信息，我无法向您证实它是否无添加、日期是否新鲜。请问您是想（A）仍接受这款11元的百钻低糖水洗红豆馅500g，（B）改选标称\"纯豆沙馅无添加\"的精品红豆沙馅料（9元起，更接近10元），还是（C）让我再找有明确配料表信息的无添加款？",
+        "reply": "选C吧，配料表和生产日期都查不到，我做流心月饼不放心。麻烦帮我找有明确配料表的无添加款，一斤装、10块左右的。"
+      }
+    },
+    {
+      "step": 25,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "已向用户说明百钻该款页面无配料表/生产日期信息；用户选择方案C——放弃百钻款，要求另找有明确配料表的无添加红豆沙馅料，规格1斤装（500g）、价格10元左右。"
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 26,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 27,
+          "step_count": 18,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 27,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "无添加 红豆沙馅料 500g"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 5,
+        "goal": {},
+        "idx": "slot-5-859",
+        "instruction": "Instruction: [SEP] 推荐一款价格在10元左右的红豆沙馅料。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 无添加 红豆沙馅料 500g | Normalized query: 无添加 红豆沙馅料 500g [SEP] Next > [SEP] 912711817333 [SEP] 豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店 [SEP] 29.0 to 56.0 [SEP] 884318648319 [SEP] 精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷 [SEP] 9.0 to 32.0 [SEP] 610977565590 [SEP] 王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙 [SEP] 7.0 [SEP] 805072691821 [SEP] 顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g [SEP] 7.0 to 74.0 [SEP] 807803407239 [SEP] 中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅 [SEP] 28.0 to 264.0 [SEP] 827510222393 [SEP] 果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙 [SEP] 18.0 to 355.0 [SEP] 865804416588 [SEP] 展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙 [SEP] 14.0 to 149.0 [SEP] 933481442144 [SEP] 精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥 [SEP] 3.0 to 10.0 [SEP] 536699019810 [SEP] 百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙 [SEP] 11.0 to 28.0 [SEP] 912092693355 [SEP] 红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅 [SEP] 29.0 to 45.0 [SEP] 645688854363 [SEP] 正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼 [SEP] 115.0 [SEP] 595965071891 [SEP] 广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包 [SEP] 39.0 to 170.0 [SEP] 642201219878 [SEP] 广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用 [SEP] 42.0 to 128.0 [SEP] 773167198293 [SEP] 王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣 [SEP] 4.0 to 18.0 [SEP] 888705520819 [SEP] 广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料 [SEP] 50.0 [SEP] 725626879049 [SEP] 水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙 [SEP] 10.0 to 99.0 [SEP] 918442053910 [SEP] 力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料 [SEP] 10.0 to 438.0 [SEP] 785778019163 [SEP] 顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g [SEP] 25.0 to 89.0 [SEP] 935728573170 [SEP] 豆沙色馅料冬蓉冬翅馅月饼馅料豆沙馅 [SEP] 12.0 to 128.0 [SEP] 872493757178 [SEP] 纯红枣酱红枣泥枣沙馅月饼蛋糕枣糕馅料烘焙商用5斤无添加剂 [SEP] 46.0 to 178.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"912711817333\", \"884318648319\", \"610977565590\", \"805072691821\", \"807803407239\", \"827510222393\", \"865804416588\", \"933481442144\", \"536699019810\", \"912092693355\", \"645688854363\", \"595965071891\", \"642201219878\", \"773167198293\", \"888705520819\", \"725626879049\", \"918442053910\", \"785778019163\", \"935728573170\", \"872493757178\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "912711817333",
+            "884318648319",
+            "610977565590",
+            "805072691821",
+            "807803407239",
+            "827510222393",
+            "865804416588",
+            "933481442144",
+            "536699019810",
+            "912092693355",
+            "645688854363",
+            "595965071891",
+            "642201219878",
+            "773167198293",
+            "888705520819",
+            "725626879049",
+            "918442053910",
+            "785778019163",
+            "935728573170",
+            "872493757178"
+          ],
+          "normalized_query": "无添加 红豆沙馅料 500g",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "912711817333",
+              "brand": "柚仕旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "面包",
+                "商用",
+                "正宗",
+                "无添加"
+              ],
+              "price": "29.0 to 56.0",
+              "rank": 1,
+              "title": "豆沙馅料家用包包子面包红豆沙旗舰店烘焙商用正宗纯无添加旗舰店"
+            },
+            {
+              "asin": "884318648319",
+              "brand": "鹿鹿农贸食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "无添加",
+                "粽子"
+              ],
+              "price": "9.0 to 32.0",
+              "rank": 2,
+              "title": "精品红豆沙纯豆沙馅无添加年夜饭豆沙馅红豆沙泥粽子红豆沙包子陷"
+            },
+            {
+              "asin": "610977565590",
+              "brand": "尚正鸿食品旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "即食",
+                "糕点"
+              ],
+              "price": "7.0",
+              "rank": 3,
+              "title": "王致和红豆沙馅500g家用包子月饼蛋黄酥糕点面包烘焙馅料即食豆沙"
+            },
+            {
+              "asin": "805072691821",
+              "brand": "尚之玖食品商行",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "青团",
+                "原材料",
+                "蛋黄酥",
+                "糕点",
+                "烘焙"
+              ],
+              "price": "7.0 to 74.0",
+              "rank": 4,
+              "title": "顺南馅料月饼青团原材料蛋黄酥馅糕点烘焙金装低糖红豆沙馅料500g"
+            },
+            {
+              "asin": "807803407239",
+              "brand": "牧谷烘焙",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "日式",
+                "豆包"
+              ],
+              "price": "28.0 to 264.0",
+              "rank": 5,
+              "title": "中和焙皇红豆粒馅5kg京日带皮红豆馅日式红豆包豆沙馅青团红豆馅"
+            },
+            {
+              "asin": "827510222393",
+              "brand": "果布奇然烘焙旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "面包",
+                "家用",
+                "口感绵密",
+                "有嚼劲"
+              ],
+              "price": "18.0 to 355.0",
+              "rank": 6,
+              "title": "果布奇然青稞米红豆馅青稞米馅水红豆沙馅料面包糕点馅料家用烘焙"
+            },
+            {
+              "asin": "865804416588",
+              "brand": "官方国货甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "馅料",
+                "月饼",
+                "包子",
+                "面包",
+                "蛋黄酥",
+                "汤圆",
+                "青团",
+                "家用",
+                "烘焙"
+              ],
+              "price": "14.0 to 149.0",
+              "rank": 7,
+              "title": "展艺低甜水洗红豆沙馅料月饼包子面包专用蛋黄酥汤圆青团家用烘焙"
+            },
+            {
+              "asin": "933481442144",
+              "brand": "叁穗食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "精品",
+                "月饼"
+              ],
+              "price": "3.0 to 10.0",
+              "rank": 8,
+              "title": "精品红豆沙馅料豆沙馅红豆沙泥粽子红豆沙包子月饼烘焙馅料豆沙泥"
+            },
+            {
+              "asin": "536699019810",
+              "brand": "安琪酵母旗舰店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "粽子"
+              ],
+              "price": "11.0 to 28.0",
+              "rank": 9,
+              "title": "百钻红豆沙馅料月饼包子面包专用蛋黄酥汤圆粽子家用烘焙"
+            },
+            {
+              "asin": "912092693355",
+              "brand": "旭方食品工厂店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "商用"
+              ],
+              "price": "29.0 to 45.0",
+              "rank": 10,
+              "title": "红豆沙馅月饼馅料专用包子馅料商用元宵汤圆青团甜品烘焙蜜豆沙馅"
+            },
+            {
+              "asin": "645688854363",
+              "brand": "广州协裕食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "14kg",
+                "箱",
+                "3袋",
+                "月饼"
+              ],
+              "price": "115.0",
+              "rank": 11,
+              "title": "正达广源 玫瑰豆沙馅14kg/箱 3袋包子馒头红豆沙馅料西点烘焙月饼"
+            },
+            {
+              "asin": "595965071891",
+              "brand": "特色中国桂林馆",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "月饼"
+              ],
+              "price": "39.0 to 170.0",
+              "rank": 12,
+              "title": "广西食全食美豆沙馅料红豆沙泥烘焙糕点家用月饼包子原料458g*2包"
+            },
+            {
+              "asin": "642201219878",
+              "brand": "咂吧零食",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "家用",
+                "商用",
+                "包子"
+              ],
+              "price": "42.0 to 128.0",
+              "rank": 13,
+              "title": "广香园红豆沙10斤豆沙馅料红豆馅豆沙包子馅料糕点烘焙家用商用"
+            },
+            {
+              "asin": "773167198293",
+              "brand": "简康调味料",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "粽子",
+                "特价"
+              ],
+              "price": "4.0 to 18.0",
+              "rank": 14,
+              "title": "王致和豆沙馅包粽子专用豆沙粽子豆沙包点心烘焙馅料特价折扣"
+            },
+            {
+              "asin": "888705520819",
+              "brand": "陈太厨房",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼"
+              ],
+              "price": "50.0",
+              "rank": 15,
+              "title": "广州酒家低糖红豆沙馅泥奶黄凤梨黑芝麻包子五仁纯白莲蓉月饼馅料"
+            },
+            {
+              "asin": "725626879049",
+              "brand": "德邦健康食品有限公司",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙包",
+                "家用"
+              ],
+              "price": "10.0 to 99.0",
+              "rank": 16,
+              "title": "水沙粒馅红豆沙馅10斤豆沙包粽子烧饼酥饼蛋黄酥汤圆馅料家用烘焙"
+            },
+            {
+              "asin": "918442053910",
+              "brand": "百安记食品",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "裱花",
+                "刮刀花",
+                "粽子"
+              ],
+              "price": "10.0 to 438.0",
+              "rank": 17,
+              "title": "力创白豆沙低糖白芸豆沙馅韩式裱花和果子茶果子皮刮刀花粽子馅料"
+            },
+            {
+              "asin": "785778019163",
+              "brand": "原麦食品专营店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "冰皮",
+                "家用"
+              ],
+              "price": "25.0 to 89.0",
+              "rank": 18,
+              "title": "顺南月饼馅料低糖红豆沙馅冰皮原料家用包子莲蓉凤梨五仁奶黄500g"
+            },
+            {
+              "asin": "935728573170",
+              "brand": "烘焙甄选",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "豆沙色",
+                "月饼"
+              ],
+              "price": "12.0 to 128.0",
+              "rank": 19,
+              "title": "豆沙色馅料冬蓉冬翅馅月饼馅料豆沙馅"
+            },
+            {
+              "asin": "872493757178",
+              "brand": "宏远烘焙原料 实体企业店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "月饼",
+                "商用",
+                "无添加剂"
+              ],
+              "price": "46.0 to 178.0",
+              "rank": 20,
+              "title": "纯红枣酱红枣泥枣沙馅月饼蛋糕枣糕馅料烘焙商用5斤无添加剂"
+            }
+          ],
+          "query": "无添加 红豆沙馅料 500g",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": true,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"无添加 红豆沙馅料 500g\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 3
+          },
+          "new_asin_count": 1,
+          "no_progress_steps": 4,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 2,
+            "product": 2,
+            "result_set": 5,
+            "subpage": 3
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 28,
+          "step_count": 19,
+          "termination_reason": "repeat_loop",
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": -0.65,
+        "reward_detail": {
+          "dimension_scores": {},
+          "evidence": {},
+          "evidence_coverage": 0,
+          "hard_gates": {},
+          "purchase_success": false,
+          "reward": -0.65,
+          "reward_type": "repeat_loop",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": -0.65,
+          "termination_reason": "repeat_loop",
+          "weighted_score": 0
+        },
+        "reward_valid": true,
+        "termination_reason": "repeat_loop"
+      }
+    }
+  ],
+  "terminal_protocol": "terminal-protocol-v2",
+  "requirement_events": []
+}

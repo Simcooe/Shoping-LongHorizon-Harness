@@ -1,0 +1,263 @@
+{
+  "task_id": "995",
+  "judge_version": "trajectory-judge-v3",
+  "rubric_version": "shopping-rubric-v2",
+  "runtime_boundary": {
+    "first_terminal_observed": true,
+    "terminal_step": 29,
+    "post_terminal_steps_present": false
+  },
+  "decision": {
+    "observed": true,
+    "step": 29,
+    "kind": "environment_terminal",
+    "requirements_resolved": false
+  },
+  "requirement_interpretation": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0001"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求电动晾衣架，全程有效。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0002"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求商家包安装，全程有效。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "basis": [
+        {
+          "source": "rubric",
+          "field": "query_quote",
+          "rubric_id": "r0003"
+        }
+      ],
+      "reasoning": "初始 Query 明确要求售价1600左右，全程有效。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无任何真实 shopper 回复，TaskFacts 未被用户告知或确认。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无 shopper 回复确认隐形/薄型需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无 shopper 回复确认遥控升降需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无 shopper 回复确认伸缩调节需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无 shopper 回复确认曲面屏照明需求，保持 latent。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "basis": [],
+      "reasoning": "无 shopper 回复确认声控需求，保持 latent。"
+    }
+  ],
+  "rubric_verdicts": [
+    {
+      "requirement_id": "r0001",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "satisfied",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "打开的商品页明确为电动晾衣架（公牛J051、好太太GW-1166H等），类别需求被页面证据满足。"
+    },
+    {
+      "requirement_id": "r0002",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "好太太GW-1166H变体标签含“免费安装”，但 Description/Features 面板为空、无最终选定商品，包安装需求未被确认落实。"
+    },
+    {
+      "requirement_id": "r0003",
+      "requirement_kind": "explicit",
+      "effective_status": "active",
+      "user_requirement_verdict": "unknown",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        },
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面存在接近1600的候选（公牛J051 1588、好太太GW-1166H 1699），但轨迹未做最终价格取舍即被环境终止。"
+    },
+    {
+      "requirement_id": "t0001",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 1,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "页面多为智能/家用电动晾衣机，但该事实未被用户有效要求（latent）。"
+    },
+    {
+      "requirement_id": "t0002",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "好太太GW-1166H页面标题含“电动隐形…薄晒衣架”，但需求未被用户确认。"
+    },
+    {
+      "requirement_id": "t0003",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "公牛J051页面标题含“遥控升降”，但需求未被用户确认。"
+    },
+    {
+      "requirement_id": "t0004",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "好太太GW-1166H变体含“伸缩晾杆”，但需求未被用户确认。"
+    },
+    {
+      "requirement_id": "t0005",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 9,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "好太太GW-1166H变体含“柔光曲屏照明”，但需求未被用户确认。"
+    },
+    {
+      "requirement_id": "t0006",
+      "requirement_kind": "taskfact",
+      "effective_status": "latent",
+      "user_requirement_verdict": "not_applicable",
+      "evidence_status": "supported",
+      "evidence": [
+        {
+          "source": "model_trace",
+          "step": 2,
+          "field": "observation"
+        }
+      ],
+      "reasoning": "公牛J051页面标题含“智能语音”，但需求未被用户确认。"
+    }
+  ],
+  "dimension_scores": {
+    "clarification_strategy": 1,
+    "information_retention": 2,
+    "search_strategy": 1,
+    "candidate_utilization": 2,
+    "evidence_verification": 1,
+    "decision_quality": 1,
+    "termination_efficiency": 1
+  },
+  "_metadata": {
+    "judge_mode": "llm",
+    "model": "deepseek-v4-flash",
+    "generated_at": "2026-09-10T12:20:22.719877+00:00",
+    "attempts": 1,
+    "trace_source": "model_trace + raw_trace(progress whitelist + boundary)",
+    "terminal_protocol": "terminal-protocol-v2"
+  }
+}

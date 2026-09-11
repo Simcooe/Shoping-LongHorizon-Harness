@@ -1,0 +1,3144 @@
+{
+  "task": "挑选一款价格在400元左右的白酒。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.22, \"复购率\": 0.48, \"平均客单价\": 300.07, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": false, \"近30天消费金额\": 2280.5, \"近90天订单数\": 19}, \"人口属性\": {\"会员等级\": \"铂金会员\", \"年龄段\": \"25-34, \", \"性别\": \"女\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"国吉祥\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Hendrick's\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"江小白\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"百加得\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"妙洁\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 800, \"最小值\": 50}, \"功能\": [\"调酒基酒\", \"宴客礼品\", \"收藏\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"玻璃\", \"陶瓷\"], \"颜色\": [\"透明\", \"琥珀\"], \"风格\": [\"国潮\", \"极简\", \"小众\"]}, \"类目偏好\": {\"厨具餐具\": \"高\", \"家居生活\": \"中\", \"数码家电\": \"低\", \"服饰鞋包\": \"中\", \"美妆护肤\": \"低\", \"运动户外\": \"中\", \"食品酒水\": \"高\"}}, \"地区信息\": {\"区县\": \"静安区\", \"城市\": \"上海市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"上海市\"}, \"最后更新时间\": \"2024-06-20T16:45:00Z\", \"注册时间\": \"2020-07-18T14:22:35Z\", \"注册渠道\": \"App\", \"用户ID\": \"U98237465, \", \"用户标签\": [\"城市独居女性\", \"家庭调酒爱好者\", \"中度酒水消费用户\", \"非促销敏感型\", \"品质认证关注\"], \"行为特征\": {\"常用设备\": \"iOS手机\", \"日均浏览时长\": 3600, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"每瓶500ml的正品酱香型白酒\", \"每箱6瓶的酱味十足白酒\"], \"最近14天收藏商品\": [], \"活跃时间段\": [20, 21, 22], \"近7天访问次数\": 18}}",
+  "step_count": 21,
+  "reset": {
+    "env_idx": 0,
+    "environment_version": "shopsimulator-environment-v2.1",
+    "goal_options": [
+      "整箱六瓶"
+    ],
+    "idx": 623,
+    "instruction": "Instruction: 挑选一款价格在400元左右的白酒。",
+    "instruction_simple": "挑选一款价格在400元左右的白酒。",
+    "message": "Task 623 started",
+    "observation_state": {
+      "actions": [
+        "search"
+      ],
+      "observation_version": "shopping-observation-v2",
+      "page_type": "search_home",
+      "search_available": true
+    },
+    "reason_key": null,
+    "user_persona": {
+      "交易特征": {
+        "优惠券使用率": 0.22,
+        "复购率": 0.48,
+        "平均客单价": 300.07,
+        "支付方式偏好": "支付宝",
+        "是否促销敏感": false,
+        "近30天消费金额": 2280.5,
+        "近90天订单数": 19
+      },
+      "人口属性": {
+        "会员等级": "铂金会员",
+        "年龄段": "25-34, ",
+        "性别": "女",
+        "消费等级": "中"
+      },
+      "兴趣偏好": {
+        "品牌偏好": [
+          {
+            "偏好程度": "高",
+            "品牌名称": "国吉祥"
+          },
+          {
+            "偏好程度": "高",
+            "品牌名称": "Hendrick's"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "江小白"
+          },
+          {
+            "偏好程度": "中",
+            "品牌名称": "百加得"
+          },
+          {
+            "偏好程度": "低",
+            "品牌名称": "妙洁"
+          }
+        ],
+        "商品属性偏好": {
+          "价格区间": {
+            "最大值": 800,
+            "最小值": 50
+          },
+          "功能": [
+            "调酒基酒",
+            "宴客礼品",
+            "收藏"
+          ],
+          "尺码偏好": {
+            "上衣": ", ",
+            "内衣": ", ",
+            "裙装": ", ",
+            "裤子": ", ",
+            "鞋码": ", "
+          },
+          "材质": [
+            "玻璃",
+            "陶瓷"
+          ],
+          "颜色": [
+            "透明",
+            "琥珀"
+          ],
+          "风格": [
+            "国潮",
+            "极简",
+            "小众"
+          ]
+        },
+        "类目偏好": {
+          "厨具餐具": "高",
+          "家居生活": "中",
+          "数码家电": "低",
+          "服饰鞋包": "中",
+          "美妆护肤": "低",
+          "运动户外": "中",
+          "食品酒水": "高"
+        }
+      },
+      "地区信息": {
+        "区县": "静安区",
+        "城市": "上海市",
+        "时区": "Asia/Shanghai",
+        "省份": "上海市"
+      },
+      "最后更新时间": "2024-06-20T16:45:00Z",
+      "注册时间": "2020-07-18T14:22:35Z",
+      "注册渠道": "App",
+      "用户ID": "U98237465, ",
+      "用户标签": [
+        "城市独居女性",
+        "家庭调酒爱好者",
+        "中度酒水消费用户",
+        "非促销敏感型",
+        "品质认证关注"
+      ],
+      "行为特征": {
+        "常用设备": "iOS手机",
+        "日均浏览时长": 3600,
+        "最近14天关注店铺": [],
+        "最近14天加购商品": [],
+        "最近14天搜索关键词": [
+          "每瓶500ml的正品酱香型白酒",
+          "每箱6瓶的酱味十足白酒"
+        ],
+        "最近14天收藏商品": [],
+        "活跃时间段": [
+          20,
+          21,
+          22
+        ],
+        "近7天访问次数": 18
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "白酒"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] Page 1 of 2 (Total results: 39) [SEP] Query: 白酒 | Normalized query: 白酒 [SEP] Next > [SEP] 789356726926 [SEP] 娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒 [SEP] 1510.0 [SEP] 894678409353 [SEP] 宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水 [SEP] 1708.0 [SEP] 837138903543 [SEP] 玲珑春39度白酒高度纯粮甑酿酒发酵白酒 [SEP] 39.0 to 234.0 [SEP] 868298509883 [SEP] 刘伶醉陶藏系列42度500毫升纯粮优级白酒一箱4瓶 [SEP] 519.0 [SEP] 942002009604 [SEP] 2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装 [SEP] 1299.0 [SEP] 708816069328 [SEP] 山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱 [SEP] 299.0 [SEP] 842479984471 [SEP] 贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼 [SEP] 1100.0 [SEP] 677037072010 [SEP] 整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒 [SEP] 265.0 to 1530.0 [SEP] 901847913257 [SEP] 贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼 [SEP] 285.0 [SEP] 831944197460 [SEP] 进口俄罗斯伏特加海军蓝高档鲟鱼酒洋酒白酒吧BELUGA [SEP] 215.0 [SEP] 792256035032 [SEP] 庄子酒 庄子漆园春30 蓝瓶 53度 500ml 芝麻香型纯粮白酒 [SEP] 4810.0 [SEP] 914463298892 [SEP] 景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒 [SEP] 480.0 [SEP] 749253634247 [SEP] 神仙大曲 上海老窖1608五年陈酿46度浓香型纯粮白酒500ml [SEP] 80.0 to 302.0 [SEP] 860318049181 [SEP] 量大优惠500mlx6临川贡酒高贡葫芦瓶50度醇爽型白酒江西产 [SEP] 348.0 [SEP] 709268264088 [SEP] 父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒 [SEP] 169.0 [SEP] 744730914175 [SEP] 6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱 [SEP] 100.0 to 175.0 [SEP] 776977766658 [SEP] 2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶 [SEP] 610.0 to 3600.0 [SEP] 848127797052 [SEP] 国产白酒徽酒百年皖酒70曲酒浓香型42度500ml/瓶纯粮原浆热卖老牌 [SEP] 68.0 to 178.0 [SEP] 886493105184 [SEP] ALDI奥乐齐浓香型纯粮52度白酒500ml传统固态法酿造口感醇厚 [SEP] 63.0 [SEP] 717353168995 [SEP] 一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮 [SEP] 238.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"789356726926\", \"894678409353\", \"837138903543\", \"868298509883\", \"942002009604\", \"708816069328\", \"842479984471\", \"677037072010\", \"901847913257\", \"831944197460\", \"792256035032\", \"914463298892\", \"749253634247\", \"860318049181\", \"709268264088\", \"744730914175\", \"776977766658\", \"848127797052\", \"886493105184\", \"717353168995\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "789356726926",
+            "894678409353",
+            "837138903543",
+            "868298509883",
+            "942002009604",
+            "708816069328",
+            "842479984471",
+            "677037072010",
+            "901847913257",
+            "831944197460",
+            "792256035032",
+            "914463298892",
+            "749253634247",
+            "860318049181",
+            "709268264088",
+            "744730914175",
+            "776977766658",
+            "848127797052",
+            "886493105184",
+            "717353168995"
+          ],
+          "normalized_query": "白酒",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "789356726926",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "酱香型",
+                "53度",
+                "500ml",
+                "盒装"
+              ],
+              "price": "1510.0",
+              "rank": 1,
+              "title": "娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒"
+            },
+            {
+              "asin": "894678409353",
+              "brand": "浩瀚名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "清香型",
+                "整箱",
+                "50度",
+                "特级"
+              ],
+              "price": "1708.0",
+              "rank": 2,
+              "title": "宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水"
+            },
+            {
+              "asin": "837138903543",
+              "brand": "来炼酒馆",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "39度",
+                "纯粮",
+                "发酵"
+              ],
+              "price": "39.0 to 234.0",
+              "rank": 3,
+              "title": "玲珑春39度白酒高度纯粮甑酿酒发酵白酒"
+            },
+            {
+              "asin": "868298509883",
+              "brand": "众诚酒类销售",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "500毫升",
+                "纯粮",
+                "优级"
+              ],
+              "price": "519.0",
+              "rank": 4,
+              "title": "刘伶醉陶藏系列42度500毫升纯粮优级白酒一箱4瓶"
+            },
+            {
+              "asin": "942002009604",
+              "brand": "英汉酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2020年",
+                "53度",
+                "酱香型"
+              ],
+              "price": "1299.0",
+              "rank": 5,
+              "title": "2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装"
+            },
+            {
+              "asin": "708816069328",
+              "brand": "1919名酒企业店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "山东特产",
+                "浓香型",
+                "52度",
+                "490ml"
+              ],
+              "price": "299.0",
+              "rank": 6,
+              "title": "山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱"
+            },
+            {
+              "asin": "842479984471",
+              "brand": "好酒不见酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "53度",
+                "酱香型",
+                "500ml",
+                "礼盒装",
+                "商务",
+                "送礼"
+              ],
+              "price": "1100.0",
+              "rank": 7,
+              "title": "贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼"
+            },
+            {
+              "asin": "677037072010",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "整箱",
+                "六瓶",
+                "六年",
+                "坤沙",
+                "53度",
+                "酱香型",
+                "原浆",
+                "老酒"
+              ],
+              "price": "265.0 to 1530.0",
+              "rank": 8,
+              "title": "整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒"
+            },
+            {
+              "asin": "901847913257",
+              "brand": "香坊酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "收藏",
+                "送礼"
+              ],
+              "price": "285.0",
+              "rank": 9,
+              "title": "贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼"
+            },
+            {
+              "asin": "831944197460",
+              "brand": "俄罗斯国食品馆",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "进口",
+                "高档",
+                "俄罗斯",
+                "鲟鱼",
+                "酒吧"
+              ],
+              "price": "215.0",
+              "rank": 10,
+              "title": "进口俄罗斯伏特加海军蓝高档鲟鱼酒洋酒白酒吧BELUGA"
+            },
+            {
+              "asin": "792256035032",
+              "brand": "冀南名酒商城",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "蓝瓶",
+                "53度",
+                "500ml",
+                "芝麻香型",
+                "纯粮"
+              ],
+              "price": "4810.0",
+              "rank": 11,
+              "title": "庄子酒 庄子漆园春30 蓝瓶 53度 500ml 芝麻香型纯粮白酒"
+            },
+            {
+              "asin": "914463298892",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "浓香型",
+                "纯粮",
+                "节日",
+                "礼品",
+                "礼盒",
+                "山东"
+              ],
+              "price": "480.0",
+              "rank": 12,
+              "title": "景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒"
+            },
+            {
+              "asin": "749253634247",
+              "brand": "第一物选店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "五年",
+                "陈酿",
+                "浓香型",
+                "纯粮",
+                "500ml"
+              ],
+              "price": "80.0 to 302.0",
+              "rank": 13,
+              "title": "神仙大曲 上海老窖1608五年陈酿46度浓香型纯粮白酒500ml"
+            },
+            {
+              "asin": "860318049181",
+              "brand": "实体超市食品酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "量大",
+                "优惠",
+                "葫芦瓶",
+                "50度",
+                "醇爽型",
+                "江西产"
+              ],
+              "price": "348.0",
+              "rank": 14,
+              "title": "量大优惠500mlx6临川贡酒高贡葫芦瓶50度醇爽型白酒江西产"
+            },
+            {
+              "asin": "709268264088",
+              "brand": "豫苏酒业有限公司",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "父亲节",
+                "佳礼",
+                "高端",
+                "42度",
+                "纯粮",
+                "500ml",
+                "浓香型",
+                "礼盒"
+              ],
+              "price": "169.0",
+              "rank": 15,
+              "title": "父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒"
+            },
+            {
+              "asin": "744730914175",
+              "brand": "西湖好酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "江西",
+                "饶州",
+                "名酒",
+                "2006",
+                "固态纯粮",
+                "52度",
+                "浓香型"
+              ],
+              "price": "100.0 to 175.0",
+              "rank": 16,
+              "title": "6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱"
+            },
+            {
+              "asin": "776977766658",
+              "brand": "赤辰酒业商行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2016年",
+                "贵州",
+                " 酱香型",
+                "53度",
+                "坤沙",
+                "收藏",
+                "一瓶"
+              ],
+              "price": "610.0 to 3600.0",
+              "rank": 17,
+              "title": "2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶"
+            },
+            {
+              "asin": "848127797052",
+              "brand": "皖酒馆",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "国产",
+                "徽酒",
+                "浓香型",
+                "42度",
+                "纯粮",
+                "原浆",
+                "热卖",
+                "老牌"
+              ],
+              "price": "68.0 to 178.0",
+              "rank": 18,
+              "title": "国产白酒徽酒百年皖酒70曲酒浓香型42度500ml/瓶纯粮原浆热卖老牌"
+            },
+            {
+              "asin": "886493105184",
+              "brand": "d[s286672762]",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "浓香型",
+                "纯粮",
+                "52度",
+                "传统固态法酿造",
+                "口感醇厚"
+              ],
+              "price": "63.0",
+              "rank": 19,
+              "title": "ALDI奥乐齐浓香型纯粮52度白酒500ml传统固态法酿造口感醇厚"
+            },
+            {
+              "asin": "717353168995",
+              "brand": "安丘景酒老店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "芝麻香型",
+                "山东",
+                "10年",
+                "节日",
+                "礼品",
+                "自饮"
+              ],
+              "price": "238.0",
+              "rank": 20,
+              "title": "一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮"
+            }
+          ],
+          "query": "白酒",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 2,
+          "total_results": 39
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"白酒\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:5f3477f604504856174c5dbde2bf24a288ded080abc61e0e75bd88a025ecd9cc"
+          ],
+          "effective_result_sets": 1,
+          "evidence_added": [
+            "result_set:5f3477f604504856174c5dbde2bf24a288ded080abc61e0e75bd88a025ecd9cc"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "new_asin_count": 20,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 1,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:5f3477f604504856174c5dbde2bf24a288ded080abc61e0e75bd88a025ecd9cc"
+          ],
+          "seen_asin_count": 20,
+          "step_count": 1,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 2,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "next >"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] Page 2 of 2 (Total results: 39) [SEP] Query: 白酒 | Normalized query: 白酒 [SEP] < Prev [SEP] 904076397975 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 145.0 to 410.0 [SEP] 863304332403 [SEP] 泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装 [SEP] 999.0 [SEP] 902272419498 [SEP] 老四川酒52度500ml浓香型纯粮食酒2瓶装试饮装四川白酒高粱酒整箱 [SEP] 46.0 to 121.0 [SEP] 763253474026 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 390.0 [SEP] 923851584024 [SEP] 内蒙古乌兰察布市特产纳尔松蒙元王朝浓香型52％vol白酒盒装包邮 [SEP] 80.0 to 418.0 [SEP] 917095127453 [SEP] 正品云南遇见酒,铭成清酒金典33度400ml/瓶 高档玻璃瓶装调香白酒 [SEP] 48.0 to 136.0 [SEP] 788991284531 [SEP] 衡水老白干绿标62度500ml*12瓶整箱老白干香型高度纯粮食口粮白酒 [SEP] 35.0 to 155.0 [SEP] 801190962445 [SEP] 桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产 [SEP] 89.0 to 246.0 [SEP] 712398556539 [SEP] 贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒 [SEP] 32.0 to 280.0 [SEP] 891068888486 [SEP] 俄罗斯进口伏特加沙皇金银标白酒原装礼盒40度原味洋酒鸡尾酒酒带 [SEP] 99.0 to 169.0 [SEP] 775046019255 [SEP] 许昌胖东来超市自由爱白酒1995正品50度清香型代购纯粮酒优质整箱 [SEP] 78.0 to 478.0 [SEP] 640204500087 [SEP] 正宗白俄罗斯酒白酒单瓶高度纯粮食酒网红伏特加500ml原瓶进口洋 [SEP] 70.0 to 420.0 [SEP] 644350293665 [SEP] 俄罗斯原装进口大雁猎雁金雁银雁野鸭燕麦酒灰雁伏特加白酒网红酒 [SEP] 58.0 to 158.0 [SEP] 852439336577 [SEP] 原装进口俄罗斯沙皇伏特加53度度白酒金标银标绝对烈酒洋酒高端 [SEP] 48.0 to 326.0 [SEP] 675638185391 [SEP] 3款俄罗斯进口500ml雷霆嘎巴小鸟伏特加酒40度洋酒白酒鸡尾酒烈酒 [SEP] 23.0 to 69.0 [SEP] 714543420511 [SEP] 俄罗斯进口伏特加酒56度3款500ml王者系列虎头熊标鹿标洋酒白酒烈 [SEP] 24.0 to 93.0 [SEP] 656729880823 [SEP] 俄罗斯原装进口伏特加五湖源泉杜松子200ml/250ml小酒样半斤白酒 [SEP] 18.0 to 130.0 [SEP] 674806678100 [SEP] 俄罗斯伏特加96度原装进口高度数白酒调酒生命之水小鸟伏特加40度 [SEP] 32.0 to 195.0 [SEP] 788169608502 [SEP] 企业外呼系统免费测试人工外呼电话营销管理系统回拨模式 [SEP] 13.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"904076397975\", \"863304332403\", \"902272419498\", \"763253474026\", \"923851584024\", \"917095127453\", \"788991284531\", \"801190962445\", \"712398556539\", \"891068888486\", \"775046019255\", \"640204500087\", \"644350293665\", \"852439336577\", \"675638185391\", \"714543420511\", \"656729880823\", \"674806678100\", \"788169608502\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "904076397975",
+            "863304332403",
+            "902272419498",
+            "763253474026",
+            "923851584024",
+            "917095127453",
+            "788991284531",
+            "801190962445",
+            "712398556539",
+            "891068888486",
+            "775046019255",
+            "640204500087",
+            "644350293665",
+            "852439336577",
+            "675638185391",
+            "714543420511",
+            "656729880823",
+            "674806678100",
+            "788169608502"
+          ],
+          "normalized_query": "白酒",
+          "observation_version": "shopping-observation-v2",
+          "page": 2,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "904076397975",
+              "brand": "星缘名酒汇",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "原箱",
+                "源码",
+                "贵州",
+                "正品",
+                "53度",
+                "酱香型",
+                "送礼",
+                "招待"
+              ],
+              "price": "145.0 to 410.0",
+              "rank": 21,
+              "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+            },
+            {
+              "asin": "863304332403",
+              "brand": "川久酒业直销店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "52度",
+                "浓香型",
+                "500ml",
+                "送礼",
+                "礼盒装"
+              ],
+              "price": "999.0",
+              "rank": 22,
+              "title": "泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装"
+            },
+            {
+              "asin": "902272419498",
+              "brand": "醉仙居酒水",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "四川",
+                "浓香型",
+                "高粱"
+              ],
+              "price": "46.0 to 121.0",
+              "rank": 23,
+              "title": "老四川酒52度500ml浓香型纯粮食酒2瓶装试饮装四川白酒高粱酒整箱"
+            },
+            {
+              "asin": "763253474026",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "珍藏",
+                "陈酿",
+                "浓香型",
+                "整箱",
+                "节日",
+                "礼品",
+                "礼盒"
+              ],
+              "price": "390.0",
+              "rank": 24,
+              "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+            },
+            {
+              "asin": "923851584024",
+              "brand": "萨日娜牛肉干奶食",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "内蒙古",
+                "乌兰察布市特产",
+                "浓香型",
+                "52％vol",
+                "包邮"
+              ],
+              "price": "80.0 to 418.0",
+              "rank": 25,
+              "title": "内蒙古乌兰察布市特产纳尔松蒙元王朝浓香型52％vol白酒盒装包邮"
+            },
+            {
+              "asin": "917095127453",
+              "brand": "茂溢酒类经营部",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "正品",
+                "云南",
+                "高档",
+                "33度",
+                "玻璃瓶装",
+                "调香"
+              ],
+              "price": "48.0 to 136.0",
+              "rank": 26,
+              "title": "正品云南遇见酒,铭成清酒金典33度400ml/瓶 高档玻璃瓶装调香白酒"
+            },
+            {
+              "asin": "788991284531",
+              "brand": "天泉名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "绿标",
+                "62度",
+                "老白干香型",
+                "高度",
+                "纯粮食"
+              ],
+              "price": "35.0 to 155.0",
+              "rank": 27,
+              "title": "衡水老白干绿标62度500ml*12瓶整箱老白干香型高度纯粮食口粮白酒"
+            },
+            {
+              "asin": "801190962445",
+              "brand": "建功酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "米香型",
+                "特产"
+              ],
+              "price": "89.0 to 246.0",
+              "rank": 28,
+              "title": "桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产"
+            },
+            {
+              "asin": "712398556539",
+              "brand": "贵州名酒批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "粮食酿造",
+                "土藏坛装酒"
+              ],
+              "price": "32.0 to 280.0",
+              "rank": 29,
+              "title": "贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒"
+            },
+            {
+              "asin": "891068888486",
+              "brand": "俄罗斯进口店",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯",
+                "进口",
+                "原装礼盒",
+                "40度",
+                "原味",
+                "酒带"
+              ],
+              "price": "99.0 to 169.0",
+              "rank": 30,
+              "title": "俄罗斯进口伏特加沙皇金银标白酒原装礼盒40度原味洋酒鸡尾酒酒带"
+            },
+            {
+              "asin": "775046019255",
+              "brand": "许昌胖东来正品代购店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "许昌胖东来超市",
+                "正品",
+                "50度",
+                "清香型",
+                "代购",
+                "纯粮酒",
+                "优质"
+              ],
+              "price": "78.0 to 478.0",
+              "rank": 31,
+              "title": "许昌胖东来超市自由爱白酒1995正品50度清香型代购纯粮酒优质整箱"
+            },
+            {
+              "asin": "640204500087",
+              "brand": "俄罗斯女孩安娜的小店",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "正宗",
+                "白俄罗斯",
+                "纯粮食酒",
+                "500ml",
+                "网红",
+                "原瓶进口"
+              ],
+              "price": "70.0 to 420.0",
+              "rank": 32,
+              "title": "正宗白俄罗斯酒白酒单瓶高度纯粮食酒网红伏特加500ml原瓶进口洋"
+            },
+            {
+              "asin": "644350293665",
+              "brand": "奇异酒类直供",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯",
+                "原装进口",
+                "大雁",
+                "猎雁",
+                "金雁",
+                "银雁"
+              ],
+              "price": "58.0 to 158.0",
+              "rank": 33,
+              "title": "俄罗斯原装进口大雁猎雁金雁银雁野鸭燕麦酒灰雁伏特加白酒网红酒"
+            },
+            {
+              "asin": "852439336577",
+              "brand": "绥芬河市哲旭食品店",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "原装进口",
+                "俄罗斯",
+                "金标",
+                "银标",
+                "绝对烈酒",
+                "高端"
+              ],
+              "price": "48.0 to 326.0",
+              "rank": 34,
+              "title": "原装进口俄罗斯沙皇伏特加53度度白酒金标银标绝对烈酒洋酒高端"
+            },
+            {
+              "asin": "675638185391",
+              "brand": "金色小树叶",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯进口",
+                "烈酒",
+                "500ml",
+                "40度"
+              ],
+              "price": "23.0 to 69.0",
+              "rank": 35,
+              "title": "3款俄罗斯进口500ml雷霆嘎巴小鸟伏特加酒40度洋酒白酒鸡尾酒烈酒"
+            },
+            {
+              "asin": "714543420511",
+              "brand": "金色小树叶",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯进口",
+                "烈性"
+              ],
+              "price": "24.0 to 93.0",
+              "rank": 36,
+              "title": "俄罗斯进口伏特加酒56度3款500ml王者系列虎头熊标鹿标洋酒白酒烈"
+            },
+            {
+              "asin": "656729880823",
+              "brand": "绥芬河自贸区桑瑜俄酒行",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯",
+                "原装",
+                "进口"
+              ],
+              "price": "18.0 to 130.0",
+              "rank": 37,
+              "title": "俄罗斯原装进口伏特加五湖源泉杜松子200ml/250ml小酒样半斤白酒"
+            },
+            {
+              "asin": "674806678100",
+              "brand": "米莎俄罗斯食品店",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "俄罗斯",
+                "原装",
+                "进口",
+                "调酒"
+              ],
+              "price": "32.0 to 195.0",
+              "rank": 38,
+              "title": "俄罗斯伏特加96度原装进口高度数白酒调酒生命之水小鸟伏特加40度"
+            },
+            {
+              "asin": "788169608502",
+              "brand": "专业外呼系统服务",
+              "category": "办公设备/耗材/相关服务›传真/通信设备›电话管理系统",
+              "key_attributes": [
+                "企业适用",
+                "电话营销",
+                "人工外呼系统",
+                "免费测试",
+                "回拨模式"
+              ],
+              "price": "13.0",
+              "rank": 39,
+              "title": "企业外呼系统免费测试人工外呼电话营销管理系统回拨模式"
+            }
+          ],
+          "query": "白酒",
+          "rank_end": 39,
+          "rank_start": 21,
+          "search_available": false,
+          "total_pages": 2,
+          "total_results": 39
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"next >\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:216ad1f1b1fec155f780b446dc3f4abd61fe76cca96c8f16e2d81b0ef328c187"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "result_set:216ad1f1b1fec155f780b446dc3f4abd61fe76cca96c8f16e2d81b0ef328c187"
+          ],
+          "evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 19,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 0,
+          "runtime_evidence_counts": {
+            "constraint": 0,
+            "option": 0,
+            "product": 0,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "result_set:216ad1f1b1fec155f780b446dc3f4abd61fe76cca96c8f16e2d81b0ef328c187"
+          ],
+          "seen_asin_count": 39,
+          "step_count": 2,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "763253474026"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 规格描述 [SEP] 52度500ml*6瓶带三个礼品袋 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 价格: 390.0 [SEP] 店铺: 潍坊好景酒业 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"52度500ml*6瓶带三个礼品袋\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "52度500ml*6瓶带三个礼品袋"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"763253474026\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:763253474026",
+            "constraint:763253474026:category:pass",
+            "constraint:763253474026:budget:pass"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:763253474026",
+            "constraint:763253474026:category:pass",
+            "constraint:763253474026:budget:pass"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 0
+          },
+          "runtime_progress_added": [
+            "product:763253474026",
+            "constraint:763253474026:category:pass",
+            "constraint:763253474026:budget:pass"
+          ],
+          "seen_asin_count": 39,
+          "step_count": 3,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 4,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Searched 白酒 (39 results, 2 pages); identified candidates near 400 RMB, including 景芝景阳春珍藏陈酿52度500ml*6瓶 at 390 (潍坊好景酒业), 景芝6年整箱 at 480, 刘伶醉陶藏4瓶装 at 519, and ranged listings 145-410 / 80-418 / 78-478."
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "content": [
+            ""
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390,
+          "subpage": "Features"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"features\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:763253474026:features"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:763253474026:features"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "runtime_progress_added": [
+            "subpage:763253474026:features"
+          ],
+          "seen_asin_count": 39,
+          "step_count": 4,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 规格描述 [SEP] 52度500ml*6瓶带三个礼品袋 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 价格: 390.0 [SEP] 店铺: 潍坊好景酒业 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"52度500ml*6瓶带三个礼品袋\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "52度500ml*6瓶带三个礼品袋"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 1
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 1
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 39,
+          "step_count": 5,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "content": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒",
+          "observation_version": "shopping-observation-v2",
+          "page_type": "information_subpage",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390,
+          "subpage": "Description"
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"description\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "subpage:763253474026:description"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "subpage:763253474026:description"
+          ],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "subpage:763253474026:description"
+          ],
+          "seen_asin_count": 39,
+          "step_count": 6,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 规格描述 [SEP] 52度500ml*6瓶带三个礼品袋 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 价格: 390.0 [SEP] 店铺: 潍坊好景酒业 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"52度500ml*6瓶带三个礼品袋\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "52度500ml*6瓶带三个礼品袋"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"< prev\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 39,
+          "step_count": 7,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 39,
+          "step_count": 8,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 10,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "酱香型白酒 500ml 6瓶 整箱"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] Page 1 of 8 (Total results: 150) [SEP] Query: 酱香型白酒 500ml 6瓶 整箱 | Normalized query: 酱香型白酒 500ml 6瓶 整箱 [SEP] Next > [SEP] 677037072010 [SEP] 整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒 [SEP] 265.0 to 1530.0 [SEP] 942002009604 [SEP] 2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装 [SEP] 1299.0 [SEP] 789356726926 [SEP] 娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒 [SEP] 1510.0 [SEP] 842479984471 [SEP] 贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼 [SEP] 1100.0 [SEP] 904076397975 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 145.0 to 410.0 [SEP] 744730914175 [SEP] 6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱 [SEP] 100.0 to 175.0 [SEP] 894678409353 [SEP] 宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水 [SEP] 1708.0 [SEP] 712398556539 [SEP] 贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒 [SEP] 32.0 to 280.0 [SEP] 863304332403 [SEP] 泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装 [SEP] 999.0 [SEP] 901847913257 [SEP] 贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼 [SEP] 285.0 [SEP] 708816069328 [SEP] 山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱 [SEP] 299.0 [SEP] 709268264088 [SEP] 父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒 [SEP] 169.0 [SEP] 788991284531 [SEP] 衡水老白干绿标62度500ml*12瓶整箱老白干香型高度纯粮食口粮白酒 [SEP] 35.0 to 155.0 [SEP] 717353168995 [SEP] 一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮 [SEP] 238.0 [SEP] 914463298892 [SEP] 景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒 [SEP] 480.0 [SEP] 763253474026 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 390.0 [SEP] 801190962445 [SEP] 桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产 [SEP] 89.0 to 246.0 [SEP] 902272419498 [SEP] 老四川酒52度500ml浓香型纯粮食酒2瓶装试饮装四川白酒高粱酒整箱 [SEP] 46.0 to 121.0 [SEP] 910039131048 [SEP] 云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒 [SEP] 238.0 to 695.0 [SEP] 776977766658 [SEP] 2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶 [SEP] 610.0 to 3600.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"677037072010\", \"942002009604\", \"789356726926\", \"842479984471\", \"904076397975\", \"744730914175\", \"894678409353\", \"712398556539\", \"863304332403\", \"901847913257\", \"708816069328\", \"709268264088\", \"788991284531\", \"717353168995\", \"914463298892\", \"763253474026\", \"801190962445\", \"902272419498\", \"910039131048\", \"776977766658\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "677037072010",
+            "942002009604",
+            "789356726926",
+            "842479984471",
+            "904076397975",
+            "744730914175",
+            "894678409353",
+            "712398556539",
+            "863304332403",
+            "901847913257",
+            "708816069328",
+            "709268264088",
+            "788991284531",
+            "717353168995",
+            "914463298892",
+            "763253474026",
+            "801190962445",
+            "902272419498",
+            "910039131048",
+            "776977766658"
+          ],
+          "normalized_query": "酱香型白酒 500ml 6瓶 整箱",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "677037072010",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "整箱",
+                "六瓶",
+                "六年",
+                "坤沙",
+                "53度",
+                "酱香型",
+                "原浆",
+                "老酒"
+              ],
+              "price": "265.0 to 1530.0",
+              "rank": 1,
+              "title": "整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒"
+            },
+            {
+              "asin": "942002009604",
+              "brand": "英汉酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2020年",
+                "53度",
+                "酱香型"
+              ],
+              "price": "1299.0",
+              "rank": 2,
+              "title": "2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装"
+            },
+            {
+              "asin": "789356726926",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "酱香型",
+                "53度",
+                "500ml",
+                "盒装"
+              ],
+              "price": "1510.0",
+              "rank": 3,
+              "title": "娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒"
+            },
+            {
+              "asin": "842479984471",
+              "brand": "好酒不见酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "53度",
+                "酱香型",
+                "500ml",
+                "礼盒装",
+                "商务",
+                "送礼"
+              ],
+              "price": "1100.0",
+              "rank": 4,
+              "title": "贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼"
+            },
+            {
+              "asin": "904076397975",
+              "brand": "星缘名酒汇",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "原箱",
+                "源码",
+                "贵州",
+                "正品",
+                "53度",
+                "酱香型",
+                "送礼",
+                "招待"
+              ],
+              "price": "145.0 to 410.0",
+              "rank": 5,
+              "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+            },
+            {
+              "asin": "744730914175",
+              "brand": "西湖好酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "江西",
+                "饶州",
+                "名酒",
+                "2006",
+                "固态纯粮",
+                "52度",
+                "浓香型"
+              ],
+              "price": "100.0 to 175.0",
+              "rank": 6,
+              "title": "6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱"
+            },
+            {
+              "asin": "894678409353",
+              "brand": "浩瀚名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "清香型",
+                "整箱",
+                "50度",
+                "特级"
+              ],
+              "price": "1708.0",
+              "rank": 7,
+              "title": "宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水"
+            },
+            {
+              "asin": "712398556539",
+              "brand": "贵州名酒批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "粮食酿造",
+                "土藏坛装酒"
+              ],
+              "price": "32.0 to 280.0",
+              "rank": 8,
+              "title": "贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒"
+            },
+            {
+              "asin": "863304332403",
+              "brand": "川久酒业直销店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "52度",
+                "浓香型",
+                "500ml",
+                "送礼",
+                "礼盒装"
+              ],
+              "price": "999.0",
+              "rank": 9,
+              "title": "泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装"
+            },
+            {
+              "asin": "901847913257",
+              "brand": "香坊酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "收藏",
+                "送礼"
+              ],
+              "price": "285.0",
+              "rank": 10,
+              "title": "贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼"
+            },
+            {
+              "asin": "708816069328",
+              "brand": "1919名酒企业店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "山东特产",
+                "浓香型",
+                "52度",
+                "490ml"
+              ],
+              "price": "299.0",
+              "rank": 11,
+              "title": "山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱"
+            },
+            {
+              "asin": "709268264088",
+              "brand": "豫苏酒业有限公司",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "父亲节",
+                "佳礼",
+                "高端",
+                "42度",
+                "纯粮",
+                "500ml",
+                "浓香型",
+                "礼盒"
+              ],
+              "price": "169.0",
+              "rank": 12,
+              "title": "父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒"
+            },
+            {
+              "asin": "788991284531",
+              "brand": "天泉名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "绿标",
+                "62度",
+                "老白干香型",
+                "高度",
+                "纯粮食"
+              ],
+              "price": "35.0 to 155.0",
+              "rank": 13,
+              "title": "衡水老白干绿标62度500ml*12瓶整箱老白干香型高度纯粮食口粮白酒"
+            },
+            {
+              "asin": "717353168995",
+              "brand": "安丘景酒老店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "芝麻香型",
+                "山东",
+                "10年",
+                "节日",
+                "礼品",
+                "自饮"
+              ],
+              "price": "238.0",
+              "rank": 14,
+              "title": "一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮"
+            },
+            {
+              "asin": "914463298892",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "浓香型",
+                "纯粮",
+                "节日",
+                "礼品",
+                "礼盒",
+                "山东"
+              ],
+              "price": "480.0",
+              "rank": 15,
+              "title": "景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒"
+            },
+            {
+              "asin": "763253474026",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "珍藏",
+                "陈酿",
+                "浓香型",
+                "整箱",
+                "节日",
+                "礼品",
+                "礼盒"
+              ],
+              "price": "390.0",
+              "rank": 16,
+              "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+            },
+            {
+              "asin": "801190962445",
+              "brand": "建功酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "米香型",
+                "特产"
+              ],
+              "price": "89.0 to 246.0",
+              "rank": 17,
+              "title": "桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产"
+            },
+            {
+              "asin": "902272419498",
+              "brand": "醉仙居酒水",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "四川",
+                "浓香型",
+                "高粱"
+              ],
+              "price": "46.0 to 121.0",
+              "rank": 18,
+              "title": "老四川酒52度500ml浓香型纯粮食酒2瓶装试饮装四川白酒高粱酒整箱"
+            },
+            {
+              "asin": "910039131048",
+              "brand": "兴和酒庄",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "青州",
+                "陈酿",
+                "53度",
+                "商务版",
+                "国标",
+                "酱香型",
+                "纯粮食"
+              ],
+              "price": "238.0 to 695.0",
+              "rank": 19,
+              "title": "云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒"
+            },
+            {
+              "asin": "776977766658",
+              "brand": "赤辰酒业商行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2016年",
+                "贵州",
+                " 酱香型",
+                "53度",
+                "坤沙",
+                "收藏",
+                "一瓶"
+              ],
+              "price": "610.0 to 3600.0",
+              "rank": 20,
+              "title": "2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶"
+            }
+          ],
+          "query": "酱香型白酒 500ml 6瓶 整箱",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 8,
+          "total_results": 150
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"酱香型白酒 500ml 6瓶 整箱\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 1,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 1,
+          "runtime_evidence_counts": {
+            "constraint": 2,
+            "option": 0,
+            "product": 1,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 40,
+          "step_count": 9,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 11,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Confirmed 763253474026 景芝白酒景阳春珍藏陈酿 52度 500ml*6瓶 浓香型整箱礼盒 at 390.0 RMB (店铺: 潍坊好景酒业; description/features pages empty); compared against alternatives — 景芝6年整箱 480.0, 刘伶醉陶藏4瓶 519.0, and 酱香型 ranged listings 台源酒 145-410 and 云门酱酒 238-695. Best fixed-price match near 400 remains the 390 RMB 景芝景阳春整箱."
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 12,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "904076397975"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 总净含量 [SEP] 500ml [SEP] 规格描述 [SEP] 500毫升*6瓶 [SEP] 500毫升*2瓶 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 价格: 145.0 to 410.0 [SEP] 店铺: 星缘名酒汇 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"500ml\", \"500毫升*6瓶\", \"500毫升*2瓶\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "500ml",
+            "500毫升*6瓶",
+            "500毫升*2瓶"
+          ],
+          "available_options": {
+            "总净含量": [
+              "500ml"
+            ],
+            "规格描述": [
+              "500毫升*6瓶",
+              "500毫升*2瓶"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "904076397975",
+            "brand": "星缘名酒汇",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "原箱",
+              "源码",
+              "贵州",
+              "正品",
+              "53度",
+              "酱香型",
+              "送礼",
+              "招待"
+            ],
+            "price": "145.0 to 410.0",
+            "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"904076397975\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "product:904076397975",
+            "constraint:904076397975:category:pass",
+            "constraint:904076397975:budget:unverifiable"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "product:904076397975",
+            "constraint:904076397975:category:pass",
+            "constraint:904076397975:budget:unverifiable"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 0,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "product:904076397975",
+            "constraint:904076397975:category:pass",
+            "constraint:904076397975:budget:unverifiable"
+          ],
+          "seen_asin_count": 40,
+          "step_count": 10,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 13,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "500毫升*6瓶"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 总净含量 [SEP] 500ml [SEP] 规格描述 [SEP] 500毫升*6瓶 [SEP] 500毫升*2瓶 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 价格: 410.0 [SEP] 店铺: 星缘名酒汇 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"500ml\", \"500毫升*6瓶\", \"500毫升*2瓶\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "500ml",
+            "500毫升*6瓶",
+            "500毫升*2瓶"
+          ],
+          "available_options": {
+            "总净含量": [
+              "500ml"
+            ],
+            "规格描述": [
+              "500毫升*6瓶",
+              "500毫升*2瓶"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "904076397975",
+            "brand": "星缘名酒汇",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "原箱",
+              "源码",
+              "贵州",
+              "正品",
+              "53度",
+              "酱香型",
+              "送礼",
+              "招待"
+            ],
+            "price": "145.0 to 410.0",
+            "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+          },
+          "search_available": false,
+          "selected_options": {
+            "规格描述": "500毫升*6瓶"
+          },
+          "selected_price": 410
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"500毫升*6瓶\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "option:904076397975:specification:500毫升*6瓶"
+          ],
+          "effective_result_sets": 2,
+          "evidence_added": [
+            "option:904076397975:specification:500毫升*6瓶"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "option:904076397975:specification:500毫升*6瓶"
+          ],
+          "seen_asin_count": 40,
+          "step_count": 11,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 14,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Opened alternative 904076397975 贵州台源酒 正品 53度酱香型白酒 500ml装 (店铺: 星缘名酒汇); selecting variant 500毫升*6瓶 shows price 410.0 RMB (2-bottle variant lower, range 145-410). Compared with prior candidate 763253474026 景芝景阳春珍藏陈酿 52度 500ml*6瓶 浓香型整箱 at 390.0 RMB: both are ~400 RMB 6-bottle cases; the 台源酒 is 酱香型 and matches the user's recent searches (每瓶500ml正品酱香型白酒, 每箱6瓶)."
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 15,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 2,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 2,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 4,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 40,
+          "step_count": 12,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 16,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "景芝 景阳春 珍藏陈酿 白酒"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] Page 1 of 3 (Total results: 54) [SEP] Query: 景芝 景阳春 珍藏陈酿 白酒 | Normalized query: 景芝 景阳春 珍藏陈酿 白酒 [SEP] Next > [SEP] 763253474026 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 390.0 [SEP] 749253634247 [SEP] 神仙大曲 上海老窖1608五年陈酿46度浓香型纯粮白酒500ml [SEP] 80.0 to 302.0 [SEP] 914463298892 [SEP] 景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒 [SEP] 480.0 [SEP] 717353168995 [SEP] 一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮 [SEP] 238.0 [SEP] 910039131048 [SEP] 云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒 [SEP] 238.0 to 695.0 [SEP] 817019504705 [SEP] 叙府陈酿6浓香型52度42度浓香型 [SEP] 158.0 to 948.0 [SEP] 808384136220 [SEP] 2021年云门陈酿小瓶版 流金岁月一盒5瓶53度50ml酱香型 摆柜 收藏 [SEP] 268.0 [SEP] 713195945120 [SEP] 华艳真蜻蜓标本豆娘保色素材未展翅成品礼物展示甲壳虫标本珍藏 [SEP] 8.0 to 49.0 [SEP] 731718932260 [SEP] Vivo欧喜不二可丝达奶酪酸奶巧克力蛋奶日式乳酸风味卡仕达酱馅料 [SEP] 23.0 to 165.0 [SEP] 680962132953 [SEP] 君琴古筝大师珍藏级整挖筝酸枝考级专业整挖实木古筝琴S009未央 [SEP] 190000.0 [SEP] 900695572137 [SEP] 潮宏基臻金珍藏黄金戒指足金戒圈指环手饰个性时尚潮流礼物 卟 [SEP] 9565.0 to 10502.0 [SEP] 789356726926 [SEP] 娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒 [SEP] 1510.0 [SEP] 894678409353 [SEP] 宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水 [SEP] 1708.0 [SEP] 837138903543 [SEP] 玲珑春39度白酒高度纯粮甑酿酒发酵白酒 [SEP] 39.0 to 234.0 [SEP] 868298509883 [SEP] 刘伶醉陶藏系列42度500毫升纯粮优级白酒一箱4瓶 [SEP] 519.0 [SEP] 942002009604 [SEP] 2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装 [SEP] 1299.0 [SEP] 708816069328 [SEP] 山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱 [SEP] 299.0 [SEP] 842479984471 [SEP] 贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼 [SEP] 1100.0 [SEP] 677037072010 [SEP] 整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒 [SEP] 265.0 to 1530.0 [SEP] 901847913257 [SEP] 贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼 [SEP] 285.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"763253474026\", \"749253634247\", \"914463298892\", \"717353168995\", \"910039131048\", \"817019504705\", \"808384136220\", \"713195945120\", \"731718932260\", \"680962132953\", \"900695572137\", \"789356726926\", \"894678409353\", \"837138903543\", \"868298509883\", \"942002009604\", \"708816069328\", \"842479984471\", \"677037072010\", \"901847913257\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "763253474026",
+            "749253634247",
+            "914463298892",
+            "717353168995",
+            "910039131048",
+            "817019504705",
+            "808384136220",
+            "713195945120",
+            "731718932260",
+            "680962132953",
+            "900695572137",
+            "789356726926",
+            "894678409353",
+            "837138903543",
+            "868298509883",
+            "942002009604",
+            "708816069328",
+            "842479984471",
+            "677037072010",
+            "901847913257"
+          ],
+          "normalized_query": "景芝 景阳春 珍藏陈酿 白酒",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "763253474026",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "珍藏",
+                "陈酿",
+                "浓香型",
+                "整箱",
+                "节日",
+                "礼品",
+                "礼盒"
+              ],
+              "price": "390.0",
+              "rank": 1,
+              "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+            },
+            {
+              "asin": "749253634247",
+              "brand": "第一物选店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "五年",
+                "陈酿",
+                "浓香型",
+                "纯粮",
+                "500ml"
+              ],
+              "price": "80.0 to 302.0",
+              "rank": 2,
+              "title": "神仙大曲 上海老窖1608五年陈酿46度浓香型纯粮白酒500ml"
+            },
+            {
+              "asin": "914463298892",
+              "brand": "潍坊好景酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "浓香型",
+                "纯粮",
+                "节日",
+                "礼品",
+                "礼盒",
+                "山东"
+              ],
+              "price": "480.0",
+              "rank": 3,
+              "title": "景芝6年52度500ml*6瓶整箱 浓香型纯粮白酒节日礼品礼盒山东酒"
+            },
+            {
+              "asin": "717353168995",
+              "brand": "安丘景酒老店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "芝麻香型",
+                "山东",
+                "10年",
+                "节日",
+                "礼品",
+                "自饮"
+              ],
+              "price": "238.0",
+              "rank": 4,
+              "title": "一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮"
+            },
+            {
+              "asin": "910039131048",
+              "brand": "兴和酒庄",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "青州",
+                "陈酿",
+                "53度",
+                "商务版",
+                "国标",
+                "酱香型",
+                "纯粮食"
+              ],
+              "price": "238.0 to 695.0",
+              "rank": 5,
+              "title": "云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒"
+            },
+            {
+              "asin": "817019504705",
+              "brand": "杰作盛誉酒行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "浓香型"
+              ],
+              "price": "158.0 to 948.0",
+              "rank": 6,
+              "title": "叙府陈酿6浓香型52度42度浓香型"
+            },
+            {
+              "asin": "808384136220",
+              "brand": "山东云海酒行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2021年",
+                "小瓶版",
+                "53度",
+                "酱香型",
+                "摆柜收藏"
+              ],
+              "price": "268.0",
+              "rank": 7,
+              "title": "2021年云门陈酿小瓶版 流金岁月一盒5瓶53度50ml酱香型 摆柜 收藏"
+            },
+            {
+              "asin": "713195945120",
+              "brand": "音无结弦",
+              "category": "家居饰品›装饰画›标本类装饰画",
+              "key_attributes": [
+                "保色素材",
+                "成品",
+                "礼物",
+                "展示",
+                "珍藏"
+              ],
+              "price": "8.0 to 49.0",
+              "rank": 8,
+              "title": "华艳真蜻蜓标本豆娘保色素材未展翅成品礼物展示甲壳虫标本珍藏"
+            },
+            {
+              "asin": "731718932260",
+              "brand": "沈阳春树食品店",
+              "category": "粮油调味/速食/干货/烘焙›烘焙原料/辅料/食品添加剂›烘培原料›烘焙馅料",
+              "key_attributes": [
+                "欧喜",
+                "卡仕达馅料"
+              ],
+              "price": "23.0 to 165.0",
+              "rank": 9,
+              "title": "Vivo欧喜不二可丝达奶酪酸奶巧克力蛋奶日式乳酸风味卡仕达酱馅料"
+            },
+            {
+              "asin": "680962132953",
+              "brand": "君琴旗舰店",
+              "category": "乐器/吉他/钢琴/配件›民族乐器›民族弹拨乐器›古筝",
+              "key_attributes": [
+                "整挖",
+                "考级",
+                "专业",
+                "实木"
+              ],
+              "price": "190000.0",
+              "rank": 10,
+              "title": "君琴古筝大师珍藏级整挖筝酸枝考级专业整挖实木古筝琴S009未央"
+            },
+            {
+              "asin": "900695572137",
+              "brand": "潮宏基珠宝旗舰店",
+              "category": "黄金›工艺黄金›细金工艺计价黄金›细金工艺计价黄金戒指",
+              "key_attributes": [
+                "足金",
+                "个性",
+                "礼物"
+              ],
+              "price": "9565.0 to 10502.0",
+              "rank": 11,
+              "title": "潮宏基臻金珍藏黄金戒指足金戒圈指环手饰个性时尚潮流礼物 卟"
+            },
+            {
+              "asin": "789356726926",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "酱香型",
+                "53度",
+                "500ml",
+                "盒装"
+              ],
+              "price": "1510.0",
+              "rank": 12,
+              "title": "娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒"
+            },
+            {
+              "asin": "894678409353",
+              "brand": "浩瀚名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "清香型",
+                "整箱",
+                "50度",
+                "特级"
+              ],
+              "price": "1708.0",
+              "rank": 13,
+              "title": "宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水"
+            },
+            {
+              "asin": "837138903543",
+              "brand": "来炼酒馆",
+              "category": "酒类›洋酒›伏特加/Vodka",
+              "key_attributes": [
+                "39度",
+                "纯粮",
+                "发酵"
+              ],
+              "price": "39.0 to 234.0",
+              "rank": 14,
+              "title": "玲珑春39度白酒高度纯粮甑酿酒发酵白酒"
+            },
+            {
+              "asin": "868298509883",
+              "brand": "众诚酒类销售",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "500毫升",
+                "纯粮",
+                "优级"
+              ],
+              "price": "519.0",
+              "rank": 15,
+              "title": "刘伶醉陶藏系列42度500毫升纯粮优级白酒一箱4瓶"
+            },
+            {
+              "asin": "942002009604",
+              "brand": "英汉酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2020年",
+                "53度",
+                "酱香型"
+              ],
+              "price": "1299.0",
+              "rank": 16,
+              "title": "2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装"
+            },
+            {
+              "asin": "708816069328",
+              "brand": "1919名酒企业店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "山东特产",
+                "浓香型",
+                "52度",
+                "490ml"
+              ],
+              "price": "299.0",
+              "rank": 17,
+              "title": "山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱"
+            },
+            {
+              "asin": "842479984471",
+              "brand": "好酒不见酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "53度",
+                "酱香型",
+                "500ml",
+                "礼盒装",
+                "商务",
+                "送礼"
+              ],
+              "price": "1100.0",
+              "rank": 18,
+              "title": "贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼"
+            },
+            {
+              "asin": "677037072010",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "整箱",
+                "六瓶",
+                "六年",
+                "坤沙",
+                "53度",
+                "酱香型",
+                "原浆",
+                "老酒"
+              ],
+              "price": "265.0 to 1530.0",
+              "rank": 19,
+              "title": "整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒"
+            },
+            {
+              "asin": "901847913257",
+              "brand": "香坊酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "收藏",
+                "送礼"
+              ],
+              "price": "285.0",
+              "rank": 20,
+              "title": "贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼"
+            }
+          ],
+          "query": "景芝 景阳春 珍藏陈酿 白酒",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 3,
+          "total_results": 54
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"景芝 景阳春 珍藏陈酿 白酒\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [
+            "result_set:ec34476c4a2b5298a2741e9139fd68b934bd6c68c46c5820e509452dc0de64ce"
+          ],
+          "effective_result_sets": 3,
+          "evidence_added": [
+            "result_set:ec34476c4a2b5298a2741e9139fd68b934bd6c68c46c5820e509452dc0de64ce"
+          ],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 6,
+          "no_progress_steps": 0,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 5,
+            "subpage": 2
+          },
+          "runtime_progress_added": [
+            "result_set:ec34476c4a2b5298a2741e9139fd68b934bd6c68c46c5820e509452dc0de64ce"
+          ],
+          "seen_asin_count": 46,
+          "step_count": 13,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 17,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "763253474026"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 规格描述 [SEP] 52度500ml*6瓶带三个礼品袋 [SEP] 景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒 [SEP] 价格: 390.0 [SEP] 店铺: 潍坊好景酒业 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"52度500ml*6瓶带三个礼品袋\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "52度500ml*6瓶带三个礼品袋"
+          ],
+          "available_options": {
+            "规格描述": [
+              "52度500ml*6瓶带三个礼品袋"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "763253474026",
+            "brand": "潍坊好景酒业",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "珍藏",
+              "陈酿",
+              "浓香型",
+              "整箱",
+              "节日",
+              "礼品",
+              "礼盒"
+            ],
+            "price": "390.0",
+            "title": "景芝白酒景阳春珍藏陈酿52度500ml*6瓶浓香型整箱节日礼品礼盒"
+          },
+          "search_available": false,
+          "selected_options": {},
+          "selected_price": 390
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"763253474026\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 1,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 5,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 46,
+          "step_count": 14,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 18,
+      "tool_name": "mea_round_report",
+      "tool_args": {
+        "summary": "Re-opened 763253474026 confirming current price 390.0 RMB with spec 52度/500ml*6瓶/浓香型整箱带三个礼品袋 (店铺: 潍坊好景酒业); grounded comparison vs 台源酒 53度酱香型 500ml*6瓶 at 410.0 RMB (店铺: 星缘名酒汇) — both are 6-bottle cases straddling 400 RMB, 景芝 is 浓香型 390 (10 below), 台源 is 酱香型 410 (10 above) and matches the user's recent 酱香型/每箱6瓶 searches."
+      },
+      "raw": {
+        "raw_missing": true
+      }
+    },
+    {
+      "step": 19,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "back to search"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "WebShop [SEP] Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Search\n\n搜索功能是否可用: True\n\n可点击的按钮: []",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "search"
+          ],
+          "observation_version": "shopping-observation-v2",
+          "page_type": "search_home",
+          "search_available": true
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"back to search\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 2,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 5,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 46,
+          "step_count": 15,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 20,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "台源酒 酱香型白酒"
+      },
+      "raw": {
+        "done": false,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] Page 1 of 6 (Total results: 103) [SEP] Query: 台源酒 酱香型白酒 | Normalized query: 台源酒 酱香型白酒 [SEP] Next > [SEP] 904076397975 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 145.0 to 410.0 [SEP] 789356726926 [SEP] 娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒 [SEP] 1510.0 [SEP] 942002009604 [SEP] 2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装 [SEP] 1299.0 [SEP] 842479984471 [SEP] 贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼 [SEP] 1100.0 [SEP] 677037072010 [SEP] 整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒 [SEP] 265.0 to 1530.0 [SEP] 901847913257 [SEP] 贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼 [SEP] 285.0 [SEP] 776977766658 [SEP] 2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶 [SEP] 610.0 to 3600.0 [SEP] 712398556539 [SEP] 贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒 [SEP] 32.0 to 280.0 [SEP] 894678409353 [SEP] 宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水 [SEP] 1708.0 [SEP] 708816069328 [SEP] 山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱 [SEP] 299.0 [SEP] 709268264088 [SEP] 父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒 [SEP] 169.0 [SEP] 744730914175 [SEP] 6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱 [SEP] 100.0 to 175.0 [SEP] 717353168995 [SEP] 一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮 [SEP] 238.0 [SEP] 863304332403 [SEP] 泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装 [SEP] 999.0 [SEP] 801190962445 [SEP] 桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产 [SEP] 89.0 to 246.0 [SEP] 801909837125 [SEP] 金沙古酒私藏御享53度酱香型整箱750ml*2瓶正品木箱装坤沙老酒 [SEP] 2150.0 [SEP] 808384136220 [SEP] 2021年云门陈酿小瓶版 流金岁月一盒5瓶53度50ml酱香型 摆柜 收藏 [SEP] 268.0 [SEP] 910039131048 [SEP] 云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒 [SEP] 238.0 to 695.0 [SEP] 860318049181 [SEP] 量大优惠500mlx6临川贡酒高贡葫芦瓶50度醇爽型白酒江西产 [SEP] 348.0 [SEP] 792256035032 [SEP] 庄子酒 庄子漆园春30 蓝瓶 53度 500ml 芝麻香型纯粮白酒 [SEP] 4810.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"904076397975\", \"789356726926\", \"942002009604\", \"842479984471\", \"677037072010\", \"901847913257\", \"776977766658\", \"712398556539\", \"894678409353\", \"708816069328\", \"709268264088\", \"744730914175\", \"717353168995\", \"863304332403\", \"801190962445\", \"801909837125\", \"808384136220\", \"910039131048\", \"860318049181\", \"792256035032\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "next >",
+            "904076397975",
+            "789356726926",
+            "942002009604",
+            "842479984471",
+            "677037072010",
+            "901847913257",
+            "776977766658",
+            "712398556539",
+            "894678409353",
+            "708816069328",
+            "709268264088",
+            "744730914175",
+            "717353168995",
+            "863304332403",
+            "801190962445",
+            "801909837125",
+            "808384136220",
+            "910039131048",
+            "860318049181",
+            "792256035032"
+          ],
+          "normalized_query": "台源酒 酱香型白酒",
+          "observation_version": "shopping-observation-v2",
+          "page": 1,
+          "page_type": "search_results",
+          "products": [
+            {
+              "asin": "904076397975",
+              "brand": "星缘名酒汇",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "原箱",
+                "源码",
+                "贵州",
+                "正品",
+                "53度",
+                "酱香型",
+                "送礼",
+                "招待"
+              ],
+              "price": "145.0 to 410.0",
+              "rank": 1,
+              "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+            },
+            {
+              "asin": "789356726926",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "酱香型",
+                "53度",
+                "500ml",
+                "盒装"
+              ],
+              "price": "1510.0",
+              "rank": 2,
+              "title": "娃哈哈酱香型白酒领酱国酒.福酱53度酱香型白酒500ml盒装酒"
+            },
+            {
+              "asin": "942002009604",
+              "brand": "英汉酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2020年",
+                "53度",
+                "酱香型"
+              ],
+              "price": "1299.0",
+              "rank": 3,
+              "title": "2020年肆拾玖坊侠义酒53度酱香型白酒整箱6瓶装"
+            },
+            {
+              "asin": "842479984471",
+              "brand": "好酒不见酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "53度",
+                "酱香型",
+                "500ml",
+                "礼盒装",
+                "商务",
+                "送礼"
+              ],
+              "price": "1100.0",
+              "rank": 4,
+              "title": "贵酒银樽53度酱香型白酒500ml6瓶礼盒装整箱商务送礼"
+            },
+            {
+              "asin": "677037072010",
+              "brand": "好多酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "整箱",
+                "六瓶",
+                "六年",
+                "坤沙",
+                "53度",
+                "酱香型",
+                "原浆",
+                "老酒"
+              ],
+              "price": "265.0 to 1530.0",
+              "rank": 5,
+              "title": "整箱六瓶陈厚六年大曲坤沙53度酱香型白酒 500ml原浆老酒"
+            },
+            {
+              "asin": "901847913257",
+              "brand": "香坊酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "收藏",
+                "送礼"
+              ],
+              "price": "285.0",
+              "rank": 6,
+              "title": "贵州金酱传承工匠 53度酱香型500ML*4瓶整箱国产白酒收藏送礼"
+            },
+            {
+              "asin": "776977766658",
+              "brand": "赤辰酒业商行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2016年",
+                "贵州",
+                " 酱香型",
+                "53度",
+                "坤沙",
+                "收藏",
+                "一瓶"
+              ],
+              "price": "610.0 to 3600.0",
+              "rank": 7,
+              "title": "2016年贵州汉王酒 古台御酱香型53度白酒坤沙酒酒质收藏老酒一瓶"
+            },
+            {
+              "asin": "712398556539",
+              "brand": "贵州名酒批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "贵州",
+                "53度",
+                "酱香型",
+                "粮食酿造",
+                "土藏坛装酒"
+              ],
+              "price": "32.0 to 280.0",
+              "rank": 8,
+              "title": "贵州白酒老土酒酱香酒坛子酒53度酱香型500ml粮食酿造土藏坛装酒"
+            },
+            {
+              "asin": "894678409353",
+              "brand": "浩瀚名酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "清香型",
+                "整箱",
+                "50度",
+                "特级"
+              ],
+              "price": "1708.0",
+              "rank": 9,
+              "title": "宝丰国色清香500ml*6瓶整箱陈坛35清香型白酒50度特级酒水"
+            },
+            {
+              "asin": "708816069328",
+              "brand": "1919名酒企业店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "山东特产",
+                "浓香型",
+                "52度",
+                "490ml"
+              ],
+              "price": "299.0",
+              "rank": 10,
+              "title": "山东特产百脉泉 泉城印象浓香型白酒52度490ml*6瓶整箱"
+            },
+            {
+              "asin": "709268264088",
+              "brand": "豫苏酒业有限公司",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "父亲节",
+                "佳礼",
+                "高端",
+                "42度",
+                "纯粮",
+                "500ml",
+                "浓香型",
+                "礼盒"
+              ],
+              "price": "169.0",
+              "rank": 11,
+              "title": "父亲节佳礼交天下1668高端42度6瓶纯粮500ml浓香型白酒礼盒纯粮酒"
+            },
+            {
+              "asin": "744730914175",
+              "brand": "西湖好酒",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "江西",
+                "饶州",
+                "名酒",
+                "2006",
+                "固态纯粮",
+                "52度",
+                "浓香型"
+              ],
+              "price": "100.0 to 175.0",
+              "rank": 12,
+              "title": "6瓶【江西名酒】饶州酒2006固态纯粮酿造52度浓香型白酒500ml整箱"
+            },
+            {
+              "asin": "717353168995",
+              "brand": "安丘景酒老店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "芝麻香型",
+                "山东",
+                "10年",
+                "节日",
+                "礼品",
+                "自饮"
+              ],
+              "price": "238.0",
+              "rank": 13,
+              "title": "一品景芝芝香10年53度500ml*1瓶芝麻香型白酒山东节日礼品自饮"
+            },
+            {
+              "asin": "863304332403",
+              "brand": "川久酒业直销店",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "52度",
+                "浓香型",
+                "500ml",
+                "送礼",
+                "礼盒装"
+              ],
+              "price": "999.0",
+              "rank": 14,
+              "title": "泸州传世窖池一马腾飞52度浓香型白酒500ml*6瓶节日送礼/礼盒装"
+            },
+            {
+              "asin": "801190962445",
+              "brand": "建功酒业",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "米香型",
+                "特产"
+              ],
+              "price": "89.0 to 246.0",
+              "rank": 15,
+              "title": "桂林老三花酒珍品20洞藏52度米香型白酒500ml/瓶漓江牌桂林特产"
+            },
+            {
+              "asin": "801909837125",
+              "brand": "贵州名酒批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "53度",
+                "酱香型",
+                "正品",
+                "木箱装",
+                "坤沙",
+                "老酒"
+              ],
+              "price": "2150.0",
+              "rank": 16,
+              "title": "金沙古酒私藏御享53度酱香型整箱750ml*2瓶正品木箱装坤沙老酒"
+            },
+            {
+              "asin": "808384136220",
+              "brand": "山东云海酒行",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "2021年",
+                "小瓶版",
+                "53度",
+                "酱香型",
+                "摆柜收藏"
+              ],
+              "price": "268.0",
+              "rank": 17,
+              "title": "2021年云门陈酿小瓶版 流金岁月一盒5瓶53度50ml酱香型 摆柜 收藏"
+            },
+            {
+              "asin": "910039131048",
+              "brand": "兴和酒庄",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "青州",
+                "陈酿",
+                "53度",
+                "商务版",
+                "国标",
+                "酱香型",
+                "纯粮食"
+              ],
+              "price": "238.0 to 695.0",
+              "rank": 18,
+              "title": "云门酱酒青州陈酿53度商务版国标酱香型500ml/瓶纯粮食酒云门酱酒"
+            },
+            {
+              "asin": "860318049181",
+              "brand": "实体超市食品酒水批发",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "量大",
+                "优惠",
+                "葫芦瓶",
+                "50度",
+                "醇爽型",
+                "江西产"
+              ],
+              "price": "348.0",
+              "rank": 19,
+              "title": "量大优惠500mlx6临川贡酒高贡葫芦瓶50度醇爽型白酒江西产"
+            },
+            {
+              "asin": "792256035032",
+              "brand": "冀南名酒商城",
+              "category": "酒类›其他酒类",
+              "key_attributes": [
+                "蓝瓶",
+                "53度",
+                "500ml",
+                "芝麻香型",
+                "纯粮"
+              ],
+              "price": "4810.0",
+              "rank": 20,
+              "title": "庄子酒 庄子漆园春30 蓝瓶 53度 500ml 芝麻香型纯粮白酒"
+            }
+          ],
+          "query": "台源酒 酱香型白酒",
+          "rank_end": 20,
+          "rank_start": 1,
+          "search_available": false,
+          "total_pages": 6,
+          "total_results": 103
+        },
+        "over": false,
+        "progress": {
+          "action_signature": "{\"action\":\"search\",\"argument\":\"台源酒 酱香型白酒\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 1,
+          "no_progress_steps": 3,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 6,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 47,
+          "step_count": 16,
+          "termination_reason": null,
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": 0,
+        "reward_detail": {}
+      }
+    },
+    {
+      "step": 21,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "904076397975"
+      },
+      "raw": {
+        "done": true,
+        "env_idx": 0,
+        "goal": {},
+        "idx": "slot-0-623",
+        "instruction": "Instruction: [SEP] 挑选一款价格在400元左右的白酒。 [SEP] Back to Search [SEP] < Prev [SEP] 总净含量 [SEP] 500ml [SEP] 规格描述 [SEP] 500毫升*6瓶 [SEP] 500毫升*2瓶 [SEP] 【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待 [SEP] 价格: 145.0 to 410.0 [SEP] 店铺: 星缘名酒汇 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"500ml\", \"500毫升*6瓶\", \"500毫升*2瓶\"]",
+        "message": "Continue interaction",
+        "observation_state": {
+          "actions": [
+            "back to search",
+            "< prev",
+            "description",
+            "features",
+            "reviews",
+            "buy now",
+            "500ml",
+            "500毫升*6瓶",
+            "500毫升*2瓶"
+          ],
+          "available_options": {
+            "总净含量": [
+              "500ml"
+            ],
+            "规格描述": [
+              "500毫升*6瓶",
+              "500毫升*2瓶"
+            ]
+          },
+          "observation_version": "shopping-observation-v2",
+          "page_type": "product_detail",
+          "product": {
+            "asin": "904076397975",
+            "brand": "星缘名酒汇",
+            "category": "酒类›其他酒类",
+            "key_attributes": [
+              "原箱",
+              "源码",
+              "贵州",
+              "正品",
+              "53度",
+              "酱香型",
+              "送礼",
+              "招待"
+            ],
+            "price": "145.0 to 410.0",
+            "title": "【原箱源码】贵州台源酒 正品 53度酱香型白酒500ml装送礼招待"
+          },
+          "search_available": false,
+          "selected_options": {}
+        },
+        "over": true,
+        "progress": {
+          "action_signature": "{\"action\":\"click\",\"argument\":\"904076397975\"}",
+          "consecutive_repeats": 0,
+          "credited_evidence_added": [],
+          "effective_result_sets": 3,
+          "evidence_added": [],
+          "evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 3,
+            "subpage": 2
+          },
+          "new_asin_count": 0,
+          "no_progress_steps": 4,
+          "opened_candidate_count": 2,
+          "runtime_evidence_counts": {
+            "constraint": 4,
+            "option": 1,
+            "product": 2,
+            "result_set": 6,
+            "subpage": 2
+          },
+          "runtime_progress_added": [],
+          "seen_asin_count": 47,
+          "step_count": 17,
+          "termination_reason": "repeat_loop",
+          "termination_version": "shopping-termination-v3"
+        },
+        "purchase": {},
+        "reward": -0.65,
+        "reward_detail": {
+          "dimension_scores": {},
+          "evidence": {},
+          "evidence_coverage": 0,
+          "hard_gates": {},
+          "purchase_success": false,
+          "reward": -0.65,
+          "reward_type": "repeat_loop",
+          "reward_valid": true,
+          "reward_version": "shopsimulator-reward-v3",
+          "sampling_invalid": false,
+          "target_asin_match": false,
+          "terminal_utility": -0.65,
+          "termination_reason": "repeat_loop",
+          "weighted_score": 0
+        },
+        "reward_valid": true,
+        "termination_reason": "repeat_loop"
+      }
+    }
+  ],
+  "terminal_protocol": "terminal-protocol-v2",
+  "requirement_events": []
+}

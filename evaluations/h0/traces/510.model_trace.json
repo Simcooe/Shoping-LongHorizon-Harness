@@ -1,0 +1,101 @@
+{
+  "task": "找一款场效应管，单只价格在一元左右，想要五只。\n\n用户画像（长期偏好，仅供参考；用户当前明确表达优先于画像）：\n{\"交易特征\": {\"优惠券使用率\": 0.3, \"复购率\": 0.58, \"平均客单价\": 65.22, \"支付方式偏好\": \"支付宝\", \"是否促销敏感\": true, \"近30天消费金额\": 782.6, \"近90天订单数\": 12}, \"人口属性\": {\"会员等级\": \"黄金会员\", \"年龄段\": \"25-34, \", \"性别\": \"男\", \"消费等级\": \"中\"}, \"兴趣偏好\": {\"品牌偏好\": [{\"偏好程度\": \"高\", \"品牌名称\": \"STMicroelectronics\"}, {\"偏好程度\": \"高\", \"品牌名称\": \"Arduino\"}, {\"偏好程度\": \"中\", \"品牌名称\": \"德州仪器(TI)\"}, {\"偏好程度\": \"低\", \"品牌名称\": \"Anker\"}], \"商品属性偏好\": {\"价格区间\": {\"最大值\": 399, \"最小值\": 1}, \"功能\": [\"高耐压\"], \"尺码偏好\": {\"上衣\": \", \", \"内衣\": \", \", \"裙装\": \", \", \"裤子\": \", \", \"鞋码\": \", \"}, \"材质\": [\"PCB\", \"ABS\", \"铝合金\"], \"颜色\": [\"黑色\", \"绿色\"], \"风格\": [\"简约\"]}, \"类目偏好\": {\"DIY工具\": \"高\", \"图书音像\": \"中\", \"家居生活\": \"低\", \"户外运动\": \"低\", \"电子元器件\": \"高\"}}, \"地区信息\": {\"区县\": \"涪城区\", \"城市\": \"绵阳市\", \"时区\": \"Asia/Shanghai\", \"省份\": \"四川省\"}, \"最后更新时间\": \"2024-06-26T08:15:00Z\", \"注册时间\": \"2021-04-17T09:26:43Z\", \"注册渠道\": \"H5网页\", \"用户ID\": \"U85392714, \", \"用户标签\": [\"电子DIY达人\", \"极客Maker\", \"价格敏感\", \"中小批量采购\", \"高活跃夜猫子\", \"复购潜力\", \"技术论坛活跃\"], \"行为特征\": {\"常用设备\": \"PC电脑\", \"日均浏览时长\": 3420, \"最近14天关注店铺\": [], \"最近14天加购商品\": [], \"最近14天搜索关键词\": [\"可承受150伏的电压、20安培电流的场效应管\"], \"最近14天收藏商品\": [], \"活跃时间段\": [10, 13, 22], \"近7天访问次数\": 18}}",
+  "step_count": 9,
+  "steps": [
+    {
+      "step": 1,
+      "tool_name": "ask_shopper",
+      "tool_args": {
+        "question": "您好！您要找场效应管（MOSFET），单只约1元、买5只。请问对规格有什么具体要求吗？比如从您近期的搜索看，是需要耐压150V、电流20A的型号吗？另外有偏好的封装（如TO-220、TO-252等）吗？"
+      },
+      "observation": "用户回复：对，我就是要找耐压150V、电流20A的场效应管。封装最好是TO-252的，我有用。"
+    },
+    {
+      "step": 2,
+      "tool_name": "search",
+      "tool_args": {
+        "keywords": "场效应管 MOSFET 150V 20A TO-252"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] Page 1 of 5 (Total results: 82) [SEP] Query: 场效应管 mosfet 150v 20a to-252 | Normalized query: 场效应管 mosfet 150v 20a to-252 [SEP] Next > [SEP] 798764985196 [SEP] 30N06/40N06/50N06 N沟道MOSFET场效应管 贴片TO-252 60V/30A/50A [SEP] 2.0 to 3.0 [SEP] 620782083994 [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K [SEP] 4.0 to 5.0 [SEP] 872250642752 [SEP] MOS管 场效应管 NCE1540K/3050K/3080K/4060K/6075K/7560K TO-252 [SEP] 2.0 to 8.0 [SEP] 696100594488 [SEP] 全新原装正品 NCE3080K 贴片TO-252 N沟道MOS场效应管芯片30V 80A [SEP] 5.0 to 40.0 [SEP] 943941171023 [SEP] DMG6968UQ-7-VB SOT-23 N 30V 6.5A 场效应管 [SEP] 0.0 [SEP] 943319347679 [SEP] 全新原装 SI1304BDL-T1-GE3 丝印:KF* MOS 场效应管 贴片SOT-323 [SEP] 0.0 to 1.0 [SEP] 560693959175 [SEP] 进口全新原装IRFB3607 IRFB3206 场效应管 75V 80A 绝非国产 [SEP] 1.0 to 2.0 [SEP] 848300046045 [SEP] IRFP240 IRFP9240原装全新音频功放对管可代2SK1530J201场效应管 [SEP] 6.0 to 13.0 [SEP] 569298167952 [SEP] 全新原装进口 IRFZ44N 场效应管 1RFZ44N TO-220 IRFZ44 正品 [SEP] 5.0 [SEP] 43612270180 [SEP] IRF3205 F3205 全新原装进口 场效应管 [SEP] 6.0 to 9.0 [SEP] 849768225838 [SEP] 全新贴片三极管 BSS84 丝印PD SOT23 场效应管 MOS管 [SEP] 1.0 to 120.0 [SEP] 754365908357 [SEP] 全新原装 3N150 STFW 3N150 焊机辅电开关管 场效应管 [SEP] 3.0 [SEP] 579172158002 [SEP] 全新IRF4905=IRF4905PBF场效应管P沟道MOS管 55V74A TO-220 [SEP] 0.0 to 3.0 [SEP] 43642830079 [SEP] 进口原装IRF9540N P沟道场效应管F9540N 23A 100V 绝非国产 [SEP] 1.0 [SEP] 671735367526 [SEP] K3878 2SK3878 全新 原装 9A 900V 场效应管 电焊机 电源 常用 [SEP] 3.0 [SEP] 687046792222 [SEP] 进口原字全测 AOTL66912 丝印66912 贴片 100V380A MOS场效应管 [SEP] 1.0 to 60.0 [SEP] 694234436531 [SEP] (20个)AO3415 丝印3415/AE9T/AF4E P沟道 MOS场效应管 贴片SOT-23 [SEP] 1.0 [SEP] 647716829066 [SEP] FQP4N60C/5N60C/6N60C/7N60/8N60C/10N60C/12N60C/20N60C场效应管 [SEP] 3.0 to 8.0 [SEP] 17240559785 [SEP] K3878MOS管开关电源焊机场效应管2SK3878东芝原装全新场管13N90 [SEP] 3.0 to 6.0 [SEP] 661664488562 [SEP] YGW40N65F1 YGW50N65F1 YGW60N65F1 IGBT场效应管 现货可直拍 [SEP] 3.0 to 4.0\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"next >\", \"798764985196\", \"620782083994\", \"872250642752\", \"696100594488\", \"943941171023\", \"943319347679\", \"560693959175\", \"848300046045\", \"569298167952\", \"43612270180\", \"849768225838\", \"754365908357\", \"579172158002\", \"43642830079\", \"671735367526\", \"687046792222\", \"694234436531\", \"647716829066\", \"17240559785\", \"661664488562\"]"
+    },
+    {
+      "step": 3,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "620782083994"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] nce7075k 70v | 75a n沟道(5只) [SEP] nce1520k 150v | 20a n沟道(5只) [SEP] nce65r1k2k 650v4a n沟道(5只) [SEP] nce40h12k 40v | 120a n沟道(5只) [SEP] nce3090k 30v | 90a n沟道(5只) [SEP] nce3080k 30v | 80a n沟道(5只) [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K [SEP] 价格: 4.0 to 5.0 [SEP] 店铺: 深圳市讯华微电子有限公司 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"nce7075k 70v | 75a n沟道(5只)\", \"nce1520k 150v | 20a n沟道(5只)\", \"nce65r1k2k 650v4a n沟道(5只)\", \"nce40h12k 40v | 120a n沟道(5只)\", \"nce3090k 30v | 90a n沟道(5只)\", \"nce3080k 30v | 80a n沟道(5只)\"]"
+    },
+    {
+      "step": 4,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "nce1520k 150v | 20a n沟道(5只)"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] nce7075k 70v | 75a n沟道(5只) [SEP] nce1520k 150v | 20a n沟道(5只) [SEP] nce65r1k2k 650v4a n沟道(5只) [SEP] nce40h12k 40v | 120a n沟道(5只) [SEP] nce3090k 30v | 90a n沟道(5只) [SEP] nce3080k 30v | 80a n沟道(5只) [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K [SEP] 价格: 5.0 [SEP] 店铺: 深圳市讯华微电子有限公司 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"nce7075k 70v | 75a n沟道(5只)\", \"nce1520k 150v | 20a n沟道(5只)\", \"nce65r1k2k 650v4a n沟道(5只)\", \"nce40h12k 40v | 120a n沟道(5只)\", \"nce3090k 30v | 90a n沟道(5只)\", \"nce3080k 30v | 80a n沟道(5只)\"]"
+    },
+    {
+      "step": 5,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "features"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] \n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]"
+    },
+    {
+      "step": 6,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] nce7075k 70v | 75a n沟道(5只) [SEP] nce1520k 150v | 20a n沟道(5只) [SEP] nce65r1k2k 650v4a n沟道(5只) [SEP] nce40h12k 40v | 120a n沟道(5只) [SEP] nce3090k 30v | 90a n沟道(5只) [SEP] nce3080k 30v | 80a n沟道(5只) [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K [SEP] 价格: 5.0 [SEP] 店铺: 深圳市讯华微电子有限公司 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"nce7075k 70v | 75a n沟道(5只)\", \"nce1520k 150v | 20a n沟道(5只)\", \"nce65r1k2k 650v4a n沟道(5只)\", \"nce40h12k 40v | 120a n沟道(5只)\", \"nce3090k 30v | 90a n沟道(5只)\", \"nce3080k 30v | 80a n沟道(5只)\"]"
+    },
+    {
+      "step": 7,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "description"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\"]"
+    },
+    {
+      "step": 8,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "< prev"
+      },
+      "observation": "Instruction: [SEP] 找一款场效应管，单只价格在一元左右，想要五只。 [SEP] Back to Search [SEP] < Prev [SEP] 颜色分类 [SEP] nce7075k 70v | 75a n沟道(5只) [SEP] nce1520k 150v | 20a n沟道(5只) [SEP] nce65r1k2k 650v4a n沟道(5只) [SEP] nce40h12k 40v | 120a n沟道(5只) [SEP] nce3090k 30v | 90a n沟道(5只) [SEP] nce3080k 30v | 80a n沟道(5只) [SEP] TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K [SEP] 价格: 5.0 [SEP] 店铺: 深圳市讯华微电子有限公司 [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\n搜索功能是否可用: False\n\n可点击的按钮: [\"back to search\", \"< prev\", \"description\", \"features\", \"reviews\", \"buy now\", \"nce7075k 70v | 75a n沟道(5只)\", \"nce1520k 150v | 20a n沟道(5只)\", \"nce65r1k2k 650v4a n沟道(5只)\", \"nce40h12k 40v | 120a n沟道(5只)\", \"nce3090k 30v | 90a n沟道(5只)\", \"nce3080k 30v | 80a n沟道(5只)\"]"
+    },
+    {
+      "step": 9,
+      "tool_name": "click",
+      "tool_args": {
+        "value": "buy now"
+      },
+      "observation": "Episode finished.\n\n搜索功能是否可用: False\n\n可点击的按钮: []"
+    }
+  ],
+  "terminal": {
+    "done": true,
+    "termination_reason": "gold_purchase",
+    "reward": 1,
+    "reward_valid": true,
+    "reward_type": "gold_purchase",
+    "purchase_success": true,
+    "purchase": {
+      "asin": "620782083994",
+      "attributes": [
+        "TO-252"
+      ],
+      "category": "电子元器件市场›分立器件›场效应管",
+      "instruction_text": "找一款场效应管，能承受一百五十伏的电压、二十安培的电流，单只价格在一元左右，想要五只。",
+      "name": "TO-252场效应MOS管NCE3090K/40H12K/3080K/65R1K2K/1520K/7075K",
+      "options": {
+        "颜色分类": "nce1520k 150v | 20a n沟道(5只)"
+      },
+      "price": 5,
+      "product_category": "",
+      "query": ""
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "task_id": "1321",
+  "rubric_version": "shopping-rubric-v2",
+  "frozen": true,
+  "query": "给我推荐一款2025年款，适合缺牙蛀牙人群的牙套，价格在20元左右的。",
+  "explicit_requirements": [
+    {
+      "id": "r0001",
+      "description": "推荐的产品应为牙套（口腔美牙产品）",
+      "source": "query_and_taskfacts",
+      "status": "explicit",
+      "hardness": "hard",
+      "query_quote": "牙套",
+      "taskfacts_basis": [
+        "category"
+      ]
+    },
+    {
+      "id": "r0002",
+      "description": "产品需为2025年款",
+      "source": "query_and_taskfacts",
+      "status": "explicit",
+      "hardness": "hard",
+      "query_quote": "2025年款",
+      "taskfacts_basis": [
+        "options"
+      ]
+    },
+    {
+      "id": "r0003",
+      "description": "产品适合有缺牙、蛀牙问题的人群使用",
+      "source": "query_and_taskfacts",
+      "status": "explicit",
+      "hardness": "hard",
+      "query_quote": "适合缺牙蛀牙人群",
+      "taskfacts_basis": [
+        "attributes",
+        "core_functions"
+      ]
+    },
+    {
+      "id": "r0004",
+      "description": "产品价格应在20元人民币左右",
+      "source": "initial_query",
+      "status": "explicit",
+      "hardness": "soft",
+      "query_quote": "价格在20元左右"
+    }
+  ],
+  "taskfact_requirements": [
+    {
+      "id": "t0001",
+      "description": "产品价格上限不超过22元",
+      "source": "taskfacts",
+      "status": "taskfact",
+      "hardness": "reference",
+      "query_quote": null,
+      "taskfacts_basis": [
+        "price_upper"
+      ]
+    },
+    {
+      "id": "t0002",
+      "description": "产品应男女通用",
+      "source": "taskfacts",
+      "status": "taskfact",
+      "hardness": "reference",
+      "query_quote": null,
+      "taskfacts_basis": [
+        "attributes",
+        "core_functions"
+      ]
+    },
+    {
+      "id": "t0003",
+      "description": "产品使用寿命应达到10年",
+      "source": "taskfacts",
+      "status": "taskfact",
+      "hardness": "reference",
+      "query_quote": null,
+      "taskfacts_basis": [
+        "attributes",
+        "core_functions"
+      ]
+    },
+    {
+      "id": "t0004",
+      "description": "产品具备万能/多功能特点，包括适合吃饭时佩戴、牙齿美白和仿真假牙功能",
+      "source": "taskfacts",
+      "status": "taskfact",
+      "hardness": "reference",
+      "query_quote": null,
+      "taskfacts_basis": [
+        "attributes",
+        "core_functions"
+      ]
+    },
+    {
+      "id": "t0005",
+      "description": "产品规格为盒装上下牙套，附带杜仲胶",
+      "source": "taskfacts",
+      "status": "taskfact",
+      "hardness": "reference",
+      "query_quote": null,
+      "taskfacts_basis": [
+        "options"
+      ]
+    }
+  ],
+  "process_requirements": [
+    {
+      "id": "p0001",
+      "description": "购买前应核验商品类别。"
+    },
+    {
+      "id": "p0002",
+      "description": "购买前应核验关键规格。"
+    },
+    {
+      "id": "p0003",
+      "description": "购买前应核验数量。"
+    },
+    {
+      "id": "p0004",
+      "description": "购买前应核验最终价格。"
+    },
+    {
+      "id": "p0005",
+      "description": "不能仅凭标题推断详情，应依据商品详情/属性证据。"
+    },
+    {
+      "id": "p0006",
+      "description": "信息不足时必要情况下应通过 shop_asker 澄清。"
+    },
+    {
+      "id": "p0007",
+      "description": "用户通过 shop_asker 明确修改要求后，后续行为应依据最新回复。"
+    },
+    {
+      "id": "p0008",
+      "description": "自然语言声明不能替代环境证据。"
+    },
+    {
+      "id": "p0009",
+      "description": "终局后不能继续行动。"
+    }
+  ],
+  "lifecycle_policy": {
+    "shopper_changes_are_judge_time_interpretation": true,
+    "rubric_is_not_modified_by_trajectory": true
+  },
+  "generation_metadata": {
+    "source": "query_plus_taskfacts",
+    "trajectory_independent": true,
+    "shared_across_harness_profiles": true,
+    "model": "deepseek-v4-pro",
+    "generator_version": "shopping-rubric-generator-v1",
+    "generated_at": "2026-09-09T12:55:28.669447+00:00"
+  }
+}
