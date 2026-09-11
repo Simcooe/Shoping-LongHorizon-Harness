@@ -1,69 +1,64 @@
-# 阶段6：论文语义验收与配对实验
+# 阶段6：机制验收、预算消融与配对实验
 
-## 任务
+## 前置与机制门槛
 
-冻结 `mea-v4-paper` 实现，证明核心语义成立，然后再与 h0、mea-v3 做同任务配对实验。
-此阶段原则上不再修改 Harness；发现问题回到对应阶段修复。
+阶段1-5完成。冻结核心源码、profile、DSH版本、环境/inspect API和导出配置。
+逐项检查：
 
-## 静态/协议验收
+- Executor每轮请求隔离；环境/Shopper在attempt内连续，attempt间不串话；
+- Auditor独立只读检查，终局后订单可核验；clean finding逐条推进并处理过期事实；
+- Manager真实调用并实现ask路由，问答出现在统一trace且被Judge识别；
+- 多session导出按call_id配对，具有全局顺序和首次真实终局；
+- 角色预算、失败分类、日志、恢复协调符合前述契约；
+- 环境已终局时不能继续购物，但允许只读最终审计。
 
-- 每轮 Executor 请求无前轮 assistant/tool 原始历史。
-- Executor episode/session id 每轮不同，ShopSimulator env session 相同。
-- Auditor evidence 全部来自独立只读 inspect。
-- Auditor inspect 前后环境状态哈希一致。
-- completed records 全部可追溯到 clean audit evidence。
-- `Buy Now` 全部具有未过期 purchase authorization。
-- Contract allowed_tools、tool budget 和 timeout 有 runtime enforcement 记录。
-- Manager/Auditor/Executor失败不会进入done。
-- 原始 session 与全部协议产物完整保存。
+核心版本不要求购买前授权；该扩展由阶段7单独验证。
 
-## 小批次顺序
+## 回归任务与验收含义
 
-第一组：
+先用fixture和非Final-200开发任务测试。
+204/263/916及6/47/51/98/585/1151已是已知回归案例，可以复用检查机制：
 
-```text
-204,263,916
-```
+- 263：不虚构“已设置数量100”；若买到1支，应被独立审计识别为未满足数量。
+  核心版本不要求确定性拦截该购买；阶段7才测试门禁。
+- 916：公开价格和真实用户回复能被核验，不能用用户未同意的价格宣称任务完成。
+- 204：满足条件的fixture应能完成整条执行/审计路径；真实模型未买成须记录原因，
+  不能强求特定随机轨迹必定成功。
+- 585：公开需求与环境隐藏目标结果分别报告。
 
-第二组：
+协议bug需修复；合法的任务失败保留。不能为“让小批次通过”反复挑选成功轨迹。
 
-```text
-6,47,51,98,204,263,585,916,1151
-```
+## 对照矩阵
 
-第三组应从 h0/mea-v3 配对结果中选取：
+先跑同预算核心架构，再改预算和可选机制：
 
-- h0成功但mea-v3失败；
-- mea-v3成功但h0失败；
-- repeat_loop；
-- max_steps；
-- 多次ask_shopper；
-- 数量/包装问题；
-- 终局与购买边界问题。
+| 配置 | 核心MEA | 最大轮数 | 购买门禁 |
+|---|---|---:|---|
+| mea-v3匹配配置 | 历史机制 | 10 | 关闭 |
+| mea-v4-paper | 本方案核心 | 10 | 关闭 |
+| mea-v4-paper预算消融 | 同一核心 | 25 | 关闭 |
+| 可选gate消融 | 同一核心 | 10 | 开启 |
 
-## 全量实验
+固定Executor/Manager/Auditor模型、推理参数、环境商品库与奖励、总购物步数及并发。
+记录所有角色的独立时间/token预算；单独说明新增只读观察能力。
+历史h0/mea-v3配置或Shopper会话隔离无法核实时，保留为参考；正式因果比较补跑匹配对照，
+不能把历史产物重标为已修复版本。
 
-只有全部小批次门槛通过后，才运行同一Final-200。必须复用：
+## 数据与评测
 
-- `benchmarks/shopping-final-v1`；
-- `evaluations/h0/rubrics`；
-- `deterministic_v3.py`；
-- `trajectory_judge_v3.py`；
-- `report_v3.py`；
-- 相同Executor模型与环境版本。
+Final-200已用于问题定位和方案调整，标为开发/回归比较集。
+该集合复用现有冻结Rubric；不得为新Harness随机生成另一套或根据结果改要求。
+泛化实验另选未参与调试的holdout，在看结果前冻结任务与Rubric，并让所有对照复用。
+本阶段先交付明确任务清单和预算配置；未经用户明确请求不自行启动新的大规模holdout。
 
-另行记录 Manager/Auditor/Executor token、延迟、调用次数、失败重试和总费用。
+复用deterministic/Judge/report的语义与版本化接口，执行跨轮exporter兼容测试。
+Manager/Auditor内部结论及原始审计检查不进入离线Judge，只提供同口径购物轨迹与真实问答。
+若不得不更改评测协议，另存版本并对所有对照一致重评，不覆盖已有结果。
 
-## 报告面板
+## 输出与运行可靠性
 
-保持四面板独立：环境结果、用户需求满足、七维过程质量、确定性行为。增加成本表，但不
-生成加权总分。
-
-必须给出逐任务配对：成功gain/loss、requirements resolved gain/loss、七维改善/退化、
-非法动作与终局行为变化。
-
-## 通过门槛
-
-不预设必须超过 h0 的统计阈值，但只有在机制验收通过后才能解释性能差异。若环境成功未
-提升，应作为真实负结果保留，不能通过修改Rubric/Judge或删除失败任务修饰结论。
-
+四面板独立报告；增加逐角色token、延迟、请求/重试次数和费用，缺失值用null。
+配对给出成功gain/loss、需求解决变化、七维改善/退化、购物动作与控制动作分别统计。
+预先固定基础设施失败的重试次数、替换条件；保留每次attempt及总成本，不无限重跑至成功。
+同时报告原始尝试结果和按固定规则重试后的结果；失败不能从分母删除。
+原始session、总事件journal、导出trace和来源映射共同归档。

@@ -1,72 +1,73 @@
-# LongHorizon-Harness 论文对齐实施总览
+# LongHorizon-Harness 论文对齐实施总览（审查修订版）
 
-## 目标
+## 目标与依据
 
-在不修改已冻结的 h0、mea-v3 代码语义和评测产物的前提下，新建
-`mea-v4-paper`，实现论文的核心语义：
+新建 `mea-v4-paper`，在 Shopping 场景实现论文的外置任务状态、fresh-context
+Executor、独立只读 Auditor，以及基于审计证据的状态推进。
+依据为 `reference/LongHorizon-Harness.pdf` 第2节、图2及第3.1节。
+本方案按论文描述设计；未逐项核对论文官方仓库，不能声称代码级复现。
+
+明确区分三类改动：
+
+- 论文核心：Manager维护状态并生成contract；Executor每轮独立上下文；Auditor独立
+  检查环境；原始执行历史不作为跨轮模型记忆；完成判断建立在审计证据上。
+- 购物适配与工程保障：公开inspect接口、多session事件导出、会话隔离、日志、预算执行、
+  失败分类与恢复。这些细节需结合现有DSH实现，不声称论文提供了相同接口。
+- 可选扩展：购买前授权门禁。论文没有规定这种两阶段购买协议，单独实现和评估。
+
+## 已有结果与改动边界
+
+`evaluations/h0/`、`evaluations/mea-v3/`、原始runs和冻结Rubric保留。
+新profile使用独立模块和配置；修改共享环境/API/runner时提供回归测试与版本记录。
+保存当前源码、配置和依赖版本指纹；只有换profile名称并不能冻结共享代码。
+
+在线角色不得读取reward、gold、私有TaskFacts、离线Judge、deterministic或report。
+原始session可以持久保存供离线追溯，但不得回灌为后续Executor/Auditor的原始历史。
+“丢弃历史”指模型上下文隔离，不是删除实验日志。
+
+## 顺序与交接
+
+每次只执行一个阶段；完成条件通过后停止，给下一个会话提供实际接口、测试命令和限制。
+下列文件名和顺序替代旧版阶段编号，不要继续使用旧提示词中的路径。
+
+| 阶段 | 实施单 | 交付 |
+|---|---|---|
+| 1 | [运行归档与会话身份](01_RUNTIME_AND_EVENTS.md) | 事件契约、session保存、会话隔离、恢复边界 |
+| 2 | [Task State与Contract](02_STATE_AND_CONTRACT.md) | 逐条证据更新、失效规则、Manager输入输出契约 |
+| 3 | [Fresh Executor与导出](03_AGENT_ADAPTER_FRESH_EXECUTOR.md) | 独立episode、硬预算、任务级双视角trace |
+| 4 | [独立Auditor](04_READ_ONLY_AUDITOR.md) | 公开只读检查、终局后成交审计 |
+| 5 | [MEA闭环与恢复](05_MEA_LOOP_AND_RECOVERY.md) | 真实Manager、ask路由、调度与恢复 |
+| 6 | [协议验收与实验](06_VALIDATION_AND_EXPERIMENT.md) | 同预算对比、开发集/留出集、成本与配对报告 |
+| 可选 | [购买前门禁消融](07_OPTIONAL_PURCHASE_GATE.md) | 在核心版本之上独立开关与实验 |
+
+阶段1-4以fixture/mock验证接口；阶段3-5可运行极少量开发任务验证工程可用性。
+阶段6的“验收通过”指机制符合协议，不以某个模型必须买对商品为门槛。
+
+交给第一个执行会话的提示：
 
 ```text
-Manager
-  -> 结构化、可追溯的 Task State 与有界 Contract
-  -> fresh-context Executor 修改环境
-  -> independent read-only Auditor 重新检查环境
-  -> 只有 clean audit evidence 可以推进 Task State
-  -> 下一轮
+请完整阅读 docs/prompts/longhorizon-paper-alignment/README.md 和
+docs/prompts/longhorizon-paper-alignment/01_RUNTIME_AND_EVENTS.md。
+只执行修订版阶段1，完成接口、代码和测试后停止。
+交付实际改动文件、测试结果和供阶段2使用的接口；不要提前接通真实MEA闭环。
 ```
 
-论文来源：`reference/LongHorizon-Harness.pdf`。
+## 关键语义
 
-## 为什么不直接修改 mea-v3
+- 每轮Executor只接收原任务、相关Task State、contract和引用的audit，环境会话保持连续。
+- Auditor从独立只读接口获取证据，可使用已有audit提供的历史事实及可追溯引用。
+- 一个contract可以incomplete，但其中已独立核验的事实可以保存；逐条推进，不要求
+  所有局部工作一起成功。
+- 环境done只说明停止购物；随后仍运行只读最终审计。Harness的任务成功另行判断。
+- 未完成的审计不会让环境回滚。恢复前必须核对会话与真实环境，并处理未审计动作。
+- 人工授权与模型审计是不同概念；可选purchase gate只是运行许可，不代替用户同意。
 
-`evaluations/mea-v3/` 已经形成200条正式结果。直接改变 mea-v3 会导致代码与历史
-结果不再对应。所有论文对齐改动必须进入新 profile 和新状态 schema；旧 profile、
-trace、Rubric、Judge 与 report 保持可复现。
+## 实验口径
 
-## 当前 mea-v3 与论文的关键差距
+先固定与mea-v3相同的10轮上限做架构对比，并固定环境总步数及角色预算。
+论文的25轮、Executor每轮1800秒、Manager/Auditor各300秒作为参考配置；
+25轮实验单独报告，不能把增加预算造成的提升全部归因于架构。
+若历史角色预算或模型参数无法核实，应列为历史参考，另跑匹配配置的对照。
 
-1. Executor 在一个持续增长的 DSH 会话中运行，并非每轮 fresh context。
-2. Auditor 没有只读环境工具，只复核 Executor 本轮提供的工具结果。
-3. Task State 不是 requirement/artifact/fact 的结构化证据状态机。
-4. Contract 缺少依赖、边界约束与相关证据引用，工具预算也是软约束。
-5. `Buy Now` 可以在 Auditor 核验前使环境不可逆终止。
-6. Manager 缺少独立 `ask` route。
-7. 没有统一 AgentAdapter 去启动独立的角色 episode。
-8. Manager/Auditor 过载可能被 runner 误记为任务成功，原始 DSH session 也未保存。
-
-## 实施顺序
-
-严格按下列顺序执行，每个文档交给一个独立会话。不要并行修改重叠文件。
-
-| 阶段 | 文档 | 结果 |
-|---|---|---|
-| 1 | `01_STATE_AND_CONTRACT.md` | 结构化 Task State、Contract、Audit reducer |
-| 2 | `02_AGENT_ADAPTER_FRESH_EXECUTOR.md` | 真正独立的每轮 Executor episode |
-| 3 | `03_READ_ONLY_AUDITOR.md` | Auditor 独立读取环境，而非复用 Executor Observation |
-| 4 | `04_AUDITED_PURCHASE.md` | 购买授权与完成审计，解决不可逆终局绕过问题 |
-| 5 | `05_RUNTIME_CONTROL_AND_RELIABILITY.md` | 硬预算、ask route、重试、runner/session 完整性 |
-| 6 | `06_VALIDATION_AND_EXPERIMENT.md` | 论文语义验收、小批次与全量配对实验 |
-
-## 全局边界
-
-- 不修改 `evaluations/h0/`、`evaluations/mea-v3/` 和冻结 Rubric。
-- 不修改 mea-v3 的历史语义来迎合结果；新机制只进入 `mea-v4-paper`。
-- 在线 Manager/Auditor 不得读取 reward、gold、私有 TaskFacts、deterministic、Judge
-  或 report。
-- Auditor 只能读取公开环境状态，不得修改购物状态。
-- Executor report 永远是未验证声明，不能直接把状态标为 completed。
-- 不把测试 mock 当成真实能力；每阶段必须说明实际运行了哪些测试。
-- 不跑完整200条，直到阶段6的小批次门槛全部通过。
-
-## 论文对齐的最终判定条件
-
-只有以下条件同时成立，才能称为 paper-aligned：
-
-1. 每轮 Executor 请求中不存在前一轮 assistant/tool 原始历史。
-2. 跨轮仅持久化结构化 Task State、Contract 与 Audit Report。
-3. Auditor 的关键结论来自自己调用的只读环境工具。
-4. completed 状态全部有 clean audit evidence 引用。
-5. 最终完成必须满足 audit status=`complete` 且 integrity=`clean`。
-6. 所有角色通过 AgentAdapter 以独立预算运行。
-7. 运行时硬限制 contract 工具集、工具次数、时间与最大轮数。
-8. 失败的 Manager/Auditor/Executor 不得被 runner 记为 done。
-
+Final-200已被用于调试，是开发/回归比较集；继续复用它和同一Rubric，
+但泛化结论须来自另行冻结、未参与调试的任务。
