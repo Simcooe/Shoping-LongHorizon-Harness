@@ -51,12 +51,12 @@ function validateTools(schemas, contract = null) {
   const contractTools = new Set(contract?.role_tools ?? [...EXECUTOR_TOOLS])
   const deniedTools = new Set((contract?.tool_rules ?? [])
     .filter(rule => rule.allow === false).map(rule => rule.tool))
-  return schemas.map((schema, index) => {
-    if (!schema || typeof schema !== 'object' || !EXECUTOR_TOOLS.has(schema.name)
-      || !contractTools.has(schema.name) || deniedTools.has(schema.name)) {
-      throw new Error(`tool_schemas[${index}] is not allowed by the executor contract`)
+  return schemas.flatMap((schema, index) => {
+    if (!schema || typeof schema !== 'object' || !EXECUTOR_TOOLS.has(schema.name)) {
+      throw new Error(`tool_schemas[${index}] is not a recognized shopping tool`)
     }
-    return copy(schema)
+    if (!contractTools.has(schema.name) || deniedTools.has(schema.name)) return []
+    return [copy(schema)]
   })
 }
 
@@ -271,7 +271,7 @@ export class AgentAdapter {
           event('tool_call', { call_id: data.callId, tool_call_id: data.callId,
             tool_name: data.name, tool_arguments: args ?? {}, local_step: data.step ?? 0 })
         } else if (item.type === 'tool/result') {
-          const meta = data.message?.meta ?? {}
+          const meta = data.meta ?? data.message?.meta ?? {}
           event('tool_result', { call_id: data.message?.source?.callId
               ?? data.message?.content?.[0]?.toolCallId,
             local_step: data.step ?? calls.get(data.message?.source?.callId) ?? 0,

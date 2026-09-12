@@ -64,6 +64,11 @@ def validate_run(run: Path) -> dict:
                     errors.append(f"task {tid}: audited_success without final receipt")
             if data.get("environment_done") and len(data.get("audits", [])) == 0:
                 errors.append(f"task {tid}: environment_done without audit")
+            if data.get("harness_outcome") == "environment_terminated_unresolved":
+                if data.get("runtime_status") != "completed":
+                    errors.append(f"task {tid}: normal unresolved terminal must complete runtime")
+                if data.get("task_success") is not False:
+                    errors.append(f"task {tid}: unresolved terminal must be task failure")
     return {"run": str(run), "valid": not errors, "errors": errors,
             "task_count": len(goals), "manifest_sha256": digest(manifest_path)}
 

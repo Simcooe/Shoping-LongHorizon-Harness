@@ -23,6 +23,7 @@ def main():
             "runtime_status": report.get("runtime_status"),
             "environment_done": report.get("environment_done"),
             "final_receipt_verified": report.get("final_receipt_verified"),
+            "task_success": report.get("task_success", report.get("harness_outcome") == "audited_success"),
             "manager_calls": report.get("manager_calls"),
             "manager_decisions": report.get("manager_decisions"),
             "ask_count": report.get("ask_count"),
@@ -34,6 +35,10 @@ def main():
         "task_count": len(rows),
         "outcomes": dict(Counter(row["harness_outcome"] for row in rows)),
         "runtime_statuses": dict(Counter(row["runtime_status"] for row in rows)),
+        "task_success": {
+            "count": sum(row["task_success"] is True for row in rows),
+            "denominator": len(rows),
+        },
         "rows": rows,
         "usage_missing_is_null": True,
         "cost_missing_is_null": True,

@@ -51,6 +51,7 @@ assert.equal(result.audits.length, 1)
 assert.equal(result.state.requirements[0].status, 'completed')
 assert.equal(result.environment_done, true)
 assert.equal(result.final_receipt_verified, true)
+assert.equal(result.task_success, true)
 assert.equal(readFileSync(join(dir, 'journal.jsonl'), 'utf8').includes('audit_report'), true)
 // Two execute/audit rounds use increasing numeric audit rounds.
 {
@@ -76,6 +77,59 @@ assert.equal(readFileSync(join(dir, 'journal.jsonl'), 'utf8').includes('audit_re
   }).run()
   assert.equal(twoRounds.runtime_status, 'completed')
   assert.deepEqual(twoRounds.audits.map(audit => audit.round), [1, 2])
+}
+
+// A normal non-purchase environment terminal is a completed runtime but failed task.
+{
+  let calls = 0
+  const terminalFailure = await createMeaController({
+    task: { id: 'task-terminal-failure', original_goal: '买阀' },
+    runId: 'run-terminal-failure', attemptId: 'attempt-terminal-failure',
+    environmentHandle: { tool_schemas: [] },
+    manager: { async plan() {
+      calls += 1
+      return { decision: 'execute', reason: 'try again', state_updates: [], contract, question: null }
+    } },
+    executor: { async runEpisode() { return {
+      episode_id: 'episode-terminal', runtime_status: 'completed',
+      report: { tool_calls: 1, environment_done: true },
+    } } },
+    auditor: { async audit() { return { audit: {
+      schema: 'longhorizon-audit-v3', id: 'audit-terminal', round: 1,
+      contract_id: contract.id, status: 'incomplete', integrity: 'clean',
+      verified_summary: '环境因repeat_loop终止，任务未完成', evidence: [], findings: [],
+      remaining_gaps: ['no purchase'], suggested_updates: [], resolves_issue_ids: [],
+    }, evidence: { terminal_receipt: null } } } },
+  }).run()
+  assert.equal(terminalFailure.runtime_status, 'completed')
+  assert.equal(terminalFailure.harness_outcome, 'environment_terminated_unresolved')
+  assert.equal(terminalFailure.task_success, false)
+  assert.equal(terminalFailure.environment_done, true)
+  assert.equal(calls, 2)
+}
+
+// A terminal wrong-purchase followed by an invalid Manager done is a completed runtime/task failure.
+{
+  let calls = 0
+  const wrongDone = await createMeaController({
+    task: { id: 'task-wrong-done', original_goal: '买精品全钢' },
+    runId: 'run-wrong-done', attemptId: 'attempt-wrong-done',
+    environmentHandle: { tool_schemas: [] },
+    manager: { async plan() {
+      calls += 1
+      if (calls === 1) return { decision: 'execute', reason: 'buy', state_updates: [], contract, question: null }
+      return { decision: 'done', reason: 'incorrect success', state_updates: [], contract: null, question: null }
+    } },
+    executor: { async runEpisode() { return { episode_id: 'episode-wrong', runtime_status: 'completed', report: { tool_calls: 1, environment_done: true } } } },
+    auditor: { async audit() { return { audit: {
+      schema: 'longhorizon-audit-v3', id: 'audit-wrong', round: 1, contract_id: contract.id,
+      status: 'incomplete', integrity: 'clean', verified_summary: 'wrong option', evidence: [], findings: [],
+      remaining_gaps: ['精品全钢未满足'], suggested_updates: [], resolves_issue_ids: [],
+    }, evidence: { terminal_receipt: { asin: 'A1' } } } } },
+  }).run()
+  assert.equal(wrongDone.runtime_status, 'completed')
+  assert.equal(wrongDone.harness_outcome, 'environment_terminated_unresolved')
+  assert.equal(wrongDone.task_success, false)
 }
 
 // Ask stores the real reply without inventing a requirement and replans without an Executor.

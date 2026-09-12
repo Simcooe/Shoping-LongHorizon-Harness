@@ -48,9 +48,11 @@ assert.equal(traces.model_trace.shopper_qa[0].actor, 'controller')
 assert.equal(traces.model_trace.steps.some(step => step.tool_name === 'ask_shopper'), true)
 assert.equal(readFileSync(join(first.log_dir, 'episode.jsonl'), 'utf8').includes('audit-1'), true)
 // Contract tool permissions and backend timeout are enforced by the adapter.
-await assert.rejects(() => adapter.runEpisode('executor', context,
+const denied = await adapter.runEpisode('executor', context,
   { id: 'contract-deny', role_tools: [] }, { env_idx: 1 },
-  { max_tool_calls: 2, timeout_ms: 1000 }), /not allowed by the executor contract/)
+  { max_tool_calls: 2, timeout_ms: 1000 })
+assert.equal(denied.runtime_status, 'completed')
+assert.deepEqual(requests.at(-1).input.tool_schemas, [])
 const hanging = new AgentAdapter({ runDir: dir, backend: {
   runEpisode: () => new Promise(() => {}),
 } })

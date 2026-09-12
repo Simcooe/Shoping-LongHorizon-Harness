@@ -11,6 +11,34 @@ import {
 import { validateManagerOutput } from './schema.js'
 
 function copy(value) { return value == null ? value : JSON.parse(JSON.stringify(value)) }
+function projectManagerState(state) {
+  const value = copy(state)
+  return {
+    schema: value.schema,
+    task: value.task,
+    requirements: (value.requirements ?? []).filter(record => record.lifecycle === 'active'),
+    artifacts: (value.artifacts ?? []).filter(record => record.valid !== false),
+    facts: (value.facts ?? []).filter(record => record.valid !== false),
+    shopper_replies: value.shopper_replies ?? [],
+    integrity_issues: (value.integrity_issues ?? []).filter(issue => issue.status === 'open'),
+    round: value.round,
+    decision: value.decision,
+  }
+}
+function projectManagerAudits(audits) {
+  const values = audits ?? []
+  return values.map((audit, index) => index === values.length - 1 ? copy(audit) : {
+    schema: audit.schema, id: audit.id, round: audit.round,
+    contract_id: audit.contract_id, status: audit.status, integrity: audit.integrity,
+    verified_summary: audit.verified_summary, remaining_gaps: audit.remaining_gaps,
+    findings: (audit.findings ?? []).map(finding => ({
+      finding_id: finding.finding_id, record_id: finding.record_id,
+      requirement_version: finding.requirement_version,
+      supported: finding.supported, proposed_status: finding.proposed_status,
+      summary: finding.summary,
+    })),
+  })
+}
 function now() { return Date.now() }
 function delay(ms) { return new Promise(resolve => setTimeout(resolve, ms)) }
 function required(value, field) {
@@ -43,6 +71,7 @@ export class MeaController {
     if (!manager || typeof manager.plan !== 'function') throw new Error('manager.plan is required')
     if (!executor || typeof executor.runEpisode !== 'function') throw new Error('executor.runEpisode is required')
     if (!auditor || typeof auditor.audit !== 'function') throw new Error('auditor.audit is required')
+    this.taskRequiresClarification = task?.requires_clarification === true
     this.task = required(task?.original_goal ?? task?.query, 'task.original_goal')
     this.taskId = required(task?.id ?? task?.task_id, 'task.id')
     this.runId = required(runId, 'runId')
@@ -112,9 +141,11 @@ export class MeaController {
     this.#budgetCheck()
     this.managerDecisions += 1
     const input = {
-      task: { id: this.taskId, original_request: this.task },
-      state: copy(this.state),
-      prior_audits: copy(this.audits),
+      task: { id: this.taskId, original_request: this.task,
+        requires_clarification: this.taskRequiresClarification,
+        clarification_count: this.state.shopper_replies?.length ?? 0 },
+      state: projectManagerState(this.state),
+      prior_audits: projectManagerAudits(this.audits),
       trigger,
       budget: { manager_calls_used: this.managerCalls, max_manager_calls: this.budget.maxManagerCalls },
     }
@@ -136,7 +167,11 @@ export class MeaController {
       } catch (error) {
         lastError = error
         this.#event('role_response', 'manager', 'manager', { request_id: requestId, error: String(error.message ?? error), budget: { retry: attempt } })
-        if (attempt === 0) await delay(10)
+        if (attempt === 0) {
+          input.schema_error = String(error.message ?? error)
+          input.retry_instruction = 'Return a shorter complete JSON object only. Correct the schema error; do not repeat commentary.'
+          await delay(50)
+        }
       }
     }
     throw lastError
@@ -170,11 +205,12 @@ export class MeaController {
     this.round += 1
     if (this.round > this.budget.maxRounds) throw Object.assign(new Error('round budget exhausted'), { code: 'ROUND_BUDGET_EXHAUSTED' })
     const availableSchemas = this.environmentHandle?.tool_schemas ?? []
+    const allowedToolNames = new Set(contract.role_tools ?? [])
     const context = {
       task_id: this.taskId, run_id: this.runId, attempt_id: this.attemptId,
       round: this.round, round_id: `round-${this.round}`, original_task: this.task,
       task_state: copy(this.state), prior_audits: copy(this.audits),
-      tool_schemas: availableSchemas.filter(schema => contract.role_tools.includes(schema.name)),
+      tool_schemas: availableSchemas.filter(schema => allowedToolNames.has(schema.name)),
     }
     const remainingToolCalls = this.budget.toolCalls - this.totalToolCalls
     if (remainingToolCalls <= 0) throw Object.assign(new Error('total tool budget exhausted'), {
@@ -232,7 +268,22 @@ export class MeaController {
       while (this.harnessOutcome === 'unresolved') {
         this.#budgetCheck()
         const managerOutput = await this.#callManager(this.round === 0 ? 'task_start' : 'post_audit')
-        this.state = applyManagerOutput(this.state, managerOutput)
+        if (this.environmentDone && managerOutput.decision === 'done') {
+          try {
+            this.state = applyManagerOutput(this.state, managerOutput)
+          } catch {
+            this.harnessOutcome = 'environment_terminated_unresolved'
+            break
+          }
+        } else if (this.environmentDone && managerOutput.decision === 'execute') {
+          // Ignore an impossible follow-up contract after a normal environment
+          // terminal; the audited task failed, while the runtime completed.
+          this.harnessOutcome = 'environment_terminated_unresolved'
+          break
+        }
+        if (!this.environmentDone) {
+          this.state = applyManagerOutput(this.state, managerOutput)
+        }
         if (managerOutput.decision === 'ask') {
           await this.#ask(managerOutput.question)
           continue
@@ -245,6 +296,10 @@ export class MeaController {
             })
           }
           this.harnessOutcome = 'audited_success'
+          break
+        }
+        if (this.environmentDone) {
+          this.harnessOutcome = 'environment_terminated_unresolved'
           break
         }
         const executed = await this.#execute(managerOutput.contract)
@@ -273,6 +328,7 @@ export class MeaController {
       runtime_status: this.runtimeStatus, manager_calls: this.managerCalls,
       manager_decisions: this.managerDecisions, ask_count: this.askCount,
       total_tool_calls: this.totalToolCalls, final_receipt_verified: this.finalReceiptVerified,
+      task_success: this.harnessOutcome === 'audited_success',
       rounds: this.round, elapsed_ms: now() - this.startedAt,
     }
   }

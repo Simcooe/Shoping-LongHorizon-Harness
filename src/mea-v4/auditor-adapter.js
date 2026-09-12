@@ -120,21 +120,23 @@ export class ReadOnlyInspector {
 }
 
 export class AuditorAdapter {
-  constructor({ inspector, runDir = null, auditor = null } = {}) {
+  constructor({ inspector, runDir = null, auditor = null, observationRegistry = null } = {}) {
     if (!inspector || typeof inspector.inspect !== 'function') throw new Error('AuditorAdapter requires a ReadOnlyInspector')
     this.inspector = inspector
     this.runDir = runDir
     this.auditor = auditor
+    this.observationRegistry = observationRegistry ?? createObservationRegistry()
   }
 
   async audit({ taskContext, contract, priorAudits = [], executorReport, environmentHandle, budget = {} }) {
     const auditId = `audit-${randomUUID()}`
     const evidence = await this.inspector.inspect(environmentHandle, { timeoutMs: budget.timeout_ms ?? 10000 })
-    const registry = createObservationRegistry([{
+    const registry = this.observationRegistry
+    registry.register({
       event_id: evidence.event_id, snapshot_id: evidence.snapshot_id,
       environment_session: evidence.environment_session, read_only: evidence.read_only,
       source: evidence.source, scope: evidence.scope, raw_ref: evidence.event_id,
-    }])
+    })
     const observationRef = { event_id: evidence.event_id, snapshot_id: evidence.snapshot_id, environment_session: evidence.environment_session }
     const scope = auditScope(evidence)
     let output
