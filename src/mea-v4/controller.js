@@ -144,6 +144,7 @@ export class MeaController {
       state: projectManagerState(this.state),
       prior_audits: projectManagerAudits(this.audits),
       trigger,
+      available_tools: (this.environmentHandle?.tool_schemas ?? []).map(schema => schema.name),
       budget: { manager_calls_used: this.managerCalls, max_manager_calls: this.budget.maxManagerCalls },
     }
     let lastError = null

@@ -14,46 +14,118 @@ function appendRoleLog(logDir, role, record) {
   mkdirSync(logDir, { recursive: true })
   writeFileSync(join(logDir, `${role}.jsonl`), `${JSON.stringify(record)}\n`, { flag: 'a' })
 }
-const MANAGER_ALLOWED_RULE_KEYS = new Set(['tool', 'allow', 'allow_kinds', 'deny_kinds', 'deny_values'])
-function normalizeManagerOutput(output) {
-  if (!output || typeof output !== 'object' || Array.isArray(output)) return output
-  const rules = output.contract?.tool_rules
-  if (Array.isArray(rules)) {
-    output.contract.tool_rules = rules.flatMap(rule => {
-      if (!rule || typeof rule !== 'object' || Array.isArray(rule) || !rule.tool) return []
-      const normalized = Object.fromEntries(Object.entries(rule)
-        .filter(([key]) => MANAGER_ALLOWED_RULE_KEYS.has(key)))
-      if (Array.isArray(normalized.allow)) {
-        const values = normalized.allow.map(String)
-        delete normalized.allow
-        normalized.allow_kinds = normalized.allow_kinds ?? values
-      }
-      if (Array.isArray(rule.allow_values) && !normalized.allow_kinds) {
-        normalized.allow_kinds = rule.allow_values.map(String)
-      }
-      return [normalized]
-    })
-  }
-  return output
+const SHOP_TOOLS = new Set(['search', 'click', 'finish', 'ask_shopper'])
+const RECORD_STATUSES = new Set(['completed', 'pending', 'blocked', 'untrusted'])
+
+function strings(value, max = 20) {
+  if (!Array.isArray(value)) return []
+  return [...new Set(value.filter(item => typeof item === 'string' && item.trim())
+    .map(item => item.trim()))].slice(0, max)
 }
+
+function resolveFindingSelector(input, selector) {
+  const audits = input?.prior_audits ?? []
+  let auditId = null, findingId = null
+  if (typeof selector === 'string') {
+    const parts = selector.split('/').filter(Boolean)
+    if (parts.length === 2) [auditId, findingId] = parts
+    else findingId = selector
+  } else if (selector && typeof selector === 'object') {
+    auditId = selector.audit_id ?? null
+    findingId = selector.finding_id ?? null
+  }
+  if (!findingId) return null
+  const matches = audits.flatMap(audit => (audit.findings ?? [])
+    .filter(finding => finding.finding_id === findingId
+      && (!auditId || audit.id === auditId))
+    .map(finding => ({ audit_id: audit.id, finding_id: finding.finding_id,
+      record_id: finding.record_id })))
+  return matches.length === 1 && matches[0].record_id ? matches[0] : null
+}
+
+/** Convert a small semantic Manager response into the runtime-owned v3 protocol. */
+function normalizeManagerOutput(output, input) {
+  if (!output || typeof output !== 'object' || Array.isArray(output)) return output
+  const decision = ['execute', 'done', 'blocked', 'ask'].includes(output.decision)
+    ? output.decision : 'blocked'
+  const selectors = output.apply_findings ?? output.state_updates ?? []
+  const stateUpdates = (Array.isArray(selectors) ? selectors : [])
+    .map(selector => resolveFindingSelector(input, selector))
+    .filter(Boolean)
+  let contract = null
+  if (decision === 'execute') {
+    const source = output.contract && typeof output.contract === 'object' ? output.contract : {}
+    const available = new Set(strings(input?.available_tools ?? [...SHOP_TOOLS]))
+    const requested = strings(source.allowed_tools ?? source.role_tools)
+      .filter(tool => SHOP_TOOLS.has(tool) && available.has(tool))
+    const roleTools = requested.length > 0 ? requested
+      : [...available].filter(tool => SHOP_TOOLS.has(tool))
+    const suggested = strings(source.suggested_tools ?? source.manager_suggested_tools)
+      .filter(tool => roleTools.includes(tool))
+    const activeRecords = (input?.state?.requirements ?? [])
+      .filter(record => record.lifecycle !== 'revoked').map(record => record.id)
+    const auditIds = new Set((input?.prior_audits ?? []).map(audit => audit.id))
+    const maxToolCalls = Math.max(1, Math.min(100,
+      Math.floor(Number(source.max_tool_calls ?? source.budget?.max_tool_calls ?? 5) || 5)))
+    const timeoutSeconds = Math.max(1, Math.min(86400,
+      Number(source.timeout_seconds ?? source.budget?.timeout_seconds ?? 300) || 300))
+    const denyValues = strings(source.deny_click_values, 50)
+    contract = {
+      id: `contract-${randomUUID()}`,
+      goal: typeof source.goal === 'string' && source.goal.trim()
+        ? source.goal.trim() : 'Advance the next unresolved task requirement.',
+      acceptance_criteria: strings(source.acceptance_criteria).length > 0
+        ? strings(source.acceptance_criteria) : ['Produce independently auditable progress.'],
+      boundary_constraints: strings(source.boundary_constraints),
+      dependencies: [],
+      relevant_state_ids: activeRecords,
+      relevant_audit_ids: strings(source.relevant_audit_ids)
+        .filter(id => auditIds.has(id)),
+      role_tools: roleTools.length > 0 ? roleTools : ['search'],
+      manager_suggested_tools: suggested,
+      tool_rules: denyValues.length > 0
+        ? [{ tool: 'click', deny_values: denyValues }] : [],
+      budget: { max_tool_calls: maxToolCalls, timeout_seconds: timeoutSeconds },
+    }
+  }
+  return {
+    decision,
+    reason: typeof output.reason === 'string' && output.reason.trim()
+      ? output.reason.trim() : 'No reason supplied.',
+    state_updates: stateUpdates,
+    contract,
+    question: decision === 'ask'
+      ? (typeof output.question === 'string' && output.question.trim()
+          ? output.question.trim() : '请补充完成任务所需的关键信息。')
+      : null,
+  }
+}
+
+/** Normalize only semantic Auditor fields; runtime binds identity and evidence. */
 function normalizeAuditorOutput(output) {
   if (!output || typeof output !== 'object' || Array.isArray(output)) return output
-  output.evidence = Array.isArray(output.evidence) ? output.evidence : []
-  output.findings = Array.isArray(output.findings) ? output.findings : []
-  output.remaining_gaps = Array.isArray(output.remaining_gaps) ? output.remaining_gaps : []
-  output.suggested_updates = Array.isArray(output.suggested_updates) ? output.suggested_updates : []
-  output.resolves_issue_ids = Array.isArray(output.resolves_issue_ids) ? output.resolves_issue_ids : []
-  for (const finding of output.findings) {
-    if (!finding || typeof finding !== 'object') continue
-    if (typeof finding.supported !== 'boolean') finding.supported = false
-    if (!['completed', 'pending', 'blocked', 'untrusted'].includes(finding.proposed_status)) {
-      // Missing/invalid status can never be repaired upward to completed.
-      finding.proposed_status = 'pending'
-    }
-    finding.evidence_refs = Array.isArray(finding.evidence_refs) ? finding.evidence_refs : []
-    finding.dependencies = Array.isArray(finding.dependencies) ? finding.dependencies : []
+  return {
+    status: ['complete', 'incomplete', 'blocked'].includes(output.status)
+      ? output.status : 'incomplete',
+    integrity: ['clean', 'suspect', 'violation'].includes(output.integrity)
+      ? output.integrity : 'suspect',
+    verified_summary: typeof output.verified_summary === 'string'
+      && output.verified_summary.trim() ? output.verified_summary.trim() : 'Audit inconclusive.',
+    findings: (Array.isArray(output.findings) ? output.findings : [])
+      .filter(finding => finding && typeof finding === 'object')
+      .map(finding => ({
+        record_id: typeof finding.record_id === 'string' ? finding.record_id : null,
+        supported: finding.supported === true,
+        proposed_status: RECORD_STATUSES.has(finding.proposed_status ?? finding.status)
+          ? (finding.proposed_status ?? finding.status) : 'pending',
+        summary: typeof finding.summary === 'string' && finding.summary.trim()
+          ? finding.summary.trim() : 'No verified update.',
+        content: typeof finding.content === 'string' && finding.content.trim()
+          ? finding.content.trim() : null,
+      })),
+    remaining_gaps: strings(output.remaining_gaps),
+    resolves_issue_ids: strings(output.resolves_issue_ids),
   }
-  return output
 }
 function jsonText(text) {
   const value = String(text ?? '').trim()
@@ -65,13 +137,13 @@ function jsonText(text) {
   }
 }
 
-const MANAGER_SYSTEM = `You are the Manager in a long-horizon shopping harness. You have no environment tools. Use only the public task, structured Task State, prior Audit Reports and real shopper replies in the input. Output exactly one JSON object accepted by longhorizon Manager v3:
-{"decision":"execute|done|blocked|ask","reason":"...","state_updates":[{"audit_id":"...","finding_id":"...","record_id":"..."}],"contract":null|{"id":"unique","goal":"...","acceptance_criteria":["..."],"boundary_constraints":["..."],"dependencies":[],"relevant_state_ids":["req-1"],"relevant_audit_ids":[],"role_tools":["search","click","finish"],"manager_suggested_tools":["search"],"tool_rules":[{"tool":"click","deny_values":["Buy Now"]}],"budget":{"max_tool_calls":1,"timeout_seconds":120}},"question":null|"one focused question"}.
-Never invent state updates: select only findings present in prior audits. Use ask when a decision-critical user requirement is missing or ambiguous; do not ask for information already supplied. Use done only after a complete clean terminal-receipt audit supports all active requirements. Contract ids must be new. tool_rules MUST be an array of structured objects with tool plus allow/allow_kinds/deny_kinds/deny_values; never output natural-language strings there. Use boundary_constraints for natural-language restrictions. The finish tool abandons without purchase and NEVER creates a terminal receipt. When the task requires completing the simulated shopping transaction, only a contract-authorized Buy Now action can produce a receipt; after any terminal environment action do not request another Executor. Keep each episode narrow and bounded.`
+const MANAGER_SYSTEM = `You are the Manager in a long-horizon shopping harness. You have no environment tools. Read the public task, compact task state, prior audits, and real shopper replies. Return one SMALL JSON object only:
+{"decision":"execute|done|blocked|ask","reason":"brief reason","apply_findings":["finding-id or audit-id/finding-id"],"contract":null|{"goal":"one immediate goal","acceptance_criteria":["checkable criterion"],"boundary_constraints":["constraint"],"allowed_tools":["search","click","finish","ask_shopper"],"suggested_tools":["search"],"max_tool_calls":5,"timeout_seconds":300,"deny_click_values":["Buy Now"]},"question":null|"one focused question"}.
+Do not emit IDs, versions, evidence references, dependencies, tool-rule objects, state records, or audit schemas; runtime owns them. Select apply_findings only from prior audits. Use ask only when progress requires user information or authorization. Use done only when the audited state satisfies the original task. Use blocked when no permitted subtask can advance it. The finish tool abandons without purchase.`
 
-const AUDITOR_SYSTEM = `You are an independent read-only Auditor. Ignore Executor claims unless independently supported by the supplied environment inspection. Output exactly one JSON object using longhorizon Audit v3 fields, except schema/id/round/contract_id are runtime-owned and MUST NOT be included:
-{"status":"complete|incomplete|blocked","integrity":"clean|suspect|violation","verified_summary":"...","evidence":[{"id":"ev-1","kind":"read_only_environment_state|read_only_terminal_receipt","summary":"...","scope":null|{"asin":"..."},"observation_ref":{"event_id":"...","snapshot_id":"...","environment_session":"..."}}],"findings":[{"finding_id":"finding-1","record_id":"req-1","requirement_version":1,"criterion":"...","supported":true,"proposed_status":"completed|pending|blocked|untrusted","evidence_refs":[{"audit_id":"RUNTIME_AUDIT_ID","evidence_id":"ev-1"}],"dependencies":[],"summary":"...","content":null,"scope":null}],"remaining_gaps":["..."],"suggested_updates":[{"finding_id":"finding-1","record_id":"req-1"}],"resolves_issue_ids":[]}.
-Use the exact observation_ref supplied by runtime. In every evidence_refs.audit_id use the supplied auditId. Compare terminal receipt fields against explicit requirements and real shopper replies; any conflicting or unknown required option, quantity, price, model, or packaging must remain pending or blocked. A terminal receipt proves only fields actually present. Missing quantity/price/packaging is unknown. A complete audit requires an actual terminal receipt and sufficient public evidence; otherwise use incomplete. Never propose completed for a requirement when an explicit constraint conflicts with the receipt or remains unknown. Do not read or infer reward, gold, hidden goals, or private facts.`
+const AUDITOR_SYSTEM = `You are an independent read-only Auditor. Ignore Executor claims unless the supplied inspection supports them. Return one SMALL JSON object only:
+{"status":"complete|incomplete|blocked","integrity":"clean|suspect|violation","verified_summary":"brief summary","findings":[{"record_id":"req-1","supported":true,"status":"completed|pending|blocked|untrusted","summary":"what the inspection proves"}],"remaining_gaps":["missing fact"]}.
+Do not emit audit IDs, finding IDs, versions, evidence blocks, evidence references, scopes, dependencies, or suggested updates; runtime binds those deterministically. Evaluate the contract acceptance criteria and boundary constraints against the read-only inspection. Missing or conflicting required information remains pending. Do not read or infer reward, gold, hidden goals, or private facts.`
 
 export class JsonChatRole {
   constructor({ role, apiKey = process.env.DEEPSEEK_API_KEY, baseUrl = process.env.DEEPSEEK_BASE_URL ?? 'https://api.deepseek.com',
@@ -143,29 +215,14 @@ export class JsonChatRole {
 
 export class ManagerModelAdapter {
   constructor(options = {}) { this.client = new JsonChatRole({ role: 'manager', system: MANAGER_SYSTEM, ...options }) }
-  plan(input, options) { return this.client.call(input, options).then(normalizeManagerOutput) }
+  plan(input, options) { return this.client.call(input, options)
+    .then(output => normalizeManagerOutput(output, input)) }
 }
 
 export class AuditorModelAdapter {
   constructor(options = {}) { this.client = new JsonChatRole({ role: 'auditor', system: AUDITOR_SYSTEM, ...options }) }
-  async audit(input, options) {
-    const output = normalizeAuditorOutput(await this.client.call(input, options))
-    const requirements = new Map((input.task_state?.requirements ?? [])
-      .map(record => [record.id, record]))
-    // Runtime identity and immutable requirement fields are protected from model drift.
-    for (const finding of output.findings ?? []) {
-      const requirement = requirements.get(finding.record_id)
-      if (requirement) {
-        finding.requirement_version = requirement.requirement_version
-        finding.content = null
-        finding.scope = null
-      }
-      for (const ref of finding.evidence_refs ?? []) {
-        if (ref.audit_id === 'RUNTIME_AUDIT_ID') ref.audit_id = input.auditId
-      }
-    }
-    return output
-  }
+  audit(input, options) { return this.client.call(input, options)
+    .then(normalizeAuditorOutput) }
 }
 
 export class HttpShopperAdapter {

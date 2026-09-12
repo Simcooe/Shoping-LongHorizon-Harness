@@ -52,29 +52,12 @@ const inspector = new ReadOnlyInspector({ inspect: async () => ({
     selected_price: 30, actions: ['Buy Now'],
   },
 }) })
-const auditor = new AuditorAdapter({ inspector, runDir: dir, auditor: async ({ observation_ref }) => ({
+const auditor = new AuditorAdapter({ inspector, runDir: dir, auditor: async () => ({
   status: 'incomplete', integrity: 'clean', verified_summary: '只读快照显示红色；Executor蓝色声明不可信。',
-  evidence: [{ id: 'ev-red', kind: 'read_only_environment_state',
-    summary: 'A1当前选择为红色', scope: { asin: 'A1', color: 'red' }, observation_ref }],
-  findings: [{ finding_id: 'finding-red', record_id: 'req-1', requirement_version: 1,
-    criterion: '颜色为红色', supported: true, proposed_status: 'completed',
-    evidence_refs: [{ audit_id: '__RUNTIME_AUDIT_ID__', evidence_id: 'ev-red' }],
-    dependencies: [], summary: '独立环境快照支持红色要求', content: null, scope: null }],
-  remaining_gaps: ['尚未成交'], suggested_updates: [{ finding_id: 'finding-red', record_id: 'req-1' }],
-  resolves_issue_ids: [],
+  findings: [{ record_id: 'req-1', supported: true, status: 'completed',
+    summary: '独立环境快照支持红色要求' }],
+  remaining_gaps: ['尚未成交'],
 }) })
-// The custom Auditor needs the runtime audit id in its self-reference.
-auditor.auditor = async ({ auditId, observation_ref }) => ({
-  status: 'incomplete', integrity: 'clean', verified_summary: '只读快照显示红色；Executor蓝色声明不可信。',
-  evidence: [{ id: 'ev-red', kind: 'read_only_environment_state',
-    summary: 'A1当前选择为红色', scope: { asin: 'A1', color: 'red' }, observation_ref }],
-  findings: [{ finding_id: 'finding-red', record_id: 'req-1', requirement_version: 1,
-    criterion: '颜色为红色', supported: true, proposed_status: 'completed',
-    evidence_refs: [{ audit_id: auditId, evidence_id: 'ev-red' }], dependencies: [],
-    summary: '独立环境快照支持红色要求', content: null, scope: null }],
-  remaining_gaps: ['尚未成交'], suggested_updates: [{ finding_id: 'finding-red', record_id: 'req-1' }],
-  resolves_issue_ids: [],
-})
 const audited = await auditor.audit({
   taskContext: { task_id: 'task-1', round: 1, original_task: '买红色阀', task_state: state },
   contract, executorReport: episode.report,
@@ -84,9 +67,10 @@ assert.doesNotThrow(() => validateAuditReport(audited.audit))
 state = applyAuditReport(state, audited.audit, {
   resolveObservation: ref => audited.observation_registry.resolve(ref),
 })
+const runtimeFinding = audited.audit.findings[0]
 state = applyManagerOutput(state, {
   decision: 'blocked', reason: 'candidate fact saved; purchase remains',
-  state_updates: [{ audit_id: audited.audit.id, finding_id: 'finding-red', record_id: 'req-1' }],
+  state_updates: [{ audit_id: audited.audit.id, finding_id: runtimeFinding.finding_id, record_id: 'req-1' }],
   contract: null, question: null,
 })
 assert.equal(state.requirements[0].status, 'completed')

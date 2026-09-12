@@ -61,6 +61,62 @@ function withTimeout(promise, timeoutMs) {
   ]).finally(() => clearTimeout(timer))
 }
 
+function runtimeAuditReport({ output, auditId, round, contract, evidence, observationRef, scope, taskState }) {
+  const evidenceId = `evidence-${auditId}`
+  const evidenceBlock = {
+    id: evidenceId,
+    kind: evidence.terminal_receipt
+      ? 'read_only_terminal_receipt' : 'read_only_environment_state',
+    summary: evidence.terminal_receipt
+      ? 'Runtime-registered terminal receipt and public environment snapshot.'
+      : 'Runtime-registered public environment snapshot.',
+    scope,
+    observation_ref: observationRef,
+  }
+  const records = new Map([
+    ...(taskState?.requirements ?? []), ...(taskState?.artifacts ?? []),
+    ...(taskState?.facts ?? []),
+  ].map(record => [record.id, record]))
+  const integrity = evidence.read_only === false ? 'violation' : output.integrity
+  const findings = (output.findings ?? []).flatMap((finding, index) => {
+    const record = records.get(finding.record_id)
+    if (!record) return []
+    let supported = finding.supported === true
+    let proposedStatus = finding.proposed_status ?? finding.status ?? 'pending'
+    if (proposedStatus === 'completed' && (integrity !== 'clean' || !supported)) {
+      supported = false
+      proposedStatus = 'pending'
+    }
+    return [{
+      finding_id: `finding-${auditId}-${index + 1}`,
+      record_id: record.id,
+      requirement_version: record.type === 'requirement'
+        ? record.requirement_version : null,
+      criterion: record.content,
+      supported,
+      proposed_status: proposedStatus,
+      evidence_refs: supported ? [{ audit_id: auditId, evidence_id: evidenceId }] : [],
+      dependencies: [],
+      summary: finding.summary,
+      content: record.type === 'requirement' ? null : finding.content,
+      scope: record.type === 'requirement' ? null : scope,
+    }]
+  })
+  return validateAuditReport({
+    schema: 'longhorizon-audit-v3', id: auditId, round,
+    contract_id: contract.id,
+    status: output.status,
+    integrity,
+    verified_summary: output.verified_summary,
+    evidence: [evidenceBlock],
+    findings,
+    remaining_gaps: output.remaining_gaps ?? [],
+    suggested_updates: findings.filter(finding => finding.record_id)
+      .map(finding => ({ finding_id: finding.finding_id, record_id: finding.record_id })),
+    resolves_issue_ids: output.resolves_issue_ids ?? [],
+  })
+}
+
 export class ReadOnlyInspector {
   constructor({ baseUrl, inspect = null, fetchImpl = fetch, logPath = null } = {}) {
     this.baseUrl = baseUrl ?? ''
@@ -144,8 +200,10 @@ export class AuditorAdapter {
       auditId, task: copy(taskContext?.original_task ?? taskContext?.task), task_state: copy(taskContext?.task_state ?? taskContext?.state),
       contract: copy(contract), prior_audits: copy(priorAudits), executor_report: copy(executorReport), evidence: copy(evidence), observation_ref: observationRef,
     })), budget.timeout_ms ?? 10000)
-    else output = { status: evidence.terminal_receipt ? 'complete' : 'incomplete', integrity: evidence.read_only ? 'clean' : 'violation', verified_summary: evidence.terminal_receipt ? '独立只读终局收据可用。' : '未发现可核验终局收据。', evidence: [{ id: `ev-${auditId}`, kind: evidence.terminal_receipt ? 'read_only_terminal_receipt' : 'read_only_environment_state', summary: '独立只读环境快照', scope, observation_ref: observationRef }], findings: [], remaining_gaps: evidence.terminal_receipt ? [] : ['terminal receipt unavailable'], suggested_updates: [], resolves_issue_ids: [] }
-    const report = validateAuditReport({ ...output, schema: 'longhorizon-audit-v3', id: auditId, round: Number(taskContext?.round ?? 1), contract_id: contract.id })
+    else output = { status: evidence.terminal_receipt ? 'complete' : 'incomplete', integrity: evidence.read_only ? 'clean' : 'violation', verified_summary: evidence.terminal_receipt ? '独立只读终局收据可用。' : '未发现可核验终局收据。', findings: [], remaining_gaps: evidence.terminal_receipt ? [] : ['terminal receipt unavailable'], resolves_issue_ids: [] }
+    const report = runtimeAuditReport({ output, auditId,
+      round: Number(taskContext?.round ?? 1), contract, evidence, observationRef,
+      scope, taskState: taskContext?.task_state ?? taskContext?.state })
     for (const item of report.evidence) registry.resolve(item.observation_ref)
     const result = { audit: report, evidence, observation_registry: registry, audit_id: auditId, read_only: evidence.read_only, status: report.status }
     if (this.runDir) { mkdirSync(join(this.runDir, 'audits'), { recursive: true }); writeFileSync(join(this.runDir, 'audits', `${auditId}.json`), `${JSON.stringify(result, null, 2)}\n`) }
