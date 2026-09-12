@@ -67,11 +67,11 @@ function jsonText(text) {
 
 const MANAGER_SYSTEM = `You are the Manager in a long-horizon shopping harness. You have no environment tools. Use only the public task, structured Task State, prior Audit Reports and real shopper replies in the input. Output exactly one JSON object accepted by longhorizon Manager v3:
 {"decision":"execute|done|blocked|ask","reason":"...","state_updates":[{"audit_id":"...","finding_id":"...","record_id":"..."}],"contract":null|{"id":"unique","goal":"...","acceptance_criteria":["..."],"boundary_constraints":["..."],"dependencies":[],"relevant_state_ids":["req-1"],"relevant_audit_ids":[],"role_tools":["search","click","finish"],"manager_suggested_tools":["search"],"tool_rules":[{"tool":"click","deny_values":["Buy Now"]}],"budget":{"max_tool_calls":1,"timeout_seconds":120}},"question":null|"one focused question"}.
-Never invent state updates: select only findings present in prior audits. If task.requires_clarification is true and clarification_count is 0, your first decision MUST be ask; ask one focused question about the most decision-critical hidden model/specification/option/quantity requirement before any purchase-capable contract. Use done only after a complete clean terminal-receipt audit supports all active requirements. Contract ids must be new. tool_rules MUST be an array of structured objects with tool plus allow/allow_kinds/deny_kinds/deny_values; never output natural-language strings there. Use boundary_constraints for natural-language restrictions. The finish tool abandons without purchase and NEVER creates a terminal receipt. When the task requires completing the simulated shopping transaction, only a contract-authorized Buy Now action can produce a receipt; after any terminal environment action do not request another Executor. Keep each episode narrow and bounded.`
+Never invent state updates: select only findings present in prior audits. Use ask when a decision-critical user requirement is missing or ambiguous; do not ask for information already supplied. Use done only after a complete clean terminal-receipt audit supports all active requirements. Contract ids must be new. tool_rules MUST be an array of structured objects with tool plus allow/allow_kinds/deny_kinds/deny_values; never output natural-language strings there. Use boundary_constraints for natural-language restrictions. The finish tool abandons without purchase and NEVER creates a terminal receipt. When the task requires completing the simulated shopping transaction, only a contract-authorized Buy Now action can produce a receipt; after any terminal environment action do not request another Executor. Keep each episode narrow and bounded.`
 
 const AUDITOR_SYSTEM = `You are an independent read-only Auditor. Ignore Executor claims unless independently supported by the supplied environment inspection. Output exactly one JSON object using longhorizon Audit v3 fields, except schema/id/round/contract_id are runtime-owned and MUST NOT be included:
 {"status":"complete|incomplete|blocked","integrity":"clean|suspect|violation","verified_summary":"...","evidence":[{"id":"ev-1","kind":"read_only_environment_state|read_only_terminal_receipt","summary":"...","scope":null|{"asin":"..."},"observation_ref":{"event_id":"...","snapshot_id":"...","environment_session":"..."}}],"findings":[{"finding_id":"finding-1","record_id":"req-1","requirement_version":1,"criterion":"...","supported":true,"proposed_status":"completed|pending|blocked|untrusted","evidence_refs":[{"audit_id":"RUNTIME_AUDIT_ID","evidence_id":"ev-1"}],"dependencies":[],"summary":"...","content":null,"scope":null}],"remaining_gaps":["..."],"suggested_updates":[{"finding_id":"finding-1","record_id":"req-1"}],"resolves_issue_ids":[]}.
-Use the exact observation_ref supplied by runtime. In every evidence_refs.audit_id use the supplied auditId. Compare every terminal receipt option and quantity literally against all explicit requirements and real shopper replies. A near match is not a match: for example 普通全钢 does not satisfy 精品全钢, 1支 does not satisfy 100支, and a different color/model/pack size must remain pending or become blocked. A terminal receipt proves only fields actually present. Missing quantity/price/packaging is unknown. A complete audit requires an actual terminal receipt and sufficient public evidence; otherwise use incomplete. Never propose completed for a requirement when any explicit model/material/option/quantity/price constraint conflicts with the receipt or remains unknown. Do not read or infer reward, gold, hidden goals, or private facts.`
+Use the exact observation_ref supplied by runtime. In every evidence_refs.audit_id use the supplied auditId. Compare terminal receipt fields against explicit requirements and real shopper replies; any conflicting or unknown required option, quantity, price, model, or packaging must remain pending or blocked. A terminal receipt proves only fields actually present. Missing quantity/price/packaging is unknown. A complete audit requires an actual terminal receipt and sufficient public evidence; otherwise use incomplete. Never propose completed for a requirement when an explicit constraint conflicts with the receipt or remains unknown. Do not read or infer reward, gold, hidden goals, or private facts.`
 
 export class JsonChatRole {
   constructor({ role, apiKey = process.env.DEEPSEEK_API_KEY, baseUrl = process.env.DEEPSEEK_BASE_URL ?? 'https://api.deepseek.com',
@@ -146,45 +146,10 @@ export class ManagerModelAdapter {
   plan(input, options) { return this.client.call(input, options).then(normalizeManagerOutput) }
 }
 
-function receiptConflictsWithKnownRequirements(input) {
-  const receipt = input.evidence?.terminal_receipt
-  if (!receipt?.asin) return []
-  const haystack = JSON.stringify({ receipt, snapshot: input.evidence?.public_snapshot }, null, 0).toLowerCase()
-  const requirements = [
-    input.task,
-    ...(input.task_state?.requirements ?? []).map(record => record.content),
-    ...(input.task_state?.shopper_replies ?? []).map(record => record.reply),
-  ].filter(Boolean)
-  const conflicts = []
-  const literalPairs = [
-    ['精品全钢', '普通全钢'], ['红色', '蓝色'], ['蓝色', '红色'],
-    ['黑色', '白色'], ['白色', '黑色'],
-  ]
-  for (const requirement of requirements) {
-    const text = String(requirement).toLowerCase()
-    for (const [wanted, actual] of literalPairs) {
-      if (text.includes(wanted.toLowerCase()) && haystack.includes(actual.toLowerCase())
-        && !haystack.includes(wanted.toLowerCase())) {
-        conflicts.push(`required ${wanted} but receipt shows ${actual}`)
-      }
-    }
-    const quantity = text.match(/(?:要|买|需要)?\s*(\d+)\s*(?:个|支|根|件|套|盒|包|片|只)/)
-    if (quantity && Number(quantity[1]) > 1) {
-      const actualText = JSON.stringify(receipt.options ?? receipt).toLowerCase()
-      const actual = actualText.match(/(\d+)\s*(?:个|支|根|件|套|盒|包|片|只)/)
-      if (!actual || Number(actual[1]) !== Number(quantity[1])) {
-        conflicts.push(`required quantity ${quantity[1]} but receipt quantity differs or is unknown`)
-      }
-    }
-  }
-  return [...new Set(conflicts)]
-}
-
 export class AuditorModelAdapter {
   constructor(options = {}) { this.client = new JsonChatRole({ role: 'auditor', system: AUDITOR_SYSTEM, ...options }) }
   async audit(input, options) {
     const output = normalizeAuditorOutput(await this.client.call(input, options))
-    const receiptConflicts = receiptConflictsWithKnownRequirements(input)
     const requirements = new Map((input.task_state?.requirements ?? [])
       .map(record => [record.id, record]))
     // Runtime identity and immutable requirement fields are protected from model drift.
@@ -194,24 +159,10 @@ export class AuditorModelAdapter {
         finding.requirement_version = requirement.requirement_version
         finding.content = null
         finding.scope = null
-        if (receiptConflicts.length > 0 && finding.proposed_status === 'completed') {
-          finding.supported = false
-          finding.proposed_status = 'pending'
-          finding.summary = `${finding.summary ?? ''} Receipt conflict: ${receiptConflicts.join('; ')}`.trim()
-          finding.evidence_refs = []
-        }
       }
       for (const ref of finding.evidence_refs ?? []) {
         if (ref.audit_id === 'RUNTIME_AUDIT_ID') ref.audit_id = input.auditId
       }
-    }
-    if (receiptConflicts.length > 0) {
-      output.status = 'incomplete'
-      output.remaining_gaps = [...new Set([...(output.remaining_gaps ?? []), ...receiptConflicts])]
-      output.suggested_updates = (output.suggested_updates ?? []).filter(update => {
-        const finding = output.findings.find(item => item.finding_id === update.finding_id)
-        return finding?.proposed_status !== 'pending' || finding?.supported === true
-      })
     }
     return output
   }

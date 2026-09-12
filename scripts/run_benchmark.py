@@ -539,9 +539,6 @@ def run_one_task(
                 "shopsim_base_url": shopsim_base_url,
                 "shopper_base_url": shopper_url or "",
                 "task": {"id": str(task_id), "original_goal": task_text,
-                         "requires_clarification": bool((reset_result.get("instruction_simple") or "").strip())
-                         and (reset_result.get("instruction_simple") or "").strip()
-                         == (reset_result.get("instruction") or "").removeprefix("Instruction: ").strip(),
                          "persona": (json.dumps(reset_result.get("user_persona"), ensure_ascii=False)
                                      if isinstance(reset_result.get("user_persona"), dict)
                                      else reset_result.get("user_persona"))},

@@ -71,7 +71,6 @@ export class MeaController {
     if (!manager || typeof manager.plan !== 'function') throw new Error('manager.plan is required')
     if (!executor || typeof executor.runEpisode !== 'function') throw new Error('executor.runEpisode is required')
     if (!auditor || typeof auditor.audit !== 'function') throw new Error('auditor.audit is required')
-    this.taskRequiresClarification = task?.requires_clarification === true
     this.task = required(task?.original_goal ?? task?.query, 'task.original_goal')
     this.taskId = required(task?.id ?? task?.task_id, 'task.id')
     this.runId = required(runId, 'runId')
@@ -141,9 +140,7 @@ export class MeaController {
     this.#budgetCheck()
     this.managerDecisions += 1
     const input = {
-      task: { id: this.taskId, original_request: this.task,
-        requires_clarification: this.taskRequiresClarification,
-        clarification_count: this.state.shopper_replies?.length ?? 0 },
+      task: { id: this.taskId, original_request: this.task },
       state: projectManagerState(this.state),
       prior_audits: projectManagerAudits(this.audits),
       trigger,
